@@ -1,1 +1,5 @@
+# local resources for studying
 etc/
+
+# already uploaded, diades doesn't have lfs so...
+data/
