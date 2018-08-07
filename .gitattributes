@@ -1,1 +1,4 @@
-data/* filter=lfs diff=lfs merge=lfs -text
+data/web-Google.txt filter=lfs diff=lfs merge=lfs -text
+data/web-Stanford.txt filter=lfs diff=lfs merge=lfs -text
+data/web-NotreDame.txt filter=lfs diff=lfs merge=lfs -text
+data/web-BerkStan.txt filter=lfs diff=lfs merge=lfs -text
