@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['wgimp_2ec',['wgimp.c',['../wgimp_8c.html',1,'']]],
-  ['wgimp_2eh',['wgimp.h',['../wgimp_8h.html',1,'']]],
-  ['wgimp_5fh',['WGIMP_H',['../wgimp_8h.html#a314a21a1734683a2e853561cf9346545',1,'wgimp.h']]]
+  ['row_5fptr',['row_ptr',['../structNTW__CRS.html#af5999845d1d6173e930a1c502042d239',1,'NTW_CRS']]]
 ];

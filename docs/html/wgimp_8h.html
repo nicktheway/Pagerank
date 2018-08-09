@@ -69,7 +69,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">wgimp.h File Reference</div>  </div>
@@ -84,6 +86,12 @@ $(function() {
 </div>
 <p><a href="wgimp_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNTW__CRS.html">NTW_CRS</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Compressed Row Storage struct.  <a href="structNTW__CRS.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a314a21a1734683a2e853561cf9346545"><td class="memItemLeft" align="right" valign="top"><a id="a314a21a1734683a2e853561cf9346545"></a>
@@ -97,6 +105,12 @@ Macros</h2></td></tr>
 <tr class="memdesc:a3c56fc1712e80e6d6fcd9bed62e78817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for null file pointers returning debug message.  <a href="#a3c56fc1712e80e6d6fcd9bed62e78817">More...</a><br /></td></tr>
 <tr class="separator:a3c56fc1712e80e6d6fcd9bed62e78817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:adadd4af694bf036d1ce831547a0141be"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structNTW__CRS.html">NTW_CRS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wgimp_8h.html#adadd4af694bf036d1ce831547a0141be">NTW_CRS</a></td></tr>
+<tr class="memdesc:adadd4af694bf036d1ce831547a0141be"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Compressed Row Storage struct.  <a href="#adadd4af694bf036d1ce831547a0141be">More...</a><br /></td></tr>
+<tr class="separator:adadd4af694bf036d1ce831547a0141be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a55440719d7abcc4cd781ff68430bf2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wgimp_8h.html#a55440719d7abcc4cd781ff68430bf2b0">NTW_expfm</a> (FILE *ntw_in_fp, FILE *ntw_out_fp, size_t ntw_node_num)</td></tr>
@@ -105,6 +119,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a05ab7f490ffeaf048d2e20a03cb54114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wgimp_8h.html#a05ab7f490ffeaf048d2e20a03cb54114">NTW_expsm</a> (FILE *ntw_in_fp, FILE *ntw_out_fp, size_t ntw_node_num)</td></tr>
 <tr class="memdesc:a05ab7f490ffeaf048d2e20a03cb54114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the edges of <em>ntw_node_num</em> nodes for easy sparse matrix creation.  <a href="#a05ab7f490ffeaf048d2e20a03cb54114">More...</a><br /></td></tr>
 <tr class="separator:a05ab7f490ffeaf048d2e20a03cb54114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04582e824cd73b6500fff09eb0b5255f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wgimp_8h.html#a04582e824cd73b6500fff09eb0b5255f">NTW_load2crs</a> (FILE *ntw_in_fp, <a class="el" href="structNTW__CRS.html">NTW_CRS</a> *ntw_CRS_out)</td></tr>
+<tr class="memdesc:a04582e824cd73b6500fff09eb0b5255f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a web graph in memory using the CRS data structure.  <a href="#a04582e824cd73b6500fff09eb0b5255f">More...</a><br /></td></tr>
+<tr class="separator:a04582e824cd73b6500fff09eb0b5255f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">Web-Graph import/export functions. </p>
@@ -154,6 +171,24 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="adadd4af694bf036d1ce831547a0141be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadd4af694bf036d1ce831547a0141be">&#9670;&nbsp;</a></span>NTW_CRS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structNTW__CRS.html">NTW_CRS</a>  <a class="el" href="structNTW__CRS.html">NTW_CRS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A Compressed Row Storage struct. </p>
+<p class="">Used to save web graph tables in RAM. See <a href="http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000">CRS</a> </p>
 
 </div>
 </div>
@@ -245,6 +280,46 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a04582e824cd73b6500fff09eb0b5255f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04582e824cd73b6500fff09eb0b5255f">&#9670;&nbsp;</a></span>NTW_load2crs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NTW_load2crs </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>ntw_in_fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNTW__CRS.html">NTW_CRS</a> *&#160;</td>
+          <td class="paramname"><em>ntw_CRS_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a web graph in memory using the CRS data structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ntw_in_fp</td><td>The input file pointer, must be like the ones exported using the <a class="el" href="wgimp_8h.html#a05ab7f490ffeaf048d2e20a03cb54114" title="Exports the edges of ntw_node_num nodes for easy sparse matrix creation.">NTW_expsm()</a> </td></tr>
+    <tr><td class="paramname">ntw_CRS_out</td><td>Pointer to the allocated memory structure containing the wab graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Indicates that the web graph was successfully loaded. </dd>
+<dd>
+false An error occured, the web graph will not be in the memory. </dd></dl>
 
 </div>
 </div>

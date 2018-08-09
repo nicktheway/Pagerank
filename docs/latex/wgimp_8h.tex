@@ -8,6 +8,11 @@ Web-\/Graph import/export functions.
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structNTW__CRS}{N\+T\+W\+\_\+\+C\+RS}}
+\begin{DoxyCompactList}\small\item\em A Compressed Row Storage struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,13 +23,20 @@ Web-\/Graph import/export functions.
 \begin{DoxyCompactList}\small\item\em The character used to indicate comment lines in the data files. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{wgimp_8h_a3c56fc1712e80e6d6fcd9bed62e78817}{N\+T\+W\+\_\+invalid\+\_\+fp\+\_\+exit}}(fp)
 \begin{DoxyCompactList}\small\item\em Checks for null file pointers returning debug message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structNTW__CRS}{N\+T\+W\+\_\+\+C\+RS}} \mbox{\hyperlink{wgimp_8h_adadd4af694bf036d1ce831547a0141be}{N\+T\+W\+\_\+\+C\+RS}}
+\begin{DoxyCompactList}\small\item\em A Compressed Row Storage struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{wgimp_8h_a55440719d7abcc4cd781ff68430bf2b0}{N\+T\+W\+\_\+expfm}} (F\+I\+LE $\ast$ntw\+\_\+in\+\_\+fp, F\+I\+LE $\ast$ntw\+\_\+out\+\_\+fp, size\+\_\+t ntw\+\_\+node\+\_\+num)
 \begin{DoxyCompactList}\small\item\em Exports the full graph matrix to {\itshape ntw\+\_\+out\+\_\+fp}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{wgimp_8h_a05ab7f490ffeaf048d2e20a03cb54114}{N\+T\+W\+\_\+expsm}} (F\+I\+LE $\ast$ntw\+\_\+in\+\_\+fp, F\+I\+LE $\ast$ntw\+\_\+out\+\_\+fp, size\+\_\+t ntw\+\_\+node\+\_\+num)
-\begin{DoxyCompactList}\small\item\em Exports the edges of {\itshape ntw\+\_\+node\+\_\+num} nodes for easy sparse matrix creation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exports the edges of {\itshape ntw\+\_\+node\+\_\+num} nodes for easy sparse matrix creation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{wgimp_8h_a04582e824cd73b6500fff09eb0b5255f}{N\+T\+W\+\_\+load2crs}} (F\+I\+LE $\ast$ntw\+\_\+in\+\_\+fp, \mbox{\hyperlink{structNTW__CRS}{N\+T\+W\+\_\+\+C\+RS}} $\ast$ntw\+\_\+\+C\+R\+S\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Loads a web graph in memory using the C\+RS data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -83,6 +95,19 @@ Checks for null file pointers returning debug message.
 \end{DoxyParams}
 
 
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{wgimp_8h_adadd4af694bf036d1ce831547a0141be}\label{wgimp_8h_adadd4af694bf036d1ce831547a0141be}} 
+\index{wgimp.\+h@{wgimp.\+h}!N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}}
+\index{N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}!wgimp.\+h@{wgimp.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+RS}{NTW\_CRS}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structNTW__CRS}{N\+T\+W\+\_\+\+C\+RS}}  \mbox{\hyperlink{structNTW__CRS}{N\+T\+W\+\_\+\+C\+RS}}}
+
+
+
+A Compressed Row Storage struct. 
+
+Used to save web graph tables in R\+AM. See \href{http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000}\texttt{ C\+RS} 
+
 \subsection{Function Documentation}
 \mbox{\Hypertarget{wgimp_8h_a55440719d7abcc4cd781ff68430bf2b0}\label{wgimp_8h_a55440719d7abcc4cd781ff68430bf2b0}} 
 \index{wgimp.\+h@{wgimp.\+h}!N\+T\+W\+\_\+expfm@{N\+T\+W\+\_\+expfm}}
@@ -126,3 +151,25 @@ The output can be loaded into M\+A\+T\+L\+AB to create a sparse matrix using M\+
 {\em ntw\+\_\+node\+\_\+num} & The number of nodes that will be in the graph matrix. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{wgimp_8h_a04582e824cd73b6500fff09eb0b5255f}\label{wgimp_8h_a04582e824cd73b6500fff09eb0b5255f}} 
+\index{wgimp.\+h@{wgimp.\+h}!N\+T\+W\+\_\+load2crs@{N\+T\+W\+\_\+load2crs}}
+\index{N\+T\+W\+\_\+load2crs@{N\+T\+W\+\_\+load2crs}!wgimp.\+h@{wgimp.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+load2crs()}{NTW\_load2crs()}}
+{\footnotesize\ttfamily bool N\+T\+W\+\_\+load2crs (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{ntw\+\_\+in\+\_\+fp,  }\item[{\mbox{\hyperlink{structNTW__CRS}{N\+T\+W\+\_\+\+C\+RS}} $\ast$}]{ntw\+\_\+\+C\+R\+S\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Loads a web graph in memory using the C\+RS data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntw\+\_\+in\+\_\+fp} & The input file pointer, must be like the ones exported using the \mbox{\hyperlink{wgimp_8h_a05ab7f490ffeaf048d2e20a03cb54114}{N\+T\+W\+\_\+expsm()}} \\
+\hline
+{\em ntw\+\_\+\+C\+R\+S\+\_\+out} & Pointer to the allocated memory structure containing the wab graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Indicates that the web graph was successfully loaded. 
+
+false An error occured, the web graph will not be in the memory. 
+\end{DoxyReturn}
