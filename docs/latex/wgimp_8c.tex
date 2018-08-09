@@ -1,0 +1,74 @@
+\hypertarget{wgimp_8c}{}\section{/home/ecat/nikos/parallel/source/helpers/wgimp.c File Reference}
+\label{wgimp_8c}\index{/home/ecat/nikos/parallel/source/helpers/wgimp.\+c@{/home/ecat/nikos/parallel/source/helpers/wgimp.\+c}}
+
+
+File containing the implementations of \mbox{\hyperlink{wgimp_8h}{wgimp.\+h}}.  
+
+
+{\ttfamily \#include \char`\"{}wgimp.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{wgimp_8c_a55440719d7abcc4cd781ff68430bf2b0}{N\+T\+W\+\_\+expfm}} (F\+I\+LE $\ast$ntw\+\_\+in\+\_\+fp, F\+I\+LE $\ast$ntw\+\_\+out\+\_\+fp, size\+\_\+t ntw\+\_\+node\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Exports the full graph matrix to {\itshape ntw\+\_\+out\+\_\+fp}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wgimp_8c_a05ab7f490ffeaf048d2e20a03cb54114}{N\+T\+W\+\_\+expsm}} (F\+I\+LE $\ast$ntw\+\_\+in\+\_\+fp, F\+I\+LE $\ast$ntw\+\_\+out\+\_\+fp, size\+\_\+t ntw\+\_\+node\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Exports the edges of {\itshape ntw\+\_\+node\+\_\+num} nodes for easy sparse matrix creation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the implementations of \mbox{\hyperlink{wgimp_8h}{wgimp.\+h}}. 
+
+\begin{DoxyAuthor}{Author}
+Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth.\+gr} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09-\/08-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{wgimp_8c_a55440719d7abcc4cd781ff68430bf2b0}\label{wgimp_8c_a55440719d7abcc4cd781ff68430bf2b0}} 
+\index{wgimp.\+c@{wgimp.\+c}!N\+T\+W\+\_\+expfm@{N\+T\+W\+\_\+expfm}}
+\index{N\+T\+W\+\_\+expfm@{N\+T\+W\+\_\+expfm}!wgimp.\+c@{wgimp.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+expfm()}{NTW\_expfm()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+expfm (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{ntw\+\_\+in\+\_\+fp,  }\item[{F\+I\+LE $\ast$}]{ntw\+\_\+out\+\_\+fp,  }\item[{size\+\_\+t}]{ntw\+\_\+node\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Exports the full graph matrix to {\itshape ntw\+\_\+out\+\_\+fp}. 
+
+Should be used with caution and for relatively small {\itshape ntw\+\_\+node\+\_\+num}. (ntw\+\_\+node\+\_\+num $< 1000 $)
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntw\+\_\+in\+\_\+fp} & The input file pointer. \\
+\hline
+{\em ntw\+\_\+out\+\_\+fp} & The output file pointer. \\
+\hline
+{\em ntw\+\_\+node\+\_\+num} & The number of nodes that will be in the graph matrix. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{wgimp_8c_a05ab7f490ffeaf048d2e20a03cb54114}\label{wgimp_8c_a05ab7f490ffeaf048d2e20a03cb54114}} 
+\index{wgimp.\+c@{wgimp.\+c}!N\+T\+W\+\_\+expsm@{N\+T\+W\+\_\+expsm}}
+\index{N\+T\+W\+\_\+expsm@{N\+T\+W\+\_\+expsm}!wgimp.\+c@{wgimp.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+expsm()}{NTW\_expsm()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+expsm (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{ntw\+\_\+in\+\_\+fp,  }\item[{F\+I\+LE $\ast$}]{ntw\+\_\+out\+\_\+fp,  }\item[{size\+\_\+t}]{ntw\+\_\+node\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Exports the edges of {\itshape ntw\+\_\+node\+\_\+num} nodes for easy sparse matrix creation. 
+
+The output can be loaded into M\+A\+T\+L\+AB to create a sparse matrix using M\+A\+T\+L\+AB\textquotesingle{}s sparse() function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntw\+\_\+in\+\_\+fp} & The input file pointer. \\
+\hline
+{\em ntw\+\_\+out\+\_\+fp} & The output file pointer. \\
+\hline
+{\em ntw\+\_\+node\+\_\+num} & The number of nodes that will be in the graph matrix. \\
+\hline
+\end{DoxyParams}
