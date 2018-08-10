@@ -102,6 +102,29 @@ int NTWPR_WGfclose(NTWPR_WGFile* wgfile);
 bool NTWPR_WGrewind(NTWPR_WGFile* const NTWPR_WGF);
 
 /**
+ * @brief Calculates the product of the CRS table @a ntwpr_crs
+ *          with the @a vector and stores the result in @a product. 
+ * 
+ * @param ntwpr_crs 
+ * @param vector 
+ * @param product
+ */
+extern void NTWPR_CRSproduct_non_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1], float product[static ntwpr_crs->node_num]);
+
+/**
+ * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.
+ * 
+ * Use it sparingly because it's slow.
+ * 
+ * @param ntwpr_crs The CRS data.
+ * @param row The row of the returned value.
+ * @param col The column of the returned value.
+ * @return float The value at [@a row, @a col]
+ */
+float NTWPR_CRSvalue_at(const NTWPR_CRS ntwpr_crs[static 1], uint32_t row, uint32_t col);
+
+
+/**
  * @brief Loads a web graph in memory using the CRS data structure.
  * 
  * The CRS structure's memory should be freed with NTWPR_CRSfree() later.
@@ -126,7 +149,17 @@ void NTWPR_CRSfree(NTWPR_CRS* ntwpr_crs);
  * @param stream Where will the output go.
  * @param ntwpr_crs The CRS to visualize.
  */
-void NTWPR_CRSprint(FILE* stream, NTWPR_CRS* ntwpr_crs);
+void NTWPR_CRSprint(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
+
+/**
+ * @brief A function for printing the full matrix of the CRS.
+ * 
+ * Useful for debugging. Avoid using it for @f$nodes > 10000@f$.
+ * 
+ * @param stream Where will the output go.
+ * @param ntwpr_crs The CRS of the matrix that will be visualized.
+ */
+void NTWPR_CRSprintfm(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
 
 /**
  * @brief Converts web graph files from the format Stanford U. (SU) used to

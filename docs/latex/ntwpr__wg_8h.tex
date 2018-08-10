@@ -42,12 +42,18 @@ int \mbox{\hyperlink{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}{N\+T\+W\+P\
 \begin{DoxyCompactList}\small\item\em Closes the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} stream and frees memory. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ntwpr__wg_8h_ab867010ffa71a24ade290edf6a10f448}{N\+T\+W\+P\+R\+\_\+\+W\+Grewind}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$const N\+T\+W\+P\+R\+\_\+\+W\+GF)
 \begin{DoxyCompactList}\small\item\em Reset the {\itshape N\+T\+W\+P\+R\+\_\+\+W\+GF} struct to read the edges again. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_a25aab53b352ef4605da95b6afb9d524d}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]}, const float vector\mbox{[}static 1\mbox{]}, float product\mbox{[}static ntwpr\+\_\+crs-\/$>$node\+\_\+num\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calculates the product of the C\+RS table {\itshape ntwpr\+\_\+crs} with the {\itshape vector} and stores the result in {\itshape product}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{ntwpr__wg_8h_a4fcd3463506972887db8fce39b11f57a}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t row, uint32\+\_\+t col)
+\begin{DoxyCompactList}\small\item\em Returns the value at ({\itshape row}, {\itshape col}) of the matrix of the C\+RS. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$ \mbox{\hyperlink{ntwpr__wg_8h_a8880314ababb89902382ab5282ef3966}{N\+T\+W\+P\+R\+\_\+load2crs}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$restrict ntwpr\+\_\+wgfp)
 \begin{DoxyCompactList}\small\item\em Loads a web graph in memory using the C\+RS data structure. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntwpr__wg_8h_ac23924bafd4289f10a3ebfd8776b6c6e}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$ntwpr\+\_\+crs)
 \begin{DoxyCompactList}\small\item\em Unloads a \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} from memory (frees allocated memory). \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ntwpr__wg_8h_aacb2310b73aedf3cb94e1e7421065614}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint}} (F\+I\+LE $\ast$stream, \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$ntwpr\+\_\+crs)
+void \mbox{\hyperlink{ntwpr__wg_8h_a9bc95dfcf738692af97101b9e234becb}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em A function for visualizing a C\+RS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_ac641591cac51ee90cf0c127531897e7e}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em A function for printing the full matrix of the C\+RS. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntwpr__wg_8h_af14fc62b79305e1d3cf64de738d66055}{N\+T\+W\+P\+R\+\_\+\+S\+U2\+WG}} (const char S\+U\+\_\+\+W\+G\+D\+\_\+path\mbox{[}static 1\mbox{]}, const char exp\+\_\+path\mbox{[}static 1\mbox{]}, uint32\+\_\+t N\+T\+W\+P\+R\+\_\+node\+\_\+num)
 \begin{DoxyCompactList}\small\item\em Converts web graph files from the format Stanford U. (SU) used to the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}\textquotesingle{} edge\+\_\+data file format. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntwpr__wg_8h_a2cbf95fa9c7afa941a04d297b22bafb6}{N\+T\+W\+P\+R\+\_\+expfm}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$restrict wgfp, const char exp\+\_\+path\mbox{[}static 1\mbox{]}, uint32\+\_\+t N\+T\+W\+P\+R\+\_\+node\+\_\+num)
@@ -151,11 +157,11 @@ Unloads a \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} from m
 {\em ntwpr\+\_\+crs} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ntwpr__wg_8h_aacb2310b73aedf3cb94e1e7421065614}\label{ntwpr__wg_8h_aacb2310b73aedf3cb94e1e7421065614}} 
+\mbox{\Hypertarget{ntwpr__wg_8h_a9bc95dfcf738692af97101b9e234becb}\label{ntwpr__wg_8h_a9bc95dfcf738692af97101b9e234becb}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint}}
 \index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
 \subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint()}{NTWPR\_CRSprint()}}
-{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{stream,  }\item[{\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$}]{ntwpr\+\_\+crs }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -170,6 +176,68 @@ Useful for debugging.
 {\em ntwpr\+\_\+crs} & The C\+RS to visualize. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{ntwpr__wg_8h_ac641591cac51ee90cf0c127531897e7e}\label{ntwpr__wg_8h_ac641591cac51ee90cf0c127531897e7e}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm()}{NTWPR\_CRSprintfm()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+A function for printing the full matrix of the C\+RS. 
+
+Useful for debugging. Avoid using it for $nodes > 10000$.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & Where will the output go. \\
+\hline
+{\em ntwpr\+\_\+crs} & The C\+RS of the matrix that will be visualized. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntwpr__wg_8h_a25aab53b352ef4605da95b6afb9d524d}\label{ntwpr__wg_8h_a25aab53b352ef4605da95b6afb9d524d}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc()}{NTWPR\_CRSproduct\_non\_alloc()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]},  }\item[{const float}]{vector\mbox{[}static 1\mbox{]},  }\item[{float}]{product\mbox{[}static ntwpr\+\_\+crs-\/$>$node\+\_\+num\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the product of the C\+RS table {\itshape ntwpr\+\_\+crs} with the {\itshape vector} and stores the result in {\itshape product}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntwpr\+\_\+crs} & \\
+\hline
+{\em vector} & \\
+\hline
+{\em product} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntwpr__wg_8h_a4fcd3463506972887db8fce39b11f57a}\label{ntwpr__wg_8h_a4fcd3463506972887db8fce39b11f57a}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at()}{NTWPR\_CRSvalue\_at()}}
+{\footnotesize\ttfamily float N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t}]{row,  }\item[{uint32\+\_\+t}]{col }\end{DoxyParamCaption})}
+
+
+
+Returns the value at ({\itshape row}, {\itshape col}) of the matrix of the C\+RS. 
+
+Use it sparingly because it\textquotesingle{}s slow.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntwpr\+\_\+crs} & The C\+RS data. \\
+\hline
+{\em row} & The row of the returned value. \\
+\hline
+{\em col} & The column of the returned value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The value at \mbox{[}{\itshape row}, {\itshape col}\mbox{]} 
+\end{DoxyReturn}
 \mbox{\Hypertarget{ntwpr__wg_8h_a2cbf95fa9c7afa941a04d297b22bafb6}\label{ntwpr__wg_8h_a2cbf95fa9c7afa941a04d297b22bafb6}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+expfm@{N\+T\+W\+P\+R\+\_\+expfm}}
 \index{N\+T\+W\+P\+R\+\_\+expfm@{N\+T\+W\+P\+R\+\_\+expfm}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}

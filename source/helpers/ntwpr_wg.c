@@ -7,6 +7,29 @@
  */
 #include "ntwpr_wg.h"
 
+float NTWPR_CRSvalue_at(const NTWPR_CRS ntwpr_crs[static 1], uint32_t row, uint32_t col)
+{
+    for (int i = ntwpr_crs->row_ptr[row]; i < ntwpr_crs->row_ptr[row+1]; i++)
+    {
+        if (ntwpr_crs->col_ind[i] == col)
+            return ntwpr_crs->val[i];
+        else if (ntwpr_crs->col_ind[i] > col)
+            return 0;
+    }
+    return 0;
+}
+
+inline void NTWPR_CRSproduct_non_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1], float product[static ntwpr_crs->node_num])
+{
+    for (uint32_t ntw_i = 0; ntw_i < ntwpr_crs->node_num; ntw_i++)
+    {
+        for (uint32_t ntw_j = ntwpr_crs->row_ptr[ntw_i]; ntw_j < ntwpr_crs->row_ptr[ntw_i + 1]; ntw_j++)
+        {
+            product[ntw_i] += ntwpr_crs->val[ntw_j] * vector[ntwpr_crs->col_ind[ntw_j]];
+        }
+    }
+}
+
 NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict ntwpr_wgfp)
 {
     NTWPR_CRS* new_crs = calloc(1, sizeof(NTWPR_CRS));
@@ -18,9 +41,9 @@ NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict ntwpr_wgfp)
     new_crs->node_num = ntwpr_wgfp->node_num;
     new_crs->edge_num = ntwpr_wgfp->edge_num;
 
-    new_crs->val = calloc(new_crs->edge_num, sizeof(float));
-    new_crs->col_ind = calloc(new_crs->edge_num, sizeof(uint32_t));
-    new_crs->row_ptr = calloc(new_crs->node_num + 1, sizeof(uint32_t));
+    new_crs->val = calloc(new_crs->edge_num, sizeof(new_crs->val[0]));
+    new_crs->col_ind = calloc(new_crs->edge_num, sizeof(new_crs->col_ind[0]));
+    new_crs->row_ptr = calloc(new_crs->node_num + 1, sizeof(new_crs->row_ptr[0]));
 
     if (!new_crs->val || !new_crs->col_ind || !new_crs->row_ptr)
     {
@@ -61,7 +84,7 @@ void NTWPR_CRSfree(NTWPR_CRS* ntwpr_crs)
     free(ntwpr_crs);
 }
 
-void NTWPR_CRSprint(FILE* stream, NTWPR_CRS* ntwpr_crs)
+void NTWPR_CRSprint(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1])
 {
     fprintf(stream, "Nodes: %u, Edges: %u\nColumn indeces:\n", ntwpr_crs->node_num, ntwpr_crs->edge_num);
     for (int i = 0; i < ntwpr_crs->edge_num; i++)
@@ -79,6 +102,42 @@ void NTWPR_CRSprint(FILE* stream, NTWPR_CRS* ntwpr_crs)
         fprintf(stream, "%u\t", ntwpr_crs->row_ptr[i]);
     }
     fprintf(stream, "\n");
+}
+
+void NTWPR_CRSprintfm(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1])
+{
+	// Parse rows
+	for (int i = 0; i < ntwpr_crs->node_num; i++)
+    {
+		// The column index of the element to print
+		int curr_col = 0;
+
+		// Print row i (if it is not all-zero)
+		for (int k = ntwpr_crs->row_ptr[i]; k < ntwpr_crs->row_ptr[i+1]; k++)
+        {
+			int j = ntwpr_crs->col_ind[k];
+
+			// Print zeros between the non-zeros of the line
+			while(curr_col < j)
+            {
+				fprintf(stream, "%.2f\t", 0.0f);
+				curr_col++;
+			}
+			// print the nonzero value
+			fprintf(stream, "%.2f\t", ntwpr_crs->val[k]);;
+			curr_col++;
+		}
+		
+        // Print the trailing zeroes of this row
+		while (curr_col < ntwpr_crs->node_num)
+        {
+			fprintf(stream, "%.2f\t", 0.0f);
+			curr_col++;
+		}
+
+		fprintf(stream, "\n");
+	}
+	fprintf(stream, "\n");
 }
 
 NTWPR_WGFile* NTWPR_WGfopen(const char path[static 1])

@@ -1,3 +1,4 @@
 \form#0:$ ntw_node_num < 1000 $
 \form#1:$< 1000 $
 \form#2:$< 10000 $
+\form#3:$nodes > 10000$
