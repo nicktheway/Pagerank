@@ -19,27 +19,31 @@ int main(int argc, char* argv[argc+1])
     }
     int n = atoi(argv[3]);
     NTWPR_SU2WG(argv[1], argv[2], n);
-    NTWPR_WGFile* file = NTWPR_WGfopen(argv[2]);
+    NTWPR_WGFile* file = NTWPR_WGF_fopen(argv[2]);
 
     NTWPR_CRS* myCRS = NTWPR_load2crs(file);
     FILE* mat = fopen("mat.txt", "w");
-    NTWPR_CRSprint(mat, myCRS);
+    NTWPR_CRS_print(mat, myCRS);
     NTWPR_expsm(file, "full_mat.txt", 40);
 
+
+    // Product testing
     float *b = malloc(myCRS->node_num * sizeof(*b));
     for (int i = 0; i < myCRS->node_num; i++){
-        b[i] = 2;
+        b[i] = i;
     }
     float *c = calloc(myCRS->node_num, sizeof(*c));
-    NTWPR_CRSproduct_non_alloc(myCRS, b, c);
+    NTWPR_CRS_product_non_alloc(myCRS, b, c);
     fprintf(mat, "\n---START PRODUCT RESULT---\n");
     for (int i = 0; i < myCRS->node_num; i++){
         fprintf(mat, "%.2f\t", c[i]);
     }
     fprintf(mat, "\n---END PRODUCT RESULT---\n");
-    NTWPR_CRSprintfm(mat, myCRS);
-    NTWPR_WGfclose(file);
-    NTWPR_CRSfree(myCRS);
+
+    NTWPR_CRS_unified_rnorm(myCRS);
+    NTWPR_CRS_printfm(mat, myCRS);
+    NTWPR_WGF_fclose(file);
+    NTWPR_CRS_free(myCRS);
     fclose(mat);
     return 0;
 }

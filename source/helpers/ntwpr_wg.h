@@ -82,7 +82,7 @@ typedef struct NTWPR_WGFile
  * @param path The path of the file.
  * @return NTWPR_WGFile* The struct containing the file created.
  */
-NTWPR_WGFile* NTWPR_WGfopen(const char path[static 1]);
+NTWPR_WGFile* NTWPR_WGF_fopen(const char path[static 1]);
 
 /**
  * @brief Closes the NTWPR_WGFile stream and frees memory.
@@ -90,7 +90,7 @@ NTWPR_WGFile* NTWPR_WGfopen(const char path[static 1]);
  * @param wgfile The file to be closed.
  * @return int Returns 0 if succussful. On failure EOF is returned.
  */
-int NTWPR_WGfclose(NTWPR_WGFile* wgfile);
+int NTWPR_WGF_fclose(NTWPR_WGFile* wgfile);
 
 /**
  * @brief Reset the @a NTWPR_WGF struct to read the edges again.
@@ -99,17 +99,53 @@ int NTWPR_WGfclose(NTWPR_WGFile* wgfile);
  * @return true If successful.
  * @return false If an error occured.
  */
-bool NTWPR_WGrewind(NTWPR_WGFile* const NTWPR_WGF);
+bool NTWPR_WGF_rewind(NTWPR_WGFile* const NTWPR_WGF);
 
 /**
  * @brief Calculates the product of the CRS table @a ntwpr_crs
  *          with the @a vector and stores the result in @a product. 
  * 
- * @param ntwpr_crs 
- * @param vector 
- * @param product
+ * @param ntwpr_crs The CRS representation of the matrix @f$A@f$.
+ * @param vector The vector @f$v@f$.
+ * @param product The product @f$A*v@f$.
  */
-extern void NTWPR_CRSproduct_non_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1], float product[static ntwpr_crs->node_num]);
+extern void NTWPR_CRS_product_non_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1], float product[static ntwpr_crs->node_num]);
+
+/**
+ * @brief Calculates the product of the CRS table @a ntwpr_crs 
+ *          with the @a vector and return the result.
+ * 
+ * The memory of the result should be freed afterwards.
+ * 
+ * @param ntwpr_crs The CRS representation of the matrix @f$A@f$.
+ * @param vector The vector @f$v@f$.
+ * @return float* The product vector @f$A*v@f$.
+ */
+float* NTWPR_CRS_product_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1]);
+
+/**
+ * @brief Normalizes the lines of the CRS table.
+ * 
+ * @param ntwpr_crs The CRS representation of the table.
+ */
+void NTWPR_CRS_rnorm(NTWPR_CRS ntwpr_crs[static 1]);
+
+/**
+ * @brief Normalizes the lines of the CRS table giving all the
+ *          edges in each row, the same value.
+ * 
+ * @param ntwpr_crs The CRS representation of the table.
+ */
+void NTWPR_CRS_unified_rnorm(NTWPR_CRS ntwpr_crs[static 1]);
+
+/**
+ * @brief Multiplies the values of the sparse table in the CRS form 
+ *          @a ntwpr_crs with the constant value @a ntw_const.
+ * 
+ * @param ntwpr_crs The NTWPR_CRS representation of the sparse table.
+ * @param ntw_const The constant multiplicator.
+ */
+void NTWPR_CRS_const_mult(NTWPR_CRS ntwpr_crs[static 1], const float ntw_const);
 
 /**
  * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.
@@ -121,7 +157,7 @@ extern void NTWPR_CRSproduct_non_alloc(const NTWPR_CRS ntwpr_crs[static 1], cons
  * @param col The column of the returned value.
  * @return float The value at [@a row, @a col]
  */
-float NTWPR_CRSvalue_at(const NTWPR_CRS ntwpr_crs[static 1], uint32_t row, uint32_t col);
+float NTWPR_CRS_value_at(const NTWPR_CRS ntwpr_crs[static 1], uint32_t row, uint32_t col);
 
 
 /**
@@ -139,7 +175,7 @@ NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict ntwpr_wgfp);
  * 
  * @param ntwpr_crs 
  */
-void NTWPR_CRSfree(NTWPR_CRS* ntwpr_crs);
+void NTWPR_CRS_free(NTWPR_CRS* ntwpr_crs);
 
 /**
  * @brief A function for visualizing a CRS.
@@ -149,7 +185,7 @@ void NTWPR_CRSfree(NTWPR_CRS* ntwpr_crs);
  * @param stream Where will the output go.
  * @param ntwpr_crs The CRS to visualize.
  */
-void NTWPR_CRSprint(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
+void NTWPR_CRS_print(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
 
 /**
  * @brief A function for printing the full matrix of the CRS.
@@ -159,7 +195,7 @@ void NTWPR_CRSprint(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
  * @param stream Where will the output go.
  * @param ntwpr_crs The CRS of the matrix that will be visualized.
  */
-void NTWPR_CRSprintfm(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
+void NTWPR_CRS_printfm(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
 
 /**
  * @brief Converts web graph files from the format Stanford U. (SU) used to

@@ -36,23 +36,31 @@ typedef struct \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$ \mbox{\hyperlink{ntwpr__wg_8h_a1efac1faf293b2afc93b21964ac0596d}{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen}} (const char path\mbox{[}static 1\mbox{]})
+\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$ \mbox{\hyperlink{ntwpr__wg_8h_ae73521afd221df1b6f0af044c35e2f96}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen}} (const char path\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em Creates a new W\+G\+File at {\itshape path}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$wgfile)
+int \mbox{\hyperlink{ntwpr__wg_8h_adfdab5767853d9fda8f38bca9460ea1f}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$wgfile)
 \begin{DoxyCompactList}\small\item\em Closes the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} stream and frees memory. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ntwpr__wg_8h_ab867010ffa71a24ade290edf6a10f448}{N\+T\+W\+P\+R\+\_\+\+W\+Grewind}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$const N\+T\+W\+P\+R\+\_\+\+W\+GF)
+bool \mbox{\hyperlink{ntwpr__wg_8h_a51091cac0d9bd8aa7d3a010640cecbdc}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$const N\+T\+W\+P\+R\+\_\+\+W\+GF)
 \begin{DoxyCompactList}\small\item\em Reset the {\itshape N\+T\+W\+P\+R\+\_\+\+W\+GF} struct to read the edges again. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ntwpr__wg_8h_a25aab53b352ef4605da95b6afb9d524d}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]}, const float vector\mbox{[}static 1\mbox{]}, float product\mbox{[}static ntwpr\+\_\+crs-\/$>$node\+\_\+num\mbox{]})
+void \mbox{\hyperlink{ntwpr__wg_8h_af8a9a1cf4b0bf0b90903cd651fd28a5b}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+non\+\_\+alloc}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]}, const float vector\mbox{[}static 1\mbox{]}, float product\mbox{[}static ntwpr\+\_\+crs-\/$>$node\+\_\+num\mbox{]})
 \begin{DoxyCompactList}\small\item\em Calculates the product of the C\+RS table {\itshape ntwpr\+\_\+crs} with the {\itshape vector} and stores the result in {\itshape product}. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{ntwpr__wg_8h_a4fcd3463506972887db8fce39b11f57a}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t row, uint32\+\_\+t col)
+float $\ast$ \mbox{\hyperlink{ntwpr__wg_8h_a6552051ad5d686792553fb8ab20859c6}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+alloc}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]}, const float vector\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calculates the product of the C\+RS table {\itshape ntwpr\+\_\+crs} with the {\itshape vector} and return the result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_a040768a1280c3afb1cb42ef4d28e390c}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+rnorm}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Normalizes the lines of the C\+RS table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_a027d21e0b67ccdfb7bf2573e4a4ab1c6}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+unified\+\_\+rnorm}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Normalizes the lines of the C\+RS table giving all the edges in each row, the same value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_a5156982cb804a8b5a42e2d8150b474dd}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+const\+\_\+mult}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]}, const float ntw\+\_\+const)
+\begin{DoxyCompactList}\small\item\em Multiplies the values of the sparse table in the C\+RS form {\itshape ntwpr\+\_\+crs} with the constant value {\itshape ntw\+\_\+const}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{ntwpr__wg_8h_aa237433885a2b3dcc3592ac907edb243}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+value\+\_\+at}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t row, uint32\+\_\+t col)
 \begin{DoxyCompactList}\small\item\em Returns the value at ({\itshape row}, {\itshape col}) of the matrix of the C\+RS. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$ \mbox{\hyperlink{ntwpr__wg_8h_a8880314ababb89902382ab5282ef3966}{N\+T\+W\+P\+R\+\_\+load2crs}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$restrict ntwpr\+\_\+wgfp)
 \begin{DoxyCompactList}\small\item\em Loads a web graph in memory using the C\+RS data structure. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ntwpr__wg_8h_ac23924bafd4289f10a3ebfd8776b6c6e}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$ntwpr\+\_\+crs)
+void \mbox{\hyperlink{ntwpr__wg_8h_a7bfa4977abde8ca916d0f38373874e77}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+free}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$ntwpr\+\_\+crs)
 \begin{DoxyCompactList}\small\item\em Unloads a \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} from memory (frees allocated memory). \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ntwpr__wg_8h_a9bc95dfcf738692af97101b9e234becb}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]})
+void \mbox{\hyperlink{ntwpr__wg_8h_a06945e591d46a4e6f363260abd1b1bb6}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+print}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em A function for visualizing a C\+RS. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ntwpr__wg_8h_ac641591cac51ee90cf0c127531897e7e}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]})
+void \mbox{\hyperlink{ntwpr__wg_8h_a7e494b2f4f57c1a839124611a7d20f4a}{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+printfm}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} ntwpr\+\_\+crs\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em A function for printing the full matrix of the C\+RS. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntwpr__wg_8h_af14fc62b79305e1d3cf64de738d66055}{N\+T\+W\+P\+R\+\_\+\+S\+U2\+WG}} (const char S\+U\+\_\+\+W\+G\+D\+\_\+path\mbox{[}static 1\mbox{]}, const char exp\+\_\+path\mbox{[}static 1\mbox{]}, uint32\+\_\+t N\+T\+W\+P\+R\+\_\+node\+\_\+num)
 \begin{DoxyCompactList}\small\item\em Converts web graph files from the format Stanford U. (SU) used to the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}\textquotesingle{} edge\+\_\+data file format. \end{DoxyCompactList}\item 
@@ -142,11 +150,28 @@ A struct containing a web-\/graph file and the graphs info.
 Used as a \char`\"{}middle\char`\"{} save format. This A\+PI uses this type to compute the pagerank of the nodes. Any dataset\textquotesingle{}s pagerank vector can be computed by extracting such struct from the dataset. 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{ntwpr__wg_8h_ac23924bafd4289f10a3ebfd8776b6c6e}\label{ntwpr__wg_8h_ac23924bafd4289f10a3ebfd8776b6c6e}} 
-\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree}}
-\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree()}{NTWPR\_CRSfree()}}
-{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$}]{ntwpr\+\_\+crs }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ntwpr__wg_8h_a5156982cb804a8b5a42e2d8150b474dd}\label{ntwpr__wg_8h_a5156982cb804a8b5a42e2d8150b474dd}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+const\+\_\+mult@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+const\+\_\+mult}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+const\+\_\+mult@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+const\+\_\+mult}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+const\+\_\+mult()}{NTWPR\_CRS\_const\_mult()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+const\+\_\+mult (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]},  }\item[{const float}]{ntw\+\_\+const }\end{DoxyParamCaption})}
+
+
+
+Multiplies the values of the sparse table in the C\+RS form {\itshape ntwpr\+\_\+crs} with the constant value {\itshape ntw\+\_\+const}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntwpr\+\_\+crs} & The \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} representation of the sparse table. \\
+\hline
+{\em ntw\+\_\+const} & The constant multiplicator. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntwpr__wg_8h_a7bfa4977abde8ca916d0f38373874e77}\label{ntwpr__wg_8h_a7bfa4977abde8ca916d0f38373874e77}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+free@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+free}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+free@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+free}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+free()}{NTWPR\_CRS\_free()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$}]{ntwpr\+\_\+crs }\end{DoxyParamCaption})}
 
 
 
@@ -157,11 +182,11 @@ Unloads a \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} from m
 {\em ntwpr\+\_\+crs} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ntwpr__wg_8h_a9bc95dfcf738692af97101b9e234becb}\label{ntwpr__wg_8h_a9bc95dfcf738692af97101b9e234becb}} 
-\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint}}
-\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint()}{NTWPR\_CRSprint()}}
-{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprint (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ntwpr__wg_8h_a06945e591d46a4e6f363260abd1b1bb6}\label{ntwpr__wg_8h_a06945e591d46a4e6f363260abd1b1bb6}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+print@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+print}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+print@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+print}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+print()}{NTWPR\_CRS\_print()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -176,11 +201,11 @@ Useful for debugging.
 {\em ntwpr\+\_\+crs} & The C\+RS to visualize. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ntwpr__wg_8h_ac641591cac51ee90cf0c127531897e7e}\label{ntwpr__wg_8h_ac641591cac51ee90cf0c127531897e7e}} 
-\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm}}
-\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm()}{NTWPR\_CRSprintfm()}}
-{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+Sprintfm (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ntwpr__wg_8h_a7e494b2f4f57c1a839124611a7d20f4a}\label{ntwpr__wg_8h_a7e494b2f4f57c1a839124611a7d20f4a}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+printfm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+printfm}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+printfm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+printfm}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+printfm()}{NTWPR\_CRS\_printfm()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+printfm (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -195,11 +220,33 @@ Useful for debugging. Avoid using it for $nodes > 10000$.
 {\em ntwpr\+\_\+crs} & The C\+RS of the matrix that will be visualized. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ntwpr__wg_8h_a25aab53b352ef4605da95b6afb9d524d}\label{ntwpr__wg_8h_a25aab53b352ef4605da95b6afb9d524d}} 
-\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc}}
-\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc()}{NTWPR\_CRSproduct\_non\_alloc()}}
-{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+Sproduct\+\_\+non\+\_\+alloc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]},  }\item[{const float}]{vector\mbox{[}static 1\mbox{]},  }\item[{float}]{product\mbox{[}static ntwpr\+\_\+crs-\/$>$node\+\_\+num\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{ntwpr__wg_8h_a6552051ad5d686792553fb8ab20859c6}\label{ntwpr__wg_8h_a6552051ad5d686792553fb8ab20859c6}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+alloc@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+alloc}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+alloc@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+alloc}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+alloc()}{NTWPR\_CRS\_product\_alloc()}}
+{\footnotesize\ttfamily float$\ast$ N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+alloc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]},  }\item[{const float}]{vector\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Calculates the product of the C\+RS table {\itshape ntwpr\+\_\+crs} with the {\itshape vector} and return the result. 
+
+The memory of the result should be freed afterwards.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntwpr\+\_\+crs} & The C\+RS representation of the matrix $A$. \\
+\hline
+{\em vector} & The vector $v$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float$\ast$ The product vector $A*v$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntwpr__wg_8h_af8a9a1cf4b0bf0b90903cd651fd28a5b}\label{ntwpr__wg_8h_af8a9a1cf4b0bf0b90903cd651fd28a5b}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+non\+\_\+alloc@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+non\+\_\+alloc}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+non\+\_\+alloc@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+non\+\_\+alloc}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+non\+\_\+alloc()}{NTWPR\_CRS\_product\_non\_alloc()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+product\+\_\+non\+\_\+alloc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]},  }\item[{const float}]{vector\mbox{[}static 1\mbox{]},  }\item[{float}]{product\mbox{[}static ntwpr\+\_\+crs-\/$>$node\+\_\+num\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -207,18 +254,48 @@ Calculates the product of the C\+RS table {\itshape ntwpr\+\_\+crs} with the {\i
 
 
 \begin{DoxyParams}{Parameters}
-{\em ntwpr\+\_\+crs} & \\
+{\em ntwpr\+\_\+crs} & The C\+RS representation of the matrix $A$. \\
 \hline
-{\em vector} & \\
+{\em vector} & The vector $v$. \\
 \hline
-{\em product} & \\
+{\em product} & The product $A*v$. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ntwpr__wg_8h_a4fcd3463506972887db8fce39b11f57a}\label{ntwpr__wg_8h_a4fcd3463506972887db8fce39b11f57a}} 
-\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at}}
-\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at@{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at()}{NTWPR\_CRSvalue\_at()}}
-{\footnotesize\ttfamily float N\+T\+W\+P\+R\+\_\+\+C\+R\+Svalue\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t}]{row,  }\item[{uint32\+\_\+t}]{col }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ntwpr__wg_8h_a040768a1280c3afb1cb42ef4d28e390c}\label{ntwpr__wg_8h_a040768a1280c3afb1cb42ef4d28e390c}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+rnorm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+rnorm}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+rnorm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+rnorm}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+rnorm()}{NTWPR\_CRS\_rnorm()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+rnorm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Normalizes the lines of the C\+RS table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntwpr\+\_\+crs} & The C\+RS representation of the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntwpr__wg_8h_a027d21e0b67ccdfb7bf2573e4a4ab1c6}\label{ntwpr__wg_8h_a027d21e0b67ccdfb7bf2573e4a4ab1c6}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+unified\+\_\+rnorm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+unified\+\_\+rnorm}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+unified\+\_\+rnorm@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+unified\+\_\+rnorm}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+unified\+\_\+rnorm()}{NTWPR\_CRS\_unified\_rnorm()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+unified\+\_\+rnorm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Normalizes the lines of the C\+RS table giving all the edges in each row, the same value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntwpr\+\_\+crs} & The C\+RS representation of the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntwpr__wg_8h_aa237433885a2b3dcc3592ac907edb243}\label{ntwpr__wg_8h_aa237433885a2b3dcc3592ac907edb243}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+value\+\_\+at@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+value\+\_\+at}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+value\+\_\+at@{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+value\+\_\+at}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+value\+\_\+at()}{NTWPR\_CRS\_value\_at()}}
+{\footnotesize\ttfamily float N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+\_\+value\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{ntwpr\+\_\+crs\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t}]{row,  }\item[{uint32\+\_\+t}]{col }\end{DoxyParamCaption})}
 
 
 
@@ -290,7 +367,7 @@ Extra\+: Can be loaded into a sparse M\+A\+T\+L\+AB matrix using\+: $>$ load -\/
 
 Loads a web graph in memory using the C\+RS data structure. 
 
-The C\+RS structure\textquotesingle{}s memory should be freed with \mbox{\hyperlink{ntwpr__wg_8h_ac23924bafd4289f10a3ebfd8776b6c6e}{N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree()}} later.
+The C\+RS structure\textquotesingle{}s memory should be freed with N\+T\+W\+P\+R\+\_\+\+C\+R\+Sfree() later.
 
 
 \begin{DoxyParams}{Parameters}
@@ -321,11 +398,11 @@ Extra\+: The output can be loaded into M\+A\+T\+L\+AB with\+: fread(file\+\_\+id
 {\em N\+T\+W\+P\+R\+\_\+node\+\_\+num} & The number of nodes that will be in the graph matrix. (Enter 0 to get all the nodes of the file.) \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}\label{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}} 
-\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+Gfclose@{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose}}
-\index{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose@{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose()}{NTWPR\_WGfclose()}}
-{\footnotesize\ttfamily int N\+T\+W\+P\+R\+\_\+\+W\+Gfclose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$}]{wgfile }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ntwpr__wg_8h_adfdab5767853d9fda8f38bca9460ea1f}\label{ntwpr__wg_8h_adfdab5767853d9fda8f38bca9460ea1f}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose()}{NTWPR\_WGF\_fclose()}}
+{\footnotesize\ttfamily int N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$}]{wgfile }\end{DoxyParamCaption})}
 
 
 
@@ -339,17 +416,17 @@ Closes the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File
 \begin{DoxyReturn}{Returns}
 int Returns 0 if succussful. On failure E\+OF is returned. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ntwpr__wg_8h_a1efac1faf293b2afc93b21964ac0596d}\label{ntwpr__wg_8h_a1efac1faf293b2afc93b21964ac0596d}} 
-\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+Gfopen@{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen}}
-\index{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen@{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen()}{NTWPR\_WGfopen()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}$\ast$ N\+T\+W\+P\+R\+\_\+\+W\+Gfopen (\begin{DoxyParamCaption}\item[{const char}]{path\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ntwpr__wg_8h_ae73521afd221df1b6f0af044c35e2f96}\label{ntwpr__wg_8h_ae73521afd221df1b6f0af044c35e2f96}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen()}{NTWPR\_WGF\_fopen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}$\ast$ N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen (\begin{DoxyParamCaption}\item[{const char}]{path\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
 
 
 
 Creates a new W\+G\+File at {\itshape path}. 
 
-The W\+G\+File should be then closed with \mbox{\hyperlink{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose()}}
+The W\+G\+File should be then closed with N\+T\+W\+P\+R\+\_\+\+W\+Gfclose()
 
 
 \begin{DoxyParams}{Parameters}
@@ -359,11 +436,11 @@ The W\+G\+File should be then closed with \mbox{\hyperlink{ntwpr__wg_8h_a19cab0d
 \begin{DoxyReturn}{Returns}
 N\+T\+W\+P\+R\+\_\+\+W\+G\+File$\ast$ The struct containing the file created. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ntwpr__wg_8h_ab867010ffa71a24ade290edf6a10f448}\label{ntwpr__wg_8h_ab867010ffa71a24ade290edf6a10f448}} 
-\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+Grewind@{N\+T\+W\+P\+R\+\_\+\+W\+Grewind}}
-\index{N\+T\+W\+P\+R\+\_\+\+W\+Grewind@{N\+T\+W\+P\+R\+\_\+\+W\+Grewind}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+Grewind()}{NTWPR\_WGrewind()}}
-{\footnotesize\ttfamily bool N\+T\+W\+P\+R\+\_\+\+W\+Grewind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$const}]{N\+T\+W\+P\+R\+\_\+\+W\+GF }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ntwpr__wg_8h_a51091cac0d9bd8aa7d3a010640cecbdc}\label{ntwpr__wg_8h_a51091cac0d9bd8aa7d3a010640cecbdc}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind()}{NTWPR\_WGF\_rewind()}}
+{\footnotesize\ttfamily bool N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$const}]{N\+T\+W\+P\+R\+\_\+\+W\+GF }\end{DoxyParamCaption})}
 
 
 

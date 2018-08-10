@@ -2,3 +2,6 @@
 \form#1:$< 1000 $
 \form#2:$< 10000 $
 \form#3:$nodes > 10000$
+\form#4:$A$
+\form#5:$v$
+\form#6:$A*v$

@@ -7,7 +7,7 @@
  */
 #include "ntwpr_wg.h"
 
-float NTWPR_CRSvalue_at(const NTWPR_CRS ntwpr_crs[static 1], uint32_t row, uint32_t col)
+float NTWPR_CRS_value_at(const NTWPR_CRS ntwpr_crs[static 1], uint32_t row, uint32_t col)
 {
     for (int i = ntwpr_crs->row_ptr[row]; i < ntwpr_crs->row_ptr[row+1]; i++)
     {
@@ -19,7 +19,55 @@ float NTWPR_CRSvalue_at(const NTWPR_CRS ntwpr_crs[static 1], uint32_t row, uint3
     return 0;
 }
 
-inline void NTWPR_CRSproduct_non_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1], float product[static ntwpr_crs->node_num])
+float* NTWPR_CRS_product_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1])
+{
+    float* product = calloc(ntwpr_crs->node_num, sizeof(*product));
+    if (!product)
+    {
+        fprintf(stderr, "%s: Error at memory allocation.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+    NTWPR_CRS_product_non_alloc(ntwpr_crs, vector, product);
+
+    return product;
+}
+
+void NTWPR_CRS_rnorm(NTWPR_CRS ntwpr_crs[static 1])
+{
+    for (int i = 0; i < ntwpr_crs->node_num; i++)
+    {
+        uint32_t diff_value = ntwpr_crs->row_ptr[i+1] - ntwpr_crs->row_ptr[i];
+        for (int j = ntwpr_crs->row_ptr[i]; j < ntwpr_crs->row_ptr[i+1]; j++)
+        {
+            ntwpr_crs->val[j] /= diff_value;
+        }
+    }
+}
+
+void NTWPR_CRS_unified_rnorm(NTWPR_CRS ntwpr_crs[static 1])
+{
+    for (int i = 0; i < ntwpr_crs->node_num; i++)
+    {
+        uint32_t diff_value = ntwpr_crs->row_ptr[i+1] - ntwpr_crs->row_ptr[i];
+        if (diff_value == 0 || diff_value == 1) continue;
+        
+        register float u_value = 1.0f / diff_value;
+        for (int j = ntwpr_crs->row_ptr[i]; j < ntwpr_crs->row_ptr[i+1]; j++)
+        {
+            ntwpr_crs->val[j] = u_value;
+        }
+    }
+}
+
+void NTWPR_CRS_const_mult(NTWPR_CRS ntwpr_crs[static 1], const float ntw_const)
+{
+    for (int i = 0; i < ntwpr_crs->edge_num; i++)
+    {
+        ntwpr_crs->val[i] *= ntw_const;
+    }
+}
+
+inline void NTWPR_CRS_product_non_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1], float product[static ntwpr_crs->node_num])
 {
     for (uint32_t ntw_i = 0; ntw_i < ntwpr_crs->node_num; ntw_i++)
     {
@@ -71,11 +119,11 @@ NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict ntwpr_wgfp)
     }
     new_crs->row_ptr[new_crs->node_num] = new_crs->edge_num;
 
-    NTWPR_WGrewind(ntwpr_wgfp);
+    NTWPR_WGF_rewind(ntwpr_wgfp);
     return new_crs;
 }
 
-void NTWPR_CRSfree(NTWPR_CRS* ntwpr_crs)
+void NTWPR_CRS_free(NTWPR_CRS* ntwpr_crs)
 {
     free(ntwpr_crs->val);
     free(ntwpr_crs->col_ind);
@@ -84,7 +132,7 @@ void NTWPR_CRSfree(NTWPR_CRS* ntwpr_crs)
     free(ntwpr_crs);
 }
 
-void NTWPR_CRSprint(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1])
+void NTWPR_CRS_print(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1])
 {
     fprintf(stream, "Nodes: %u, Edges: %u\nColumn indeces:\n", ntwpr_crs->node_num, ntwpr_crs->edge_num);
     for (int i = 0; i < ntwpr_crs->edge_num; i++)
@@ -104,7 +152,7 @@ void NTWPR_CRSprint(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1])
     fprintf(stream, "\n");
 }
 
-void NTWPR_CRSprintfm(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1])
+void NTWPR_CRS_printfm(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1])
 {
 	// Parse rows
 	for (int i = 0; i < ntwpr_crs->node_num; i++)
@@ -140,7 +188,7 @@ void NTWPR_CRSprintfm(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]
 	fprintf(stream, "\n");
 }
 
-NTWPR_WGFile* NTWPR_WGfopen(const char path[static 1])
+NTWPR_WGFile* NTWPR_WGF_fopen(const char path[static 1])
 {
     NTWPR_WGFile* wgfile_p = malloc(sizeof(NTWPR_WGFile));
     FILE* edge_data_file = fopen(path, "rb");
@@ -162,7 +210,7 @@ NTWPR_WGFile* NTWPR_WGfopen(const char path[static 1])
     return wgfile_p;
 }
 
-int NTWPR_WGfclose(NTWPR_WGFile* wgfile)
+int NTWPR_WGF_fclose(NTWPR_WGFile* wgfile)
 {
     int return_val;
     if ((return_val = fclose(wgfile->edge_data)))
@@ -175,7 +223,7 @@ int NTWPR_WGfclose(NTWPR_WGFile* wgfile)
     return 0;
 }
 
-bool NTWPR_WGrewind(NTWPR_WGFile* const NTWPR_WGF)
+bool NTWPR_WGF_rewind(NTWPR_WGFile* const NTWPR_WGF)
 {
     return !fseek(NTWPR_WGF->edge_data, 0, SEEK_SET);
 }
@@ -255,7 +303,7 @@ void NTWPR_expfm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
         col_counter++;
     }
 
-    NTWPR_WGrewind(wgfp);
+    NTWPR_WGF_rewind(wgfp);
     fclose(NTWPR_out_fp);
 }
 
@@ -289,7 +337,7 @@ void NTWPR_expsm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
         }
     }
 
-    NTWPR_WGrewind(wgfp);
+    NTWPR_WGF_rewind(wgfp);
     fclose(NTWPR_out_fp);
 }
 

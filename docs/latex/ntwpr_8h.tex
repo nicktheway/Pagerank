@@ -1,0 +1,68 @@
+\hypertarget{ntwpr_8h}{}\section{/home/ecat/nikos/parallel/source/helpers/ntwpr.h File Reference}
+\label{ntwpr_8h}\index{/home/ecat/nikos/parallel/source/helpers/ntwpr.\+h@{/home/ecat/nikos/parallel/source/helpers/ntwpr.\+h}}
+
+
+Methods for calculating the pagerank of web graphs.  
+
+
+{\ttfamily \#include \char`\"{}ntwpr\+\_\+wg.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ntwpr_8h_a4f406a3d192d960a30bf52a6bec8bee0}{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}} (const uint32\+\_\+t node\+Num, float vector\mbox{[}static node\+Num\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initializes the pagerank vector uniformely. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{ntwpr_8h_a083e4f0e1305131937259f25312948e7}{N\+T\+W\+P\+R\+\_\+pagerank}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} web\+Graph\mbox{[}static 1\mbox{]}, float d, float e)
+\begin{DoxyCompactList}\small\item\em Calculates the pagerank of the nodes of a web graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Methods for calculating the pagerank of web graphs. 
+
+\begin{DoxyAuthor}{Author}
+Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth.\+gr} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11-\/08-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ntwpr_8h_a083e4f0e1305131937259f25312948e7}\label{ntwpr_8h_a083e4f0e1305131937259f25312948e7}} 
+\index{ntwpr.\+h@{ntwpr.\+h}!N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}}
+\index{N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}!ntwpr.\+h@{ntwpr.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+pagerank()}{NTWPR\_pagerank()}}
+{\footnotesize\ttfamily float$\ast$ N\+T\+W\+P\+R\+\_\+pagerank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{web\+Graph\mbox{[}static 1\mbox{]},  }\item[{float}]{d,  }\item[{float}]{e }\end{DoxyParamCaption})}
+
+
+
+Calculates the pagerank of the nodes of a web graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em web\+Graph} & The web graf in \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} representation. \\
+\hline
+{\em d} & The teleportation coefficient. \\
+\hline
+{\em e} & The converge tolerance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float$\ast$ The calculated pagerank vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntwpr_8h_a4f406a3d192d960a30bf52a6bec8bee0}\label{ntwpr_8h_a4f406a3d192d960a30bf52a6bec8bee0}} 
+\index{ntwpr.\+h@{ntwpr.\+h}!N\+T\+W\+P\+R\+\_\+pr\+\_\+init@{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}}
+\index{N\+T\+W\+P\+R\+\_\+pr\+\_\+init@{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}!ntwpr.\+h@{ntwpr.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+pr\+\_\+init()}{NTWPR\_pr\_init()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+pr\+\_\+init (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{node\+Num,  }\item[{float}]{vector\mbox{[}static node\+Num\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the pagerank vector uniformely. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Num} & The number of nodes (size of the vector). \\
+\hline
+{\em vector} & The vector that will be initialized. \\
+\hline
+\end{DoxyParams}
