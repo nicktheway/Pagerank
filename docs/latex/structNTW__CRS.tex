@@ -1,0 +1,51 @@
+\hypertarget{structNTW__CRS}{}\section{N\+T\+W\+\_\+\+C\+RS Struct Reference}
+\label{structNTW__CRS}\index{N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}}
+
+
+A Compressed Row Storage struct.  
+
+
+
+
+{\ttfamily \#include $<$wgimp.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \mbox{\hyperlink{structNTW__CRS_abe01efe3d4a64ef6ed470021481a03ae}{val}}
+\item 
+size\+\_\+t $\ast$ \mbox{\hyperlink{structNTW__CRS_ac31b5a5fc330dd97ce536dd8a5f9182d}{col\+\_\+ind}}
+\item 
+size\+\_\+t $\ast$ \mbox{\hyperlink{structNTW__CRS_af5999845d1d6173e930a1c502042d239}{row\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Compressed Row Storage struct. 
+
+Used to save web graph tables in R\+AM. See \href{http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000}\texttt{ C\+RS} 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structNTW__CRS_ac31b5a5fc330dd97ce536dd8a5f9182d}\label{structNTW__CRS_ac31b5a5fc330dd97ce536dd8a5f9182d}} 
+\index{N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}!col\+\_\+ind@{col\+\_\+ind}}
+\index{col\+\_\+ind@{col\+\_\+ind}!N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}}
+\subsubsection{\texorpdfstring{col\+\_\+ind}{col\_ind}}
+{\footnotesize\ttfamily size\+\_\+t$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+::col\+\_\+ind}
+
+A vector containing the columns of the val\textquotesingle{}s values. \mbox{\Hypertarget{structNTW__CRS_af5999845d1d6173e930a1c502042d239}\label{structNTW__CRS_af5999845d1d6173e930a1c502042d239}} 
+\index{N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}!row\+\_\+ptr@{row\+\_\+ptr}}
+\index{row\+\_\+ptr@{row\+\_\+ptr}!N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}}
+\subsubsection{\texorpdfstring{row\+\_\+ptr}{row\_ptr}}
+{\footnotesize\ttfamily size\+\_\+t$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+::row\+\_\+ptr}
+
+A pointer to the val vector indicating the start of a matrix\textquotesingle{} row. \mbox{\Hypertarget{structNTW__CRS_abe01efe3d4a64ef6ed470021481a03ae}\label{structNTW__CRS_abe01efe3d4a64ef6ed470021481a03ae}} 
+\index{N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}!val@{val}}
+\index{val@{val}!N\+T\+W\+\_\+\+C\+RS@{N\+T\+W\+\_\+\+C\+RS}}
+\subsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily double$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+::val}
+
+The non zero values of the matrix. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ecat/nikos/parallel/source/helpers/\mbox{\hyperlink{wgimp_8h}{wgimp.\+h}}\end{DoxyCompactItemize}
