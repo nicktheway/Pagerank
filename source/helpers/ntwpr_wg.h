@@ -129,9 +129,23 @@ void NTWPR_SU2WG(const char SU_WGD_path[static 1], const char exp_path[static 1]
  * Should be used with caution and for relatively small @a NTWPR_node_num.
  * (NTWPR_node_num @f$< 10000 @f$)
  * 
- * @param NTWPR_WGF The input NTWPR_WGFile pointer.
+ * @param wgfp The input NTWPR_WGFile pointer.
  * @param exp_path The output file's path.
- * @param NTWPR_node_num The number of nodes that will be in the graph matrix.
+ * @param NTWPR_node_num The max number of nodes that will be in the graph matrix.
  */
-void NTWPR_expfm(NTWPR_WGFile* restrict NTWPR_WGF, const char exp_path[static 1], uint32_t NTWPR_node_num);
+void NTWPR_expfm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uint32_t NTWPR_node_num);
+
+/**
+ * @brief Exports the edges to a text file at @a exp_path.
+ * 
+ * Extra: Can be loaded into a sparse MATLAB matrix using:
+ *      > load -ASCII exported_file_path
+ *      > sparce(file_name(:,1)+1, file_name(:,2)+1, ...
+ *          ones(size(file_name, 1), 1), node_num, node_num)
+ * 
+ * @param wgfp The input NTWPR_WGFile pointer.
+ * @param exp_path The output file's path.
+ * @param NTWPR_node_num The max number of nodes that will be in the graph matrix.
+ */
+void NTWPR_expsm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uint32_t NTWPR_node_num);
 #endif

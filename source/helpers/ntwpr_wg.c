@@ -126,6 +126,39 @@ void NTWPR_expfm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
     fclose(NTWPR_out_fp);
 }
 
+void NTWPR_expsm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uint32_t NTWPR_node_num)
+{
+    FILE* NTWPR_out_fp = fopen(exp_path, "w");
+
+    // Input/Output file checking
+    NTWPR_invalid_fp_exit(wgfp->edge_data);
+    NTWPR_invalid_fp_exit(NTWPR_out_fp);
+ 
+    uint32_t edge_nodes[2];
+    uint32_t i = 0;
+
+    while(i++ < wgfp->edge_num)
+    {
+        if (fread(edge_nodes, sizeof(edge_nodes[0]), 2, wgfp->edge_data) != 2)
+        {
+            fprintf(stderr, "Error at reading wgfp edge data.\n");
+            exit(EXIT_FAILURE);
+        }
+        
+        if (edge_nodes[0] >= NTWPR_node_num) break;
+        if (edge_nodes[1] >= NTWPR_node_num) continue;
+        
+        if (fprintf(NTWPR_out_fp, "%u\t%u\n", edge_nodes[0], edge_nodes[1]) < 0)
+        {
+            fprintf(stderr, "Error while writing the sparse matrix at the output file\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    NTWPR_WGFile_Reset(wgfp);
+    fclose(NTWPR_out_fp);
+}
+
 void NTWPR_SU2WG(const char SU_WGD_path[static 1], const char exp_path[static 1], uint32_t NTWPR_node_num)
 {
     FILE* NTWPR_SU_fp = fopen(SU_WGD_path, "r");
