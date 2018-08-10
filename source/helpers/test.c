@@ -26,5 +26,7 @@ int main(int argc, char* argv[argc+1])
     NTWPR_CRSprint(mat, myCRS);
     NTWPR_expsm(file, "full_mat.txt", 40);
     NTWPR_WGfclose(file);
+    NTWPR_CRSfree(myCRS);
+    fclose(mat);
     return 0;
 }
