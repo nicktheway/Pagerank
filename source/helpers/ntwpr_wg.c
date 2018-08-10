@@ -1,7 +1,7 @@
 /**
- * @brief File containing the implementations of wgimp.h
+ * @brief File containing the implementations of ntwpr_wg.h
  * 
- * @file wgimp.c
+ * @file ntwpr_wg.c
  * @author Katomeris Nikolaos, 8551, ngkatomer@auth.gr
  * @date 09-08-2018
  */

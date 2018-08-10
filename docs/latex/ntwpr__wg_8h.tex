@@ -1,0 +1,250 @@
+\hypertarget{ntwpr__wg_8h}{}\section{/home/ecat/nikos/parallel/source/helpers/ntwpr\+\_\+wg.h File Reference}
+\label{ntwpr__wg_8h}\index{/home/ecat/nikos/parallel/source/helpers/ntwpr\+\_\+wg.\+h@{/home/ecat/nikos/parallel/source/helpers/ntwpr\+\_\+wg.\+h}}
+
+
+Web-\/Graph import/export functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+\begin{DoxyCompactList}\small\item\em A Compressed Row Storage struct. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}
+\begin{DoxyCompactList}\small\item\em A struct containing a web-\/graph file and the graphs info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ntwpr__wg_8h_afff4e8167c3a8a36b98805ff3ed41854}\label{ntwpr__wg_8h_afff4e8167c3a8a36b98805ff3ed41854}} 
+\#define \mbox{\hyperlink{ntwpr__wg_8h_afff4e8167c3a8a36b98805ff3ed41854}{N\+T\+W\+P\+R\+\_\+\+W\+G\+\_\+H}}~1
+\begin{DoxyCompactList}\small\item\em Macro used to not redifine header definitions when this file is included to other sources. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ntwpr__wg_8h_a3b180f0333f2cbf897a974114e77c249}{D\+F\+\_\+\+S\+U\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+NT}}~\textquotesingle{}\#\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em The character used to indicate comment lines in the Stanford\textquotesingle{}s (SU) data files. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ntwpr__wg_8h_aaa2a19790d76b937d36911757ab9a416}{N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit}}(fp)
+\begin{DoxyCompactList}\small\item\em Checks for null file pointers returning debug message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} \mbox{\hyperlink{ntwpr__wg_8h_aaa00d0216c511bdc730bd723577fba78}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+\begin{DoxyCompactList}\small\item\em A Compressed Row Storage struct. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} \mbox{\hyperlink{ntwpr__wg_8h_a991a879882127f21fb6693371ffb5dc6}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}
+\begin{DoxyCompactList}\small\item\em A struct containing a web-\/graph file and the graphs info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$ \mbox{\hyperlink{ntwpr__wg_8h_a1efac1faf293b2afc93b21964ac0596d}{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen}} (const char path\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates a new W\+G\+File at {\itshape path}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$wgfile)
+\begin{DoxyCompactList}\small\item\em Closes the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} stream and frees memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntwpr__wg_8h_a88c82f1695c30ae7aab73d48af2de047}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+\_\+\+Reset}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$const N\+T\+W\+P\+R\+\_\+\+W\+GF)
+\begin{DoxyCompactList}\small\item\em Reset the {\itshape N\+T\+W\+P\+R\+\_\+\+W\+GF} struct to read the edges again. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} $\ast$ \mbox{\hyperlink{ntwpr__wg_8h_a70e7939134d3c2bc636606ff00f4e7cf}{N\+T\+W\+P\+R\+\_\+load2crs}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$restrict N\+T\+W\+P\+R\+\_\+in\+\_\+fp)
+\begin{DoxyCompactList}\small\item\em Loads a web graph in memory using the C\+RS data structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_af14fc62b79305e1d3cf64de738d66055}{N\+T\+W\+P\+R\+\_\+\+S\+U2\+WG}} (const char S\+U\+\_\+\+W\+G\+D\+\_\+path\mbox{[}static 1\mbox{]}, const char exp\+\_\+path\mbox{[}static 1\mbox{]}, uint32\+\_\+t N\+T\+W\+P\+R\+\_\+node\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Converts web graph files from the format Stanford U. (SU) used to the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}\textquotesingle{} edge\+\_\+data file format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_a22ea7abc80323bd36dc0e95ef58b5335}{N\+T\+W\+P\+R\+\_\+expfm}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$restrict N\+T\+W\+P\+R\+\_\+\+W\+GF, const char exp\+\_\+path\mbox{[}static 1\mbox{]}, uint32\+\_\+t N\+T\+W\+P\+R\+\_\+node\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Exports the full graph matrix of a \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} to the file at {\itshape exp\+\_\+path}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Web-\/Graph import/export functions. 
+
+Currently supported data\+:
+\begin{DoxyItemize}
+\item Files containing sorted edges of web graphs like the ones found at\+: \href{https://snap.stanford.edu/data/#web}\texttt{ Stanford Large Network Dataset Collection} ~\newline
+
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Katomeris Nikolaos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09-\/08-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ntwpr__wg_8h_a3b180f0333f2cbf897a974114e77c249}\label{ntwpr__wg_8h_a3b180f0333f2cbf897a974114e77c249}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!D\+F\+\_\+\+S\+U\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+NT@{D\+F\+\_\+\+S\+U\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+NT}}
+\index{D\+F\+\_\+\+S\+U\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+NT@{D\+F\+\_\+\+S\+U\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+NT}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{D\+F\+\_\+\+S\+U\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+NT}{DF\_SU\_LINE\_COMMENT}}
+{\footnotesize\ttfamily \#define D\+F\+\_\+\+S\+U\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+NT~\textquotesingle{}\#\textquotesingle{}}
+
+
+
+The character used to indicate comment lines in the Stanford\textquotesingle{}s (SU) data files. 
+
+\mbox{\Hypertarget{ntwpr__wg_8h_aaa2a19790d76b937d36911757ab9a416}\label{ntwpr__wg_8h_aaa2a19790d76b937d36911757ab9a416}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit@{N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit}}
+\index{N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit@{N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit}{NTWPR\_invalid\_fp\_exit}}
+{\footnotesize\ttfamily \#define N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit(\begin{DoxyParamCaption}\item[{}]{fp }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                                                \(\backslash\)}
+\DoxyCodeLine{    if (!fp)                                                        \(\backslash\)}
+\DoxyCodeLine{    \{                                                               \(\backslash\)}
+\DoxyCodeLine{        fprintf(stderr,                                             \(\backslash\)}
+\DoxyCodeLine{            \textcolor{stringliteral}{"\%s:\%d: Invalid file pointer.\(\backslash\)n"}, \_\_FILE\_\_, \_\_LINE\_\_);  \(\backslash\)}
+\DoxyCodeLine{        exit(EXIT\_FAILURE);                                         \(\backslash\)}
+\DoxyCodeLine{    \}                                                               \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(\textcolor{keyword}{false})                                                      \(\backslash\)}
+\end{DoxyCode}
+
+
+Checks for null file pointers returning debug message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & The file pointer to check for null. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{ntwpr__wg_8h_aaa00d0216c511bdc730bd723577fba78}\label{ntwpr__wg_8h_aaa00d0216c511bdc730bd723577fba78}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+\index{N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+C\+RS}{NTWPR\_CRS}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}  \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}
+
+
+
+A Compressed Row Storage struct. 
+
+Used to save web graph tables in R\+AM. See \href{http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000}\texttt{ C\+RS} \mbox{\Hypertarget{ntwpr__wg_8h_a991a879882127f21fb6693371ffb5dc6}\label{ntwpr__wg_8h_a991a879882127f21fb6693371ffb5dc6}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+File@{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+File@{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}{NTWPR\_WGFile}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}  \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}}
+
+
+
+A struct containing a web-\/graph file and the graphs info. 
+
+Used as a \char`\"{}middle\char`\"{} save format. This A\+PI uses this type to compute the pagerank of the nodes. Any dataset\textquotesingle{}s pagerank vector can be computed by extracting such struct from the dataset. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ntwpr__wg_8h_a22ea7abc80323bd36dc0e95ef58b5335}\label{ntwpr__wg_8h_a22ea7abc80323bd36dc0e95ef58b5335}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+expfm@{N\+T\+W\+P\+R\+\_\+expfm}}
+\index{N\+T\+W\+P\+R\+\_\+expfm@{N\+T\+W\+P\+R\+\_\+expfm}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+expfm()}{NTWPR\_expfm()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+expfm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$restrict}]{N\+T\+W\+P\+R\+\_\+\+W\+GF,  }\item[{const char}]{exp\+\_\+path\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t}]{N\+T\+W\+P\+R\+\_\+node\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Exports the full graph matrix of a \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} to the file at {\itshape exp\+\_\+path}. 
+
+Should be used with caution and for relatively small {\itshape N\+T\+W\+P\+R\+\_\+node\+\_\+num}. (N\+T\+W\+P\+R\+\_\+node\+\_\+num $< 10000 $)
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+T\+W\+P\+R\+\_\+\+W\+GF} & The input \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} pointer. \\
+\hline
+{\em exp\+\_\+path} & The output file\textquotesingle{}s path. \\
+\hline
+{\em N\+T\+W\+P\+R\+\_\+node\+\_\+num} & The number of nodes that will be in the graph matrix. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntwpr__wg_8h_a70e7939134d3c2bc636606ff00f4e7cf}\label{ntwpr__wg_8h_a70e7939134d3c2bc636606ff00f4e7cf}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+load2crs@{N\+T\+W\+P\+R\+\_\+load2crs}}
+\index{N\+T\+W\+P\+R\+\_\+load2crs@{N\+T\+W\+P\+R\+\_\+load2crs}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+load2crs()}{NTWPR\_load2crs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}$\ast$ N\+T\+W\+P\+R\+\_\+load2crs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$restrict}]{N\+T\+W\+P\+R\+\_\+in\+\_\+fp }\end{DoxyParamCaption})}
+
+
+
+Loads a web graph in memory using the C\+RS data structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+T\+W\+P\+R\+\_\+in\+\_\+fp} & The input web graph data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+T\+W\+P\+R\+\_\+\+C\+R\+S$\ast$ pointing to the loaded C\+RS or null. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntwpr__wg_8h_af14fc62b79305e1d3cf64de738d66055}\label{ntwpr__wg_8h_af14fc62b79305e1d3cf64de738d66055}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+S\+U2\+WG@{N\+T\+W\+P\+R\+\_\+\+S\+U2\+WG}}
+\index{N\+T\+W\+P\+R\+\_\+\+S\+U2\+WG@{N\+T\+W\+P\+R\+\_\+\+S\+U2\+WG}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+S\+U2\+W\+G()}{NTWPR\_SU2WG()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+S\+U2\+WG (\begin{DoxyParamCaption}\item[{const char}]{S\+U\+\_\+\+W\+G\+D\+\_\+path\mbox{[}static 1\mbox{]},  }\item[{const char}]{exp\+\_\+path\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t}]{N\+T\+W\+P\+R\+\_\+node\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Converts web graph files from the format Stanford U. (SU) used to the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}\textquotesingle{} edge\+\_\+data file format. 
+
+Extra\+: The output can be loaded into M\+A\+T\+L\+AB with\+: fread(file\+\_\+id, \mbox{[}2,inf\mbox{]}, \textquotesingle{}uint32\textquotesingle{})\textquotesingle{};
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+U\+\_\+\+W\+G\+D\+\_\+path} & The input file\textquotesingle{}s path.. \\
+\hline
+{\em exp\+\_\+path} & The output file\textquotesingle{}s path. \\
+\hline
+{\em N\+T\+W\+P\+R\+\_\+node\+\_\+num} & The number of nodes that will be in the graph matrix. (Enter 0 to get all the nodes of the file.) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}\label{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+Gfclose@{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose@{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose()}{NTWPR\_WGfclose()}}
+{\footnotesize\ttfamily int N\+T\+W\+P\+R\+\_\+\+W\+Gfclose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$}]{wgfile }\end{DoxyParamCaption})}
+
+
+
+Closes the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} stream and frees memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wgfile} & The file to be closed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 if succussful. On failure E\+OF is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntwpr__wg_8h_a88c82f1695c30ae7aab73d48af2de047}\label{ntwpr__wg_8h_a88c82f1695c30ae7aab73d48af2de047}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+\_\+\+Reset@{N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+\_\+\+Reset}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+\_\+\+Reset@{N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+\_\+\+Reset}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+\_\+\+Reset()}{NTWPR\_WGFile\_Reset()}}
+{\footnotesize\ttfamily bool N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$const}]{N\+T\+W\+P\+R\+\_\+\+W\+GF }\end{DoxyParamCaption})}
+
+
+
+Reset the {\itshape N\+T\+W\+P\+R\+\_\+\+W\+GF} struct to read the edges again. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+T\+W\+P\+R\+\_\+\+W\+GF} & The \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If successful. 
+
+false If an error occured. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntwpr__wg_8h_a1efac1faf293b2afc93b21964ac0596d}\label{ntwpr__wg_8h_a1efac1faf293b2afc93b21964ac0596d}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+Gfopen@{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen@{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+Gfopen()}{NTWPR\_WGfopen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}$\ast$ N\+T\+W\+P\+R\+\_\+\+W\+Gfopen (\begin{DoxyParamCaption}\item[{const char}]{path\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates a new W\+G\+File at {\itshape path}. 
+
+The W\+G\+File should be then closed with \mbox{\hyperlink{ntwpr__wg_8h_a19cab0d6c36fbe7fcfb0b410e7ad7670}{N\+T\+W\+P\+R\+\_\+\+W\+Gfclose()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path of the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+T\+W\+P\+R\+\_\+\+W\+G\+File$\ast$ The struct containing the file created. 
+\end{DoxyReturn}

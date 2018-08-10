@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['wgimp_2ec',['wgimp.c',['../wgimp_8c.html',1,'']]],
-  ['wgimp_2eh',['wgimp.h',['../wgimp_8h.html',1,'']]]
+  ['test_2ec',['test.c',['../test_8c.html',1,'']]]
 ];

@@ -5,7 +5,7 @@
  * - Files containing sorted edges of web graphs like the ones found at:
  *  <a href="https://snap.stanford.edu/data/#web">Stanford Large Network Dataset Collection</a>  
  * 
- * @file wgimp.h
+ * @file ntwpr_wg.h
  * @author Katomeris Nikolaos
  * @date 09-08-2018
  */
@@ -76,6 +76,8 @@ typedef struct NTWPR_WGFile
 
 /**
  * @brief Creates a new WGFile at @a path.
+ * 
+ * The WGFile should be then closed with NTWPR_WGfclose()
  * 
  * @param path The path of the file.
  * @return NTWPR_WGFile* The struct containing the file created.

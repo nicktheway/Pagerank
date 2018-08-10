@@ -1,0 +1,67 @@
+\hypertarget{structNTWPR__CRS}{}\section{N\+T\+W\+P\+R\+\_\+\+C\+RS Struct Reference}
+\label{structNTWPR__CRS}\index{N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+
+
+A Compressed Row Storage struct.  
+
+
+
+
+{\ttfamily \#include $<$ntwpr\+\_\+wg.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structNTWPR__CRS_a05685735e3e7157eb84471e95c14e994}{edge\+\_\+num}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structNTWPR__CRS_a745bd86046682b8f2b96974389d4bae2}{node\+\_\+num}}
+\item 
+double $\ast$ \mbox{\hyperlink{structNTWPR__CRS_a2ed66783648d21a14b2729df178e0099}{val}}
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{structNTWPR__CRS_a93cf048b735d3757aae9345801ef15fa}{col\+\_\+ind}}
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{structNTWPR__CRS_a33e24ac0e5c91ebc8207447e13c8a636}{row\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Compressed Row Storage struct. 
+
+Used to save web graph tables in R\+AM. See \href{http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000}\texttt{ C\+RS} 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structNTWPR__CRS_a93cf048b735d3757aae9345801ef15fa}\label{structNTWPR__CRS_a93cf048b735d3757aae9345801ef15fa}} 
+\index{N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}!col\+\_\+ind@{col\+\_\+ind}}
+\index{col\+\_\+ind@{col\+\_\+ind}!N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+\subsubsection{\texorpdfstring{col\+\_\+ind}{col\_ind}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+::col\+\_\+ind}
+
+A vector containing the columns of the val\textquotesingle{}s values. \mbox{\Hypertarget{structNTWPR__CRS_a05685735e3e7157eb84471e95c14e994}\label{structNTWPR__CRS_a05685735e3e7157eb84471e95c14e994}} 
+\index{N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}!edge\+\_\+num@{edge\+\_\+num}}
+\index{edge\+\_\+num@{edge\+\_\+num}!N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+\subsubsection{\texorpdfstring{edge\+\_\+num}{edge\_num}}
+{\footnotesize\ttfamily uint32\+\_\+t N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+::edge\+\_\+num}
+
+The number of non zero elements (edges) \mbox{\Hypertarget{structNTWPR__CRS_a745bd86046682b8f2b96974389d4bae2}\label{structNTWPR__CRS_a745bd86046682b8f2b96974389d4bae2}} 
+\index{N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}!node\+\_\+num@{node\+\_\+num}}
+\index{node\+\_\+num@{node\+\_\+num}!N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+\subsubsection{\texorpdfstring{node\+\_\+num}{node\_num}}
+{\footnotesize\ttfamily uint32\+\_\+t N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+::node\+\_\+num}
+
+The number of nodes of the graph. \mbox{\Hypertarget{structNTWPR__CRS_a33e24ac0e5c91ebc8207447e13c8a636}\label{structNTWPR__CRS_a33e24ac0e5c91ebc8207447e13c8a636}} 
+\index{N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}!row\+\_\+ptr@{row\+\_\+ptr}}
+\index{row\+\_\+ptr@{row\+\_\+ptr}!N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+\subsubsection{\texorpdfstring{row\+\_\+ptr}{row\_ptr}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+::row\+\_\+ptr}
+
+A pointer to the val vector indicating the start of a matrix\textquotesingle{} row. \mbox{\Hypertarget{structNTWPR__CRS_a2ed66783648d21a14b2729df178e0099}\label{structNTWPR__CRS_a2ed66783648d21a14b2729df178e0099}} 
+\index{N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}!val@{val}}
+\index{val@{val}!N\+T\+W\+P\+R\+\_\+\+C\+RS@{N\+T\+W\+P\+R\+\_\+\+C\+RS}}
+\subsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily double$\ast$ N\+T\+W\+P\+R\+\_\+\+C\+R\+S\+::val}
+
+The non zero values of the matrix. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ecat/nikos/parallel/source/helpers/\mbox{\hyperlink{ntwpr__wg_8h}{ntwpr\+\_\+wg.\+h}}\end{DoxyCompactItemize}
