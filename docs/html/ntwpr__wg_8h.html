@@ -126,18 +126,27 @@ Functions</h2></td></tr>
 <tr class="memitem:a19cab0d6c36fbe7fcfb0b410e7ad7670"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#a19cab0d6c36fbe7fcfb0b410e7ad7670">NTWPR_WGfclose</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *wgfile)</td></tr>
 <tr class="memdesc:a19cab0d6c36fbe7fcfb0b410e7ad7670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> stream and frees memory.  <a href="#a19cab0d6c36fbe7fcfb0b410e7ad7670">More...</a><br /></td></tr>
 <tr class="separator:a19cab0d6c36fbe7fcfb0b410e7ad7670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88c82f1695c30ae7aab73d48af2de047"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#a88c82f1695c30ae7aab73d48af2de047">NTWPR_WGFile_Reset</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *const NTWPR_WGF)</td></tr>
-<tr class="memdesc:a88c82f1695c30ae7aab73d48af2de047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the <em>NTWPR_WGF</em> struct to read the edges again.  <a href="#a88c82f1695c30ae7aab73d48af2de047">More...</a><br /></td></tr>
-<tr class="separator:a88c82f1695c30ae7aab73d48af2de047"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70e7939134d3c2bc636606ff00f4e7cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#a70e7939134d3c2bc636606ff00f4e7cf">NTWPR_load2crs</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict NTWPR_in_fp)</td></tr>
-<tr class="memdesc:a70e7939134d3c2bc636606ff00f4e7cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a web graph in memory using the CRS data structure.  <a href="#a70e7939134d3c2bc636606ff00f4e7cf">More...</a><br /></td></tr>
-<tr class="separator:a70e7939134d3c2bc636606ff00f4e7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab867010ffa71a24ade290edf6a10f448"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#ab867010ffa71a24ade290edf6a10f448">NTWPR_WGrewind</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *const NTWPR_WGF)</td></tr>
+<tr class="memdesc:ab867010ffa71a24ade290edf6a10f448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the <em>NTWPR_WGF</em> struct to read the edges again.  <a href="#ab867010ffa71a24ade290edf6a10f448">More...</a><br /></td></tr>
+<tr class="separator:ab867010ffa71a24ade290edf6a10f448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8880314ababb89902382ab5282ef3966"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#a8880314ababb89902382ab5282ef3966">NTWPR_load2crs</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict ntwpr_wgfp)</td></tr>
+<tr class="memdesc:a8880314ababb89902382ab5282ef3966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a web graph in memory using the CRS data structure.  <a href="#a8880314ababb89902382ab5282ef3966">More...</a><br /></td></tr>
+<tr class="separator:a8880314ababb89902382ab5282ef3966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23924bafd4289f10a3ebfd8776b6c6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#ac23924bafd4289f10a3ebfd8776b6c6e">NTWPR_CRSfree</a> (<a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a> *ntwpr_crs)</td></tr>
+<tr class="memdesc:ac23924bafd4289f10a3ebfd8776b6c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads a <a class="el" href="structNTWPR__CRS.html" title="A Compressed Row Storage struct.">NTWPR_CRS</a> from memory (frees allocated memory).  <a href="#ac23924bafd4289f10a3ebfd8776b6c6e">More...</a><br /></td></tr>
+<tr class="separator:ac23924bafd4289f10a3ebfd8776b6c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb2310b73aedf3cb94e1e7421065614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#aacb2310b73aedf3cb94e1e7421065614">NTWPR_CRSprint</a> (FILE *stream, <a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a> *ntwpr_crs)</td></tr>
+<tr class="memdesc:aacb2310b73aedf3cb94e1e7421065614"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function for visualizing a CRS.  <a href="#aacb2310b73aedf3cb94e1e7421065614">More...</a><br /></td></tr>
+<tr class="separator:aacb2310b73aedf3cb94e1e7421065614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af14fc62b79305e1d3cf64de738d66055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#af14fc62b79305e1d3cf64de738d66055">NTWPR_SU2WG</a> (const char SU_WGD_path[static 1], const char exp_path[static 1], uint32_t NTWPR_node_num)</td></tr>
 <tr class="memdesc:af14fc62b79305e1d3cf64de738d66055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts web graph files from the format Stanford U. (SU) used to the <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a>' edge_data file format.  <a href="#af14fc62b79305e1d3cf64de738d66055">More...</a><br /></td></tr>
 <tr class="separator:af14fc62b79305e1d3cf64de738d66055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ea7abc80323bd36dc0e95ef58b5335"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#a22ea7abc80323bd36dc0e95ef58b5335">NTWPR_expfm</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict NTWPR_WGF, const char exp_path[static 1], uint32_t NTWPR_node_num)</td></tr>
-<tr class="memdesc:a22ea7abc80323bd36dc0e95ef58b5335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the full graph matrix of a <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> to the file at <em>exp_path</em>.  <a href="#a22ea7abc80323bd36dc0e95ef58b5335">More...</a><br /></td></tr>
-<tr class="separator:a22ea7abc80323bd36dc0e95ef58b5335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cbf95fa9c7afa941a04d297b22bafb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#a2cbf95fa9c7afa941a04d297b22bafb6">NTWPR_expfm</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict wgfp, const char exp_path[static 1], uint32_t NTWPR_node_num)</td></tr>
+<tr class="memdesc:a2cbf95fa9c7afa941a04d297b22bafb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the full graph matrix of a <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> to the file at <em>exp_path</em>.  <a href="#a2cbf95fa9c7afa941a04d297b22bafb6">More...</a><br /></td></tr>
+<tr class="separator:a2cbf95fa9c7afa941a04d297b22bafb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c3d176a9c253518592ae1ee08749ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#a66c3d176a9c253518592ae1ee08749ec">NTWPR_expsm</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict wgfp, const char exp_path[static 1], uint32_t NTWPR_node_num)</td></tr>
+<tr class="memdesc:a66c3d176a9c253518592ae1ee08749ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the edges to a text file at <em>exp_path</em>.  <a href="#a66c3d176a9c253518592ae1ee08749ec">More...</a><br /></td></tr>
+<tr class="separator:a66c3d176a9c253518592ae1ee08749ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">Web-Graph import/export functions. </p>
@@ -226,8 +235,72 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a22ea7abc80323bd36dc0e95ef58b5335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22ea7abc80323bd36dc0e95ef58b5335">&#9670;&nbsp;</a></span>NTWPR_expfm()</h2>
+<a id="ac23924bafd4289f10a3ebfd8776b6c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23924bafd4289f10a3ebfd8776b6c6e">&#9670;&nbsp;</a></span>NTWPR_CRSfree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTWPR_CRSfree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a> *&#160;</td>
+          <td class="paramname"><em>ntwpr_crs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unloads a <a class="el" href="structNTWPR__CRS.html" title="A Compressed Row Storage struct.">NTWPR_CRS</a> from memory (frees allocated memory). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ntwpr_crs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aacb2310b73aedf3cb94e1e7421065614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb2310b73aedf3cb94e1e7421065614">&#9670;&nbsp;</a></span>NTWPR_CRSprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTWPR_CRSprint </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a> *&#160;</td>
+          <td class="paramname"><em>ntwpr_crs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A function for visualizing a CRS. </p>
+<p class="">Useful for debugging.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>Where will the output go. </td></tr>
+    <tr><td class="paramname">ntwpr_crs</td><td>The CRS to visualize. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2cbf95fa9c7afa941a04d297b22bafb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cbf95fa9c7afa941a04d297b22bafb6">&#9670;&nbsp;</a></span>NTWPR_expfm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,7 +309,7 @@ Functions</h2></td></tr>
           <td class="memname">void NTWPR_expfm </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict&#160;</td>
-          <td class="paramname"><em>NTWPR_WGF</em>, </td>
+          <td class="paramname"><em>wgfp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -262,17 +335,62 @@ Functions</h2></td></tr>
 <p class="">Should be used with caution and for relatively small <em>NTWPR_node_num</em>. (NTWPR_node_num <img class="formulaInl" alt="$&lt; 10000 $" src="form_2.png"/>)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">NTWPR_WGF</td><td>The input <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> pointer. </td></tr>
+    <tr><td class="paramname">wgfp</td><td>The input <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> pointer. </td></tr>
     <tr><td class="paramname">exp_path</td><td>The output file's path. </td></tr>
-    <tr><td class="paramname">NTWPR_node_num</td><td>The number of nodes that will be in the graph matrix. </td></tr>
+    <tr><td class="paramname">NTWPR_node_num</td><td>The max number of nodes that will be in the graph matrix. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a70e7939134d3c2bc636606ff00f4e7cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70e7939134d3c2bc636606ff00f4e7cf">&#9670;&nbsp;</a></span>NTWPR_load2crs()</h2>
+<a id="a66c3d176a9c253518592ae1ee08749ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c3d176a9c253518592ae1ee08749ec">&#9670;&nbsp;</a></span>NTWPR_expsm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTWPR_expsm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict&#160;</td>
+          <td class="paramname"><em>wgfp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>exp_path</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>NTWPR_node_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exports the edges to a text file at <em>exp_path</em>. </p>
+<p class="">Extra: Can be loaded into a sparse MATLAB matrix using: &gt; load -ASCII exported_file_path &gt; sparce(file_name(:,1)+1, file_name(:,2)+1, ... ones(size(file_name, 1), 1), node_num, node_num)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wgfp</td><td>The input <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> pointer. </td></tr>
+    <tr><td class="paramname">exp_path</td><td>The output file's path. </td></tr>
+    <tr><td class="paramname">NTWPR_node_num</td><td>The max number of nodes that will be in the graph matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8880314ababb89902382ab5282ef3966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8880314ababb89902382ab5282ef3966">&#9670;&nbsp;</a></span>NTWPR_load2crs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,16 +399,17 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a>* NTWPR_load2crs </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict&#160;</td>
-          <td class="paramname"><em>NTWPR_in_fp</em></td><td>)</td>
+          <td class="paramname"><em>ntwpr_wgfp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Loads a web graph in memory using the CRS data structure. </p>
+<p class="">The CRS structure's memory should be freed with <a class="el" href="ntwpr__wg_8h.html#ac23924bafd4289f10a3ebfd8776b6c6e" title="Unloads a NTWPR_CRS from memory (frees allocated memory).">NTWPR_CRSfree()</a> later.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">NTWPR_in_fp</td><td>The input web graph data. </td></tr>
+    <tr><td class="paramname">ntwpr_wgfp</td><td>The input web graph data. </td></tr>
   </table>
   </dd>
 </dl>
@@ -370,35 +489,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a88c82f1695c30ae7aab73d48af2de047"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88c82f1695c30ae7aab73d48af2de047">&#9670;&nbsp;</a></span>NTWPR_WGFile_Reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool NTWPR_WGFile_Reset </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *const&#160;</td>
-          <td class="paramname"><em>NTWPR_WGF</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reset the <em>NTWPR_WGF</em> struct to read the edges again. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">NTWPR_WGF</td><td>The <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> struct. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true If successful. </dd>
-<dd>
-false If an error occured. </dd></dl>
-
-</div>
-</div>
 <a id="a1efac1faf293b2afc93b21964ac0596d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1efac1faf293b2afc93b21964ac0596d">&#9670;&nbsp;</a></span>NTWPR_WGfopen()</h2>
 
@@ -424,6 +514,35 @@ false If an error occured. </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>NTWPR_WGFile* The struct containing the file created. </dd></dl>
+
+</div>
+</div>
+<a id="ab867010ffa71a24ade290edf6a10f448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab867010ffa71a24ade290edf6a10f448">&#9670;&nbsp;</a></span>NTWPR_WGrewind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NTWPR_WGrewind </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *const&#160;</td>
+          <td class="paramname"><em>NTWPR_WGF</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the <em>NTWPR_WGF</em> struct to read the edges again. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NTWPR_WGF</td><td>The <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true If successful. </dd>
+<dd>
+false If an error occured. </dd></dl>
 
 </div>
 </div>

@@ -55,7 +55,7 @@ typedef struct NTWPR_CRS
 {
     uint32_t edge_num;  /**< The number of non zero elements (edges) */
     uint32_t node_num;  /**< The number of nodes of the graph. */
-    double* val;        /**< The non zero values of the matrix. */
+    float* val;        /**< The non zero values of the matrix. */
     uint32_t* col_ind;  /**< A vector containing the columns of the val's values. */
     uint32_t* row_ptr;  /**< A pointer to the val vector indicating the start of a matrix' row. */
 } NTWPR_CRS;
@@ -99,15 +99,34 @@ int NTWPR_WGfclose(NTWPR_WGFile* wgfile);
  * @return true If successful.
  * @return false If an error occured.
  */
-bool NTWPR_WGFile_Reset(NTWPR_WGFile* const NTWPR_WGF);
+bool NTWPR_WGrewind(NTWPR_WGFile* const NTWPR_WGF);
 
 /**
  * @brief Loads a web graph in memory using the CRS data structure.
  * 
- * @param NTWPR_in_fp The input web graph data.
+ * The CRS structure's memory should be freed with NTWPR_CRSfree() later.
+ * 
+ * @param ntwpr_wgfp The input web graph data.
  * @return NTWPR_CRS* pointing to the loaded CRS or null.
  */
-NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict NTWPR_in_fp);
+NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict ntwpr_wgfp);
+
+/**
+ * @brief Unloads a NTWPR_CRS from memory (frees allocated memory).
+ * 
+ * @param ntwpr_crs 
+ */
+void NTWPR_CRSfree(NTWPR_CRS* ntwpr_crs);
+
+/**
+ * @brief A function for visualizing a CRS.
+ * 
+ * Useful for debugging.
+ * 
+ * @param stream Where will the output go.
+ * @param ntwpr_crs The CRS to visualize.
+ */
+void NTWPR_CRSprint(FILE* stream, NTWPR_CRS* ntwpr_crs);
 
 /**
  * @brief Converts web graph files from the format Stanford U. (SU) used to
@@ -141,7 +160,7 @@ void NTWPR_expfm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
  * Extra: Can be loaded into a sparse MATLAB matrix using:
  *      > load -ASCII exported_file_path
  *      > sparce(file_name(:,1)+1, file_name(:,2)+1, ...
- *          ones(size(file_name, 1), 1), node_num, node_num)
+ *      ones(size(file_name, 1), 1), node_num, node_num)
  * 
  * @param wgfp The input NTWPR_WGFile pointer.
  * @param exp_path The output file's path.

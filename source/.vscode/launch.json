@@ -11,8 +11,8 @@
             "program": "${workspaceFolder}/helpers/a.out",
             "args": [
                         "${workspaceFolder}/../data/web-NotreDame.txt", 
-                        "${workspaceFolder}/helpers/matrices/ha.txt", 
-                        "10"
+                        "${workspaceFolder}/../matlab_scripts/matrices/ha.txt", 
+                        "20"
                     ],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",

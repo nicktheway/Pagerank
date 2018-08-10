@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "wgimp.h": "c",
         "stdlib.h": "c",
-        "ntwpr_wg.h": "c"
+        "ntwpr_wg.h": "c",
+        "cstdlib": "c"
     }
 }

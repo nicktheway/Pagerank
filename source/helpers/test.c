@@ -20,7 +20,11 @@ int main(int argc, char* argv[argc+1])
     int n = atoi(argv[3]);
     NTWPR_SU2WG(argv[1], argv[2], n);
     NTWPR_WGFile* file = NTWPR_WGfopen(argv[2]);
-    NTWPR_expsm(file, "full_mat.mat", 20);
+
+    NTWPR_CRS* myCRS = NTWPR_load2crs(file);
+    FILE* mat = fopen("mat.txt", "w");
+    NTWPR_CRSprint(mat, myCRS);
+    NTWPR_expsm(file, "full_mat.txt", 40);
     NTWPR_WGfclose(file);
     return 0;
 }

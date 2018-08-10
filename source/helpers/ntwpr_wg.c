@@ -3,13 +3,82 @@
  * 
  * @file ntwpr_wg.c
  * @author Katomeris Nikolaos, 8551, ngkatomer@auth.gr
- * @date 09-08-2018
+ * @date 10-08-2018
  */
 #include "ntwpr_wg.h"
 
-NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict NTWPR_in_fp)
+NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict ntwpr_wgfp)
 {
-    return NULL;
+    NTWPR_CRS* new_crs = calloc(1, sizeof(NTWPR_CRS));
+    if (!new_crs)
+    {
+        fprintf(stderr, "Error when allocating memory for the CRS struct.\n");
+        exit(EXIT_FAILURE);
+    }
+    new_crs->node_num = ntwpr_wgfp->node_num;
+    new_crs->edge_num = ntwpr_wgfp->edge_num;
+
+    new_crs->val = calloc(new_crs->edge_num, sizeof(float));
+    new_crs->col_ind = calloc(new_crs->edge_num, sizeof(uint32_t));
+    new_crs->row_ptr = calloc(new_crs->node_num + 1, sizeof(uint32_t));
+
+    if (!new_crs->val || !new_crs->col_ind || !new_crs->row_ptr)
+    {
+        fprintf(stderr, "%s: Error when allocating memory for the CRS struct.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+
+    uint32_t edges_read = 0;
+    uint32_t curr_row = 0;
+    uint32_t edge_nodes[2];
+    fseek(ntwpr_wgfp->edge_data, 2*sizeof(uint32_t), SEEK_SET);
+    while (fread(edge_nodes, sizeof(edge_nodes[0]), 2, ntwpr_wgfp->edge_data) == 2)
+    {
+        new_crs->col_ind[edges_read] = edge_nodes[1];
+        new_crs->val[edges_read] = 1.0f;
+        if (edge_nodes[0] > curr_row)
+        {
+            for (int i = curr_row + 1; i <= edge_nodes[0]; i++)
+            {
+                new_crs->row_ptr[i] = edges_read;
+            }
+            curr_row = edge_nodes[0];
+        }
+        edges_read++;
+    }
+    new_crs->row_ptr[new_crs->node_num] = new_crs->edge_num;
+
+    NTWPR_WGrewind(ntwpr_wgfp);
+    return new_crs;
+}
+
+void NTWPR_CRSfree(NTWPR_CRS* ntwpr_crs)
+{
+    free(ntwpr_crs->val);
+    free(ntwpr_crs->col_ind);
+    free(ntwpr_crs->row_ptr);
+
+    free(ntwpr_crs);
+}
+
+void NTWPR_CRSprint(FILE* stream, NTWPR_CRS* ntwpr_crs)
+{
+    fprintf(stream, "Nodes: %u, Edges: %u\nColumn indeces:\n", ntwpr_crs->node_num, ntwpr_crs->edge_num);
+    for (int i = 0; i < ntwpr_crs->edge_num; i++)
+    {
+        fprintf(stream, "%u\t", ntwpr_crs->col_ind[i]);
+    }
+    fprintf(stream, "\nValues:\n");
+    for (int i = 0; i < ntwpr_crs->edge_num; i++)
+    {
+        fprintf(stream, "%.2f\t", ntwpr_crs->val[i]);
+    }
+    fprintf(stream, "\nRow pointers:\n");
+    for (int i = 0; i <= ntwpr_crs->node_num; i++)
+    {
+        fprintf(stream, "%u\t", ntwpr_crs->row_ptr[i]);
+    }
+    fprintf(stream, "\n");
 }
 
 NTWPR_WGFile* NTWPR_WGfopen(const char path[static 1])
@@ -24,6 +93,8 @@ NTWPR_WGFile* NTWPR_WGfopen(const char path[static 1])
         fprintf(stderr, "Error at reading edge_data_file size data.\n");
         exit(EXIT_FAILURE);
     }
+
+    fseek(edge_data_file, 0, SEEK_SET);
 
     wgfile_p->edge_data = edge_data_file;
     wgfile_p->node_num = NTWPR_size[0];
@@ -45,9 +116,9 @@ int NTWPR_WGfclose(NTWPR_WGFile* wgfile)
     return 0;
 }
 
-bool NTWPR_WGFile_Reset(NTWPR_WGFile* const NTWPR_WGF)
+bool NTWPR_WGrewind(NTWPR_WGFile* const NTWPR_WGF)
 {
-    return !fseek(NTWPR_WGF->edge_data, 2 * sizeof(uint32_t), SEEK_SET);
+    return !fseek(NTWPR_WGF->edge_data, 0, SEEK_SET);
 }
 
 void NTWPR_expfm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uint32_t NTWPR_node_num)
@@ -61,6 +132,9 @@ void NTWPR_expfm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
     uint32_t edge_nodes[2];
     uint32_t line_counter = 0, col_counter = 0;
 
+    if (NTWPR_node_num > wgfp->node_num) NTWPR_node_num = wgfp->node_num;
+
+    fseek(wgfp->edge_data, 2*sizeof(uint32_t), SEEK_SET);
     while(line_counter < wgfp->node_num)
     {
         if (fread(edge_nodes, sizeof(edge_nodes[0]), 2, wgfp->edge_data) != 2)
@@ -122,7 +196,7 @@ void NTWPR_expfm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
         col_counter++;
     }
 
-    NTWPR_WGFile_Reset(wgfp);
+    NTWPR_WGrewind(wgfp);
     fclose(NTWPR_out_fp);
 }
 
@@ -137,6 +211,7 @@ void NTWPR_expsm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
     uint32_t edge_nodes[2];
     uint32_t i = 0;
 
+    fseek(wgfp->edge_data, 2*sizeof(uint32_t), SEEK_SET);
     while(i++ < wgfp->edge_num)
     {
         if (fread(edge_nodes, sizeof(edge_nodes[0]), 2, wgfp->edge_data) != 2)
@@ -147,7 +222,7 @@ void NTWPR_expsm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
         
         if (edge_nodes[0] >= NTWPR_node_num) break;
         if (edge_nodes[1] >= NTWPR_node_num) continue;
-        
+
         if (fprintf(NTWPR_out_fp, "%u\t%u\n", edge_nodes[0], edge_nodes[1]) < 0)
         {
             fprintf(stderr, "Error while writing the sparse matrix at the output file\n");
@@ -155,7 +230,7 @@ void NTWPR_expsm(NTWPR_WGFile* restrict wgfp, const char exp_path[static 1], uin
         }
     }
 
-    NTWPR_WGFile_Reset(wgfp);
+    NTWPR_WGrewind(wgfp);
     fclose(NTWPR_out_fp);
 }
 
