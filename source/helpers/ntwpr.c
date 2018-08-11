@@ -6,42 +6,36 @@
  * @date 11-08-2018
  */
 #include "ntwpr.h"
+#include "ntw_math.h"
 
-float* NTWPR_pagerank(NTWPR_CRS webGraph[static 1], float d, float e)
+double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
 {
-    NTWPR_CRS_unified_rnorm(webGraph);
-    float* v = malloc(webGraph->node_num * sizeof(*v));
-    float* pagerank = malloc(webGraph->node_num * sizeof(*pagerank));
-    if (!pagerank || !v)
-    {
-        fprintf(stderr, "%s: Error at allocating memory for the pagerank vector.\n", __func__);
+    // For better readability.
+    const uint32_t wgSize = webGraph->node_num;
+    // Make the matrix a probability matrix.
+    NTW_CRS_rowNormUnif(webGraph);
 
-        exit(EXIT_FAILURE);
-    }
-    // Initialize the pagerank vector uniformely.
-    NTWPR_pr_init(webGraph->node_num, pagerank);
-    NTWPR_pr_init(webGraph->node_num, v);
+    // Multiply with the teleportation coefficient.
+    NTW_CRS_cmult(webGraph, d);
 
-    for (int i = 0; i < webGraph->node_num; i++)
-    {
-        v[i] *= 1-d;
-    }
+    // Create the initial pagerank vector (unified) and the b vector.
+    double* pagerank = NTW_newUniVectorD(wgSize, 1 / wgSize);
+    double* b = NTW_newUniVectorD(wgSize, (1-d)/wgSize);
 
-    // Multiply with the negative of the teleportation coefficient.
-    NTWPR_CRS_const_mult(webGraph, -d);
-
-    float delta = 1.0f;
+    double delta = 1.0;
     int max_iterations = 500, curr_iteration = 0;
     while (delta > e && curr_iteration++ < max_iterations)
     {
-        delta = NTWPR_GS_iter(webGraph, pagerank, v);
+        delta = NTWPR_GS_iter(webGraph, pagerank, b);
     }
     printf("ci: %d\tdelta = %0.3f\n", curr_iteration, delta);
 
+
+    free(b);
     return pagerank;
 }
 
-inline void NTWPR_pr_init(const uint32_t nodeNum, float vector[static nodeNum])
+inline void NTWPR_pr_init(const uint32_t nodeNum, double vector[static nodeNum])
 {
     if (!nodeNum) 
     {
@@ -55,24 +49,24 @@ inline void NTWPR_pr_init(const uint32_t nodeNum, float vector[static nodeNum])
     }
 }
 
-inline float NTWPR_GS_iter(const NTWPR_CRS matrix[static 1], float x_vec[static 1], const float b_vec[static 1])
+inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1])
 {
-    float sqnorm_diff = 0;
+    double sqnorm_diff = 0;
     for (uint32_t i = 0; i < matrix->node_num; i++)
     {
-        float den = 1.0f;
-        float num = b_vec[i];
-        const float old_x = x_vec[i];
+        double den = 1.0;
+        double num = b_vec[i];
+        const double old_x = x_vec[i];
 
         for (uint32_t j = matrix->row_ptr[i]; j < matrix->row_ptr[i+1]; j++)
         {
-            if (j == i)
+            if (matrix->col_ind[j] == i)
             {
                 den += matrix->val[j];
             } 
             else
             {
-                num -= matrix->val[j] * x_vec[matrix->col_ind[j]];
+                num -= matrix->val[j] * x_vec[i];
                 // printf("num == %0.3f\t", x_vec[matrix->col_ind[j]]);
             }
         }
@@ -83,9 +77,9 @@ inline float NTWPR_GS_iter(const NTWPR_CRS matrix[static 1], float x_vec[static 
     return sqnorm_diff;
 }
 
-inline float Vector_sqnorm(uint32_t size, float vector[static size])
+inline double Vector_sqnorm(uint32_t size, double vector[static size])
 {
-    float norm = 0;
+    double norm = 0;
     for (uint32_t i = 0; i < size; i++)
     {
         norm += vector[i] * vector[i];

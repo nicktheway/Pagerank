@@ -22,10 +22,25 @@ int main(int argc, char* argv[argc+1])
     NTWPR_SU2WG(argv[1], argv[2], n);
     NTWPR_WGFile* file = NTWPR_WGF_fopen(argv[2]);
 
-    NTWPR_CRS* myCRS = NTWPR_load2crs(file);
+    ntw_crs* myCRS = NTWPR_load2crs(file);
     FILE* mat = fopen("mat.txt", "w");
-    //NTWPR_CRS_print(mat, myCRS);
-    //NTWPR_expsm(file, "full_mat.txt", 40);
+    //NTW_CRS_print(mat, myCRS);
+    // NTWPR_expsm(file, argv[2], n);
+
+
+
+    double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-6);
+    fprintf(mat, "\n---START PR RESULT---\n");
+    for (int i = 0; i < myCRS->node_num; i++){
+        fprintf(mat, "%.2f\t", 100000*pr[i]);
+    }
+    fprintf(mat, "\n---END PR RESULT---\n");
+    // NTW_CRS_printFullMatrix(mat, myCRS);
+    NTWPR_WGF_fclose(file);
+    NTW_CRS_free(myCRS);
+    fclose(mat);
+    return 0;
+}
 
     /*
     // Product testing
@@ -34,24 +49,11 @@ int main(int argc, char* argv[argc+1])
         b[i] = i;
     }
     float *c = calloc(myCRS->node_num, sizeof(*c));
-    NTWPR_CRS_product_non_alloc(myCRS, b, c);
+    NTW_CRS_vmult(myCRS, b, c);
     fprintf(mat, "\n---START PRODUCT RESULT---\n");
     for (int i = 0; i < myCRS->node_num; i++){
         fprintf(mat, "%.2f\t", c[i]);
     }
     fprintf(mat, "\n---END PRODUCT RESULT---\n");
     */
-    // NTWPR_CRS_unified_rnorm(myCRS);
-    // NTWPR_CRS_printfm(mat, myCRS);
-    float* pr = NTWPR_pagerank(myCRS, 0.85f, 1e-5);
-    fprintf(mat, "\n---START PR RESULT---\n");
-    for (int i = 0; i < myCRS->node_num; i++){
-        fprintf(mat, "%.2f\t", 100000*pr[i]);
-    }
-    fprintf(mat, "\n---END PR RESULT---\n");
-    // NTWPR_CRS_printfm(mat, myCRS);
-    NTWPR_WGF_fclose(file);
-    NTWPR_CRS_free(myCRS);
-    fclose(mat);
-    return 0;
-}
+    // NTW_CRS_rowNormUnif(myCRS);

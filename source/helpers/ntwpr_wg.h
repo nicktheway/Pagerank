@@ -44,21 +44,7 @@ do {                                                                \
     }                                                               \
 } while(false)                                                      \
 
-/**
- * @brief A Compressed Row Storage struct.
- * 
- * Used to save web graph tables in RAM.
- * See <a href="http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000">CRS</a> 
- * 
- */
-typedef struct NTWPR_CRS
-{
-    uint32_t edge_num;  /**< The number of non zero elements (edges) */
-    uint32_t node_num;  /**< The number of nodes of the graph. */
-    float* val;        /**< The non zero values of the matrix. */
-    uint32_t* col_ind;  /**< A vector containing the columns of the val's values. */
-    uint32_t* row_ptr;  /**< A pointer to the val vector indicating the start of a matrix' row. */
-} NTWPR_CRS;
+
 
 /**
  * @brief A struct containing a web-graph file and the graphs info.
@@ -102,100 +88,16 @@ int NTWPR_WGF_fclose(NTWPR_WGFile* wgfile);
 bool NTWPR_WGF_rewind(NTWPR_WGFile* const NTWPR_WGF);
 
 /**
- * @brief Calculates the product of the CRS table @a ntwpr_crs
- *          with the @a vector and stores the result in @a product. 
- * 
- * @param ntwpr_crs The CRS representation of the matrix @f$A@f$.
- * @param vector The vector @f$v@f$.
- * @param product The product @f$A*v@f$.
- */
-extern void NTWPR_CRS_product_non_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1], float product[static ntwpr_crs->node_num]);
-
-/**
- * @brief Calculates the product of the CRS table @a ntwpr_crs 
- *          with the @a vector and return the result.
- * 
- * The memory of the result should be freed afterwards.
- * 
- * @param ntwpr_crs The CRS representation of the matrix @f$A@f$.
- * @param vector The vector @f$v@f$.
- * @return float* The product vector @f$A*v@f$.
- */
-float* NTWPR_CRS_product_alloc(const NTWPR_CRS ntwpr_crs[static 1], const float vector[static 1]);
-
-/**
- * @brief Normalizes the lines of the CRS table.
- * 
- * @param ntwpr_crs The CRS representation of the table.
- */
-void NTWPR_CRS_rnorm(NTWPR_CRS ntwpr_crs[static 1]);
-
-/**
- * @brief Normalizes the lines of the CRS table giving all the
- *          edges in each row, the same value.
- * 
- * @param ntwpr_crs The CRS representation of the table.
- */
-void NTWPR_CRS_unified_rnorm(NTWPR_CRS ntwpr_crs[static 1]);
-
-/**
- * @brief Multiplies the values of the sparse table in the CRS form 
- *          @a ntwpr_crs with the constant value @a ntw_const.
- * 
- * @param ntwpr_crs The NTWPR_CRS representation of the sparse table.
- * @param ntw_const The constant multiplicator.
- */
-void NTWPR_CRS_const_mult(NTWPR_CRS ntwpr_crs[static 1], const float ntw_const);
-
-/**
- * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.
- * 
- * Use it sparingly because it's slow.
- * 
- * @param ntwpr_crs The CRS data.
- * @param row The row of the returned value.
- * @param col The column of the returned value.
- * @return float The value at [@a row, @a col]
- */
-float NTWPR_CRS_value_at(const NTWPR_CRS ntwpr_crs[static 1], uint32_t row, uint32_t col);
-
-
-/**
  * @brief Loads a web graph in memory using the CRS data structure.
  * 
  * The CRS structure's memory should be freed with NTWPR_CRSfree() later.
  * 
  * @param ntwpr_wgfp The input web graph data.
- * @return NTWPR_CRS* pointing to the loaded CRS or null.
+ * @return ntw_crs* pointing to the loaded CRS or null.
  */
-NTWPR_CRS* NTWPR_load2crs(NTWPR_WGFile* restrict ntwpr_wgfp);
+ntw_crs* NTWPR_load2crs(NTWPR_WGFile* restrict ntwpr_wgfp);
 
-/**
- * @brief Unloads a NTWPR_CRS from memory (frees allocated memory).
- * 
- * @param ntwpr_crs 
- */
-void NTWPR_CRS_free(NTWPR_CRS* ntwpr_crs);
 
-/**
- * @brief A function for visualizing a CRS.
- * 
- * Useful for debugging.
- * 
- * @param stream Where will the output go.
- * @param ntwpr_crs The CRS to visualize.
- */
-void NTWPR_CRS_print(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
-
-/**
- * @brief A function for printing the full matrix of the CRS.
- * 
- * Useful for debugging. Avoid using it for @f$nodes > 10000@f$.
- * 
- * @param stream Where will the output go.
- * @param ntwpr_crs The CRS of the matrix that will be visualized.
- */
-void NTWPR_CRS_printfm(FILE* restrict stream, const NTWPR_CRS ntwpr_crs[static 1]);
 
 /**
  * @brief Converts web graph files from the format Stanford U. (SU) used to
