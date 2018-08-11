@@ -12,7 +12,11 @@ File containing the definitions of the functions declared at \mbox{\hyperlink{nt
 float $\ast$ \mbox{\hyperlink{ntwpr_8c_a083e4f0e1305131937259f25312948e7}{N\+T\+W\+P\+R\+\_\+pagerank}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} web\+Graph\mbox{[}static 1\mbox{]}, float d, float e)
 \begin{DoxyCompactList}\small\item\em Calculates the pagerank of the nodes of a web graph. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntwpr_8c_a4f406a3d192d960a30bf52a6bec8bee0}{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}} (const uint32\+\_\+t node\+Num, float vector\mbox{[}static node\+Num\mbox{]})
-\begin{DoxyCompactList}\small\item\em Initializes the pagerank vector uniformely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes the pagerank vector uniformely. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{ntwpr_8c_adba2a6c6aa2c7512738b05cd77f5b3fa}{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} matrix\mbox{[}static 1\mbox{]}, float x\+\_\+vec\mbox{[}static 1\mbox{]}, const float b\+\_\+vec\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calculates one iteration of $(I-A)x = b$. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{ntwpr_8c_a3f62462143253fb13fd9a45d67a0cf54}{Vector\+\_\+sqnorm}} (uint32\+\_\+t size, float vector\mbox{[}static size\mbox{]})
+\begin{DoxyCompactList}\small\item\em Returns the squered norm of a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -27,6 +31,28 @@ Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth
 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{ntwpr_8c_adba2a6c6aa2c7512738b05cd77f5b3fa}\label{ntwpr_8c_adba2a6c6aa2c7512738b05cd77f5b3fa}} 
+\index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter@{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}}
+\index{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter@{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}!ntwpr.\+c@{ntwpr.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter()}{NTWPR\_GS\_iter()}}
+{\footnotesize\ttfamily float N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{matrix\mbox{[}static 1\mbox{]},  }\item[{float}]{x\+\_\+vec\mbox{[}static 1\mbox{]},  }\item[{const float}]{b\+\_\+vec\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates one iteration of $(I-A)x = b$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & The sparse matrix A in C\+RS form. \\
+\hline
+{\em x\+\_\+vec} & The vector x that will be replaced. \\
+\hline
+{\em b\+\_\+vec} & The vector b. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The squared norm difference of the old and new {\itshape x\+\_\+vec}. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{ntwpr_8c_a083e4f0e1305131937259f25312948e7}\label{ntwpr_8c_a083e4f0e1305131937259f25312948e7}} 
 \index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}}
 \index{N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}!ntwpr.\+c@{ntwpr.\+c}}
@@ -66,3 +92,23 @@ Initializes the pagerank vector uniformely.
 {\em vector} & The vector that will be initialized. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{ntwpr_8c_a3f62462143253fb13fd9a45d67a0cf54}\label{ntwpr_8c_a3f62462143253fb13fd9a45d67a0cf54}} 
+\index{ntwpr.\+c@{ntwpr.\+c}!Vector\+\_\+sqnorm@{Vector\+\_\+sqnorm}}
+\index{Vector\+\_\+sqnorm@{Vector\+\_\+sqnorm}!ntwpr.\+c@{ntwpr.\+c}}
+\subsubsection{\texorpdfstring{Vector\+\_\+sqnorm()}{Vector\_sqnorm()}}
+{\footnotesize\ttfamily float Vector\+\_\+sqnorm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size,  }\item[{float}]{vector\mbox{[}static size\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the squered norm of a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The vector\textquotesingle{}s size. \\
+\hline
+{\em vector} & The vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The vector\textquotesingle{}s second norm squared. 
+\end{DoxyReturn}

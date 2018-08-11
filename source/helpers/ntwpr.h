@@ -15,7 +15,7 @@
  * @param nodeNum The number of nodes (size of the vector).
  * @param vector The vector that will be initialized.
  */
-inline void NTWPR_pr_init(const uint32_t nodeNum, float vector[static nodeNum]);
+void NTWPR_pr_init(const uint32_t nodeNum, float vector[static nodeNum]);
 
 /**
  * @brief Calculates the pagerank of the nodes of a web graph.
@@ -27,4 +27,22 @@ inline void NTWPR_pr_init(const uint32_t nodeNum, float vector[static nodeNum]);
  */
 float* NTWPR_pagerank(NTWPR_CRS webGraph[static 1], float d, float e);
 
+/**
+ * @brief Calculates one iteration of @f$(I-A)x = b@f$
+ * 
+ * @param matrix The sparse matrix A in CRS form.
+ * @param x_vec The vector x that will be replaced.
+ * @param b_vec The vector b.
+ * @return float The squared norm difference of the old and new @a x_vec.
+ */
+float NTWPR_GS_iter(const NTWPR_CRS matrix[static 1], float x_vec[static 1], const float b_vec[static 1]);
+
+/**
+ * @brief Returns the squered norm of a vector.
+ * 
+ * @param size The vector's size.
+ * @param vector The vector.
+ * @return float The vector's second norm squared.
+ */
+float Vector_sqnorm(uint32_t size, float vector[static size]);
 #endif

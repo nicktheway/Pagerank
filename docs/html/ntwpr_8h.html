@@ -89,12 +89,71 @@ Functions</h2></td></tr>
 <tr class="memitem:a083e4f0e1305131937259f25312948e7"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8h.html#a083e4f0e1305131937259f25312948e7">NTWPR_pagerank</a> (<a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a> webGraph[static 1], float d, float e)</td></tr>
 <tr class="memdesc:a083e4f0e1305131937259f25312948e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the pagerank of the nodes of a web graph.  <a href="#a083e4f0e1305131937259f25312948e7">More...</a><br /></td></tr>
 <tr class="separator:a083e4f0e1305131937259f25312948e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba2a6c6aa2c7512738b05cd77f5b3fa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8h.html#adba2a6c6aa2c7512738b05cd77f5b3fa">NTWPR_GS_iter</a> (const <a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a> matrix[static 1], float x_vec[static 1], const float b_vec[static 1])</td></tr>
+<tr class="memdesc:adba2a6c6aa2c7512738b05cd77f5b3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates one iteration of <img class="formulaInl" alt="$(I-A)x = b$" src="form_7.png"/>.  <a href="#adba2a6c6aa2c7512738b05cd77f5b3fa">More...</a><br /></td></tr>
+<tr class="separator:adba2a6c6aa2c7512738b05cd77f5b3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f62462143253fb13fd9a45d67a0cf54"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8h.html#a3f62462143253fb13fd9a45d67a0cf54">Vector_sqnorm</a> (uint32_t size, float vector[static size])</td></tr>
+<tr class="memdesc:a3f62462143253fb13fd9a45d67a0cf54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squered norm of a vector.  <a href="#a3f62462143253fb13fd9a45d67a0cf54">More...</a><br /></td></tr>
+<tr class="separator:a3f62462143253fb13fd9a45d67a0cf54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">Methods for calculating the pagerank of web graphs. </p>
 <dl class="section author"><dt>Author</dt><dd>Katomeris Nikolaos, 8551, <a href="#" onclick="location.href='mai'+'lto:'+'ngk'+'at'+'ome'+'r@'+'aut'+'h.'+'gr'; return false;">ngkat<span style="display: none;">.nosp@m.</span>omer<span style="display: none;">.nosp@m.</span>@auth<span style="display: none;">.nosp@m.</span>.gr</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>11-08-2018 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="adba2a6c6aa2c7512738b05cd77f5b3fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba2a6c6aa2c7512738b05cd77f5b3fa">&#9670;&nbsp;</a></span>NTWPR_GS_iter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float NTWPR_GS_iter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structNTWPR__CRS.html">NTWPR_CRS</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x_vec</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>b_vec</em>[static 1]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates one iteration of <img class="formulaInl" alt="$(I-A)x = b$" src="form_7.png"/>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>The sparse matrix A in CRS form. </td></tr>
+    <tr><td class="paramname">x_vec</td><td>The vector x that will be replaced. </td></tr>
+    <tr><td class="paramname">b_vec</td><td>The vector b. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float The squared norm difference of the old and new <em>x_vec</em>. </dd></dl>
+
+</div>
+</div>
 <a id="a083e4f0e1305131937259f25312948e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a083e4f0e1305131937259f25312948e7">&#9670;&nbsp;</a></span>NTWPR_pagerank()</h2>
 
@@ -182,6 +241,52 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a3f62462143253fb13fd9a45d67a0cf54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f62462143253fb13fd9a45d67a0cf54">&#9670;&nbsp;</a></span>Vector_sqnorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Vector_sqnorm </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>vector</em>[static size]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the squered norm of a vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The vector's size. </td></tr>
+    <tr><td class="paramname">vector</td><td>The vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float The vector's second norm squared. </dd></dl>
 
 </div>
 </div>

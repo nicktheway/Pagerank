@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ntwpr_wg.h"
+#include "ntwpr.h"
 
 int main(int argc, char* argv[argc+1])
 {
@@ -23,10 +24,10 @@ int main(int argc, char* argv[argc+1])
 
     NTWPR_CRS* myCRS = NTWPR_load2crs(file);
     FILE* mat = fopen("mat.txt", "w");
-    NTWPR_CRS_print(mat, myCRS);
-    NTWPR_expsm(file, "full_mat.txt", 40);
+    //NTWPR_CRS_print(mat, myCRS);
+    //NTWPR_expsm(file, "full_mat.txt", 40);
 
-
+    /*
     // Product testing
     float *b = malloc(myCRS->node_num * sizeof(*b));
     for (int i = 0; i < myCRS->node_num; i++){
@@ -39,9 +40,16 @@ int main(int argc, char* argv[argc+1])
         fprintf(mat, "%.2f\t", c[i]);
     }
     fprintf(mat, "\n---END PRODUCT RESULT---\n");
-
-    NTWPR_CRS_unified_rnorm(myCRS);
-    NTWPR_CRS_printfm(mat, myCRS);
+    */
+    // NTWPR_CRS_unified_rnorm(myCRS);
+    // NTWPR_CRS_printfm(mat, myCRS);
+    float* pr = NTWPR_pagerank(myCRS, 0.85f, 1e-5);
+    fprintf(mat, "\n---START PR RESULT---\n");
+    for (int i = 0; i < myCRS->node_num; i++){
+        fprintf(mat, "%.2f\t", 100000*pr[i]);
+    }
+    fprintf(mat, "\n---END PR RESULT---\n");
+    // NTWPR_CRS_printfm(mat, myCRS);
     NTWPR_WGF_fclose(file);
     NTWPR_CRS_free(myCRS);
     fclose(mat);

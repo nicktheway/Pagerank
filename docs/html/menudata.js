@@ -34,8 +34,10 @@ var menudata={children:[
 {text:"Globals",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
 {text:"d",url:"globals.html#index_d"},
-{text:"n",url:"globals.html#index_n"}]},
+{text:"n",url:"globals.html#index_n"},
+{text:"v",url:"globals.html#index_v"}]},
 {text:"Functions",url:"globals_func.html",children:[
-{text:"n",url:"globals_func.html#index_n"}]},
+{text:"n",url:"globals_func.html#index_n"},
+{text:"v",url:"globals_func.html#index_v"}]},
 {text:"Typedefs",url:"globals_type.html"},
 {text:"Macros",url:"globals_defs.html"}]}]}]}
