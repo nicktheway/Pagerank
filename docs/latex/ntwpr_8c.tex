@@ -6,16 +6,17 @@ File containing the definitions of the functions declared at \mbox{\hyperlink{nt
 
 
 {\ttfamily \#include \char`\"{}ntwpr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ntw\+\_\+math.\+h\char`\"{}}\newline
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-float $\ast$ \mbox{\hyperlink{ntwpr_8c_a083e4f0e1305131937259f25312948e7}{N\+T\+W\+P\+R\+\_\+pagerank}} (\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} web\+Graph\mbox{[}static 1\mbox{]}, float d, float e)
+double $\ast$ \mbox{\hyperlink{ntwpr_8c_af77c56f0f2a93fcd5d91eb426cc6d122}{N\+T\+W\+P\+R\+\_\+pagerank}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} web\+Graph\mbox{[}static 1\mbox{]}, double d, double e)
 \begin{DoxyCompactList}\small\item\em Calculates the pagerank of the nodes of a web graph. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ntwpr_8c_a4f406a3d192d960a30bf52a6bec8bee0}{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}} (const uint32\+\_\+t node\+Num, float vector\mbox{[}static node\+Num\mbox{]})
+void \mbox{\hyperlink{ntwpr_8c_a37f94e58ec12588c95d479fd6a342161}{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}} (const uint32\+\_\+t node\+Num, double vector\mbox{[}static node\+Num\mbox{]})
 \begin{DoxyCompactList}\small\item\em Initializes the pagerank vector uniformely. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{ntwpr_8c_adba2a6c6aa2c7512738b05cd77f5b3fa}{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}} (const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} matrix\mbox{[}static 1\mbox{]}, float x\+\_\+vec\mbox{[}static 1\mbox{]}, const float b\+\_\+vec\mbox{[}static 1\mbox{]})
+double \mbox{\hyperlink{ntwpr_8c_a270d8ab35b1ca3759bc377885af69c88}{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} matrix\mbox{[}static 1\mbox{]}, double x\+\_\+vec\mbox{[}static 1\mbox{]}, const double b\+\_\+vec\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em Calculates one iteration of $(I-A)x = b$. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{ntwpr_8c_a3f62462143253fb13fd9a45d67a0cf54}{Vector\+\_\+sqnorm}} (uint32\+\_\+t size, float vector\mbox{[}static size\mbox{]})
+double \mbox{\hyperlink{ntwpr_8c_a8ebacef8d2edcabf2d227550b50bb260}{Vector\+\_\+sqnorm}} (uint32\+\_\+t size, double vector\mbox{[}static size\mbox{]})
 \begin{DoxyCompactList}\small\item\em Returns the squered norm of a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -31,11 +32,11 @@ Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{ntwpr_8c_adba2a6c6aa2c7512738b05cd77f5b3fa}\label{ntwpr_8c_adba2a6c6aa2c7512738b05cd77f5b3fa}} 
+\mbox{\Hypertarget{ntwpr_8c_a270d8ab35b1ca3759bc377885af69c88}\label{ntwpr_8c_a270d8ab35b1ca3759bc377885af69c88}} 
 \index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter@{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}}
 \index{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter@{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}!ntwpr.\+c@{ntwpr.\+c}}
 \subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter()}{NTWPR\_GS\_iter()}}
-{\footnotesize\ttfamily float N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{matrix\mbox{[}static 1\mbox{]},  }\item[{float}]{x\+\_\+vec\mbox{[}static 1\mbox{]},  }\item[{const float}]{b\+\_\+vec\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{matrix\mbox{[}static 1\mbox{]},  }\item[{double}]{x\+\_\+vec\mbox{[}static 1\mbox{]},  }\item[{const double}]{b\+\_\+vec\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -51,13 +52,13 @@ Calculates one iteration of $(I-A)x = b$.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-float The squared norm difference of the old and new {\itshape x\+\_\+vec}. 
+double The squared norm difference of the old and new {\itshape x\+\_\+vec}. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ntwpr_8c_a083e4f0e1305131937259f25312948e7}\label{ntwpr_8c_a083e4f0e1305131937259f25312948e7}} 
+\mbox{\Hypertarget{ntwpr_8c_af77c56f0f2a93fcd5d91eb426cc6d122}\label{ntwpr_8c_af77c56f0f2a93fcd5d91eb426cc6d122}} 
 \index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}}
 \index{N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}!ntwpr.\+c@{ntwpr.\+c}}
 \subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+pagerank()}{NTWPR\_pagerank()}}
-{\footnotesize\ttfamily float$\ast$ N\+T\+W\+P\+R\+\_\+pagerank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}}}]{web\+Graph\mbox{[}static 1\mbox{]},  }\item[{float}]{d,  }\item[{float}]{e }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double$\ast$ N\+T\+W\+P\+R\+\_\+pagerank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{web\+Graph\mbox{[}static 1\mbox{]},  }\item[{double}]{d,  }\item[{double}]{e }\end{DoxyParamCaption})}
 
 
 
@@ -65,7 +66,7 @@ Calculates the pagerank of the nodes of a web graph.
 
 
 \begin{DoxyParams}{Parameters}
-{\em web\+Graph} & The web graf in \mbox{\hyperlink{structNTWPR__CRS}{N\+T\+W\+P\+R\+\_\+\+C\+RS}} representation. \\
+{\em web\+Graph} & The web graf in \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} representation. \\
 \hline
 {\em d} & The teleportation coefficient. \\
 \hline
@@ -73,13 +74,13 @@ Calculates the pagerank of the nodes of a web graph.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-float$\ast$ The calculated pagerank vector. 
+double$\ast$ The calculated pagerank vector. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ntwpr_8c_a4f406a3d192d960a30bf52a6bec8bee0}\label{ntwpr_8c_a4f406a3d192d960a30bf52a6bec8bee0}} 
+\mbox{\Hypertarget{ntwpr_8c_a37f94e58ec12588c95d479fd6a342161}\label{ntwpr_8c_a37f94e58ec12588c95d479fd6a342161}} 
 \index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+pr\+\_\+init@{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}}
 \index{N\+T\+W\+P\+R\+\_\+pr\+\_\+init@{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}!ntwpr.\+c@{ntwpr.\+c}}
 \subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+pr\+\_\+init()}{NTWPR\_pr\_init()}}
-{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+pr\+\_\+init (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{node\+Num,  }\item[{float}]{vector\mbox{[}static node\+Num\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+pr\+\_\+init (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{node\+Num,  }\item[{double}]{vector\mbox{[}static node\+Num\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -92,11 +93,11 @@ Initializes the pagerank vector uniformely.
 {\em vector} & The vector that will be initialized. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ntwpr_8c_a3f62462143253fb13fd9a45d67a0cf54}\label{ntwpr_8c_a3f62462143253fb13fd9a45d67a0cf54}} 
+\mbox{\Hypertarget{ntwpr_8c_a8ebacef8d2edcabf2d227550b50bb260}\label{ntwpr_8c_a8ebacef8d2edcabf2d227550b50bb260}} 
 \index{ntwpr.\+c@{ntwpr.\+c}!Vector\+\_\+sqnorm@{Vector\+\_\+sqnorm}}
 \index{Vector\+\_\+sqnorm@{Vector\+\_\+sqnorm}!ntwpr.\+c@{ntwpr.\+c}}
 \subsubsection{\texorpdfstring{Vector\+\_\+sqnorm()}{Vector\_sqnorm()}}
-{\footnotesize\ttfamily float Vector\+\_\+sqnorm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size,  }\item[{float}]{vector\mbox{[}static size\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double Vector\+\_\+sqnorm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size,  }\item[{double}]{vector\mbox{[}static size\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -110,5 +111,5 @@ Returns the squered norm of a vector.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-float The vector\textquotesingle{}s second norm squared. 
+double The vector\textquotesingle{}s second norm squared. 
 \end{DoxyReturn}

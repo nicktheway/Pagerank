@@ -1,0 +1,163 @@
+\hypertarget{ntw__math_8h}{}\section{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+math.h File Reference}
+\label{ntw__math_8h}\index{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+math.\+h@{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+math.\+h}}
+
+
+Header containing useful math functions, especially for vectors.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ntw__math_8h_a8d8420e5fd69663f4aefcda4344f35d3}{N\+T\+W\+\_\+mult\+DV}} (const size\+\_\+t n, double vector\mbox{[}static n\mbox{]}, const double c)
+\begin{DoxyCompactList}\small\item\em Does the multiplication\+: $\vec{V} = c\vec{V}$. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__math_8h_a51ff9b76d13a32a82a752984ffd113a3}{N\+T\+W\+\_\+add\+DV}} (const size\+\_\+t n, double vectorA\mbox{[}static n\mbox{]}, const double vectorB\mbox{[}static n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Does the addition\+: $\vec{A} = \vec{A}+\vec{B}$. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__math_8h_a3bcd90627ca4b91226f86065ad94d456}{N\+T\+W\+\_\+sub\+DV}} (const size\+\_\+t n, double vectorA\mbox{[}static n\mbox{]}, const double vectorB\mbox{[}static n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Does the substitution\+: $\vec{A} = \vec{A}-\vec{B}$. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{ntw__math_8h_a9600239ccc845d162c04f9472c6f8e5d}{N\+T\+W\+\_\+dot\+DV}} (const size\+\_\+t n, const double vectorA\mbox{[}static n\mbox{]}, const double vectorB\mbox{[}static n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calculates the dot product of {\itshape vectorA} and {\itshape vectorB}. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{ntw__math_8h_a49ce6feaf1ed2169fb3871e5a693353c}{N\+T\+W\+\_\+new\+Zero\+VectorD}} (const size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Creates a {\itshape n} length zero vector. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{ntw__math_8h_ae338b005355f529597f0d1a770f44a7d}{N\+T\+W\+\_\+new\+Uni\+VectorD}} (const size\+\_\+t n, const double value)
+\begin{DoxyCompactList}\small\item\em Creates a {\itshape n} legth vector with all elements set to {\itshape value}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header containing useful math functions, especially for vectors. 
+
+\begin{DoxyAuthor}{Author}
+Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth.\+gr} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11-\/08-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ntw__math_8h_a51ff9b76d13a32a82a752984ffd113a3}\label{ntw__math_8h_a51ff9b76d13a32a82a752984ffd113a3}} 
+\index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+add\+DV@{N\+T\+W\+\_\+add\+DV}}
+\index{N\+T\+W\+\_\+add\+DV@{N\+T\+W\+\_\+add\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+add\+D\+V()}{NTW\_addDV()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+add\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{double}]{vectorA\mbox{[}static n\mbox{]},  }\item[{const double}]{vectorB\mbox{[}static n\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Does the addition\+: $\vec{A} = \vec{A}+\vec{B}$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the vectors. If less only the first {\itshape n} elements will be added. \\
+\hline
+{\em vectorA} & The vector $\vec{A}$. \\
+\hline
+{\em vectorB} & The vector $\vec{B}$. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__math_8h_a9600239ccc845d162c04f9472c6f8e5d}\label{ntw__math_8h_a9600239ccc845d162c04f9472c6f8e5d}} 
+\index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+dot\+DV@{N\+T\+W\+\_\+dot\+DV}}
+\index{N\+T\+W\+\_\+dot\+DV@{N\+T\+W\+\_\+dot\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+dot\+D\+V()}{NTW\_dotDV()}}
+{\footnotesize\ttfamily double N\+T\+W\+\_\+dot\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{const double}]{vectorA\mbox{[}static n\mbox{]},  }\item[{const double}]{vectorB\mbox{[}static n\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Calculates the dot product of {\itshape vectorA} and {\itshape vectorB}. 
+
+If {\itshape n} is less than the actual size of the vectors the dot product will be calculated as if the vectors where reduced to their first n elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the arrays. \\
+\hline
+{\em vectorA} & The vector $\vec{A}$ \\
+\hline
+{\em vectorB} & The vector $\vec{B}$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The dot product $\vec{A} \cdot \vec{B}$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntw__math_8h_a8d8420e5fd69663f4aefcda4344f35d3}\label{ntw__math_8h_a8d8420e5fd69663f4aefcda4344f35d3}} 
+\index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+mult\+DV@{N\+T\+W\+\_\+mult\+DV}}
+\index{N\+T\+W\+\_\+mult\+DV@{N\+T\+W\+\_\+mult\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+mult\+D\+V()}{NTW\_multDV()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+mult\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{double}]{vector\mbox{[}static n\mbox{]},  }\item[{const double}]{c }\end{DoxyParamCaption})}
+
+
+
+Does the multiplication\+: $\vec{V} = c\vec{V}$. 
+
+Doesn\textquotesingle{}t allocate memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the vector. If less only the first {\itshape n} elements will be multiplied. \\
+\hline
+{\em vector} & The vector $\vec{V}$, must be at least {\itshape n} elements long. \\
+\hline
+{\em c} & The constant $c$. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__math_8h_ae338b005355f529597f0d1a770f44a7d}\label{ntw__math_8h_ae338b005355f529597f0d1a770f44a7d}} 
+\index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+new\+Uni\+VectorD@{N\+T\+W\+\_\+new\+Uni\+VectorD}}
+\index{N\+T\+W\+\_\+new\+Uni\+VectorD@{N\+T\+W\+\_\+new\+Uni\+VectorD}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+new\+Uni\+Vector\+D()}{NTW\_newUniVectorD()}}
+{\footnotesize\ttfamily double$\ast$ N\+T\+W\+\_\+new\+Uni\+VectorD (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{const double}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a {\itshape n} legth vector with all elements set to {\itshape value}. 
+
+Allocates memory that should be freed later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size $n$ of the vector. \\
+\hline
+{\em value} & The value $v$ of each element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double$\ast$ Pointer to the vector\+: $\overbrace{\begin{pmatrix}v & v & \cdots &v\end{pmatrix}}^{n}$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntw__math_8h_a49ce6feaf1ed2169fb3871e5a693353c}\label{ntw__math_8h_a49ce6feaf1ed2169fb3871e5a693353c}} 
+\index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+new\+Zero\+VectorD@{N\+T\+W\+\_\+new\+Zero\+VectorD}}
+\index{N\+T\+W\+\_\+new\+Zero\+VectorD@{N\+T\+W\+\_\+new\+Zero\+VectorD}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+new\+Zero\+Vector\+D()}{NTW\_newZeroVectorD()}}
+{\footnotesize\ttfamily double$\ast$ N\+T\+W\+\_\+new\+Zero\+VectorD (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Creates a {\itshape n} length zero vector. 
+
+Allocates memory that should be freed later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double$\ast$ Pointer to the vector\+: $\overbrace{\begin{pmatrix}0 & 0 & \cdots &0\end{pmatrix}}^{n}$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntw__math_8h_a3bcd90627ca4b91226f86065ad94d456}\label{ntw__math_8h_a3bcd90627ca4b91226f86065ad94d456}} 
+\index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+sub\+DV@{N\+T\+W\+\_\+sub\+DV}}
+\index{N\+T\+W\+\_\+sub\+DV@{N\+T\+W\+\_\+sub\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+sub\+D\+V()}{NTW\_subDV()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+sub\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{double}]{vectorA\mbox{[}static n\mbox{]},  }\item[{const double}]{vectorB\mbox{[}static n\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Does the substitution\+: $\vec{A} = \vec{A}-\vec{B}$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the vectors. If less only the first {\itshape n} elements will be substituded. \\
+\hline
+{\em vectorA} & The vector $\vec{A}$. \\
+\hline
+{\em vectorB} & The vector $\vec{B}$. \\
+\hline
+\end{DoxyParams}

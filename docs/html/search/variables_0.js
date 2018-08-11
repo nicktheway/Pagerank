@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['col_5find',['col_ind',['../structNTWPR__CRS.html#a93cf048b735d3757aae9345801ef15fa',1,'NTWPR_CRS']]]
+  ['col_5find',['col_ind',['../structntw__crs.html#a3f5430e0836427a7da3b0bcceb3cc148',1,'ntw_crs']]]
 ];

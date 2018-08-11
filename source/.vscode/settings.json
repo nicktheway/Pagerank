@@ -4,6 +4,7 @@
         "wgimp.h": "c",
         "stdlib.h": "c",
         "ntwpr_wg.h": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "stdint.h": "c"
     }
 }

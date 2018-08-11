@@ -12,6 +12,12 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -66,98 +72,123 @@ $(function() {
 <div class="contents">
 <div class="textblock">Here is a list of all documented functions, variables, defines, enums, and typedefs with links to the documentation:</div>
 
-<h3><a id="index_d"></a>- d -</h3><ul>
-<li>DF_SU_LINE_COMMENT
-: <a class="el" href="ntwpr__wg_8h.html#a3b180f0333f2cbf897a974114e77c249">ntwpr_wg.h</a>
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>LINE_COMMENT_SU
+: <a class="el" href="ntwpr__wg_8h.html#a8cf91b022221bf70190c1f93d8459f47">ntwpr_wg.h</a>
 </li>
 </ul>
 
 
 <h3><a id="index_n"></a>- n -</h3><ul>
-<li>NTWPR_CRS
-: <a class="el" href="ntwpr__wg_8h.html#aaa00d0216c511bdc730bd723577fba78">ntwpr_wg.h</a>
+<li>NTW_addDV()
+: <a class="el" href="ntw__math_8c.html#a51ff9b76d13a32a82a752984ffd113a3">ntw_math.c</a>
+, <a class="el" href="ntw__math_8h.html#a51ff9b76d13a32a82a752984ffd113a3">ntw_math.h</a>
 </li>
-<li>NTWPR_CRS_const_mult()
-: <a class="el" href="ntwpr__wg_8c.html#a5156982cb804a8b5a42e2d8150b474dd">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a5156982cb804a8b5a42e2d8150b474dd">ntwpr_wg.h</a>
+<li>ntw_crs
+: <a class="el" href="ntw__crs_8h.html#a9c312b83e0c0c7b12c63c50a25c224de">ntw_crs.h</a>
 </li>
-<li>NTWPR_CRS_free()
-: <a class="el" href="ntwpr__wg_8c.html#a7bfa4977abde8ca916d0f38373874e77">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a7bfa4977abde8ca916d0f38373874e77">ntwpr_wg.h</a>
+<li>NTW_CRS_cmult()
+: <a class="el" href="ntw__crs_8c.html#a623b227a7c44c98cc9e5910510c9d29d">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#a623b227a7c44c98cc9e5910510c9d29d">ntw_crs.h</a>
 </li>
-<li>NTWPR_CRS_print()
-: <a class="el" href="ntwpr__wg_8c.html#a06945e591d46a4e6f363260abd1b1bb6">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a06945e591d46a4e6f363260abd1b1bb6">ntwpr_wg.h</a>
+<li>NTW_CRS_free()
+: <a class="el" href="ntw__crs_8c.html#a305e64535f13c75705e10ac0c55b135d">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#a305e64535f13c75705e10ac0c55b135d">ntw_crs.h</a>
 </li>
-<li>NTWPR_CRS_printfm()
-: <a class="el" href="ntwpr__wg_8c.html#a7e494b2f4f57c1a839124611a7d20f4a">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a7e494b2f4f57c1a839124611a7d20f4a">ntwpr_wg.h</a>
+<li>NTW_CRS_new()
+: <a class="el" href="ntw__crs_8c.html#ae4a307c637e1bded2ffb6bcc9bbf960b">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#ae4a307c637e1bded2ffb6bcc9bbf960b">ntw_crs.h</a>
 </li>
-<li>NTWPR_CRS_product_alloc()
-: <a class="el" href="ntwpr__wg_8c.html#a6552051ad5d686792553fb8ab20859c6">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a6552051ad5d686792553fb8ab20859c6">ntwpr_wg.h</a>
+<li>NTW_CRS_print()
+: <a class="el" href="ntw__crs_8c.html#ad2927841d2ac3dd3965750a1028ca18e">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#ad2927841d2ac3dd3965750a1028ca18e">ntw_crs.h</a>
 </li>
-<li>NTWPR_CRS_product_non_alloc()
-: <a class="el" href="ntwpr__wg_8c.html#af8a9a1cf4b0bf0b90903cd651fd28a5b">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#af8a9a1cf4b0bf0b90903cd651fd28a5b">ntwpr_wg.h</a>
+<li>NTW_CRS_printFullMatrix()
+: <a class="el" href="ntw__crs_8c.html#ac0c1bfc4772e88d4a85c54ff4a6cc620">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#ac0c1bfc4772e88d4a85c54ff4a6cc620">ntw_crs.h</a>
 </li>
-<li>NTWPR_CRS_rnorm()
-: <a class="el" href="ntwpr__wg_8c.html#a040768a1280c3afb1cb42ef4d28e390c">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a040768a1280c3afb1cb42ef4d28e390c">ntwpr_wg.h</a>
+<li>NTW_CRS_rowNorm()
+: <a class="el" href="ntw__crs_8c.html#a9f8e401f5151b982e7a40c40ce2ea040">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#a9f8e401f5151b982e7a40c40ce2ea040">ntw_crs.h</a>
 </li>
-<li>NTWPR_CRS_unified_rnorm()
-: <a class="el" href="ntwpr__wg_8c.html#a027d21e0b67ccdfb7bf2573e4a4ab1c6">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a027d21e0b67ccdfb7bf2573e4a4ab1c6">ntwpr_wg.h</a>
+<li>NTW_CRS_rowNormUnif()
+: <a class="el" href="ntw__crs_8c.html#a051627d1d5da22de040dcd4aafe3faa6">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#a051627d1d5da22de040dcd4aafe3faa6">ntw_crs.h</a>
 </li>
-<li>NTWPR_CRS_value_at()
-: <a class="el" href="ntwpr__wg_8c.html#aa237433885a2b3dcc3592ac907edb243">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#aa237433885a2b3dcc3592ac907edb243">ntwpr_wg.h</a>
+<li>NTW_CRS_valueAt()
+: <a class="el" href="ntw__crs_8c.html#a16aa5023529756790dc54d54f370ccd2">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#a16aa5023529756790dc54d54f370ccd2">ntw_crs.h</a>
 </li>
-<li>NTWPR_expfm()
-: <a class="el" href="ntwpr__wg_8c.html#a2cbf95fa9c7afa941a04d297b22bafb6">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a2cbf95fa9c7afa941a04d297b22bafb6">ntwpr_wg.h</a>
+<li>NTW_CRS_vmult()
+: <a class="el" href="ntw__crs_8c.html#a6654f7dea85510e5a553c47130b4d293">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#a6654f7dea85510e5a553c47130b4d293">ntw_crs.h</a>
 </li>
-<li>NTWPR_expsm()
-: <a class="el" href="ntwpr__wg_8c.html#a66c3d176a9c253518592ae1ee08749ec">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a66c3d176a9c253518592ae1ee08749ec">ntwpr_wg.h</a>
+<li>NTW_CRS_vmultAlloc()
+: <a class="el" href="ntw__crs_8c.html#aec240d09f69f88b56cc72e14c266c8ae">ntw_crs.c</a>
+, <a class="el" href="ntw__crs_8h.html#aec240d09f69f88b56cc72e14c266c8ae">ntw_crs.h</a>
+</li>
+<li>NTW_dotDV()
+: <a class="el" href="ntw__math_8c.html#a9600239ccc845d162c04f9472c6f8e5d">ntw_math.c</a>
+, <a class="el" href="ntw__math_8h.html#a9600239ccc845d162c04f9472c6f8e5d">ntw_math.h</a>
+</li>
+<li>NTW_multDV()
+: <a class="el" href="ntw__math_8c.html#a8d8420e5fd69663f4aefcda4344f35d3">ntw_math.c</a>
+, <a class="el" href="ntw__math_8h.html#a8d8420e5fd69663f4aefcda4344f35d3">ntw_math.h</a>
+</li>
+<li>NTW_newUniVectorD()
+: <a class="el" href="ntw__math_8c.html#ae338b005355f529597f0d1a770f44a7d">ntw_math.c</a>
+, <a class="el" href="ntw__math_8h.html#ae338b005355f529597f0d1a770f44a7d">ntw_math.h</a>
+</li>
+<li>NTW_newZeroVectorD()
+: <a class="el" href="ntw__math_8h.html#a49ce6feaf1ed2169fb3871e5a693353c">ntw_math.h</a>
+, <a class="el" href="ntw__math_8c.html#a49ce6feaf1ed2169fb3871e5a693353c">ntw_math.c</a>
+</li>
+<li>NTW_subDV()
+: <a class="el" href="ntw__math_8c.html#a3bcd90627ca4b91226f86065ad94d456">ntw_math.c</a>
+, <a class="el" href="ntw__math_8h.html#a3bcd90627ca4b91226f86065ad94d456">ntw_math.h</a>
 </li>
 <li>NTWPR_GS_iter()
-: <a class="el" href="ntwpr_8c.html#adba2a6c6aa2c7512738b05cd77f5b3fa">ntwpr.c</a>
-, <a class="el" href="ntwpr_8h.html#adba2a6c6aa2c7512738b05cd77f5b3fa">ntwpr.h</a>
+: <a class="el" href="ntwpr_8c.html#a270d8ab35b1ca3759bc377885af69c88">ntwpr.c</a>
+, <a class="el" href="ntwpr_8h.html#a270d8ab35b1ca3759bc377885af69c88">ntwpr.h</a>
 </li>
 <li>NTWPR_invalid_fp_exit
 : <a class="el" href="ntwpr__wg_8h.html#aaa2a19790d76b937d36911757ab9a416">ntwpr_wg.h</a>
 </li>
-<li>NTWPR_load2crs()
-: <a class="el" href="ntwpr__wg_8c.html#a8880314ababb89902382ab5282ef3966">ntwpr_wg.c</a>
-, <a class="el" href="ntwpr__wg_8h.html#a8880314ababb89902382ab5282ef3966">ntwpr_wg.h</a>
-</li>
 <li>NTWPR_pagerank()
-: <a class="el" href="ntwpr_8c.html#a083e4f0e1305131937259f25312948e7">ntwpr.c</a>
-, <a class="el" href="ntwpr_8h.html#a083e4f0e1305131937259f25312948e7">ntwpr.h</a>
+: <a class="el" href="ntwpr_8c.html#af77c56f0f2a93fcd5d91eb426cc6d122">ntwpr.c</a>
+, <a class="el" href="ntwpr_8h.html#af77c56f0f2a93fcd5d91eb426cc6d122">ntwpr.h</a>
 </li>
 <li>NTWPR_pr_init()
-: <a class="el" href="ntwpr_8h.html#a4f406a3d192d960a30bf52a6bec8bee0">ntwpr.h</a>
-, <a class="el" href="ntwpr_8c.html#a4f406a3d192d960a30bf52a6bec8bee0">ntwpr.c</a>
+: <a class="el" href="ntwpr_8c.html#a37f94e58ec12588c95d479fd6a342161">ntwpr.c</a>
+, <a class="el" href="ntwpr_8h.html#a37f94e58ec12588c95d479fd6a342161">ntwpr.h</a>
 </li>
-<li>NTWPR_SU2WG()
-: <a class="el" href="ntwpr__wg_8h.html#af14fc62b79305e1d3cf64de738d66055">ntwpr_wg.h</a>
-, <a class="el" href="ntwpr__wg_8c.html#af14fc62b79305e1d3cf64de738d66055">ntwpr_wg.c</a>
+<li>NTWPR_WGF_convertSU()
+: <a class="el" href="ntwpr__wg_8h.html#aaa736e093db117a284824bee85784ce3">ntwpr_wg.h</a>
+, <a class="el" href="ntwpr__wg_8c.html#aaa736e093db117a284824bee85784ce3">ntwpr_wg.c</a>
 </li>
-<li>NTWPR_WG_H
-: <a class="el" href="ntwpr__wg_8h.html#afff4e8167c3a8a36b98805ff3ed41854">ntwpr_wg.h</a>
+<li>NTWPR_WGF_exportFM()
+: <a class="el" href="ntwpr__wg_8h.html#ae1e79e9dc654e3514269d78748e4a394">ntwpr_wg.h</a>
+, <a class="el" href="ntwpr__wg_8c.html#ae1e79e9dc654e3514269d78748e4a394">ntwpr_wg.c</a>
+</li>
+<li>NTWPR_WGF_exportSM()
+: <a class="el" href="ntwpr__wg_8h.html#a5c8e2ee5ea6ae1d95077293d28357a47">ntwpr_wg.h</a>
+, <a class="el" href="ntwpr__wg_8c.html#a5c8e2ee5ea6ae1d95077293d28357a47">ntwpr_wg.c</a>
 </li>
 <li>NTWPR_WGF_fclose()
-: <a class="el" href="ntwpr__wg_8h.html#adfdab5767853d9fda8f38bca9460ea1f">ntwpr_wg.h</a>
-, <a class="el" href="ntwpr__wg_8c.html#adfdab5767853d9fda8f38bca9460ea1f">ntwpr_wg.c</a>
+: <a class="el" href="ntwpr__wg_8c.html#adfdab5767853d9fda8f38bca9460ea1f">ntwpr_wg.c</a>
+, <a class="el" href="ntwpr__wg_8h.html#adfdab5767853d9fda8f38bca9460ea1f">ntwpr_wg.h</a>
 </li>
 <li>NTWPR_WGF_fopen()
-: <a class="el" href="ntwpr__wg_8h.html#ae73521afd221df1b6f0af044c35e2f96">ntwpr_wg.h</a>
-, <a class="el" href="ntwpr__wg_8c.html#ae73521afd221df1b6f0af044c35e2f96">ntwpr_wg.c</a>
+: <a class="el" href="ntwpr__wg_8c.html#ae73521afd221df1b6f0af044c35e2f96">ntwpr_wg.c</a>
+, <a class="el" href="ntwpr__wg_8h.html#ae73521afd221df1b6f0af044c35e2f96">ntwpr_wg.h</a>
+</li>
+<li>NTWPR_WGF_load2crs()
+: <a class="el" href="ntwpr__wg_8h.html#a7de28416dbf08fff7b53404ca887f2f7">ntwpr_wg.h</a>
+, <a class="el" href="ntwpr__wg_8c.html#a7de28416dbf08fff7b53404ca887f2f7">ntwpr_wg.c</a>
 </li>
 <li>NTWPR_WGF_rewind()
-: <a class="el" href="ntwpr__wg_8h.html#a51091cac0d9bd8aa7d3a010640cecbdc">ntwpr_wg.h</a>
-, <a class="el" href="ntwpr__wg_8c.html#a51091cac0d9bd8aa7d3a010640cecbdc">ntwpr_wg.c</a>
+: <a class="el" href="ntwpr__wg_8c.html#a900ec9963949f8e50b80772f502fbc63">ntwpr_wg.c</a>
+, <a class="el" href="ntwpr__wg_8h.html#a900ec9963949f8e50b80772f502fbc63">ntwpr_wg.h</a>
 </li>
 <li>NTWPR_WGFile
 : <a class="el" href="ntwpr__wg_8h.html#a991a879882127f21fb6693371ffb5dc6">ntwpr_wg.h</a>
@@ -167,8 +198,8 @@ $(function() {
 
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>Vector_sqnorm()
-: <a class="el" href="ntwpr_8c.html#a3f62462143253fb13fd9a45d67a0cf54">ntwpr.c</a>
-, <a class="el" href="ntwpr_8h.html#a3f62462143253fb13fd9a45d67a0cf54">ntwpr.h</a>
+: <a class="el" href="ntwpr_8c.html#a8ebacef8d2edcabf2d227550b50bb260">ntwpr.c</a>
+, <a class="el" href="ntwpr_8h.html#a8ebacef8d2edcabf2d227550b50bb260">ntwpr.h</a>
 </li>
 </ul>
 </div><!-- contents -->

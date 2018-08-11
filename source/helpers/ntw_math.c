@@ -38,6 +38,7 @@ double NTW_dotDV(const size_t n, const double vectorA[static n], const double ve
     {
         dot += vectorA[i] * vectorB[i];
     }
+    return dot;
 }
 
 double* NTW_newZeroVectorD(const size_t n)

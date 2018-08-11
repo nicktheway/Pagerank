@@ -6,9 +6,13 @@
  * @date 11-08-2018
  */
 
-ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, const uint32_t rowPtr[static nodeNum+1], const uint32_t colInd[static edgeNum], const double val[static edgeNum])
+#include "ntw_crs.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t rowPtr[static nodeNum+1], uint32_t colInd[static edgeNum], double val[static edgeNum])
 {
-    ntw_crs* newCrs = malloc(sizeof(*newCrs));
+    ntw_crs* const newCrs = malloc(sizeof(*newCrs));
     if (newCrs)
     {
         newCrs->node_num = nodeNum;

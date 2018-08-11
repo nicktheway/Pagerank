@@ -5,13 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Parallel pagerank: NTWPR_CRS Struct Reference</title>
+<title>Parallel pagerank: ntw_crs Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -67,40 +73,42 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">NTWPR_CRS Struct Reference</div>  </div>
+<div class="title">ntw_crs Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>A Compressed Row Storage struct.  
- <a href="structNTWPR__CRS.html#details">More...</a></p>
+ <a href="structntw__crs.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ntw__crs_8h_source.html">ntw_crs.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a05685735e3e7157eb84471e95c14e994"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNTWPR__CRS.html#a05685735e3e7157eb84471e95c14e994">edge_num</a></td></tr>
-<tr class="separator:a05685735e3e7157eb84471e95c14e994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a745bd86046682b8f2b96974389d4bae2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNTWPR__CRS.html#a745bd86046682b8f2b96974389d4bae2">node_num</a></td></tr>
-<tr class="separator:a745bd86046682b8f2b96974389d4bae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45c38202e915dbfdbbd389166b05df91"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNTWPR__CRS.html#a45c38202e915dbfdbbd389166b05df91">val</a></td></tr>
-<tr class="separator:a45c38202e915dbfdbbd389166b05df91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93cf048b735d3757aae9345801ef15fa"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNTWPR__CRS.html#a93cf048b735d3757aae9345801ef15fa">col_ind</a></td></tr>
-<tr class="separator:a93cf048b735d3757aae9345801ef15fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33e24ac0e5c91ebc8207447e13c8a636"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNTWPR__CRS.html#a33e24ac0e5c91ebc8207447e13c8a636">row_ptr</a></td></tr>
-<tr class="separator:a33e24ac0e5c91ebc8207447e13c8a636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a11fbae59bf6159e40cb18e5f37ada"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structntw__crs.html#a36a11fbae59bf6159e40cb18e5f37ada">node_num</a></td></tr>
+<tr class="separator:a36a11fbae59bf6159e40cb18e5f37ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85160ebade6d93ba77c9e90f2f237cea"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structntw__crs.html#a85160ebade6d93ba77c9e90f2f237cea">edge_num</a></td></tr>
+<tr class="separator:a85160ebade6d93ba77c9e90f2f237cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf117885ca226f2a82ff28dca7177c34"><td class="memItemLeft" align="right" valign="top">uint32_t *restrict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structntw__crs.html#abf117885ca226f2a82ff28dca7177c34">row_ptr</a></td></tr>
+<tr class="separator:abf117885ca226f2a82ff28dca7177c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5430e0836427a7da3b0bcceb3cc148"><td class="memItemLeft" align="right" valign="top">uint32_t *restrict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structntw__crs.html#a3f5430e0836427a7da3b0bcceb3cc148">col_ind</a></td></tr>
+<tr class="separator:a3f5430e0836427a7da3b0bcceb3cc148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed2cc918a69051b395e9b151a66867f"><td class="memItemLeft" align="right" valign="top">double *restrict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structntw__crs.html#a5ed2cc918a69051b395e9b151a66867f">val</a></td></tr>
+<tr class="separator:a5ed2cc918a69051b395e9b151a66867f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">A Compressed Row Storage struct. </p>
-<p class="">Used to save web graph tables in RAM. See <a href="http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000">CRS</a> </p>
+<p class="">Used to save web graph tables in RAM.</p>
+<p class="">The represented matrix can be easily converted into a probability matrix and the dangling nodes (all zero rows) can be found easily as well because row_ptr[i] == row_ptr[i+1] if the node i is dangling.</p>
+<p class="">See <a href="http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000">CRS</a> </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a93cf048b735d3757aae9345801ef15fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93cf048b735d3757aae9345801ef15fa">&#9670;&nbsp;</a></span>col_ind</h2>
+<a id="a3f5430e0836427a7da3b0bcceb3cc148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5430e0836427a7da3b0bcceb3cc148">&#9670;&nbsp;</a></span>col_ind</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t* NTWPR_CRS::col_ind</td>
+          <td class="memname">uint32_t* restrict ntw_crs::col_ind</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -108,14 +116,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a05685735e3e7157eb84471e95c14e994"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05685735e3e7157eb84471e95c14e994">&#9670;&nbsp;</a></span>edge_num</h2>
+<a id="a85160ebade6d93ba77c9e90f2f237cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85160ebade6d93ba77c9e90f2f237cea">&#9670;&nbsp;</a></span>edge_num</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t NTWPR_CRS::edge_num</td>
+          <td class="memname">uint32_t ntw_crs::edge_num</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -123,14 +131,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a745bd86046682b8f2b96974389d4bae2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a745bd86046682b8f2b96974389d4bae2">&#9670;&nbsp;</a></span>node_num</h2>
+<a id="a36a11fbae59bf6159e40cb18e5f37ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a11fbae59bf6159e40cb18e5f37ada">&#9670;&nbsp;</a></span>node_num</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t NTWPR_CRS::node_num</td>
+          <td class="memname">uint32_t ntw_crs::node_num</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -138,14 +146,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a33e24ac0e5c91ebc8207447e13c8a636"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33e24ac0e5c91ebc8207447e13c8a636">&#9670;&nbsp;</a></span>row_ptr</h2>
+<a id="abf117885ca226f2a82ff28dca7177c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf117885ca226f2a82ff28dca7177c34">&#9670;&nbsp;</a></span>row_ptr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t* NTWPR_CRS::row_ptr</td>
+          <td class="memname">uint32_t* restrict ntw_crs::row_ptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -153,14 +161,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a45c38202e915dbfdbbd389166b05df91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45c38202e915dbfdbbd389166b05df91">&#9670;&nbsp;</a></span>val</h2>
+<a id="a5ed2cc918a69051b395e9b151a66867f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed2cc918a69051b395e9b151a66867f">&#9670;&nbsp;</a></span>val</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float* NTWPR_CRS::val</td>
+          <td class="memname">double* restrict ntw_crs::val</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -169,7 +177,7 @@ Data Fields</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/ecat/nikos/parallel/source/helpers/<a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a></li>
+<li>/home/ecat/nikos/parallel/source/helpers/<a class="el" href="ntw__crs_8h_source.html">ntw_crs.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

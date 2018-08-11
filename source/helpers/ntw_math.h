@@ -10,38 +10,35 @@
 #ifndef NTW_MATH_H
 #define NTW_MATH_H 1
 
-#include <stdio.h> // for perror
-#include <stdlib.h> // for size_t
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * @brief Multiplies the @a vector by the constant @a c. Stores the reuslt
- *          in place.
+ * @brief Does the multiplication: \f$\vec{V} = c\vec{V}\f$
  * 
  * Doesn't allocate memory.
  * 
  * @param n The size of the vector. If less only the first @a n elements will be multiplied.
- * @param vector The vector, must be at least @a n elements long. 
- * @param c The constant.
+ * @param vector The vector \f$\vec{V}\f$, must be at least @a n elements long. 
+ * @param c The constant \f$c\f$.
  */
 void NTW_multDV(const size_t n, double vector[static n], const double c);
 
 /**
- * @brief Adds the vectors @a vectorA and @a vectorB and stores the result
- *          in the @a vectorA
+ * @brief Does the addition: \f$\vec{A} = \vec{A}+\vec{B}\f$
  * 
  * @param n The size of the vectors. If less only the first @a n elements will be added.
- * @param vectorA The first  vector that will be modified.
- * @param vectorB The second vector.
+ * @param vectorA The vector \f$\vec{A}\f$.
+ * @param vectorB The vector \f$\vec{B}\f$.
  */
 void NTW_addDV(const size_t n, double vectorA[static n], const double vectorB[static n]);
 
 /**
- * @brief Subs the @a vectorB from the @a vectorA and stores the result
- *          in the @a vectorA
+ * @brief Does the substitution: \f$\vec{A} = \vec{A}-\vec{B}\f$
  * 
  * @param n The size of the vectors. If less only the first @a n elements will be substituded.
- * @param vectorA The first  vector that will be modified.
- * @param vectorB The second vector.
+ * @param vectorA The vector \f$\vec{A}\f$.
+ * @param vectorB The vector \f$\vec{B}\f$.
  */
 void NTW_subDV(const size_t n, double vectorA[static n], const double vectorB[static n]);
 
@@ -52,9 +49,9 @@ void NTW_subDV(const size_t n, double vectorA[static n], const double vectorB[st
  * be calculated as if the vectors where reduced to their first n elements.
  * 
  * @param n The size of the arrays.
- * @param vectorA 
- * @param vectorB 
- * @return double The dot product @f$\bold{vectorA} \cdot \bold{vectorB} @f$
+ * @param vectorA The vector \f$\vec{A}\f$
+ * @param vectorB The vector \f$\vec{B}\f$
+ * @return double The dot product \f$\vec{A} \cdot \vec{B}\f$
  */
 double NTW_dotDV(const size_t n, const double vectorA[static n], const double vectorB[static n]);
 
@@ -64,7 +61,7 @@ double NTW_dotDV(const size_t n, const double vectorA[static n], const double ve
  * Allocates memory that should be freed later.
  * 
  * @param n The size of the vector.
- * @return double* Pointer to the vector.
+ * @return double* Pointer to the vector: \f$\overbrace{\begin{pmatrix}0 & 0 & \cdots &0\end{pmatrix}}^{n}\f$.
  */
 double* NTW_newZeroVectorD(const size_t n);
 
@@ -73,9 +70,9 @@ double* NTW_newZeroVectorD(const size_t n);
  * 
  * Allocates memory that should be freed later.
  * 
- * @param n The size of the vector.
- * @param value The value of each elements.
- * @return double* Pointer to the vector.
+ * @param n The size \f$n\f$ of the vector.
+ * @param value The value \f$v\f$ of each element.
+ * @return double* Pointer to the vector: \f$\overbrace{\begin{pmatrix}v & v & \cdots &v\end{pmatrix}}^{n}\f$.
  */
 double* NTW_newUniVectorD(const size_t n, const double value);
 

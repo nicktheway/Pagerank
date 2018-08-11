@@ -1,0 +1,266 @@
+\hypertarget{ntw__crs_8h}{}\section{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+crs.h File Reference}
+\label{ntw__crs_8h}\index{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+crs.\+h@{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+crs.\+h}}
+
+
+File containing C\+RS (compressed row storage) type and functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}
+\begin{DoxyCompactList}\small\item\em A Compressed Row Storage struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} \mbox{\hyperlink{ntw__crs_8h_a9c312b83e0c0c7b12c63c50a25c224de}{ntw\+\_\+crs}}
+\begin{DoxyCompactList}\small\item\em A Compressed Row Storage struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} $\ast$ \mbox{\hyperlink{ntw__crs_8h_ae4a307c637e1bded2ffb6bcc9bbf960b}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new}} (const uint32\+\_\+t node\+Num, const uint32\+\_\+t edge\+Num, uint32\+\_\+t row\+Ptr\mbox{[}static node\+Num+1\mbox{]}, uint32\+\_\+t col\+Ind\mbox{[}static edge\+Num\mbox{]}, double val\mbox{[}static edge\+Num\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates a new C\+RS structure to store a matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8h_a305e64535f13c75705e10ac0c55b135d}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} $\ast$crs)
+\begin{DoxyCompactList}\small\item\em Unloads a \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} from memory (frees allocated memory). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8h_a623b227a7c44c98cc9e5910510c9d29d}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, const double c)
+\begin{DoxyCompactList}\small\item\em Multiplies the values of the sparse table in the C\+RS form {\itshape crs} with the constant value {\itshape c}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8h_a6654f7dea85510e5a553c47130b4d293}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, const double vector\mbox{[}static 1\mbox{]}, double product\mbox{[}static crs-\/$>$node\+\_\+num\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calculates the product of the C\+RS table {\itshape crs} with the {\itshape vector} and stores the result in {\itshape product}. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{ntw__crs_8h_aec240d09f69f88b56cc72e14c266c8ae}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, const double vector\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calculates the product of the C\+RS table {\itshape crs} with the {\itshape vector} and return the result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8h_a9f8e401f5151b982e7a40c40ce2ea040}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Normalizes the rows of the C\+RS table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8h_a051627d1d5da22de040dcd4aafe3faa6}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Normalizes the rows of the C\+RS table giving all the edges in each row, the same value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{ntw__crs_8h_a16aa5023529756790dc54d54f370ccd2}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t row, uint32\+\_\+t col)
+\begin{DoxyCompactList}\small\item\em Returns the value at ({\itshape row}, {\itshape col}) of the matrix of the C\+RS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8h_ad2927841d2ac3dd3965750a1028ca18e}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em A function for visualizing a C\+RS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8h_ac0c1bfc4772e88d4a85c54ff4a6cc620}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em A function for printing the full matrix of the C\+RS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing C\+RS (compressed row storage) type and functions. 
+
+\begin{DoxyAuthor}{Author}
+Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth.\+gr} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11-\/08-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{ntw__crs_8h_a9c312b83e0c0c7b12c63c50a25c224de}\label{ntw__crs_8h_a9c312b83e0c0c7b12c63c50a25c224de}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!ntw\+\_\+crs@{ntw\+\_\+crs}}
+\index{ntw\+\_\+crs@{ntw\+\_\+crs}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{ntw\+\_\+crs}{ntw\_crs}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}  \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}
+
+
+
+A Compressed Row Storage struct. 
+
+Used to save web graph tables in R\+AM.
+
+The represented matrix can be easily converted into a probability matrix and the dangling nodes (all zero rows) can be found easily as well because row\+\_\+ptr\mbox{[}i\mbox{]} == row\+\_\+ptr\mbox{[}i+1\mbox{]} if the node i is dangling.
+
+See \href{http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000}\texttt{ C\+RS} 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ntw__crs_8h_a623b227a7c44c98cc9e5910510c9d29d}\label{ntw__crs_8h_a623b227a7c44c98cc9e5910510c9d29d}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult()}{NTW\_CRS\_cmult()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]},  }\item[{const double}]{c }\end{DoxyParamCaption})}
+
+
+
+Multiplies the values of the sparse table in the C\+RS form {\itshape crs} with the constant value {\itshape c}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & The \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} representation of the sparse table. \\
+\hline
+{\em c} & The constant multiplicator. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__crs_8h_a305e64535f13c75705e10ac0c55b135d}\label{ntw__crs_8h_a305e64535f13c75705e10ac0c55b135d}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+free@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free()}{NTW\_CRS\_free()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} $\ast$}]{crs }\end{DoxyParamCaption})}
+
+
+
+Unloads a \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} from memory (frees allocated memory). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__crs_8h_ae4a307c637e1bded2ffb6bcc9bbf960b}\label{ntw__crs_8h_ae4a307c637e1bded2ffb6bcc9bbf960b}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+new@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new()}{NTW\_CRS\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+new (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{node\+Num,  }\item[{const uint32\+\_\+t}]{edge\+Num,  }\item[{uint32\+\_\+t}]{row\+Ptr\mbox{[}static node\+Num+1\mbox{]},  }\item[{uint32\+\_\+t}]{col\+Ind\mbox{[}static edge\+Num\mbox{]},  }\item[{double}]{val\mbox{[}static edge\+Num\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates a new C\+RS structure to store a matrix. 
+
+Should be freed using the N\+T\+W\+\_\+\+C\+R\+S\+\_\+free when non needed anymore.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Num} & The number of nodes (rows) of the matrix. \\
+\hline
+{\em edge\+Num} & The number of non-\/zero elements of the matrix. \\
+\hline
+{\em row\+Ptr} & Array of {\itshape node\+Num} + 1 elements with the indeces of the {\itshape val} where each row begins and the end of the {\itshape val} array. \\
+\hline
+{\em col\+Ind} & Array of {\itshape edge\+Num} elements with the columns of each non zero element of the matrix. \\
+\hline
+{\em val} & Array of {\itshape edge\+Num} elements with the non zero values of the matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ntw\+\_\+crs$\ast$ The created struct or null if unsuccessful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntw__crs_8h_ad2927841d2ac3dd3965750a1028ca18e}\label{ntw__crs_8h_ad2927841d2ac3dd3965750a1028ca18e}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+print@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print()}{NTW\_CRS\_print()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+A function for visualizing a C\+RS. 
+
+Useful for debugging.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & Where will the output go. \\
+\hline
+{\em crs} & The C\+RS to visualize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__crs_8h_ac0c1bfc4772e88d4a85c54ff4a6cc620}\label{ntw__crs_8h_ac0c1bfc4772e88d4a85c54ff4a6cc620}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix()}{NTW\_CRS\_printFullMatrix()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+A function for printing the full matrix of the C\+RS. 
+
+Useful for debugging. Avoid using it for $nodes > 10000$.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & Where will the output go. \\
+\hline
+{\em crs} & The C\+RS of the matrix that will be visualized. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__crs_8h_a9f8e401f5151b982e7a40c40ce2ea040}\label{ntw__crs_8h_a9f8e401f5151b982e7a40c40ce2ea040}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm()}{NTW\_CRS\_rowNorm()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Normalizes the rows of the C\+RS table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & The C\+RS representation of the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__crs_8h_a051627d1d5da22de040dcd4aafe3faa6}\label{ntw__crs_8h_a051627d1d5da22de040dcd4aafe3faa6}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif()}{NTW\_CRS\_rowNormUnif()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Normalizes the rows of the C\+RS table giving all the edges in each row, the same value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & The C\+RS representation of the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__crs_8h_a16aa5023529756790dc54d54f370ccd2}\label{ntw__crs_8h_a16aa5023529756790dc54d54f370ccd2}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At()}{NTW\_CRS\_valueAt()}}
+{\footnotesize\ttfamily double N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t}]{row,  }\item[{uint32\+\_\+t}]{col }\end{DoxyParamCaption})}
+
+
+
+Returns the value at ({\itshape row}, {\itshape col}) of the matrix of the C\+RS. 
+
+Use it sparingly because it\textquotesingle{}s relatively slow. (Depends on how sparse the row is with O(n) where n is the non-\/zero elements of the row).
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & The C\+RS data. \\
+\hline
+{\em row} & The row of the returned value. \\
+\hline
+{\em col} & The column of the returned value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The value at \mbox{[}{\itshape row}, {\itshape col}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntw__crs_8h_a6654f7dea85510e5a553c47130b4d293}\label{ntw__crs_8h_a6654f7dea85510e5a553c47130b4d293}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult()}{NTW\_CRS\_vmult()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]},  }\item[{const double}]{vector\mbox{[}static 1\mbox{]},  }\item[{double}]{product\mbox{[}static crs-\/$>$node\+\_\+num\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Calculates the product of the C\+RS table {\itshape crs} with the {\itshape vector} and stores the result in {\itshape product}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & The C\+RS representation of the matrix $A$. \\
+\hline
+{\em vector} & The vector $v$. \\
+\hline
+{\em product} & The product $A*v$. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ntw__crs_8h_aec240d09f69f88b56cc72e14c266c8ae}\label{ntw__crs_8h_aec240d09f69f88b56cc72e14c266c8ae}} 
+\index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc()}{NTW\_CRS\_vmultAlloc()}}
+{\footnotesize\ttfamily double$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]},  }\item[{const double}]{vector\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Calculates the product of the C\+RS table {\itshape crs} with the {\itshape vector} and return the result. 
+
+The memory of the result should be freed afterwards.
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & The C\+RS representation of the matrix $A$. \\
+\hline
+{\em vector} & The vector $v$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double$\ast$ The product vector $A*v$. 
+\end{DoxyReturn}

@@ -33,7 +33,7 @@ var menudata={children:[
 {text:"File List",url:"files.html"},
 {text:"Globals",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
-{text:"d",url:"globals.html#index_d"},
+{text:"l",url:"globals.html#index_l"},
 {text:"n",url:"globals.html#index_n"},
 {text:"v",url:"globals.html#index_v"}]},
 {text:"Functions",url:"globals_func.html",children:[

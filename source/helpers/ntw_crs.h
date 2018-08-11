@@ -9,6 +9,7 @@
 #ifndef NTW_CRS_H
 #define NTW_CRS_H 1
 
+#include <stdio.h>
 #include <stdint.h>
 
 /**
@@ -27,9 +28,9 @@ typedef struct ntw_crs
 {
     uint32_t node_num;  /**< The number of nodes of the graph. */
     uint32_t edge_num;  /**< The number of non zero elements (edges) */
-    uint32_t* row_ptr;  /**< A pointer to the val vector indicating the start of a matrix' row. */
-    uint32_t* col_ind;  /**< A vector containing the columns of the val's values. */
-    double* val;        /**< The non zero values of the matrix. */
+    uint32_t* restrict row_ptr;  /**< A pointer to the val vector indicating the start of a matrix' row. */
+    uint32_t* restrict col_ind;  /**< A vector containing the columns of the val's values. */
+    double* restrict val;        /**< The non zero values of the matrix. */
 } ntw_crs;
 
 /**
@@ -44,7 +45,7 @@ typedef struct ntw_crs
  * @param val Array of @a edgeNum elements with the non zero values of the matrix.
  * @return ntw_crs* The created struct or null if unsuccessful.
  */
-ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, const uint32_t rowPtr[static nodeNum+1], const uint32_t colInd[static edgeNum], const double val[static edgeNum]);
+ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t rowPtr[static nodeNum+1], uint32_t colInd[static edgeNum], double val[static edgeNum]);
 
 /**
  * @brief Unloads a ntw_crs from memory (frees allocated memory).
