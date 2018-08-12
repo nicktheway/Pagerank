@@ -7,8 +7,8 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "ntwpr_wg.h"
-#include "ntwpr.h"
+#include "../include/ntwpr_wg.h"
+#include "../include/ntwpr.h"
 
 int main(int argc, char* argv[argc+1])
 {
@@ -23,11 +23,15 @@ int main(int argc, char* argv[argc+1])
     NTWPR_WGFile* file = NTWPR_WGF_fopen(argv[2]);
 
     ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
-    FILE* mat = fopen("mat.txt", "w");
+    FILE* mat = fopen("./../data/mat.txt", "w");
     //NTW_CRS_print(mat, myCRS);
     // NTWPR_WGF_exportSM(file, argv[2], n);
 
-
+    if (!mat)
+    {
+        perror("ERROR");
+        return EXIT_FAILURE;
+    }
 
     double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-6);
     fprintf(mat, "\n---START PR RESULT---\n");

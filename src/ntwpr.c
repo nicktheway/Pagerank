@@ -5,8 +5,8 @@
  * @author Katomeris Nikolaos, 8551, ngkatomer@auth.gr
  * @date 11-08-2018
  */
-#include "ntwpr.h"
-#include "ntw_math.h"
+#include "../include/ntwpr.h"
+#include "../include/ntw_math.h"
 
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
 {

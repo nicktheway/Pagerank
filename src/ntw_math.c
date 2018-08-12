@@ -5,7 +5,7 @@
  * @author Katomeris Nikolaos, 8551, ngkatomer@auth.gr
  * @date 11-08-2018
  */
-#include "ntw_math.h"
+#include "../include/ntw_math.h"
 
 void NTW_multDV(const size_t n, double vector[static n], const double c)
 {

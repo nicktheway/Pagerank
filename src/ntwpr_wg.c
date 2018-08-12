@@ -5,7 +5,7 @@
  * @author Katomeris Nikolaos, 8551, ngkatomer@auth.gr
  * @date 10-08-2018
  */
-#include "ntwpr_wg.h"
+#include "../include/ntwpr_wg.h"
 #include <stdio.h>
 
 ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf)

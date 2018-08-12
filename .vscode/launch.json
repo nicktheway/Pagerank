@@ -8,10 +8,10 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/helpers/a.out",
+            "program": "${workspaceFolder}/bin/pr",
             "args": [
-                        "${workspaceFolder}/../data/web-NotreDame.txt", 
-                        "${workspaceFolder}/../matlab_scripts/matrices/ha.txt", 
+                        "${workspaceFolder}/data/web-NotreDame.txt", 
+                        "${workspaceFolder}/matlab_scripts/matrices/ha.txt", 
                         "20"
                     ],
             "stopAtEntry": true,

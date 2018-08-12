@@ -5,6 +5,9 @@
         "stdlib.h": "c",
         "ntwpr_wg.h": "c",
         "cstdlib": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "ntw_crs.h": "c",
+        "ntw_math.h": "c",
+        "ntwpr.h": "c"
     }
 }

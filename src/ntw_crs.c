@@ -6,7 +6,7 @@
  * @date 11-08-2018
  */
 
-#include "ntw_crs.h"
+#include "../include/ntw_crs.h"
 #include <stdio.h>
 #include <stdlib.h>
 
