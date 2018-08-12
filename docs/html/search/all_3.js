@@ -2,6 +2,7 @@ var searchData=
 [
   ['node_5fnum',['node_num',['../structntw__crs.html#a36a11fbae59bf6159e40cb18e5f37ada',1,'ntw_crs::node_num()'],['../structNTWPR__WGFile.html#a473237730653419df2494e0f2f52995c',1,'NTWPR_WGFile::node_num()']]],
   ['ntw_5fadddv',['NTW_addDV',['../ntw__math_8h.html#a51ff9b76d13a32a82a752984ffd113a3',1,'NTW_addDV(const size_t n, double vectorA[static n], const double vectorB[static n]):&#160;ntw_math.c'],['../ntw__math_8c.html#a51ff9b76d13a32a82a752984ffd113a3',1,'NTW_addDV(const size_t n, double vectorA[static n], const double vectorB[static n]):&#160;ntw_math.c']]],
+  ['ntw_5fassigndv',['NTW_assignDV',['../ntw__math_8h.html#a07ea6fbf31937d399d557563de1e9adc',1,'NTW_assignDV(const size_t n, double vectorA[static n], const double vectorB[static n]):&#160;ntw_math.c'],['../ntw__math_8c.html#a07ea6fbf31937d399d557563de1e9adc',1,'NTW_assignDV(const size_t n, double vectorA[static n], const double vectorB[static n]):&#160;ntw_math.c']]],
   ['ntw_5fcrs',['ntw_crs',['../structntw__crs.html',1,'ntw_crs'],['../ntw__crs_8h.html#a9c312b83e0c0c7b12c63c50a25c224de',1,'ntw_crs():&#160;ntw_crs.h']]],
   ['ntw_5fcrs_2ec',['ntw_crs.c',['../ntw__crs_8c.html',1,'']]],
   ['ntw_5fcrs_2eh',['ntw_crs.h',['../ntw__crs_8h.html',1,'']]],
@@ -19,6 +20,7 @@ var searchData=
   ['ntw_5fmath_2ec',['ntw_math.c',['../ntw__math_8c.html',1,'']]],
   ['ntw_5fmath_2eh',['ntw_math.h',['../ntw__math_8h.html',1,'']]],
   ['ntw_5fmultdv',['NTW_multDV',['../ntw__math_8h.html#a8d8420e5fd69663f4aefcda4344f35d3',1,'NTW_multDV(const size_t n, double vector[static n], const double c):&#160;ntw_math.c'],['../ntw__math_8c.html#a8d8420e5fd69663f4aefcda4344f35d3',1,'NTW_multDV(const size_t n, double vector[static n], const double c):&#160;ntw_math.c']]],
+  ['ntw_5fnewcopydv',['NTW_newCopyDV',['../ntw__math_8h.html#a1f6d139af3e68933c657b944a4d4c153',1,'NTW_newCopyDV(const size_t n, const double vector[static n]):&#160;ntw_math.c'],['../ntw__math_8c.html#a1f6d139af3e68933c657b944a4d4c153',1,'NTW_newCopyDV(const size_t n, const double vector[static n]):&#160;ntw_math.c']]],
   ['ntw_5fnewunivectord',['NTW_newUniVectorD',['../ntw__math_8h.html#ae338b005355f529597f0d1a770f44a7d',1,'NTW_newUniVectorD(const size_t n, const double value):&#160;ntw_math.c'],['../ntw__math_8c.html#ae338b005355f529597f0d1a770f44a7d',1,'NTW_newUniVectorD(const size_t n, const double value):&#160;ntw_math.c']]],
   ['ntw_5fnewzerovectord',['NTW_newZeroVectorD',['../ntw__math_8h.html#a49ce6feaf1ed2169fb3871e5a693353c',1,'NTW_newZeroVectorD(const size_t n):&#160;ntw_math.c'],['../ntw__math_8c.html#a49ce6feaf1ed2169fb3871e5a693353c',1,'NTW_newZeroVectorD(const size_t n):&#160;ntw_math.c']]],
   ['ntw_5fprintdv',['NTW_printDV',['../ntw__math_8h.html#ac2969ffaf263ed6fb0e569a129cde71f',1,'NTW_printDV(FILE *restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits):&#160;ntw_math.c'],['../ntw__math_8c.html#ac2969ffaf263ed6fb0e569a129cde71f',1,'NTW_printDV(FILE *restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits):&#160;ntw_math.c']]],

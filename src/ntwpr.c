@@ -14,13 +14,15 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
     const uint32_t wgSize = webGraph->node_num;
 
     // Make the matrix a probability matrix.
-    NTW_CRS_rowNormUnif(webGraph);
+    //NTW_CRS_rowNormUnif(webGraph);
+    NTW_CRS_colNorm(webGraph);
 
     // Multiply with the teleportation coefficient.
     NTW_CRS_cmult(webGraph, -d);
     NTW_CRS_printFullMatrix(stdout, webGraph);
     // Create the initial pagerank vector (unified) and the b vector.
     double* pagerank = NTW_newUniVectorD(wgSize, 1.0 / wgSize);
+
     double* b = NTW_newUniVectorD(wgSize, (1-d)/wgSize);
     NTW_printDV(stdout, wgSize, b, 4);
     double delta = 1.0;
@@ -31,11 +33,9 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
     }
     printf("ci: %d\tdelta = %0.3f\n", curr_iteration, delta);
 
-
     free(b);
     return pagerank;
 }
-
 
 inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1])
 {
@@ -44,23 +44,22 @@ inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 
     {
         double den = 1.0;
         double num = b_vec[i];
-        const double old_x = x_vec[i];
+        const double old_xi = x_vec[i];
 
         for (uint32_t j = matrix->row_ptr[i]; j < matrix->row_ptr[i+1]; j++)
         {
             if (matrix->col_ind[j] == i)
             {
                 den += matrix->val[j];
-            } 
+            }
             else
             {
                 num -= matrix->val[j] * x_vec[matrix->col_ind[j]];
-                // printf("num == %0.3f\t", x_vec[matrix->col_ind[j]]);
             }
         }
         // printf("\nnum = %0.3f\t den=%0.3f\n", num, den);
         x_vec[i] = num / den;
-        sqnorm_diff += (x_vec[i] - old_x) * (x_vec[i] - old_x);
+        sqnorm_diff += (x_vec[i] - old_xi) * (x_vec[i] - old_xi);
     }
     return sqnorm_diff;
 }

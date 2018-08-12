@@ -65,6 +65,16 @@ double NTW_dotDV(const size_t n, const double vectorA[static n], const double ve
 double NTW_sqMagnDV(const size_t n, const double vector[static n]);
 
 /**
+ * @brief Assign the values of vectorB to vectorA
+ *          \f[\vec{A} = \vec{B}\f]
+ * 
+ * @param n The size of the two vectors.
+ * @param vectorA The \f$\vec{A}\f$.
+ * @param vectorB The \f$\vec{B}\f$.
+ */
+void NTW_assignDV(const size_t n, double vectorA[static n], const double vectorB[static n]);
+
+/**
  * @brief Creates a @a n length zero vector.
  * 
  * Allocates memory that should be freed later.
@@ -84,6 +94,17 @@ double* NTW_newZeroVectorD(const size_t n);
  * @return double* Pointer to the vector: \f$\overbrace{\begin{pmatrix}v & v & \cdots &v\end{pmatrix}}^{n}\f$.
  */
 double* NTW_newUniVectorD(const size_t n, const double value);
+
+/**
+ * @brief Create a copy/subcopy of the @a vector.
+ * 
+ * Allocates memory that should be freed later.
+ * 
+ * @param n The size of the copied vector;
+ * @param vector 
+ * @return double* Pointer to the new copy.
+ */
+double* NTW_newCopyDV(const size_t n, const double vector[static n]);
 
 /**
  * @brief Prints a double @a vector to the @a stream.

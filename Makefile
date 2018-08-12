@@ -2,9 +2,9 @@
 CC=gcc
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
-    CFLAGS =-g
+    CFLAGS = -Wall -g
 else
-    CFLAGS=-O3
+    CFLAGS= -Wall -O3
 endif
 LIBS=
 

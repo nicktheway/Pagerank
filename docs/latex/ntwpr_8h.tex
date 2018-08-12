@@ -43,7 +43,7 @@ Calculates one iteration of $(I-A)x = b$.
 
 Uses the Gauss-\/Sneidel method, using forward substitution.
 
-\[\vec{x}^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^k + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\]
+\[\vec{x}_i^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^{k+1} + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\]
 
 
 \begin{DoxyParams}{Parameters}
@@ -64,6 +64,10 @@ Definition at line 40 of file ntwpr.\+c.
 
 
 References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
 
 \mbox{\Hypertarget{ntwpr_8h_af77c56f0f2a93fcd5d91eb426cc6d122}\label{ntwpr_8h_af77c56f0f2a93fcd5d91eb426cc6d122}} 
 \index{ntwpr.\+h@{ntwpr.\+h}!N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}}
@@ -93,7 +97,7 @@ Definition at line 11 of file ntwpr.\+c.
 
 
 
-References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif(), N\+T\+W\+\_\+new\+Uni\+Vector\+D(), and N\+T\+W\+\_\+print\+D\+V().
+References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+new\+Uni\+Vector\+D(), N\+T\+W\+\_\+print\+D\+V(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
 
 \mbox{\Hypertarget{ntwpr_8h_a37f94e58ec12588c95d479fd6a342161}\label{ntwpr_8h_a37f94e58ec12588c95d479fd6a342161}} 
 \index{ntwpr.\+h@{ntwpr.\+h}!N\+T\+W\+P\+R\+\_\+pr\+\_\+init@{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}}
@@ -114,7 +118,7 @@ Initializes the pagerank vector uniformely.
 \end{DoxyParams}
 
 
-Definition at line 68 of file ntwpr.\+c.
+Definition at line 67 of file ntwpr.\+c.
 
 \mbox{\Hypertarget{ntwpr_8h_a8ebacef8d2edcabf2d227550b50bb260}\label{ntwpr_8h_a8ebacef8d2edcabf2d227550b50bb260}} 
 \index{ntwpr.\+h@{ntwpr.\+h}!Vector\+\_\+sqnorm@{Vector\+\_\+sqnorm}}

@@ -49,7 +49,15 @@ double NTW_sqMagnDV(const size_t n, const double vector[static n])
         norm += vector[i] * vector[i];
     }
     return norm;
-} 
+}
+
+void NTW_assignDV(const size_t n, double vectorA[static n], const double vectorB[static n])
+{
+    for (size_t i = 0; i < n; i++)
+    {
+        vectorA[i] = vectorB[i];
+    }
+}
 
 double* NTW_newZeroVectorD(const size_t n)
 {
@@ -75,6 +83,21 @@ double* NTW_newUniVectorD(const size_t n, const double value)
         vector[i] = value;
     }
     return vector;
+}
+
+double* NTW_newCopyDV(const size_t n, const double vector[static n])
+{
+    double* newCopy = malloc(n * sizeof *newCopy);
+    if (!newCopy)
+    {
+        fprintf(stderr, "%s: Error at memory allocation.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+    for (size_t i = 0; i < n; i++)
+    {
+        newCopy[i] = vector[i];
+    }
+    return newCopy;
 }
 
 void NTW_printDV(FILE* restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits)

@@ -150,7 +150,7 @@ Functions</h2></td></tr>
 <p>Calculates one iteration of \((I-A)x = b\). </p>
 <p class="">Uses the Gauss-Sneidel method, using forward substitution.</p>
 <p class="formulaDsp">
-\[\vec{x}^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^k + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\]
+\[\vec{x}_i^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^{k+1} + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\]
 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -165,6 +165,8 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00040">40</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00011">NTWPR_pagerank()</a>.</p>
 
 </div>
 </div>
@@ -213,7 +215,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00011">11</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
 
-<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8c_source.html#l00037">NTW_CRS_cmult()</a>, <a class="el" href="ntw__crs_8c_source.html#l00128">NTW_CRS_printFullMatrix()</a>, <a class="el" href="ntw__crs_8c_source.html#l00081">NTW_CRS_rowNormUnif()</a>, <a class="el" href="ntw__math_8c_source.html#l00065">NTW_newUniVectorD()</a>, and <a class="el" href="ntw__math_8c_source.html#l00080">NTW_printDV()</a>.</p>
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8c_source.html#l00037">NTW_CRS_cmult()</a>, <a class="el" href="ntw__crs_8c_source.html#l00128">NTW_CRS_printFullMatrix()</a>, <a class="el" href="ntw__math_8c_source.html#l00073">NTW_newUniVectorD()</a>, <a class="el" href="ntw__math_8c_source.html#l00103">NTW_printDV()</a>, and <a class="el" href="ntwpr_8c_source.html#l00040">NTWPR_GS_iter()</a>.</p>
 
 </div>
 </div>
@@ -252,7 +254,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00068">68</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00067">67</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
 
 </div>
 </div>

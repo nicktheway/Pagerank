@@ -19,10 +19,14 @@ double \mbox{\hyperlink{ntw__math_8c_a9600239ccc845d162c04f9472c6f8e5d}{N\+T\+W\
 \begin{DoxyCompactList}\small\item\em Calculates the dot product of {\itshape vectorA} and {\itshape vectorB}. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ntw__math_8c_a3ca7aadc74a60c0d3a6ee8559215bbc5}{N\+T\+W\+\_\+sq\+Magn\+DV}} (const size\+\_\+t n, const double vector\mbox{[}static n\mbox{]})
 \begin{DoxyCompactList}\small\item\em Returns the squered magnitude of the {\itshape vector}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__math_8c_a07ea6fbf31937d399d557563de1e9adc}{N\+T\+W\+\_\+assign\+DV}} (const size\+\_\+t n, double vectorA\mbox{[}static n\mbox{]}, const double vectorB\mbox{[}static n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Assign the values of vectorB to vectorA \[\vec{A} = \vec{B}\]. \end{DoxyCompactList}\item 
 double $\ast$ \mbox{\hyperlink{ntw__math_8c_a49ce6feaf1ed2169fb3871e5a693353c}{N\+T\+W\+\_\+new\+Zero\+VectorD}} (const size\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em Creates a {\itshape n} length zero vector. \end{DoxyCompactList}\item 
 double $\ast$ \mbox{\hyperlink{ntw__math_8c_ae338b005355f529597f0d1a770f44a7d}{N\+T\+W\+\_\+new\+Uni\+VectorD}} (const size\+\_\+t n, const double value)
 \begin{DoxyCompactList}\small\item\em Creates a {\itshape n} legth vector with all elements set to {\itshape value}. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{ntw__math_8c_a1f6d139af3e68933c657b944a4d4c153}{N\+T\+W\+\_\+new\+Copy\+DV}} (const size\+\_\+t n, const double vector\mbox{[}static n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Create a copy/subcopy of the {\itshape vector}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntw__math_8c_ac2969ffaf263ed6fb0e569a129cde71f}{N\+T\+W\+\_\+print\+DV}} (F\+I\+LE $\ast$restrict stream, const size\+\_\+t n, const double vector\mbox{[}static n\mbox{]}, const unsigned decimal\+Digits)
 \begin{DoxyCompactList}\small\item\em Prints a double {\itshape vector} to the {\itshape stream}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -61,6 +65,29 @@ Does the addition\+: $\vec{A} = \vec{A}+\vec{B}$.
 
 
 Definition at line 18 of file ntw\+\_\+math.\+c.
+
+\mbox{\Hypertarget{ntw__math_8c_a07ea6fbf31937d399d557563de1e9adc}\label{ntw__math_8c_a07ea6fbf31937d399d557563de1e9adc}} 
+\index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+\_\+assign\+DV@{N\+T\+W\+\_\+assign\+DV}}
+\index{N\+T\+W\+\_\+assign\+DV@{N\+T\+W\+\_\+assign\+DV}!ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+assign\+D\+V()}{NTW\_assignDV()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+assign\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{double}]{vectorA\mbox{[}static n\mbox{]},  }\item[{const double}]{vectorB\mbox{[}static n\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Assign the values of vectorB to vectorA \[\vec{A} = \vec{B}\]. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the two vectors. \\
+\hline
+{\em vectorA} & The $\vec{A}$. \\
+\hline
+{\em vectorB} & The $\vec{B}$. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file ntw\+\_\+math.\+c.
 
 \mbox{\Hypertarget{ntw__math_8c_a9600239ccc845d162c04f9472c6f8e5d}\label{ntw__math_8c_a9600239ccc845d162c04f9472c6f8e5d}} 
 \index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+\_\+dot\+DV@{N\+T\+W\+\_\+dot\+DV}}
@@ -115,6 +142,32 @@ Doesn\textquotesingle{}t allocate memory.
 
 Definition at line 10 of file ntw\+\_\+math.\+c.
 
+\mbox{\Hypertarget{ntw__math_8c_a1f6d139af3e68933c657b944a4d4c153}\label{ntw__math_8c_a1f6d139af3e68933c657b944a4d4c153}} 
+\index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+\_\+new\+Copy\+DV@{N\+T\+W\+\_\+new\+Copy\+DV}}
+\index{N\+T\+W\+\_\+new\+Copy\+DV@{N\+T\+W\+\_\+new\+Copy\+DV}!ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+new\+Copy\+D\+V()}{NTW\_newCopyDV()}}
+{\footnotesize\ttfamily double$\ast$ N\+T\+W\+\_\+new\+Copy\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{const double}]{vector\mbox{[}static n\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Create a copy/subcopy of the {\itshape vector}. 
+
+Allocates memory that should be freed later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the copied vector; \\
+\hline
+{\em vector} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double$\ast$ Pointer to the new copy. 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file ntw\+\_\+math.\+c.
+
 \mbox{\Hypertarget{ntw__math_8c_ae338b005355f529597f0d1a770f44a7d}\label{ntw__math_8c_ae338b005355f529597f0d1a770f44a7d}} 
 \index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+\_\+new\+Uni\+VectorD@{N\+T\+W\+\_\+new\+Uni\+VectorD}}
 \index{N\+T\+W\+\_\+new\+Uni\+VectorD@{N\+T\+W\+\_\+new\+Uni\+VectorD}!ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}}
@@ -139,7 +192,7 @@ double$\ast$ Pointer to the vector\+: $\overbrace{\begin{pmatrix}v & v & \cdots 
 \end{DoxyReturn}
 
 
-Definition at line 65 of file ntw\+\_\+math.\+c.
+Definition at line 73 of file ntw\+\_\+math.\+c.
 
 
 
@@ -167,7 +220,7 @@ double$\ast$ Pointer to the vector\+: $\overbrace{\begin{pmatrix}0 & 0 & \cdots 
 \end{DoxyReturn}
 
 
-Definition at line 54 of file ntw\+\_\+math.\+c.
+Definition at line 62 of file ntw\+\_\+math.\+c.
 
 \mbox{\Hypertarget{ntw__math_8c_ac2969ffaf263ed6fb0e569a129cde71f}\label{ntw__math_8c_ac2969ffaf263ed6fb0e569a129cde71f}} 
 \index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+\_\+print\+DV@{N\+T\+W\+\_\+print\+DV}}
@@ -192,7 +245,7 @@ Prints a double {\itshape vector} to the {\itshape stream}.
 \end{DoxyParams}
 
 
-Definition at line 80 of file ntw\+\_\+math.\+c.
+Definition at line 103 of file ntw\+\_\+math.\+c.
 
 
 

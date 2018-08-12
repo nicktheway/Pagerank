@@ -36,7 +36,7 @@ void NTW_CRS_free(ntw_crs* crs)
 
 void NTW_CRS_cmult(ntw_crs crs[static 1], const double c)
 {
-    for (int i = 0; i < crs->edge_num; i++)
+    for (uint32_t i = 0; i < crs->edge_num; i++)
     {
         crs->val[i] *= c;
     }
@@ -68,10 +68,10 @@ double* NTW_CRS_vmultAlloc(const ntw_crs crs[static 1], const double vector[stat
 
 void NTW_CRS_rowNorm(ntw_crs crs[static 1])
 {
-    for (int i = 0; i < crs->node_num; i++)
+    for (uint32_t i = 0; i < crs->node_num; i++)
     {
         uint32_t diff_value = crs->row_ptr[i+1] - crs->row_ptr[i];
-        for (int j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
+        for (uint32_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
         {
             crs->val[j] /= diff_value;
         }
@@ -80,13 +80,13 @@ void NTW_CRS_rowNorm(ntw_crs crs[static 1])
 
 void NTW_CRS_rowNormUnif(ntw_crs crs[static 1])
 {
-    for (int i = 0; i < crs->node_num; i++)
+    for (uint32_t i = 0; i < crs->node_num; i++)
     {
         uint32_t diff_value = crs->row_ptr[i+1] - crs->row_ptr[i];
         if (diff_value == 0 || diff_value == 1) continue;
         
         register double u_value = 1.0f / diff_value;
-        for (int j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
+        for (uint32_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
         {
             crs->val[j] = u_value;
         }
@@ -95,7 +95,7 @@ void NTW_CRS_rowNormUnif(ntw_crs crs[static 1])
 
 double NTW_CRS_valueAt(const ntw_crs crs[static 1], uint32_t row, uint32_t col)
 {
-    for (int i = crs->row_ptr[row]; i < crs->row_ptr[row+1]; i++)
+    for (uint32_t i = crs->row_ptr[row]; i < crs->row_ptr[row+1]; i++)
     {
         if (crs->col_ind[i] == col)
             return crs->val[i];
@@ -108,17 +108,17 @@ double NTW_CRS_valueAt(const ntw_crs crs[static 1], uint32_t row, uint32_t col)
 void NTW_CRS_print(FILE* restrict stream, const ntw_crs crs[static 1])
 {
     fprintf(stream, "Nodes: %u, Edges: %u\nColumn indeces:\n", crs->node_num, crs->edge_num);
-    for (int i = 0; i < crs->edge_num; i++)
+    for (uint32_t i = 0; i < crs->edge_num; i++)
     {
         fprintf(stream, "%u\t", crs->col_ind[i]);
     }
     fprintf(stream, "\nValues:\n");
-    for (int i = 0; i < crs->edge_num; i++)
+    for (uint32_t i = 0; i < crs->edge_num; i++)
     {
         fprintf(stream, "%.2f\t", crs->val[i]);
     }
     fprintf(stream, "\nRow pointers:\n");
-    for (int i = 0; i <= crs->node_num; i++)
+    for (uint32_t i = 0; i <= crs->node_num; i++)
     {
         fprintf(stream, "%u\t", crs->row_ptr[i]);
     }
@@ -128,15 +128,15 @@ void NTW_CRS_print(FILE* restrict stream, const ntw_crs crs[static 1])
 void NTW_CRS_printFullMatrix(FILE* restrict stream, const ntw_crs crs[static 1])
 {
 	// Parse rows
-	for (int i = 0; i < crs->node_num; i++)
+	for (uint32_t i = 0; i < crs->node_num; i++)
     {
 		// The column index of the element to print
-		int curr_col = 0;
+		uint32_t curr_col = 0;
 
 		// Print row i (if it is not all-zero)
-		for (int k = crs->row_ptr[i]; k < crs->row_ptr[i+1]; k++)
+		for (uint32_t k = crs->row_ptr[i]; k < crs->row_ptr[i+1]; k++)
         {
-			int j = crs->col_ind[k];
+			uint32_t j = crs->col_ind[k];
 
 			// Print zeros between the non-zeros of the line
 			while(curr_col < j)
