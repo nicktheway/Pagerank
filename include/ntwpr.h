@@ -30,6 +30,10 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e);
 /**
  * @brief Calculates one iteration of @f$(I-A)x = b@f$
  * 
+ * Uses the Gauss-Sneidel method, using forward substitution.
+ * 
+ * \f[\vec{x}^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^k + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\f]
+ * 
  * @param matrix The sparse matrix A in CRS form.
  * @param x_vec The vector x that will be replaced.
  * @param b_vec The vector b.

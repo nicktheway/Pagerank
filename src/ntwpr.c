@@ -12,18 +12,19 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
 {
     // For better readability.
     const uint32_t wgSize = webGraph->node_num;
+
     // Make the matrix a probability matrix.
     NTW_CRS_rowNormUnif(webGraph);
 
     // Multiply with the teleportation coefficient.
-    NTW_CRS_cmult(webGraph, d);
-
+    NTW_CRS_cmult(webGraph, -d);
+    NTW_CRS_printFullMatrix(stdout, webGraph);
     // Create the initial pagerank vector (unified) and the b vector.
-    double* pagerank = NTW_newUniVectorD(wgSize, 1 / wgSize);
+    double* pagerank = NTW_newUniVectorD(wgSize, 1.0 / wgSize);
     double* b = NTW_newUniVectorD(wgSize, (1-d)/wgSize);
-
+    NTW_printDV(stdout, wgSize, b, 4);
     double delta = 1.0;
-    int max_iterations = 500, curr_iteration = 0;
+    int max_iterations = 2, curr_iteration = 0;
     while (delta > e && curr_iteration++ < max_iterations)
     {
         delta = NTWPR_GS_iter(webGraph, pagerank, b);
@@ -35,19 +36,6 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
     return pagerank;
 }
 
-inline void NTWPR_pr_init(const uint32_t nodeNum, double vector[static nodeNum])
-{
-    if (!nodeNum) 
-    {
-        fprintf(stderr, "nodeNum must be positive!\n");
-        exit(EXIT_FAILURE);
-    }
-    // Compiler will optimize out the division at every iteration.
-    for (uint32_t i = 0; i < nodeNum; i++)
-    {
-        vector[i] = 1.0f / nodeNum;
-    }
-}
 
 inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1])
 {
@@ -66,7 +54,7 @@ inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 
             } 
             else
             {
-                num -= matrix->val[j] * x_vec[i];
+                num -= matrix->val[j] * x_vec[matrix->col_ind[j]];
                 // printf("num == %0.3f\t", x_vec[matrix->col_ind[j]]);
             }
         }
@@ -77,12 +65,16 @@ inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 
     return sqnorm_diff;
 }
 
-inline double Vector_sqnorm(uint32_t size, double vector[static size])
+void NTWPR_pr_init(const uint32_t nodeNum, double vector[static nodeNum])
 {
-    double norm = 0;
-    for (uint32_t i = 0; i < size; i++)
+    if (!nodeNum) 
     {
-        norm += vector[i] * vector[i];
+        fprintf(stderr, "nodeNum must be positive!\n");
+        exit(EXIT_FAILURE);
     }
-    return norm;
-} 
+    // Compiler will optimize out the division at every iteration.
+    for (uint32_t i = 0; i < nodeNum; i++)
+    {
+        vector[i] = 1.0f / nodeNum;
+    }
+}

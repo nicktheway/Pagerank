@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Parallel pagerank: /home/ecat/nikos/parallel/source/helpers/ntwpr.c File Reference</title>
+<title>Parallel pagerank: /home/ecat/nikos/parallel/src/ntwpr.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Parallel pagerank
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Pagerank vector parallel calculator in C</div>
   </td>
@@ -70,7 +70,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ac7426e64a8e6f06cc3e6ac020978cfe.html">helpers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -83,28 +83,29 @@ $(function() {
 
 <p>File containing the definitions of the functions declared at <a class="el" href="ntwpr_8h.html" title="Methods for calculating the pagerank of web graphs.">ntwpr.h</a>.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="ntwpr_8h_source.html">ntwpr.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntw__math_8h_source.html">ntw_math.h</a>&quot;</code><br />
-</div><table class="memberdecls">
+<div class="textblock"><code>#include &quot;<a class="el" href="ntwpr_8h_source.html">../include/ntwpr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ntw__math_8h_source.html">../include/ntw_math.h</a>&quot;</code><br />
+</div>
+<p><a href="ntwpr_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af77c56f0f2a93fcd5d91eb426cc6d122"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8c.html#af77c56f0f2a93fcd5d91eb426cc6d122">NTWPR_pagerank</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> webGraph[static 1], double d, double e)</td></tr>
 <tr class="memdesc:af77c56f0f2a93fcd5d91eb426cc6d122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the pagerank of the nodes of a web graph.  <a href="#af77c56f0f2a93fcd5d91eb426cc6d122">More...</a><br /></td></tr>
 <tr class="separator:af77c56f0f2a93fcd5d91eb426cc6d122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37f94e58ec12588c95d479fd6a342161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8c.html#a37f94e58ec12588c95d479fd6a342161">NTWPR_pr_init</a> (const uint32_t nodeNum, double vector[static nodeNum])</td></tr>
-<tr class="memdesc:a37f94e58ec12588c95d479fd6a342161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the pagerank vector uniformely.  <a href="#a37f94e58ec12588c95d479fd6a342161">More...</a><br /></td></tr>
-<tr class="separator:a37f94e58ec12588c95d479fd6a342161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a270d8ab35b1ca3759bc377885af69c88"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8c.html#a270d8ab35b1ca3759bc377885af69c88">NTWPR_GS_iter</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> matrix[static 1], double x_vec[static 1], const double b_vec[static 1])</td></tr>
 <tr class="memdesc:a270d8ab35b1ca3759bc377885af69c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates one iteration of \((I-A)x = b\).  <a href="#a270d8ab35b1ca3759bc377885af69c88">More...</a><br /></td></tr>
 <tr class="separator:a270d8ab35b1ca3759bc377885af69c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ebacef8d2edcabf2d227550b50bb260"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8c.html#a8ebacef8d2edcabf2d227550b50bb260">Vector_sqnorm</a> (uint32_t size, double vector[static size])</td></tr>
-<tr class="memdesc:a8ebacef8d2edcabf2d227550b50bb260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squered norm of a vector.  <a href="#a8ebacef8d2edcabf2d227550b50bb260">More...</a><br /></td></tr>
-<tr class="separator:a8ebacef8d2edcabf2d227550b50bb260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f94e58ec12588c95d479fd6a342161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8c.html#a37f94e58ec12588c95d479fd6a342161">NTWPR_pr_init</a> (const uint32_t nodeNum, double vector[static nodeNum])</td></tr>
+<tr class="memdesc:a37f94e58ec12588c95d479fd6a342161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the pagerank vector uniformely.  <a href="#a37f94e58ec12588c95d479fd6a342161">More...</a><br /></td></tr>
+<tr class="separator:a37f94e58ec12588c95d479fd6a342161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">File containing the definitions of the functions declared at <a class="el" href="ntwpr_8h.html" title="Methods for calculating the pagerank of web graphs.">ntwpr.h</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Katomeris Nikolaos, 8551, <a href="#" onclick="location.href='mai'+'lto:'+'ngk'+'at'+'ome'+'r@'+'aut'+'h.'+'gr'; return false;">ngkat<span style="display: none;">.nosp@m.</span>omer<span style="display: none;">.nosp@m.</span>@auth<span style="display: none;">.nosp@m.</span>.gr</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>11-08-2018 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a270d8ab35b1ca3759bc377885af69c88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a270d8ab35b1ca3759bc377885af69c88">&#9670;&nbsp;</a></span>NTWPR_GS_iter()</h2>
@@ -147,6 +148,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates one iteration of \((I-A)x = b\). </p>
+<p class="">Uses the Gauss-Sneidel method, using forward substitution.</p>
+<p class="formulaDsp">
+\[\vec{x}^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^k + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\]
+</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">matrix</td><td>The sparse matrix A in CRS form. </td></tr>
@@ -156,6 +161,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double The squared norm difference of the old and new <em>x_vec</em>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00040">40</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
 </div>
 </div>
@@ -202,6 +211,10 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double* The calculated pagerank vector. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00011">11</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8c_source.html#l00037">NTW_CRS_cmult()</a>, <a class="el" href="ntw__crs_8c_source.html#l00128">NTW_CRS_printFullMatrix()</a>, <a class="el" href="ntw__crs_8c_source.html#l00081">NTW_CRS_rowNormUnif()</a>, <a class="el" href="ntw__math_8c_source.html#l00065">NTW_newUniVectorD()</a>, and <a class="el" href="ntw__math_8c_source.html#l00080">NTW_printDV()</a>.</p>
+
 </div>
 </div>
 <a id="a37f94e58ec12588c95d479fd6a342161"></a>
@@ -209,9 +222,6 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void NTWPR_pr_init </td>
@@ -231,11 +241,6 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Initializes the pagerank vector uniformely. </p>
@@ -247,51 +252,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-</div>
-</div>
-<a id="a8ebacef8d2edcabf2d227550b50bb260"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ebacef8d2edcabf2d227550b50bb260">&#9670;&nbsp;</a></span>Vector_sqnorm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Vector_sqnorm </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>vector</em>[static size]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the squered norm of a vector. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>The vector's size. </td></tr>
-    <tr><td class="paramname">vector</td><td>The vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>double The vector's second norm squared. </dd></dl>
+<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00068">68</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
 
 </div>
 </div>

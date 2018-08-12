@@ -9,7 +9,7 @@
 
 void NTW_multDV(const size_t n, double vector[static n], const double c)
 {
-    for (int i = 0; i < n; i++)
+    for (size_t i = 0; i < n; i++)
     {
         vector[i] *= c;
     }
@@ -17,7 +17,7 @@ void NTW_multDV(const size_t n, double vector[static n], const double c)
 
 void NTW_addDV(const size_t n, double vectorA[static n], const double vectorB[static n])
 {
-    for (int i = 0; i < n; i++)
+    for (size_t i = 0; i < n; i++)
     {
         vectorA[i] += vectorB[i];
     }
@@ -25,7 +25,7 @@ void NTW_addDV(const size_t n, double vectorA[static n], const double vectorB[st
 
 void NTW_subDV(const size_t n, double vectorA[static n], const double vectorB[static n])
 {
-    for (int i = 0; i < n; i++)
+    for (size_t i = 0; i < n; i++)
     {
         vectorA[i] -= vectorB[i];
     }
@@ -34,12 +34,22 @@ void NTW_subDV(const size_t n, double vectorA[static n], const double vectorB[st
 double NTW_dotDV(const size_t n, const double vectorA[static n], const double vectorB[static n])
 {
     double dot = 0;
-    for (int i = 0; i < n; i++)
+    for (size_t i = 0; i < n; i++)
     {
         dot += vectorA[i] * vectorB[i];
     }
     return dot;
 }
+
+double NTW_sqMagnDV(const size_t n, const double vector[static n])
+{
+    double norm = 0;
+    for (size_t i = 0; i < n; i++)
+    {
+        norm += vector[i] * vector[i];
+    }
+    return norm;
+} 
 
 double* NTW_newZeroVectorD(const size_t n)
 {
@@ -60,9 +70,19 @@ double* NTW_newUniVectorD(const size_t n, const double value)
         fprintf(stderr, "%s: Error at memory allocation.\n", __func__);
         exit(EXIT_FAILURE);
     }
-    for (int i = 0; i < n; i++)
+    for (size_t i = 0; i < n; i++)
     {
         vector[i] = value;
     }
     return vector;
+}
+
+void NTW_printDV(FILE* restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits)
+{
+    fprintf(stream, "[");
+    for (int i = 0; i < n - 1; i++)
+    {
+        fprintf(stream, "%.*lf\t", decimalDigits, vector[i]);
+    }
+    fprintf(stream, "%.*lf]\n", decimalDigits, vector[n-1]);
 }

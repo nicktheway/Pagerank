@@ -1,5 +1,5 @@
-\hypertarget{ntw__crs_8h}{}\section{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+crs.h File Reference}
-\label{ntw__crs_8h}\index{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+crs.\+h@{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+crs.\+h}}
+\hypertarget{ntw__crs_8h}{}\section{/home/ecat/nikos/parallel/include/ntw\+\_\+crs.h File Reference}
+\label{ntw__crs_8h}\index{/home/ecat/nikos/parallel/include/ntw\+\_\+crs.\+h@{/home/ecat/nikos/parallel/include/ntw\+\_\+crs.\+h}}
 
 
 File containing C\+RS (compressed row storage) type and functions.  
@@ -88,6 +88,18 @@ Multiplies the values of the sparse table in the C\+RS form {\itshape crs} with 
 {\em c} & The constant multiplicator. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 37 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::edge\+\_\+num, and ntw\+\_\+crs\+::val.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
+
 \mbox{\Hypertarget{ntw__crs_8h_a305e64535f13c75705e10ac0c55b135d}\label{ntw__crs_8h_a305e64535f13c75705e10ac0c55b135d}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+free@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -103,6 +115,14 @@ Unloads a \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} from memory (frees all
 {\em crs} & \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 28 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
 \mbox{\Hypertarget{ntw__crs_8h_ae4a307c637e1bded2ffb6bcc9bbf960b}\label{ntw__crs_8h_ae4a307c637e1bded2ffb6bcc9bbf960b}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+new@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -131,6 +151,14 @@ Should be freed using the N\+T\+W\+\_\+\+C\+R\+S\+\_\+free when non needed anymo
 \begin{DoxyReturn}{Returns}
 ntw\+\_\+crs$\ast$ The created struct or null if unsuccessful. 
 \end{DoxyReturn}
+
+
+Definition at line 13 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::edge\+\_\+num, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
 \mbox{\Hypertarget{ntw__crs_8h_ad2927841d2ac3dd3965750a1028ca18e}\label{ntw__crs_8h_ad2927841d2ac3dd3965750a1028ca18e}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+print@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -150,6 +178,14 @@ Useful for debugging.
 {\em crs} & The C\+RS to visualize. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 108 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::edge\+\_\+num, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
 \mbox{\Hypertarget{ntw__crs_8h_ac0c1bfc4772e88d4a85c54ff4a6cc620}\label{ntw__crs_8h_ac0c1bfc4772e88d4a85c54ff4a6cc620}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -169,6 +205,18 @@ Useful for debugging. Avoid using it for $nodes > 10000$.
 {\em crs} & The C\+RS of the matrix that will be visualized. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 128 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
+
 \mbox{\Hypertarget{ntw__crs_8h_a9f8e401f5151b982e7a40c40ce2ea040}\label{ntw__crs_8h_a9f8e401f5151b982e7a40c40ce2ea040}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -184,6 +232,14 @@ Normalizes the rows of the C\+RS table.
 {\em crs} & The C\+RS representation of the table. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 69 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
 \mbox{\Hypertarget{ntw__crs_8h_a051627d1d5da22de040dcd4aafe3faa6}\label{ntw__crs_8h_a051627d1d5da22de040dcd4aafe3faa6}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -199,6 +255,18 @@ Normalizes the rows of the C\+RS table giving all the edges in each row, the sam
 {\em crs} & The C\+RS representation of the table. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 81 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
+
 \mbox{\Hypertarget{ntw__crs_8h_a16aa5023529756790dc54d54f370ccd2}\label{ntw__crs_8h_a16aa5023529756790dc54d54f370ccd2}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -223,6 +291,14 @@ Use it sparingly because it\textquotesingle{}s relatively slow. (Depends on how 
 \begin{DoxyReturn}{Returns}
 double The value at \mbox{[}{\itshape row}, {\itshape col}\mbox{]} 
 \end{DoxyReturn}
+
+
+Definition at line 96 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
 \mbox{\Hypertarget{ntw__crs_8h_a6654f7dea85510e5a553c47130b4d293}\label{ntw__crs_8h_a6654f7dea85510e5a553c47130b4d293}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -242,6 +318,18 @@ Calculates the product of the C\+RS table {\itshape crs} with the {\itshape vect
 {\em product} & The product $A*v$. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 45 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
+
+
+Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc().
+
 \mbox{\Hypertarget{ntw__crs_8h_aec240d09f69f88b56cc72e14c266c8ae}\label{ntw__crs_8h_aec240d09f69f88b56cc72e14c266c8ae}} 
 \index{ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc}!ntw\+\_\+crs.\+h@{ntw\+\_\+crs.\+h}}
@@ -264,3 +352,11 @@ The memory of the result should be freed afterwards.
 \begin{DoxyReturn}{Returns}
 double$\ast$ The product vector $A*v$. 
 \end{DoxyReturn}
+
+
+Definition at line 56 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::node\+\_\+num, and N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult().
+

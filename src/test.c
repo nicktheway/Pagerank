@@ -23,7 +23,7 @@ int main(int argc, char* argv[argc+1])
     NTWPR_WGFile* file = NTWPR_WGF_fopen(argv[2]);
 
     ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
-    FILE* mat = fopen("./../data/mat.txt", "w");
+    FILE* mat = fopen("./data/mat.txt", "w");
     //NTW_CRS_print(mat, myCRS);
     // NTWPR_WGF_exportSM(file, argv[2], n);
 

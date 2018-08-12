@@ -56,6 +56,15 @@ void NTW_subDV(const size_t n, double vectorA[static n], const double vectorB[st
 double NTW_dotDV(const size_t n, const double vectorA[static n], const double vectorB[static n]);
 
 /**
+ * @brief Returns the squered magnitude of the @a vector.
+ * 
+ * @param n The size of the vector.
+ * @param vector The vector \f$\vec{V}\f$
+ * @return double \f$\|\vec{V}\|^{2}\f$
+ */
+double NTW_sqMagnDV(const size_t n, const double vector[static n]);
+
+/**
  * @brief Creates a @a n length zero vector.
  * 
  * Allocates memory that should be freed later.
@@ -75,5 +84,15 @@ double* NTW_newZeroVectorD(const size_t n);
  * @return double* Pointer to the vector: \f$\overbrace{\begin{pmatrix}v & v & \cdots &v\end{pmatrix}}^{n}\f$.
  */
 double* NTW_newUniVectorD(const size_t n, const double value);
+
+/**
+ * @brief Prints a double @a vector to the @a stream.
+ * 
+ * @param stream The stream where the @a vector will be printed.
+ * @param n The size of the @a vector.
+ * @param vector The vector that will be printed.
+ * @param decimalDigits The accuracy of the printed elements.
+ */
+void NTW_printDV(FILE* restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits);
 
 #endif

@@ -1,5 +1,5 @@
-\hypertarget{ntw__math_8h}{}\section{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+math.h File Reference}
-\label{ntw__math_8h}\index{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+math.\+h@{/home/ecat/nikos/parallel/source/helpers/ntw\+\_\+math.\+h}}
+\hypertarget{ntw__math_8h}{}\section{/home/ecat/nikos/parallel/include/ntw\+\_\+math.h File Reference}
+\label{ntw__math_8h}\index{/home/ecat/nikos/parallel/include/ntw\+\_\+math.\+h@{/home/ecat/nikos/parallel/include/ntw\+\_\+math.\+h}}
 
 
 Header containing useful math functions, especially for vectors.  
@@ -18,10 +18,14 @@ void \mbox{\hyperlink{ntw__math_8h_a3bcd90627ca4b91226f86065ad94d456}{N\+T\+W\+\
 \begin{DoxyCompactList}\small\item\em Does the substitution\+: $\vec{A} = \vec{A}-\vec{B}$. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ntw__math_8h_a9600239ccc845d162c04f9472c6f8e5d}{N\+T\+W\+\_\+dot\+DV}} (const size\+\_\+t n, const double vectorA\mbox{[}static n\mbox{]}, const double vectorB\mbox{[}static n\mbox{]})
 \begin{DoxyCompactList}\small\item\em Calculates the dot product of {\itshape vectorA} and {\itshape vectorB}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{ntw__math_8h_a3ca7aadc74a60c0d3a6ee8559215bbc5}{N\+T\+W\+\_\+sq\+Magn\+DV}} (const size\+\_\+t n, const double vector\mbox{[}static n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Returns the squered magnitude of the {\itshape vector}. \end{DoxyCompactList}\item 
 double $\ast$ \mbox{\hyperlink{ntw__math_8h_a49ce6feaf1ed2169fb3871e5a693353c}{N\+T\+W\+\_\+new\+Zero\+VectorD}} (const size\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em Creates a {\itshape n} length zero vector. \end{DoxyCompactList}\item 
 double $\ast$ \mbox{\hyperlink{ntw__math_8h_ae338b005355f529597f0d1a770f44a7d}{N\+T\+W\+\_\+new\+Uni\+VectorD}} (const size\+\_\+t n, const double value)
-\begin{DoxyCompactList}\small\item\em Creates a {\itshape n} legth vector with all elements set to {\itshape value}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a {\itshape n} legth vector with all elements set to {\itshape value}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__math_8h_ac2969ffaf263ed6fb0e569a129cde71f}{N\+T\+W\+\_\+print\+DV}} (F\+I\+LE $\ast$restrict stream, const size\+\_\+t n, const double vector\mbox{[}static n\mbox{]}, const unsigned decimal\+Digits)
+\begin{DoxyCompactList}\small\item\em Prints a double {\itshape vector} to the {\itshape stream}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -55,6 +59,10 @@ Does the addition\+: $\vec{A} = \vec{A}+\vec{B}$.
 {\em vectorB} & The vector $\vec{B}$. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 18 of file ntw\+\_\+math.\+c.
+
 \mbox{\Hypertarget{ntw__math_8h_a9600239ccc845d162c04f9472c6f8e5d}\label{ntw__math_8h_a9600239ccc845d162c04f9472c6f8e5d}} 
 \index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+dot\+DV@{N\+T\+W\+\_\+dot\+DV}}
 \index{N\+T\+W\+\_\+dot\+DV@{N\+T\+W\+\_\+dot\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
@@ -79,6 +87,10 @@ If {\itshape n} is less than the actual size of the vectors the dot product will
 \begin{DoxyReturn}{Returns}
 double The dot product $\vec{A} \cdot \vec{B}$ 
 \end{DoxyReturn}
+
+
+Definition at line 34 of file ntw\+\_\+math.\+c.
+
 \mbox{\Hypertarget{ntw__math_8h_a8d8420e5fd69663f4aefcda4344f35d3}\label{ntw__math_8h_a8d8420e5fd69663f4aefcda4344f35d3}} 
 \index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+mult\+DV@{N\+T\+W\+\_\+mult\+DV}}
 \index{N\+T\+W\+\_\+mult\+DV@{N\+T\+W\+\_\+mult\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
@@ -100,6 +112,10 @@ Doesn\textquotesingle{}t allocate memory.
 {\em c} & The constant $c$. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 10 of file ntw\+\_\+math.\+c.
+
 \mbox{\Hypertarget{ntw__math_8h_ae338b005355f529597f0d1a770f44a7d}\label{ntw__math_8h_ae338b005355f529597f0d1a770f44a7d}} 
 \index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+new\+Uni\+VectorD@{N\+T\+W\+\_\+new\+Uni\+VectorD}}
 \index{N\+T\+W\+\_\+new\+Uni\+VectorD@{N\+T\+W\+\_\+new\+Uni\+VectorD}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
@@ -122,6 +138,14 @@ Allocates memory that should be freed later.
 \begin{DoxyReturn}{Returns}
 double$\ast$ Pointer to the vector\+: $\overbrace{\begin{pmatrix}v & v & \cdots &v\end{pmatrix}}^{n}$. 
 \end{DoxyReturn}
+
+
+Definition at line 65 of file ntw\+\_\+math.\+c.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
+
 \mbox{\Hypertarget{ntw__math_8h_a49ce6feaf1ed2169fb3871e5a693353c}\label{ntw__math_8h_a49ce6feaf1ed2169fb3871e5a693353c}} 
 \index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+new\+Zero\+VectorD@{N\+T\+W\+\_\+new\+Zero\+VectorD}}
 \index{N\+T\+W\+\_\+new\+Zero\+VectorD@{N\+T\+W\+\_\+new\+Zero\+VectorD}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
@@ -142,6 +166,63 @@ Allocates memory that should be freed later.
 \begin{DoxyReturn}{Returns}
 double$\ast$ Pointer to the vector\+: $\overbrace{\begin{pmatrix}0 & 0 & \cdots &0\end{pmatrix}}^{n}$. 
 \end{DoxyReturn}
+
+
+Definition at line 54 of file ntw\+\_\+math.\+c.
+
+\mbox{\Hypertarget{ntw__math_8h_ac2969ffaf263ed6fb0e569a129cde71f}\label{ntw__math_8h_ac2969ffaf263ed6fb0e569a129cde71f}} 
+\index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+print\+DV@{N\+T\+W\+\_\+print\+DV}}
+\index{N\+T\+W\+\_\+print\+DV@{N\+T\+W\+\_\+print\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+print\+D\+V()}{NTW\_printDV()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+print\+DV (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const size\+\_\+t}]{n,  }\item[{const double}]{vector\mbox{[}static n\mbox{]},  }\item[{const unsigned}]{decimal\+Digits }\end{DoxyParamCaption})}
+
+
+
+Prints a double {\itshape vector} to the {\itshape stream}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream where the {\itshape vector} will be printed. \\
+\hline
+{\em n} & The size of the {\itshape vector}. \\
+\hline
+{\em vector} & The vector that will be printed. \\
+\hline
+{\em decimal\+Digits} & The accuracy of the printed elements. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file ntw\+\_\+math.\+c.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
+
+\mbox{\Hypertarget{ntw__math_8h_a3ca7aadc74a60c0d3a6ee8559215bbc5}\label{ntw__math_8h_a3ca7aadc74a60c0d3a6ee8559215bbc5}} 
+\index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+sq\+Magn\+DV@{N\+T\+W\+\_\+sq\+Magn\+DV}}
+\index{N\+T\+W\+\_\+sq\+Magn\+DV@{N\+T\+W\+\_\+sq\+Magn\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+sq\+Magn\+D\+V()}{NTW\_sqMagnDV()}}
+{\footnotesize\ttfamily double N\+T\+W\+\_\+sq\+Magn\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{const double}]{vector\mbox{[}static n\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Returns the squered magnitude of the {\itshape vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The size of the vector. \\
+\hline
+{\em vector} & The vector $\vec{V}$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double $\|\vec{V}\|^{2}$ 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file ntw\+\_\+math.\+c.
+
 \mbox{\Hypertarget{ntw__math_8h_a3bcd90627ca4b91226f86065ad94d456}\label{ntw__math_8h_a3bcd90627ca4b91226f86065ad94d456}} 
 \index{ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}!N\+T\+W\+\_\+sub\+DV@{N\+T\+W\+\_\+sub\+DV}}
 \index{N\+T\+W\+\_\+sub\+DV@{N\+T\+W\+\_\+sub\+DV}!ntw\+\_\+math.\+h@{ntw\+\_\+math.\+h}}
@@ -161,3 +242,7 @@ Does the substitution\+: $\vec{A} = \vec{A}-\vec{B}$.
 {\em vectorB} & The vector $\vec{B}$. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 26 of file ntw\+\_\+math.\+c.
+

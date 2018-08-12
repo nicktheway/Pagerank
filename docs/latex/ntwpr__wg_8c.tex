@@ -1,11 +1,11 @@
-\hypertarget{ntwpr__wg_8c}{}\section{/home/ecat/nikos/parallel/source/helpers/ntwpr\+\_\+wg.c File Reference}
-\label{ntwpr__wg_8c}\index{/home/ecat/nikos/parallel/source/helpers/ntwpr\+\_\+wg.\+c@{/home/ecat/nikos/parallel/source/helpers/ntwpr\+\_\+wg.\+c}}
+\hypertarget{ntwpr__wg_8c}{}\section{/home/ecat/nikos/parallel/src/ntwpr\+\_\+wg.c File Reference}
+\label{ntwpr__wg_8c}\index{/home/ecat/nikos/parallel/src/ntwpr\+\_\+wg.\+c@{/home/ecat/nikos/parallel/src/ntwpr\+\_\+wg.\+c}}
 
 
 File containing the implementations of \mbox{\hyperlink{ntwpr__wg_8h}{ntwpr\+\_\+wg.\+h}}.  
 
 
-{\ttfamily \#include \char`\"{}ntwpr\+\_\+wg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/ntwpr\+\_\+wg.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -59,6 +59,14 @@ Extra\+: The output can be loaded into M\+A\+T\+L\+AB with\+: fread(file\+\_\+id
 {\em node\+Num} & The number of nodes that will be in the graph matrix. (Enter 0 to get all the nodes of the file.) \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 214 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+N\+T\+\_\+\+SU, and N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit.
+
 \mbox{\Hypertarget{ntwpr__wg_8c_ae1e79e9dc654e3514269d78748e4a394}\label{ntwpr__wg_8c_ae1e79e9dc654e3514269d78748e4a394}} 
 \index{ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+FM@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+FM}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+FM@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+FM}!ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}}
@@ -80,6 +88,14 @@ Should be used with caution and for relatively small {\itshape node\+Num}. (node
 {\em node\+Num} & The max number of nodes that will be in the graph matrix. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 96 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit, and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind().
+
 \mbox{\Hypertarget{ntwpr__wg_8c_a5c8e2ee5ea6ae1d95077293d28357a47}\label{ntwpr__wg_8c_a5c8e2ee5ea6ae1d95077293d28357a47}} 
 \index{ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+SM@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+SM}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+SM@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+SM}!ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}}
@@ -101,6 +117,14 @@ Extra\+: Can be loaded into a sparse M\+A\+T\+L\+AB matrix using\+: $>$ load -\/
 {\em node\+Num} & The max number of nodes that will be in the graph matrix. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 175 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit, and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind().
+
 \mbox{\Hypertarget{ntwpr__wg_8c_adfdab5767853d9fda8f38bca9460ea1f}\label{ntwpr__wg_8c_adfdab5767853d9fda8f38bca9460ea1f}} 
 \index{ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose}!ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}}
@@ -119,6 +143,14 @@ Closes the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File
 \begin{DoxyReturn}{Returns}
 int Returns 0 if succussful. On failure E\+OF is returned. 
 \end{DoxyReturn}
+
+
+Definition at line 78 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data.
+
 \mbox{\Hypertarget{ntwpr__wg_8c_ae73521afd221df1b6f0af044c35e2f96}\label{ntwpr__wg_8c_ae73521afd221df1b6f0af044c35e2f96}} 
 \index{ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen}!ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}}
@@ -139,6 +171,14 @@ The W\+G\+File should be then closed with N\+T\+W\+P\+R\+\_\+\+W\+Gfclose()
 \begin{DoxyReturn}{Returns}
 N\+T\+W\+P\+R\+\_\+\+W\+G\+File$\ast$ The struct containing the file created. 
 \end{DoxyReturn}
+
+
+Definition at line 56 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::node\+\_\+num, and N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit.
+
 \mbox{\Hypertarget{ntwpr__wg_8c_a7de28416dbf08fff7b53404ca887f2f7}\label{ntwpr__wg_8c_a7de28416dbf08fff7b53404ca887f2f7}} 
 \index{ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs}!ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}}
@@ -159,6 +199,14 @@ The C\+RS structure\textquotesingle{}s memory should be freed with N\+T\+W\+P\+R
 \begin{DoxyReturn}{Returns}
 ntw\+\_\+crs$\ast$ pointing to the loaded C\+RS or null. 
 \end{DoxyReturn}
+
+
+Definition at line 11 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::edge\+\_\+num, ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind(), ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
 \mbox{\Hypertarget{ntwpr__wg_8c_a900ec9963949f8e50b80772f502fbc63}\label{ntwpr__wg_8c_a900ec9963949f8e50b80772f502fbc63}} 
 \index{ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind}!ntwpr\+\_\+wg.\+c@{ntwpr\+\_\+wg.\+c}}
@@ -179,3 +227,15 @@ true If successful.
 
 false If an error occured. 
 \end{DoxyReturn}
+
+
+Definition at line 91 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+F\+M(), N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+S\+M(), and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs().
+

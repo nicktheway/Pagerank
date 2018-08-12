@@ -1,5 +1,5 @@
-\hypertarget{ntwpr_8h}{}\section{/home/ecat/nikos/parallel/source/helpers/ntwpr.h File Reference}
-\label{ntwpr_8h}\index{/home/ecat/nikos/parallel/source/helpers/ntwpr.\+h@{/home/ecat/nikos/parallel/source/helpers/ntwpr.\+h}}
+\hypertarget{ntwpr_8h}{}\section{/home/ecat/nikos/parallel/include/ntwpr.h File Reference}
+\label{ntwpr_8h}\index{/home/ecat/nikos/parallel/include/ntwpr.\+h@{/home/ecat/nikos/parallel/include/ntwpr.\+h}}
 
 
 Methods for calculating the pagerank of web graphs.  
@@ -41,6 +41,10 @@ Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth
 
 Calculates one iteration of $(I-A)x = b$. 
 
+Uses the Gauss-\/Sneidel method, using forward substitution.
+
+\[\vec{x}^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^k + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\]
+
 
 \begin{DoxyParams}{Parameters}
 {\em matrix} & The sparse matrix A in C\+RS form. \\
@@ -53,6 +57,14 @@ Calculates one iteration of $(I-A)x = b$.
 \begin{DoxyReturn}{Returns}
 double The squared norm difference of the old and new {\itshape x\+\_\+vec}. 
 \end{DoxyReturn}
+
+
+Definition at line 40 of file ntwpr.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
 \mbox{\Hypertarget{ntwpr_8h_af77c56f0f2a93fcd5d91eb426cc6d122}\label{ntwpr_8h_af77c56f0f2a93fcd5d91eb426cc6d122}} 
 \index{ntwpr.\+h@{ntwpr.\+h}!N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}}
 \index{N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}!ntwpr.\+h@{ntwpr.\+h}}
@@ -75,11 +87,19 @@ Calculates the pagerank of the nodes of a web graph.
 \begin{DoxyReturn}{Returns}
 double$\ast$ The calculated pagerank vector. 
 \end{DoxyReturn}
+
+
+Definition at line 11 of file ntwpr.\+c.
+
+
+
+References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif(), N\+T\+W\+\_\+new\+Uni\+Vector\+D(), and N\+T\+W\+\_\+print\+D\+V().
+
 \mbox{\Hypertarget{ntwpr_8h_a37f94e58ec12588c95d479fd6a342161}\label{ntwpr_8h_a37f94e58ec12588c95d479fd6a342161}} 
 \index{ntwpr.\+h@{ntwpr.\+h}!N\+T\+W\+P\+R\+\_\+pr\+\_\+init@{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}}
 \index{N\+T\+W\+P\+R\+\_\+pr\+\_\+init@{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}!ntwpr.\+h@{ntwpr.\+h}}
 \subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+pr\+\_\+init()}{NTWPR\_pr\_init()}}
-{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+pr\+\_\+init (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{node\+Num,  }\item[{double}]{vector\mbox{[}static node\+Num\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+pr\+\_\+init (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{node\+Num,  }\item[{double}]{vector\mbox{[}static node\+Num\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -92,11 +112,15 @@ Initializes the pagerank vector uniformely.
 {\em vector} & The vector that will be initialized. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 68 of file ntwpr.\+c.
+
 \mbox{\Hypertarget{ntwpr_8h_a8ebacef8d2edcabf2d227550b50bb260}\label{ntwpr_8h_a8ebacef8d2edcabf2d227550b50bb260}} 
 \index{ntwpr.\+h@{ntwpr.\+h}!Vector\+\_\+sqnorm@{Vector\+\_\+sqnorm}}
 \index{Vector\+\_\+sqnorm@{Vector\+\_\+sqnorm}!ntwpr.\+h@{ntwpr.\+h}}
 \subsubsection{\texorpdfstring{Vector\+\_\+sqnorm()}{Vector\_sqnorm()}}
-{\footnotesize\ttfamily double Vector\+\_\+sqnorm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size,  }\item[{double}]{vector\mbox{[}static size\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double Vector\+\_\+sqnorm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size,  }\item[{double}]{vector\mbox{[}static size\mbox{]} }\end{DoxyParamCaption})}
 
 
 

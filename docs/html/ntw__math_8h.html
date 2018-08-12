@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Parallel pagerank: /home/ecat/nikos/parallel/source/helpers/ntw_math.h File Reference</title>
+<title>Parallel pagerank: /home/ecat/nikos/parallel/include/ntw_math.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Parallel pagerank
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Pagerank vector parallel calculator in C</div>
   </td>
@@ -70,7 +70,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ac7426e64a8e6f06cc3e6ac020978cfe.html">helpers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,17 +102,25 @@ Functions</h2></td></tr>
 <tr class="memitem:a9600239ccc845d162c04f9472c6f8e5d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__math_8h.html#a9600239ccc845d162c04f9472c6f8e5d">NTW_dotDV</a> (const size_t n, const double vectorA[static n], const double vectorB[static n])</td></tr>
 <tr class="memdesc:a9600239ccc845d162c04f9472c6f8e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the dot product of <em>vectorA</em> and <em>vectorB</em>.  <a href="#a9600239ccc845d162c04f9472c6f8e5d">More...</a><br /></td></tr>
 <tr class="separator:a9600239ccc845d162c04f9472c6f8e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca7aadc74a60c0d3a6ee8559215bbc5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__math_8h.html#a3ca7aadc74a60c0d3a6ee8559215bbc5">NTW_sqMagnDV</a> (const size_t n, const double vector[static n])</td></tr>
+<tr class="memdesc:a3ca7aadc74a60c0d3a6ee8559215bbc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squered magnitude of the <em>vector</em>.  <a href="#a3ca7aadc74a60c0d3a6ee8559215bbc5">More...</a><br /></td></tr>
+<tr class="separator:a3ca7aadc74a60c0d3a6ee8559215bbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49ce6feaf1ed2169fb3871e5a693353c"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__math_8h.html#a49ce6feaf1ed2169fb3871e5a693353c">NTW_newZeroVectorD</a> (const size_t n)</td></tr>
 <tr class="memdesc:a49ce6feaf1ed2169fb3871e5a693353c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <em>n</em> length zero vector.  <a href="#a49ce6feaf1ed2169fb3871e5a693353c">More...</a><br /></td></tr>
 <tr class="separator:a49ce6feaf1ed2169fb3871e5a693353c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae338b005355f529597f0d1a770f44a7d"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__math_8h.html#ae338b005355f529597f0d1a770f44a7d">NTW_newUniVectorD</a> (const size_t n, const double value)</td></tr>
 <tr class="memdesc:ae338b005355f529597f0d1a770f44a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <em>n</em> legth vector with all elements set to <em>value</em>.  <a href="#ae338b005355f529597f0d1a770f44a7d">More...</a><br /></td></tr>
 <tr class="separator:ae338b005355f529597f0d1a770f44a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2969ffaf263ed6fb0e569a129cde71f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__math_8h.html#ac2969ffaf263ed6fb0e569a129cde71f">NTW_printDV</a> (FILE *restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits)</td></tr>
+<tr class="memdesc:ac2969ffaf263ed6fb0e569a129cde71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a double <em>vector</em> to the <em>stream</em>.  <a href="#ac2969ffaf263ed6fb0e569a129cde71f">More...</a><br /></td></tr>
+<tr class="separator:ac2969ffaf263ed6fb0e569a129cde71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">Header containing useful math functions, especially for vectors. </p>
 <dl class="section author"><dt>Author</dt><dd>Katomeris Nikolaos, 8551, <a href="#" onclick="location.href='mai'+'lto:'+'ngk'+'at'+'ome'+'r@'+'aut'+'h.'+'gr'; return false;">ngkat<span style="display: none;">.nosp@m.</span>omer<span style="display: none;">.nosp@m.</span>@auth<span style="display: none;">.nosp@m.</span>.gr</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>11-08-2018 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="ntw__math_8h_source.html">ntw_math.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a51ff9b76d13a32a82a752984ffd113a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51ff9b76d13a32a82a752984ffd113a3">&#9670;&nbsp;</a></span>NTW_addDV()</h2>
@@ -155,6 +163,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00018">18</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
 
 </div>
 </div>
@@ -202,6 +212,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double The dot product \(\vec{A} \cdot \vec{B}\) </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00034">34</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+
 </div>
 </div>
 <a id="a8d8420e5fd69663f4aefcda4344f35d3"></a>
@@ -247,6 +259,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00010">10</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+
 </div>
 </div>
 <a id="ae338b005355f529597f0d1a770f44a7d"></a>
@@ -286,6 +300,10 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double* Pointer to the vector: \(\overbrace{\begin{pmatrix}v &amp; v &amp; \cdots &amp;v\end{pmatrix}}^{n}\). </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00065">65</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00011">NTWPR_pagerank()</a>.</p>
+
 </div>
 </div>
 <a id="a49ce6feaf1ed2169fb3871e5a693353c"></a>
@@ -313,6 +331,103 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double* Pointer to the vector: \(\overbrace{\begin{pmatrix}0 &amp; 0 &amp; \cdots &amp;0\end{pmatrix}}^{n}\). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00054">54</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+
+</div>
+</div>
+<a id="ac2969ffaf263ed6fb0e569a129cde71f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2969ffaf263ed6fb0e569a129cde71f">&#9670;&nbsp;</a></span>NTW_printDV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTW_printDV </td>
+          <td>(</td>
+          <td class="paramtype">FILE *restrict&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>vector</em>[static n], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned&#160;</td>
+          <td class="paramname"><em>decimalDigits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints a double <em>vector</em> to the <em>stream</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>The stream where the <em>vector</em> will be printed. </td></tr>
+    <tr><td class="paramname">n</td><td>The size of the <em>vector</em>. </td></tr>
+    <tr><td class="paramname">vector</td><td>The vector that will be printed. </td></tr>
+    <tr><td class="paramname">decimalDigits</td><td>The accuracy of the printed elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00080">80</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00011">NTWPR_pagerank()</a>.</p>
+
+</div>
+</div>
+<a id="a3ca7aadc74a60c0d3a6ee8559215bbc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca7aadc74a60c0d3a6ee8559215bbc5">&#9670;&nbsp;</a></span>NTW_sqMagnDV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double NTW_sqMagnDV </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>vector</em>[static n]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the squered magnitude of the <em>vector</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The size of the vector. </td></tr>
+    <tr><td class="paramname">vector</td><td>The vector \(\vec{V}\) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double \(\|\vec{V}\|^{2}\) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00044">44</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
 
 </div>
 </div>
@@ -357,6 +472,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00026">26</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
 
 </div>
 </div>
