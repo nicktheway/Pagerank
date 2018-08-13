@@ -26,7 +26,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
     double* b = NTW_newUniVectorD(wgSize, (1-d)/wgSize);
     NTW_printDV(stdout, wgSize, b, 4);
     double delta = 1.0;
-    int max_iterations = 2, curr_iteration = 0;
+    int max_iterations = 50, curr_iteration = 0;
     while (delta > e && curr_iteration++ < max_iterations)
     {
         delta = NTWPR_GS_iter(webGraph, pagerank, b);

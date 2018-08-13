@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include "../include/ntwpr_wg.h"
 #include "../include/ntwpr.h"
+#include "../include/ntw_math.h"
 
 int main(int argc, char* argv[argc+1])
 {
@@ -24,9 +25,19 @@ int main(int argc, char* argv[argc+1])
 
     ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
     FILE* mat = fopen("./data/mat.txt", "w");
-    //NTW_CRS_print(mat, myCRS);
-    // NTWPR_WGF_exportSM(file, argv[2], n);
+	NTW_CRS_colNorm(myCRS);
+    NTW_CRS_printFullMatrix(mat, myCRS);
 
+	/**** TESTING START *****/
+/*
+	NTW_CRS_rowNormUnif(myCRS);
+	uint32_t wgSize = myCRS->node_num;
+	double* pagerank = NTW_newUniVectorD(wgSize, 1.0 / wgSize);
+	double* product = NTW_newZeroVectorD(wgSize);
+	NTW_CRS_vmultTranspose(myCRS, pagerank, product);
+	NTW_printDV(mat, wgSize, product, 3);
+    // NTWPR_WGF_exportSM(file, argv[2], n);
+*/
     if (!mat)
     {
         perror("ERROR");
@@ -35,10 +46,9 @@ int main(int argc, char* argv[argc+1])
 
     double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-6);
     fprintf(mat, "\n---START PR RESULT---\n");
-    for (int i = 0; i < myCRS->node_num; i++){
-        fprintf(mat, "%.2f\t", 100000*pr[i]);
-    }
+    NTW_printDV(mat, myCRS->node_num, pr, 4);
     fprintf(mat, "\n---END PR RESULT---\n");
+
     // NTW_CRS_printFullMatrix(mat, myCRS);
     NTWPR_WGF_fclose(file);
     NTW_CRS_free(myCRS);

@@ -34,6 +34,11 @@ void NTW_CRS_free(ntw_crs* crs)
     free(crs);
 }
 
+ntw_crs* NTW_CRS_newTranspose(const ntw_crs crs[static 1])
+{
+	return (void *) 0;
+}
+
 void NTW_CRS_cmult(ntw_crs crs[static 1], const double c)
 {
     for (uint32_t i = 0; i < crs->edge_num; i++)
@@ -66,6 +71,17 @@ double* NTW_CRS_vmultAlloc(const ntw_crs crs[static 1], const double vector[stat
     return product;
 }
 
+void NTW_CRS_vmultTranspose(const ntw_crs crs[static 1], const double vector[static 1], double product[static 1])
+{
+	for (uint32_t j = 0; j < crs->node_num; j++)
+	{
+		for (uint32_t i = crs->row_ptr[j]; i < crs->row_ptr[j + 1]; i++)
+		{
+			product[crs->col_ind[i]] += crs->val[i] * vector[j];
+		}
+	}
+}
+
 void NTW_CRS_rowNorm(ntw_crs crs[static 1])
 {
     for (uint32_t i = 0; i < crs->node_num; i++)
@@ -91,6 +107,27 @@ void NTW_CRS_rowNormUnif(ntw_crs crs[static 1])
             crs->val[j] = u_value;
         }
     }
+}
+
+void NTW_CRS_colNorm(ntw_crs crs[static 1])
+{
+	// Allocate memory array to store the number of non zero elements in each column.
+	uint32_t* counter = calloc(crs->node_num, sizeof *counter);
+	if (!counter)
+	{
+		fprintf(stderr, "%s: There is not enough memory available for this process\n", __func__);
+		exit(EXIT_FAILURE);
+	}
+	for (uint32_t i = 0; i < crs->edge_num; i++)
+	{
+		counter[crs->col_ind[i]]++;
+	}
+	for (uint32_t i = 0; i < crs->edge_num; i++)
+	{
+		if (counter[crs->col_ind[i]])
+			crs->val[i] /= counter[crs->col_ind[i]];
+	}
+	free(counter);
 }
 
 double NTW_CRS_valueAt(const ntw_crs crs[static 1], uint32_t row, uint32_t col)

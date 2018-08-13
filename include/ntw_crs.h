@@ -55,6 +55,17 @@ ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t ro
 void NTW_CRS_free(ntw_crs* crs);
 
 /**
+ * \TODO...
+ * @brief Creates a new ntw_crs storing the transpose of @a crs.
+ * 
+ * Allocates memory for the new ntw_crs that should be freed using the NTW_CRS_free when non needed anymore.
+ * 
+ * @param crs
+ * @return ntw_crs* Pointer to the created struct or null if unsuccessful. 
+ */
+ntw_crs* NTW_CRS_newTranspose(const ntw_crs crs[static 1]);
+
+/**
  * @brief Multiplies the values of the sparse table in the CRS form 
  *          @a crs with the constant value @a c.
  * 
@@ -86,7 +97,17 @@ void NTW_CRS_vmult(const ntw_crs crs[static 1], const double vector[static 1], d
 double* NTW_CRS_vmultAlloc(const ntw_crs crs[static 1], const double vector[static 1]);
 
 /**
- * @brief Normalizes the rows of the CRS table.
+ * @brief Calculates the product of the transpose of the CRS table @a crs
+ *          with the @a vector and stores the result in @a product. 
+ * 
+ * @param crs The CRS representation of the matrix @f$A@f$.
+ * @param vector The vector @f$v@f$.
+ * @param product The product @f$A^T*v@f$.
+ */
+void NTW_CRS_vmultTranspose(const ntw_crs crs[static 1], const double vector[static 1], double product[static 1]);
+
+/**
+ * @brief Normalizes the rows of the CRS table so they sum to one.
  * 
  * @param crs The CRS representation of the table.
  */
@@ -94,12 +115,20 @@ void NTW_CRS_rowNorm(ntw_crs crs[static 1]);
 
 /**
  * @brief Normalizes the rows of the CRS table giving all the
- *          edges in each row, the same value.
+ *          edges in each row the same value in order to sum to one.
  * 
  * @param crs The CRS representation of the table.
  */
 void NTW_CRS_rowNormUnif(ntw_crs crs[static 1]);
 
+/**
+ * @brief Normalizes the columns of the CRS table so they sum to one.
+ *
+ * O(crs->edge_num) complexity.
+ * 
+ * @param crs The CRS representation of the table.
+ */
+void NTW_CRS_colNorm(ntw_crs crs[static 1]);
 
 /**
  * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.
