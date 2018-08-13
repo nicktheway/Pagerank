@@ -10,30 +10,38 @@
 
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
 {
-    // For better readability.
+    // For more readable code wgSize <- webGraph->node_num
     const uint32_t wgSize = webGraph->node_num;
-	NTW_CRS_printFullMatrix(stdout, webGraph);
+
+	/** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
+
     // Make the matrix a probability matrix.
-    //NTW_CRS_rowNormUnif(webGraph);
     NTW_CRS_colNorm(webGraph);
-	NTW_CRS_printFullMatrix(stdout, webGraph);
+	/** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
+
     // Multiply with the teleportation coefficient.
     NTW_CRS_cmult(webGraph, -d);
-    NTW_CRS_printFullMatrix(stdout, webGraph);
+    /** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
+
     // Create the initial pagerank vector (unified) and the b vector.
     double* pagerank = NTW_newUniVectorD(wgSize, 1.0 / wgSize);
+	
+	// Create the b vector.
+    double* b = NTW_newUniVectorD(wgSize, (1 - d) / wgSize);
+    /** DEBUG:* NTW_printDV(stdout, wgSize, b, 4); */
 
-    double* b = NTW_newUniVectorD(wgSize, (1-d)/wgSize);
-    NTW_printDV(stdout, wgSize, b, 4);
+	// Start the Gauss-Sneidel Algorithm.
     double delta = 1.0;
-    int max_iterations = 50, curr_iteration = 0;
+    unsigned max_iterations = 50, curr_iteration = 0;
     while (delta > e && curr_iteration++ < max_iterations)
     {
         delta = NTWPR_GS_iter(webGraph, pagerank, b);
     }
-    printf("ci: %d\tdelta = %0.3f\n", curr_iteration, delta);
+    fprintf(stdout, "DEBUG: Converged after #%u iterations.\tDelta = %0.2e\n", curr_iteration - 1, delta);
 
+	// Clear allocated vars except from pagerank of course.
     free(b);
+
     return pagerank;
 }
 

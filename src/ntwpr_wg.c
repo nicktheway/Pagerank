@@ -10,20 +10,14 @@
 
 ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf)
 {
-    ntw_crs* new_crs = calloc(1, sizeof(ntw_crs));
-    if (!new_crs)
-    {
-        fprintf(stderr, "Error when allocating memory for the CRS struct.\n");
-        exit(EXIT_FAILURE);
-    }
-    new_crs->node_num = wgf->node_num;
-    new_crs->edge_num = wgf->edge_num;
-
-    new_crs->val = calloc(new_crs->edge_num, sizeof(new_crs->val[0]));
-    new_crs->col_ind = calloc(new_crs->edge_num, sizeof(new_crs->col_ind[0]));
-    new_crs->row_ptr = calloc(new_crs->node_num + 1, sizeof(new_crs->row_ptr[0]));
-
-    if (!new_crs->val || !new_crs->col_ind || !new_crs->row_ptr)
+	
+    const uint32_t node_num = wgf->node_num;
+    const uint32_t edge_num = wgf->edge_num; 
+    uint32_t* row_ptr = calloc(node_num + 1, sizeof *row_ptr);
+	uint32_t* col_ind = calloc(edge_num, sizeof *col_ind);
+	double* val = calloc(edge_num, sizeof *val);
+    
+	if (!val || !col_ind || !row_ptr)
     {
         fprintf(stderr, "%s: Error when allocating memory for the CRS struct.\n", __func__);
         exit(EXIT_FAILURE);
@@ -32,25 +26,31 @@ ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf)
     uint32_t edges_read = 0;
     uint32_t curr_row = 0;
     uint32_t edge_nodes[2];
+
+	// Skip node_num and edge_num
     fseek(wgf->edge_data, 2*sizeof(uint32_t), SEEK_SET);
     while (fread(edge_nodes, sizeof(edge_nodes[0]), 2, wgf->edge_data) == 2)
     {
-        new_crs->col_ind[edges_read] = edge_nodes[1];
-        new_crs->val[edges_read] = 1.0;
+        col_ind[edges_read] = edge_nodes[1];
+        val[edges_read] = 1.0;
+
         if (edge_nodes[0] > curr_row)
         {
             for (int i = curr_row + 1; i <= edge_nodes[0]; i++)
             {
-                new_crs->row_ptr[i] = edges_read;
+                row_ptr[i] = edges_read;
             }
             curr_row = edge_nodes[0];
         }
         edges_read++;
     }
-    new_crs->row_ptr[new_crs->node_num] = new_crs->edge_num;
+	
+	for (uint32_t i = curr_row + 1; i <= node_num; i++)
+    	row_ptr[i] = edge_num;
 
     NTWPR_WGF_rewind(wgf);
-    return new_crs;
+
+	return NTW_CRS_new(node_num, edge_num, row_ptr, col_ind, val);
 }
 
 NTWPR_WGFile* NTWPR_WGF_fopen(const char path[static 1])
