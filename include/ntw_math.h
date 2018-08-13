@@ -65,6 +65,16 @@ double NTW_dotDV(const size_t n, const double vectorA[static n], const double ve
 double NTW_sqMagnDV(const size_t n, const double vector[static n]);
 
 /**
+ * @brief Returns \f$\sum_{i=0}^{n}V(ind[i])\f$
+ * 
+ * @param n The number \f$n\f$  of the sumation elements.
+ * @param indices The @a n indices of the vector that will be in the sum.
+ * @param vector The vector \f$\vec{V}\f$
+ * @return double The partial sum of the @a vector elements.
+ */
+double NTW_partialSumDV(const size_t n, const size_t indices[static n], const double vector[static 1]);
+
+/**
  * @brief Assign the values of vectorB to vectorA
  *          \f[\vec{A} = \vec{B}\f]
  * 

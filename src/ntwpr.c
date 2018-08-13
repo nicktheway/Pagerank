@@ -12,11 +12,11 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
 {
     // For better readability.
     const uint32_t wgSize = webGraph->node_num;
-
+	NTW_CRS_printFullMatrix(stdout, webGraph);
     // Make the matrix a probability matrix.
     //NTW_CRS_rowNormUnif(webGraph);
     NTW_CRS_colNorm(webGraph);
-
+	NTW_CRS_printFullMatrix(stdout, webGraph);
     // Multiply with the teleportation coefficient.
     NTW_CRS_cmult(webGraph, -d);
     NTW_CRS_printFullMatrix(stdout, webGraph);

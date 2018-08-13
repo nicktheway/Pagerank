@@ -51,6 +51,16 @@ double NTW_sqMagnDV(const size_t n, const double vector[static n])
     return norm;
 }
 
+double NTW_partialSumDV(const size_t n, const size_t indices[static n], const double vector[static 1])
+{
+	double sum = 0;
+	for (size_t i = 0; i < n; i++)
+	{
+		sum += vector[indices[i]];
+	}
+	return sum;
+}
+
 void NTW_assignDV(const size_t n, double vectorA[static n], const double vectorB[static n])
 {
     for (size_t i = 0; i < n; i++)

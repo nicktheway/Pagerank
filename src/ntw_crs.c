@@ -130,6 +130,41 @@ void NTW_CRS_colNorm(ntw_crs crs[static 1])
 	free(counter);
 }
 
+uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1])
+{
+	uint32_t counter = 0;
+	for (uint32_t i = 0; i < crs->node_num; i++)
+	{
+		counter += (crs->row_ptr[i] == crs->row_ptr[i+1]);	
+	}
+	return counter;
+}
+
+uint32_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum)
+{
+	*outIndicesNum = NTW_CRS_getEmptyRowsNum(crs);
+	if (*outIndicesNum == 0) 
+		return (void *) 0;
+
+	uint32_t* emptyRows = malloc(*outIndicesNum * sizeof *emptyRows);
+	if (!emptyRows)
+	{
+		fprintf(stderr, "%s: Error at allocating memory for the row indices\n", __func__);
+		exit(EXIT_FAILURE);
+	}
+	uint32_t counter = 0;
+	for (uint32_t i = 0; i < crs->node_num; i++)
+	{
+		if (crs->row_ptr[i] == crs->row_ptr[i+1])
+		{
+			emptyRows[counter++] = i;
+			if (counter == *outIndicesNum) break;
+		}
+	}
+
+	return emptyRows;
+}
+
 double NTW_CRS_valueAt(const ntw_crs crs[static 1], uint32_t row, uint32_t col)
 {
     for (uint32_t i = crs->row_ptr[row]; i < crs->row_ptr[row+1]; i++)

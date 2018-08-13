@@ -25,11 +25,18 @@ int main(int argc, char* argv[argc+1])
 
     ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
     FILE* mat = fopen("./data/mat.txt", "w");
-	NTW_CRS_colNorm(myCRS);
-    NTW_CRS_printFullMatrix(mat, myCRS);
+
+    NTW_CRS_print(mat, myCRS);
 
 	/**** TESTING START *****/
 /*
+	uint32_t emptyRNum;
+	uint32_t* emptyRows = NTW_CRS_getEmptyRowIndices(myCRS, &emptyRNum);
+	if (emptyRNum)
+		for (int i = 0; i < emptyRNum; i++)
+			printf("%u\t", emptyRows[i]);
+	printf("\n####\n%u\n####\n", emptyRNum);
+
 	NTW_CRS_rowNormUnif(myCRS);
 	uint32_t wgSize = myCRS->node_num;
 	double* pagerank = NTW_newUniVectorD(wgSize, 1.0 / wgSize);
@@ -44,7 +51,7 @@ int main(int argc, char* argv[argc+1])
         return EXIT_FAILURE;
     }
 
-    double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-6);
+    double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-14);
     fprintf(mat, "\n---START PR RESULT---\n");
     NTW_printDV(mat, myCRS->node_num, pr, 4);
     fprintf(mat, "\n---END PR RESULT---\n");

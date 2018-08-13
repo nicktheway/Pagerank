@@ -131,6 +131,23 @@ void NTW_CRS_rowNormUnif(ntw_crs crs[static 1]);
 void NTW_CRS_colNorm(ntw_crs crs[static 1]);
 
 /**
+ * @brief Returns the number of empty rows of the @a crs.
+ *
+ * @param crs
+ * @return uint32_t The number of empty rows in the crs matrix.
+ */
+uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1]);
+
+/**
+ * @brief Returns a vector with the indices of empty rows of the @a crs.
+ *
+ * @param crs
+ * @param outIndicesNum Pass the adress of a uint32_t to be filled with the size of the returned array.
+ * @return uint32_t The number of empty rows in the crs matrix.
+ */
+uint32_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum);
+
+/**
  * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.
  * 
  * Use it sparingly because it's relatively slow. (Depends on how sparse the
