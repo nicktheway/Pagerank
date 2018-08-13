@@ -32,8 +32,11 @@ int main(int argc, char* argv[argc+1])
     fprintf(mat, "\n---START PR RESULT---\n");
     NTW_printDV(mat, myCRS->node_num, pr, 4);
     fprintf(mat, "\n---END PR RESULT---\n");
-
+	NTWPR_WGF_convert2Transpose(argv[2], "./data/new_input.mat");
+	NTWPR_WGFile* nf = NTWPR_WGF_fopen("./data/new_input.mat");
+	NTWPR_WGF_exportFM(nf, "./data/new_input.txt", n);
     // NTW_CRS_printFullMatrix(mat, myCRS);
+	free(pr);
     NTWPR_WGF_fclose(file);
     NTW_CRS_free(myCRS);
     fclose(mat);

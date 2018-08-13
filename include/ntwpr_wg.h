@@ -59,6 +59,19 @@ typedef struct NTWPR_WGFile
     FILE* edge_data; /**< The edges represented as node pairs */
 } NTWPR_WGFile;
 
+/**
+ * @brief A struct for storing web-graph edges.
+ *
+ * Useful for preparing edges before applying a Pagerank algorithm.
+ * For example, the gauss sneidel method needs the transpose of the
+ * web graph matrix.
+ */
+typedef struct NTWPR_WGEdge
+{
+	uint32_t nodeA; /**< The first node of the edge. */
+	uint32_t nodeB; /**< The second node of the edge. */
+} NTWPR_WGEdge;
+
 /******************* FUNCTION DEFINITIONS *******************/
 
 /**
@@ -125,6 +138,16 @@ void NTWPR_WGF_exportSM(NTWPR_WGFile* restrict wgfp, const char exportPath[stati
 ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf);
 
 /**
+ * @brief Creates a web graph file with the transpose of the web graph in @a origWGFPath.
+ * 
+ * If the path is the same the file will be replaced. 
+ *
+ * @param origWGFPath The path of the web graph file containing the graph \f$G\f$.
+ * @param exportWGFPath The path of the web graph file that will contain the output graph \f$G^T\f$.
+ */
+void NTWPR_WGF_convert2Transpose(const char origWGFPath[static 1], const char exportWGFPath[static 1]);
+
+/**
  * @brief Converts web graph files from the format Stanford U. (SU) used to
  *        the NTWPR_WGFile' edge_data file format.
  * 
@@ -137,6 +160,21 @@ ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf);
  */
 void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[static 1], uint32_t nodeNum);
 
+/**
+ * @brief Transposes the edges of a graph described with @a edges.
+ * 
+ * @param n The number of edges in the graph.
+ * @param edges The edges of the graph.
+ */
+void NTWPR_WGF_transposeEdges(const size_t n, NTWPR_WGEdge edges[static n]);
 
+/**
+ * @brief Compares two edges, used for sorting with qsort().
+ * 
+ * @param edgeA
+ * @param edgeB
+ * @return int edgeA->nodeA - edgeB->nodeB
+ */
+int NTWPR_WGF_edgeCompare(const void* restrict edgeA, const void* restrict edgeB);
 
 #endif

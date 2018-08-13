@@ -211,6 +211,57 @@ void NTWPR_WGF_exportSM(NTWPR_WGFile* restrict wgfp, const char exportPath[stati
     fclose(NTWPR_out_fp);
 }
 
+void NTWPR_WGF_convert2Transpose(const char origWGFPath[static 1], const char exportWGFPath[static 1])
+{
+	NTWPR_WGFile* wgfFrom = NTWPR_WGF_fopen(origWGFPath);
+
+	const uint32_t sizes[2] = {	[0] = wgfFrom->node_num,
+								[1] = wgfFrom->edge_num, };
+
+	NTWPR_WGEdge* edges = malloc(sizes[1] * sizeof *edges);
+	if (!edges)
+	{
+		fprintf(stderr, "%s: Error at allocating memory needed for convertion.\n", __func__);
+		exit(EXIT_FAILURE);
+	}
+	fseek(wgfFrom->edge_data, 2 * sizeof(uint32_t), SEEK_SET);
+
+	if (fread(edges, sizeof(*edges), sizes[1], wgfFrom->edge_data) != sizes[1])
+	{
+		fprintf(stderr, "%s: Error at reading web graph data from %s.\n", __func__, origWGFPath);
+		exit(EXIT_FAILURE);
+	}
+
+	NTWPR_WGF_fclose(wgfFrom);
+	// Sort them incrementaly based on edgeB. And transpose them.
+	qsort(edges, sizes[1], sizeof(edges[0]), NTWPR_WGF_edgeCompare);
+	NTWPR_WGF_transposeEdges(sizes[1], edges);
+/* DEBUG:
+	for (int i = 0; i < edge_num; i++)
+		printf("%u\t%u\n", edges[i].nodeA, edges[i].nodeB);
+*/
+
+	// Create the new file/replace.
+	FILE* fp = fopen(exportWGFPath, "wb");
+	if (!fp)
+	{
+		fprintf(stderr, "%s: Error at creating file at path %s\n", __func__, exportWGFPath);
+		exit(EXIT_FAILURE); 
+	}
+	if (fwrite(sizes, sizeof(sizes[0]), 2, fp) != 2)
+	{
+		fprintf(stderr, "Error at writing to file at %s\n", exportWGFPath);
+		exit(EXIT_FAILURE);
+	}
+	if (fwrite(edges, sizeof(edges[0]), sizes[1], fp) != sizes[1])
+	{
+		fprintf(stderr, "Error at writing to file at %s\n", exportWGFPath);
+		exit(EXIT_FAILURE);
+	}
+
+	fclose(fp);
+}
+
 void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[static 1], uint32_t nodeNum)
 {
     FILE* NTWPR_SU_fp = fopen(suDataPath, "r");
@@ -292,4 +343,22 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
 
     fclose(NTWPR_SU_fp);
     fclose(NTWPR_WGFile_fp);
+}
+
+void NTWPR_WGF_transposeEdges(const size_t n, NTWPR_WGEdge edges[static n])
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		uint32_t temp = edges[i].nodeA;
+		edges[i].nodeA = edges[i].nodeB;
+		edges[i].nodeB = temp;
+	}
+}
+
+int NTWPR_WGF_edgeCompare(const void* restrict edgeA, const void* restrict edgeB)
+{
+	NTWPR_WGEdge* a = (NTWPR_WGEdge*) edgeA;
+	NTWPR_WGEdge* b = (NTWPR_WGEdge*) edgeB;
+
+	return (a->nodeB - b->nodeB);
 }
