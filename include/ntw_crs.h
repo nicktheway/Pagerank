@@ -143,9 +143,9 @@ uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1]);
  *
  * @param crs
  * @param outIndicesNum Pass the adress of a uint32_t to be filled with the size of the returned array.
- * @return uint32_t The number of empty rows in the crs matrix.
+ * @return size_t The number of empty rows in the crs matrix.
  */
-uint32_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum);
+size_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum);
 
 /**
  * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.

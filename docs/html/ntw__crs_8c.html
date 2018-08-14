@@ -97,6 +97,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a305e64535f13c75705e10ac0c55b135d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a305e64535f13c75705e10ac0c55b135d">NTW_CRS_free</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> *crs)</td></tr>
 <tr class="memdesc:a305e64535f13c75705e10ac0c55b135d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads a <a class="el" href="structntw__crs.html" title="A Compressed Row Storage struct.">ntw_crs</a> from memory (frees allocated memory).  <a href="#a305e64535f13c75705e10ac0c55b135d">More...</a><br /></td></tr>
 <tr class="separator:a305e64535f13c75705e10ac0c55b135d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1934c183e244be92d4423a4c7a1a664"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structntw__crs.html">ntw_crs</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#ad1934c183e244be92d4423a4c7a1a664">NTW_CRS_newTranspose</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1])</td></tr>
+<tr class="memdesc:ad1934c183e244be92d4423a4c7a1a664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="structntw__crs.html" title="A Compressed Row Storage struct.">ntw_crs</a> storing the transpose of <em>crs</em>.  <a href="#ad1934c183e244be92d4423a4c7a1a664">More...</a><br /></td></tr>
+<tr class="separator:ad1934c183e244be92d4423a4c7a1a664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a623b227a7c44c98cc9e5910510c9d29d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a623b227a7c44c98cc9e5910510c9d29d">NTW_CRS_cmult</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1], const double c)</td></tr>
 <tr class="memdesc:a623b227a7c44c98cc9e5910510c9d29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the values of the sparse table in the CRS form <em>crs</em> with the constant value <em>c</em>.  <a href="#a623b227a7c44c98cc9e5910510c9d29d">More...</a><br /></td></tr>
 <tr class="separator:a623b227a7c44c98cc9e5910510c9d29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,12 +109,24 @@ Functions</h2></td></tr>
 <tr class="memitem:aec240d09f69f88b56cc72e14c266c8ae"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#aec240d09f69f88b56cc72e14c266c8ae">NTW_CRS_vmultAlloc</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1], const double vector[static 1])</td></tr>
 <tr class="memdesc:aec240d09f69f88b56cc72e14c266c8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the product of the CRS table <em>crs</em> with the <em>vector</em> and return the result.  <a href="#aec240d09f69f88b56cc72e14c266c8ae">More...</a><br /></td></tr>
 <tr class="separator:aec240d09f69f88b56cc72e14c266c8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7767a2af3a68e2400e1758d66af02456"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a7767a2af3a68e2400e1758d66af02456">NTW_CRS_vmultTranspose</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1], const double vector[static 1], double product[static 1])</td></tr>
+<tr class="memdesc:a7767a2af3a68e2400e1758d66af02456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the product of the transpose of the CRS table <em>crs</em> with the <em>vector</em> and stores the result in <em>product</em>.  <a href="#a7767a2af3a68e2400e1758d66af02456">More...</a><br /></td></tr>
+<tr class="separator:a7767a2af3a68e2400e1758d66af02456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8e401f5151b982e7a40c40ce2ea040"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a9f8e401f5151b982e7a40c40ce2ea040">NTW_CRS_rowNorm</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1])</td></tr>
-<tr class="memdesc:a9f8e401f5151b982e7a40c40ce2ea040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes the rows of the CRS table.  <a href="#a9f8e401f5151b982e7a40c40ce2ea040">More...</a><br /></td></tr>
+<tr class="memdesc:a9f8e401f5151b982e7a40c40ce2ea040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes the rows of the CRS table so they sum to one.  <a href="#a9f8e401f5151b982e7a40c40ce2ea040">More...</a><br /></td></tr>
 <tr class="separator:a9f8e401f5151b982e7a40c40ce2ea040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051627d1d5da22de040dcd4aafe3faa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a051627d1d5da22de040dcd4aafe3faa6">NTW_CRS_rowNormUnif</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1])</td></tr>
-<tr class="memdesc:a051627d1d5da22de040dcd4aafe3faa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes the rows of the CRS table giving all the edges in each row, the same value.  <a href="#a051627d1d5da22de040dcd4aafe3faa6">More...</a><br /></td></tr>
+<tr class="memdesc:a051627d1d5da22de040dcd4aafe3faa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes the rows of the CRS table giving all the edges in each row the same value in order to sum to one.  <a href="#a051627d1d5da22de040dcd4aafe3faa6">More...</a><br /></td></tr>
 <tr class="separator:a051627d1d5da22de040dcd4aafe3faa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cde7a7cfd8c0af52fc9bb5efd56bd91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a6cde7a7cfd8c0af52fc9bb5efd56bd91">NTW_CRS_colNorm</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1])</td></tr>
+<tr class="memdesc:a6cde7a7cfd8c0af52fc9bb5efd56bd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes the columns of the CRS table so they sum to one.  <a href="#a6cde7a7cfd8c0af52fc9bb5efd56bd91">More...</a><br /></td></tr>
+<tr class="separator:a6cde7a7cfd8c0af52fc9bb5efd56bd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648c37ba5979101abb5e505dc10801eb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a648c37ba5979101abb5e505dc10801eb">NTW_CRS_getEmptyRowsNum</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1])</td></tr>
+<tr class="memdesc:a648c37ba5979101abb5e505dc10801eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of empty rows of the <em>crs</em>.  <a href="#a648c37ba5979101abb5e505dc10801eb">More...</a><br /></td></tr>
+<tr class="separator:a648c37ba5979101abb5e505dc10801eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40293be2ebdb25f330d4d608b9daedee"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a40293be2ebdb25f330d4d608b9daedee">NTW_CRS_getEmptyRowIndices</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1], uint32_t *restrict outIndicesNum)</td></tr>
+<tr class="memdesc:a40293be2ebdb25f330d4d608b9daedee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector with the indices of empty rows of the <em>crs</em>.  <a href="#a40293be2ebdb25f330d4d608b9daedee">More...</a><br /></td></tr>
+<tr class="separator:a40293be2ebdb25f330d4d608b9daedee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16aa5023529756790dc54d54f370ccd2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8c.html#a16aa5023529756790dc54d54f370ccd2">NTW_CRS_valueAt</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1], uint32_t row, uint32_t col)</td></tr>
 <tr class="memdesc:a16aa5023529756790dc54d54f370ccd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value at (<em>row</em>, <em>col</em>) of the matrix of the CRS.  <a href="#a16aa5023529756790dc54d54f370ccd2">More...</a><br /></td></tr>
 <tr class="separator:a16aa5023529756790dc54d54f370ccd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,9 +179,42 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00037">37</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00042">42</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00030">ntw_crs::edge_num</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00011">NTWPR_pagerank()</a>.</p>
+
+</div>
+</div>
+<a id="a6cde7a7cfd8c0af52fc9bb5efd56bd91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cde7a7cfd8c0af52fc9bb5efd56bd91">&#9670;&nbsp;</a></span>NTW_CRS_colNorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTW_CRS_colNorm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structntw__crs.html">ntw_crs</a>&#160;</td>
+          <td class="paramname"><em>crs</em>[static 1]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Normalizes the columns of the CRS table so they sum to one. </p>
+<p class="">O(crs-&gt;edge_num) complexity.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">crs</td><td>The CRS representation of the table. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00112">112</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00030">ntw_crs::edge_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00011">NTWPR_pagerank()</a>.</p>
 
@@ -199,6 +247,83 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00028">28</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
+
+</div>
+</div>
+<a id="a40293be2ebdb25f330d4d608b9daedee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40293be2ebdb25f330d4d608b9daedee">&#9670;&nbsp;</a></span>NTW_CRS_getEmptyRowIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t* NTW_CRS_getEmptyRowIndices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structntw__crs.html">ntw_crs</a>&#160;</td>
+          <td class="paramname"><em>crs</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *restrict&#160;</td>
+          <td class="paramname"><em>outIndicesNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a vector with the indices of empty rows of the <em>crs</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">crs</td><td></td></tr>
+    <tr><td class="paramname">outIndicesNum</td><td>Pass the adress of a uint32_t to be filled with the size of the returned array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t The number of empty rows in the crs matrix. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00143">143</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8c_source.html#l00133">NTW_CRS_getEmptyRowsNum()</a>, and <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00011">NTWPR_pagerank()</a>.</p>
+
+</div>
+</div>
+<a id="a648c37ba5979101abb5e505dc10801eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648c37ba5979101abb5e505dc10801eb">&#9670;&nbsp;</a></span>NTW_CRS_getEmptyRowsNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t NTW_CRS_getEmptyRowsNum </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structntw__crs.html">ntw_crs</a>&#160;</td>
+          <td class="paramname"><em>crs</em>[static 1]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of empty rows of the <em>crs</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">crs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t The number of empty rows in the crs matrix. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00133">133</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, and <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntw__crs_8c_source.html#l00143">NTW_CRS_getEmptyRowIndices()</a>.</p>
 
 </div>
 </div>
@@ -264,6 +389,38 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00030">ntw_crs::edge_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00011">NTWPR_WGF_load2crs()</a>.</p>
+
+</div>
+</div>
+<a id="ad1934c183e244be92d4423a4c7a1a664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1934c183e244be92d4423a4c7a1a664">&#9670;&nbsp;</a></span>NTW_CRS_newTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structntw__crs.html">ntw_crs</a>* NTW_CRS_newTranspose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structntw__crs.html">ntw_crs</a>&#160;</td>
+          <td class="paramname"><em>crs</em>[static 1]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="structntw__crs.html" title="A Compressed Row Storage struct.">ntw_crs</a> storing the transpose of <em>crs</em>. </p>
+<p class="">... Allocates memory for the new <a class="el" href="structntw__crs.html" title="A Compressed Row Storage struct.">ntw_crs</a> that should be freed using the NTW_CRS_free when non needed anymore.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">crs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ntw_crs* Pointer to the created struct or null if unsuccessful. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00037">37</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+
 </div>
 </div>
 <a id="ad2927841d2ac3dd3965750a1028ca18e"></a>
@@ -302,7 +459,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00108">108</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00180">180</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00030">ntw_crs::edge_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
@@ -344,11 +501,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00128">128</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00200">200</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00011">NTWPR_pagerank()</a>.</p>
 
 </div>
 </div>
@@ -368,7 +523,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Normalizes the rows of the CRS table. </p>
+<p>Normalizes the rows of the CRS table so they sum to one. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">crs</td><td>The CRS representation of the table. </td></tr>
@@ -376,7 +531,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00069">69</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00085">85</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
@@ -398,7 +553,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Normalizes the rows of the CRS table giving all the edges in each row, the same value. </p>
+<p>Normalizes the rows of the CRS table giving all the edges in each row the same value in order to sum to one. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">crs</td><td>The CRS representation of the table. </td></tr>
@@ -406,7 +561,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00081">81</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00097">97</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
@@ -456,7 +611,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double The value at [<em>row</em>, <em>col</em>] </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00096">96</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00168">168</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
@@ -504,11 +659,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00045">45</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00050">50</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ntw__crs_8c_source.html#l00056">NTW_CRS_vmultAlloc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ntw__crs_8c_source.html#l00061">NTW_CRS_vmultAlloc()</a>.</p>
 
 </div>
 </div>
@@ -549,9 +704,57 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double* The product vector \(A*v\). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00056">56</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00061">61</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
-<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, and <a class="el" href="ntw__crs_8c_source.html#l00045">NTW_CRS_vmult()</a>.</p>
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, and <a class="el" href="ntw__crs_8c_source.html#l00050">NTW_CRS_vmult()</a>.</p>
+
+</div>
+</div>
+<a id="a7767a2af3a68e2400e1758d66af02456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7767a2af3a68e2400e1758d66af02456">&#9670;&nbsp;</a></span>NTW_CRS_vmultTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTW_CRS_vmultTranspose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structntw__crs.html">ntw_crs</a>&#160;</td>
+          <td class="paramname"><em>crs</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>vector</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>product</em>[static 1]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the product of the transpose of the CRS table <em>crs</em> with the <em>vector</em> and stores the result in <em>product</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">crs</td><td>The CRS representation of the matrix \(A\). </td></tr>
+    <tr><td class="paramname">vector</td><td>The vector \(v\). </td></tr>
+    <tr><td class="paramname">product</td><td>The product \(A^T*v\). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00074">74</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
 
 </div>
 </div>

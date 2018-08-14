@@ -108,9 +108,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a5c8e2ee5ea6ae1d95077293d28357a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8c.html#a5c8e2ee5ea6ae1d95077293d28357a47">NTWPR_WGF_exportSM</a> (<a class="el" href="structNTWPR__WGFile.html">NTWPR_WGFile</a> *restrict wgfp, const char exportPath[static 1], uint32_t nodeNum)</td></tr>
 <tr class="memdesc:a5c8e2ee5ea6ae1d95077293d28357a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the edges to a text file at <em>exportPath</em>.  <a href="#a5c8e2ee5ea6ae1d95077293d28357a47">More...</a><br /></td></tr>
 <tr class="separator:a5c8e2ee5ea6ae1d95077293d28357a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae222205d7ec37b1cf59d341ab10d96ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8c.html#ae222205d7ec37b1cf59d341ab10d96ae">NTWPR_WGF_convert2Transpose</a> (const char origWGFPath[static 1], const char exportWGFPath[static 1])</td></tr>
+<tr class="memdesc:ae222205d7ec37b1cf59d341ab10d96ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a web graph file with the transpose of the web graph in <em>origWGFPath</em>.  <a href="#ae222205d7ec37b1cf59d341ab10d96ae">More...</a><br /></td></tr>
+<tr class="separator:ae222205d7ec37b1cf59d341ab10d96ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa736e093db117a284824bee85784ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8c.html#aaa736e093db117a284824bee85784ce3">NTWPR_WGF_convertSU</a> (const char suDataPath[static 1], const char exportPath[static 1], uint32_t nodeNum)</td></tr>
 <tr class="memdesc:aaa736e093db117a284824bee85784ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts web graph files from the format Stanford U. (SU) used to the <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a>' edge_data file format.  <a href="#aaa736e093db117a284824bee85784ce3">More...</a><br /></td></tr>
 <tr class="separator:aaa736e093db117a284824bee85784ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b7e40ba0184d6a28064dafbb79ce13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8c.html#ac5b7e40ba0184d6a28064dafbb79ce13">NTWPR_WGF_transposeEdges</a> (const size_t n, <a class="el" href="structNTWPR__WGEdge.html">NTWPR_WGEdge</a> edges[static n])</td></tr>
+<tr class="memdesc:ac5b7e40ba0184d6a28064dafbb79ce13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transposes the edges of a graph described with <em>edges</em>.  <a href="#ac5b7e40ba0184d6a28064dafbb79ce13">More...</a><br /></td></tr>
+<tr class="separator:ac5b7e40ba0184d6a28064dafbb79ce13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd73ca055f4ab669f7bc75548fa682d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8c.html#aabd73ca055f4ab669f7bc75548fa682d">NTWPR_WGF_edgeCompare</a> (const void *restrict edgeA, const void *restrict edgeB)</td></tr>
+<tr class="memdesc:aabd73ca055f4ab669f7bc75548fa682d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two edges, used for sorting with qsort().  <a href="#aabd73ca055f4ab669f7bc75548fa682d">More...</a><br /></td></tr>
+<tr class="separator:aabd73ca055f4ab669f7bc75548fa682d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">File containing the implementations of <a class="el" href="ntwpr__wg_8h.html" title="Web-Graph import/export functions.">ntwpr_wg.h</a>. </p>
@@ -119,6 +128,48 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ae222205d7ec37b1cf59d341ab10d96ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae222205d7ec37b1cf59d341ab10d96ae">&#9670;&nbsp;</a></span>NTWPR_WGF_convert2Transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTWPR_WGF_convert2Transpose </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>origWGFPath</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>exportWGFPath</em>[static 1]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a web graph file with the transpose of the web graph in <em>origWGFPath</em>. </p>
+<p class="">If the path is the same the file will be replaced.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origWGFPath</td><td>The path of the web graph file containing the graph \(G\). </td></tr>
+    <tr><td class="paramname">exportWGFPath</td><td>The path of the web graph file that will contain the output graph \(G^T\). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00214">214</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00059">NTWPR_WGFile::edge_data</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00057">NTWPR_WGFile::edge_num</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00058">NTWPR_WGFile::node_num</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00358">NTWPR_WGF_edgeCompare()</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00078">NTWPR_WGF_fclose()</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00056">NTWPR_WGF_fopen()</a>, and <a class="el" href="ntwpr__wg_8c_source.html#l00348">NTWPR_WGF_transposeEdges()</a>.</p>
+
+</div>
+</div>
 <a id="aaa736e093db117a284824bee85784ce3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa736e093db117a284824bee85784ce3">&#9670;&nbsp;</a></span>NTWPR_WGF_convertSU()</h2>
 
@@ -162,9 +213,53 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00214">214</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00265">265</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00027">LINE_COMMENT_SU</a>, and <a class="el" href="ntwpr__wg_8h_source.html#l00034">NTWPR_invalid_fp_exit</a>.</p>
+
+</div>
+</div>
+<a id="aabd73ca055f4ab669f7bc75548fa682d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd73ca055f4ab669f7bc75548fa682d">&#9670;&nbsp;</a></span>NTWPR_WGF_edgeCompare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NTWPR_WGF_edgeCompare </td>
+          <td>(</td>
+          <td class="paramtype">const void *restrict&#160;</td>
+          <td class="paramname"><em>edgeA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *restrict&#160;</td>
+          <td class="paramname"><em>edgeB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares two edges, used for sorting with qsort(). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edgeA</td><td></td></tr>
+    <tr><td class="paramname">edgeB</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int edgeA-&gt;nodeA - edgeB-&gt;nodeB </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00358">358</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00071">NTWPR_WGEdge::nodeB</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00214">NTWPR_WGF_convert2Transpose()</a>.</p>
 
 </div>
 </div>
@@ -295,6 +390,8 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00059">NTWPR_WGFile::edge_data</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00214">NTWPR_WGF_convert2Transpose()</a>.</p>
+
 </div>
 </div>
 <a id="ae73521afd221df1b6f0af044c35e2f96"></a>
@@ -327,6 +424,8 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00059">NTWPR_WGFile::edge_data</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00057">NTWPR_WGFile::edge_num</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00058">NTWPR_WGFile::node_num</a>, and <a class="el" href="ntwpr__wg_8h_source.html#l00034">NTWPR_invalid_fp_exit</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00214">NTWPR_WGF_convert2Transpose()</a>.</p>
+
 </div>
 </div>
 <a id="a7de28416dbf08fff7b53404ca887f2f7"></a>
@@ -357,7 +456,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00011">11</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
 
-<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00030">ntw_crs::edge_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00091">NTWPR_WGF_rewind()</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8c_source.html#l00013">NTW_CRS_new()</a>, and <a class="el" href="ntwpr__wg_8c_source.html#l00091">NTWPR_WGF_rewind()</a>.</p>
 
 </div>
 </div>
@@ -393,6 +492,47 @@ false If an error occured. </dd></dl>
 <p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00059">NTWPR_WGFile::edge_data</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00096">NTWPR_WGF_exportFM()</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00175">NTWPR_WGF_exportSM()</a>, and <a class="el" href="ntwpr__wg_8c_source.html#l00011">NTWPR_WGF_load2crs()</a>.</p>
+
+</div>
+</div>
+<a id="ac5b7e40ba0184d6a28064dafbb79ce13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b7e40ba0184d6a28064dafbb79ce13">&#9670;&nbsp;</a></span>NTWPR_WGF_transposeEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTWPR_WGF_transposeEdges </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNTWPR__WGEdge.html">NTWPR_WGEdge</a>&#160;</td>
+          <td class="paramname"><em>edges</em>[static n]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transposes the edges of a graph described with <em>edges</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The number of edges in the graph. </td></tr>
+    <tr><td class="paramname">edges</td><td>The edges of the graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00348">348</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00214">NTWPR_WGF_convert2Transpose()</a>.</p>
 
 </div>
 </div>

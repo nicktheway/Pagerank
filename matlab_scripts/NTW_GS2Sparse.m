@@ -1,6 +1,8 @@
-N = 50;
+N = 30;
+c = 0.85;
+e = 1e-12;
 
-file = fopen("ha.mat");
+file = fopen("ha.wg");
 A = fread(file, [2,inf], 'uint32')';
 fclose(file);
 Sp = A(2:end, :) + 1;

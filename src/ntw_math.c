@@ -6,8 +6,9 @@
  * @date 11-08-2018
  */
 #include "../include/ntw_math.h"
+#include <math.h>
 
-void NTW_multDV(const size_t n, double vector[static n], const double c)
+void NTWM_multDV(const size_t n, double vector[static n], const double c)
 {
     for (size_t i = 0; i < n; i++)
     {
@@ -15,7 +16,7 @@ void NTW_multDV(const size_t n, double vector[static n], const double c)
     }
 }
 
-void NTW_addDV(const size_t n, double vectorA[static n], const double vectorB[static n])
+void NTWM_addDV(const size_t n, double vectorA[static n], const double vectorB[static n])
 {
     for (size_t i = 0; i < n; i++)
     {
@@ -23,7 +24,7 @@ void NTW_addDV(const size_t n, double vectorA[static n], const double vectorB[st
     }
 }
 
-void NTW_subDV(const size_t n, double vectorA[static n], const double vectorB[static n])
+void NTWM_subDV(const size_t n, double vectorA[static n], const double vectorB[static n])
 {
     for (size_t i = 0; i < n; i++)
     {
@@ -31,7 +32,7 @@ void NTW_subDV(const size_t n, double vectorA[static n], const double vectorB[st
     }
 }
 
-double NTW_dotDV(const size_t n, const double vectorA[static n], const double vectorB[static n])
+double NTWM_dotDV(const size_t n, const double vectorA[static n], const double vectorB[static n])
 {
     double dot = 0;
     for (size_t i = 0; i < n; i++)
@@ -41,7 +42,7 @@ double NTW_dotDV(const size_t n, const double vectorA[static n], const double ve
     return dot;
 }
 
-double NTW_sqMagnDV(const size_t n, const double vector[static n])
+double NTWM_sqMagnDV(const size_t n, const double vector[static n])
 {
     double norm = 0;
     for (size_t i = 0; i < n; i++)
@@ -51,7 +52,24 @@ double NTW_sqMagnDV(const size_t n, const double vector[static n])
     return norm;
 }
 
-double NTW_partialSumDV(const size_t n, const size_t indices[static n], const double vector[static 1])
+void NTWM_normalizeDV(const size_t n, double vector[static n])
+{
+    double norm = 0;
+    for (size_t i = 0; i < n; i++)
+    {
+        norm += vector[i] * vector[i];
+    }
+    
+    if (fabs(norm - 0) < NTWM_DOUBLE_PRES) return;
+    
+    norm = sqrt(norm);
+    for (size_t i = 0; i < n; i++)
+    {
+        vector[i] /= norm;
+    }
+}
+
+double NTWM_partialSumDV(const size_t n, const size_t indices[static n], const double vector[static 1])
 {
 	double sum = 0;
 	for (size_t i = 0; i < n; i++)
@@ -61,7 +79,7 @@ double NTW_partialSumDV(const size_t n, const size_t indices[static n], const do
 	return sum;
 }
 
-void NTW_assignDV(const size_t n, double vectorA[static n], const double vectorB[static n])
+void NTWM_assignDV(const size_t n, double vectorA[static n], const double vectorB[static n])
 {
     for (size_t i = 0; i < n; i++)
     {
@@ -69,7 +87,7 @@ void NTW_assignDV(const size_t n, double vectorA[static n], const double vectorB
     }
 }
 
-double* NTW_newZeroVectorD(const size_t n)
+double* NTWM_newZeroVectorD(const size_t n)
 {
     double* vector = calloc(n, sizeof *vector);
     if (!vector)
@@ -80,7 +98,7 @@ double* NTW_newZeroVectorD(const size_t n)
     return vector;
 }
 
-double* NTW_newUniVectorD(const size_t n, const double value)
+double* NTWM_newUniVectorD(const size_t n, const double value)
 {
     double* vector = malloc(n * sizeof *vector);
     if (!vector)
@@ -95,7 +113,7 @@ double* NTW_newUniVectorD(const size_t n, const double value)
     return vector;
 }
 
-double* NTW_newCopyDV(const size_t n, const double vector[static n])
+double* NTWM_newCopyDV(const size_t n, const double vector[static n])
 {
     double* newCopy = malloc(n * sizeof *newCopy);
     if (!newCopy)
@@ -110,7 +128,7 @@ double* NTW_newCopyDV(const size_t n, const double vector[static n])
     return newCopy;
 }
 
-void NTW_printDV(FILE* restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits)
+void NTWM_printDV(FILE* restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits)
 {
     fprintf(stream, "[");
     for (int i = 0; i < n - 1; i++)

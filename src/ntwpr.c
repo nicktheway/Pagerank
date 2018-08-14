@@ -8,34 +8,37 @@
 #include "../include/ntwpr.h"
 #include "../include/ntw_math.h"
 
-double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
+double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* stream)
 {
     // For more readable code wgSize <- webGraph->node_num
     const uint32_t wgSize = webGraph->node_num;
 
-	/** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
+	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
 
     // Make the matrix a probability matrix.
     NTW_CRS_colNorm(webGraph);
-	/** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
-
+	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
+    
     // Multiply with the teleportation coefficient.
-    NTW_CRS_cmult(webGraph, -d);
-    /** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
+    NTW_CRS_cmult(webGraph, -c);
+    /** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
 
     // Create the initial pagerank vector (unified) and the b vector.
-    double* pagerank = NTW_newUniVectorD(wgSize, 1.0 / wgSize);
+    double* pagerank = NTWM_newUniVectorD(wgSize, 1.0 / wgSize);
 	
 	// Create the b vector.
-    double* b = NTW_newUniVectorD(wgSize, (1 - d) / wgSize);
-    /** DEBUG:* NTW_printDV(stdout, wgSize, b, 4); */
+    double* b = NTWM_newUniVectorD(wgSize, (1 - c) / wgSize);
+    /** DEBUG:* NTWM_printDV(stdout, wgSize, b, 4); */
 
 	// Start the Gauss-Sneidel Algorithm.
     double delta = 1.0;
+    uint32_t emptyRows;
+    size_t *d = NTW_CRS_getEmptyRowIndices(webGraph, &emptyRows);
+    
     unsigned max_iterations = 50, curr_iteration = 0;
     while (delta > e && curr_iteration++ < max_iterations)
     {
-        delta = NTWPR_GS_iter(webGraph, pagerank, b);
+        delta = NTWPR_GS_iter(webGraph, pagerank, b, emptyRows, d);
     }
     fprintf(stdout, "DEBUG: Converged after #%u iterations.\tDelta = %0.2e\n", curr_iteration - 1, delta);
 
@@ -45,13 +48,16 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
     return pagerank;
 }
 
-inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1])
+inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const uint32_t m, const size_t d[static m])
 {
     double sqnorm_diff = 0;
+    
     for (uint32_t i = 0; i < matrix->node_num; i++)
     {
         double den = 1.0;
-        double num = b_vec[i];
+        
+        //const double dv = NTWM_partialSumDV(m, d, x_vec);
+        double num = b_vec[i];// + 0.85*dv / matrix->node_num;
         const double old_xi = x_vec[i];
 
         for (uint32_t j = matrix->row_ptr[i]; j < matrix->row_ptr[i+1]; j++)
@@ -69,6 +75,8 @@ inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 
         x_vec[i] = num / den;
         sqnorm_diff += (x_vec[i] - old_xi) * (x_vec[i] - old_xi);
     }
+    
+    // NTWM_printDV(stdout, matrix->node_num, x_vec, 3);
     return sqnorm_diff;
 }
 

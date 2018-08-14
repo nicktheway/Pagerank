@@ -6,7 +6,7 @@ ifeq ($(DEBUG), 1)
 else
     CFLAGS= -std=c11 -Wall -O3
 endif
-LIBS=
+LIBS= -lm
 
 # Files
 _DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h
@@ -34,4 +34,4 @@ debug: $(OBJ)
 .PHONY: clean
 
 clean:
-	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~ $(SDIR)/*~ 
+	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~ $(SDIR)/*~

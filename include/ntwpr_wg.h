@@ -63,8 +63,7 @@ typedef struct NTWPR_WGFile
  * @brief A struct for storing web-graph edges.
  *
  * Useful for preparing edges before applying a Pagerank algorithm.
- * For example, the gauss sneidel method needs the transpose of the
- * web graph matrix.
+ * For example, the gauss sneidel method needs sorted edges.
  */
 typedef struct NTWPR_WGEdge
 {
