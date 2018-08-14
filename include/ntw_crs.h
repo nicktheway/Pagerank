@@ -55,7 +55,7 @@ ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t ro
 void NTW_CRS_free(ntw_crs* crs);
 
 /**
- * \TODO...
+ * NOT defined. TODO...
  * @brief Creates a new ntw_crs storing the transpose of @a crs.
  * 
  * Allocates memory for the new ntw_crs that should be freed using the NTW_CRS_free when non needed anymore.

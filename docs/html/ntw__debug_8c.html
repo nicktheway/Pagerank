@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Parallel pagerank: /home/ecat/nikos/parallel/src/test.c File Reference</title>
+<title>Parallel pagerank: /home/ecat/nikos/parallel/src/ntw_debug.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,35 +77,82 @@ $(function() {
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">test.c File Reference</div>  </div>
+<div class="title">ntw_debug.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Test script used for development.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="ntwpr__wg_8h_source.html">../include/ntwpr_wg.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntwpr_8h_source.html">../include/ntwpr.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntw__math_8h_source.html">../include/ntw_math.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntw__debug_8h_source.html">../include/ntw_debug.h</a>&quot;</code><br />
 </div>
-<p><a href="test_8c_source.html">Go to the source code of this file.</a></p>
+<p><a href="ntw__debug_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a67b053252f69cdbde21d914d4100273e"><td class="memItemLeft" align="right" valign="top"><a id="a67b053252f69cdbde21d914d4100273e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, char *argv[argc+1])</td></tr>
-<tr class="separator:a67b053252f69cdbde21d914d4100273e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8596836fe05b703cec2dc8c5a1ae08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__debug_8c.html#abf8596836fe05b703cec2dc8c5a1ae08">NTW_DEBUG_printElapsedTime</a> (FILE *restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1])</td></tr>
+<tr class="memdesc:abf8596836fe05b703cec2dc8c5a1ae08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints: <em>message:</em> &lt;elapsed time from <em>start</em> to <em>finish</em> in ms&gt; to <em>stream</em>.  <a href="#abf8596836fe05b703cec2dc8c5a1ae08">More...</a><br /></td></tr>
+<tr class="separator:abf8596836fe05b703cec2dc8c5a1ae08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p class="">Test script used for development. </p>
-<dl class="section author"><dt>Author</dt><dd>Katomeris Nikolaos, 8551, <a href="#" onclick="location.href='mai'+'lto:'+'ngk'+'at'+'ome'+'r@'+'aut'+'h.'+'gr'; return false;">ngkat<span style="display: none;">.nosp@m.</span>omer<span style="display: none;">.nosp@m.</span>@auth<span style="display: none;">.nosp@m.</span>.gr</a> </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>09-08-2018 </dd></dl>
+<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Katomeris Nikolaos, 8551, <a href="#" onclick="location.href='mai'+'lto:'+'ngk'+'at'+'ome'+'r@'+'aut'+'h.'+'gr'; return false;">ngkat<span style="display: none;">.nosp@m.</span>omer<span style="display: none;">.nosp@m.</span>@auth<span style="display: none;">.nosp@m.</span>.gr</a> </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14-08-2018 </dd></dl>
 
-<p class="definition">Definition in file <a class="el" href="test_8c_source.html">test.c</a>.</p>
-</div></div><!-- contents -->
+<p class="definition">Definition in file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="abf8596836fe05b703cec2dc8c5a1ae08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8596836fe05b703cec2dc8c5a1ae08">&#9670;&nbsp;</a></span>NTW_DEBUG_printElapsedTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTW_DEBUG_printElapsedTime </td>
+          <td>(</td>
+          <td class="paramtype">FILE *restrict&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct timespec&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct timespec&#160;</td>
+          <td class="paramname"><em>finish</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>message</em>[static 1]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints: <em>message:</em> &lt;elapsed time from <em>start</em> to <em>finish</em> in ms&gt; to <em>stream</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>Where the debug message will be printed. Must be open. </td></tr>
+    <tr><td class="paramname">start</td><td>The starting time point. </td></tr>
+    <tr><td class="paramname">finish</td><td>The end's time point. </td></tr>
+    <tr><td class="paramname">message</td><td>Debug message to print before the elapsed time. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__debug_8c_source.html#l00011">11</a> of file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00013">NTWPR_pagerank()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

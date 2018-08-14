@@ -7,18 +7,22 @@
  */
 #include "../include/ntwpr.h"
 #include "../include/ntw_math.h"
+#include "../include/ntw_debug.h"
+#include <time.h>
 
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* stream)
 {
+    struct timespec start, finish;
     // For more readable code wgSize <- webGraph->node_num
     const uint32_t wgSize = webGraph->node_num;
 
 	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
-
+    clock_gettime(CLOCK_MONOTONIC, &start);
     // Make the matrix a probability matrix.
     NTW_CRS_colNorm(webGraph);
 	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
-    
+    clock_gettime(CLOCK_MONOTONIC, &finish);
+    NTW_DEBUG_printElapsedTime(stream, start, finish, "Make graph stochastic time");
     // Multiply with the teleportation coefficient.
     NTW_CRS_cmult(webGraph, -c);
     /** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
@@ -38,7 +42,10 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
     unsigned max_iterations = 50, curr_iteration = 0;
     while (delta > e && curr_iteration++ < max_iterations)
     {
+        clock_gettime(CLOCK_MONOTONIC, &start);
         delta = NTWPR_GS_iter(webGraph, pagerank, b, emptyRows, d);
+        clock_gettime(CLOCK_MONOTONIC, &finish);
+        NTW_DEBUG_printElapsedTime(stream, start, finish, "Iteration");
     }
     fprintf(stdout, "DEBUG: Converged after #%u iterations.\tDelta = %0.2e\n", curr_iteration - 1, delta);
 
@@ -48,7 +55,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
     return pagerank;
 }
 
-inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const uint32_t m, const size_t d[static m])
+double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const uint32_t m, const size_t d[static m])
 {
     double sqnorm_diff = 0;
     
@@ -78,18 +85,4 @@ inline double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 
     
     // NTWM_printDV(stdout, matrix->node_num, x_vec, 3);
     return sqnorm_diff;
-}
-
-void NTWPR_pr_init(const uint32_t nodeNum, double vector[static nodeNum])
-{
-    if (!nodeNum) 
-    {
-        fprintf(stderr, "nodeNum must be positive!\n");
-        exit(EXIT_FAILURE);
-    }
-    // Compiler will optimize out the division at every iteration.
-    for (uint32_t i = 0; i < nodeNum; i++)
-    {
-        vector[i] = 1.0f / nodeNum;
-    }
 }

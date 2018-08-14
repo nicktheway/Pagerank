@@ -1,5 +1,58 @@
+Load to crs time:: 0.019157 ms
+NTWPR_pagerank:
+Make graph stochastic time: 0.003265 ms
+Iteration: 0.001634 ms
+Iteration: 0.001024 ms
+Iteration: 0.000839 ms
+Iteration: 0.000784 ms
+Iteration: 0.000764 ms
+Iteration: 0.000810 ms
+Iteration: 0.000842 ms
+Iteration: 0.000827 ms
+Iteration: 0.000767 ms
+Iteration: 0.000792 ms
+Iteration: 0.000809 ms
+Iteration: 0.000732 ms
+Iteration: 0.000761 ms
+Iteration: 0.000812 ms
+Iteration: 0.000870 ms
+Iteration: 0.000782 ms
+Iteration: 0.000770 ms
+Iteration: 0.000780 ms
+Iteration: 0.000819 ms
+Iteration: 0.000734 ms
+Iteration: 0.000822 ms
+Iteration: 0.000754 ms
+Iteration: 0.000774 ms
+Iteration: 0.000847 ms
+Iteration: 0.000769 ms
+Iteration: 0.000722 ms
+Iteration: 0.000825 ms
+Iteration: 0.000812 ms
+Iteration: 0.000815 ms
+Iteration: 0.000770 ms
+Iteration: 0.000769 ms
+Iteration: 0.000786 ms
+Iteration: 0.000814 ms
+Iteration: 0.000792 ms
+Iteration: 0.000762 ms
+Iteration: 0.000827 ms
+Iteration: 0.000814 ms
+Iteration: 0.000731 ms
+Iteration: 0.000797 ms
+Iteration: 0.000814 ms
+Iteration: 0.000817 ms
+Iteration: 0.000816 ms
+Iteration: 0.000776 ms
+Iteration: 0.000900 ms
+Iteration: 0.000777 ms
+Iteration: 0.000787 ms
+Iteration: 0.000772 ms
+Iteration: 0.000865 ms
+Iteration: 0.000839 ms
+Iteration: 0.000741 ms
+Whole pagerank time: 0.122116 ms
 
 ---START PR RESULT---
-[0.109884903	0.154167706	0.005000000	0.010118745	0.016807415	0.009245553	0.010118745	0.024690720	0.014419211	0.012243745	0.028578396	0.015738039	0.005000000	0.005000000	0.009245553	0.014007654	0.005000000	0.015920213	0.015920213	0.066637739	0.055717509	0.022268944	0.005000000	0.066637697	0.066637678	0.066637661	0.066637661	0.066637643	0.015920213	0.020165766]
 
 ---END PR RESULT---

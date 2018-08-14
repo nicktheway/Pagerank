@@ -1,0 +1,57 @@
+\hypertarget{ntw__debug_8h}{}\section{/home/ecat/nikos/parallel/include/ntw\+\_\+debug.h File Reference}
+\label{ntw__debug_8h}\index{/home/ecat/nikos/parallel/include/ntw\+\_\+debug.\+h@{/home/ecat/nikos/parallel/include/ntw\+\_\+debug.\+h}}
+
+
+Contains the declarations of useful debugging functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ntw__debug_8h_abf8596836fe05b703cec2dc8c5a1ae08}{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time}} (F\+I\+LE $\ast$restrict stream, const struct timespec start, const struct timespec finish, const char message\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Prints\+: {\itshape message\+:} $<$elapsed time from {\itshape start} to {\itshape finish} in ms$>$ to {\itshape stream}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the declarations of useful debugging functions. 
+
+\begin{DoxyAuthor}{Author}
+Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth.\+gr} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14-\/08-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ntw__debug_8h_abf8596836fe05b703cec2dc8c5a1ae08}\label{ntw__debug_8h_abf8596836fe05b703cec2dc8c5a1ae08}} 
+\index{ntw\+\_\+debug.\+h@{ntw\+\_\+debug.\+h}!N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time@{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time}}
+\index{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time@{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time}!ntw\+\_\+debug.\+h@{ntw\+\_\+debug.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time()}{NTW\_DEBUG\_printElapsedTime()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$restrict}]{stream,  }\item[{const struct timespec}]{start,  }\item[{const struct timespec}]{finish,  }\item[{const char}]{message\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Prints\+: {\itshape message\+:} $<$elapsed time from {\itshape start} to {\itshape finish} in ms$>$ to {\itshape stream}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & Where the debug message will be printed. Must be open. \\
+\hline
+{\em start} & The starting time point. \\
+\hline
+{\em finish} & The end\textquotesingle{}s time point. \\
+\hline
+{\em message} & Debug message to print before the elapsed time. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file ntw\+\_\+debug.\+c.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
+

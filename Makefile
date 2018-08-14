@@ -2,15 +2,15 @@
 CC=gcc
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
-    CFLAGS = -std=c11 -Wall -g
+    CFLAGS = -std=c11 -D_POSIX_C_SOURCE=199309L -Wall -g
 else
-    CFLAGS= -std=c11 -Wall -O3
+    CFLAGS= -std=c11 -D_POSIX_C_SOURCE=199309L -Wall -O3
 endif
 LIBS= -lm
 
 # Files
-_DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h
-_OBJ = ntw_math.o ntw_crs.o ntwpr_wg.o ntwpr.o test.o
+_DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h ntw_debug.h
+_OBJ = ntw_math.o ntw_crs.o ntwpr_wg.o ntwpr.o ntw_debug.o test.o
 
 # Folders, Paths
 IDIR=include

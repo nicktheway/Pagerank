@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Parallel pagerank: /home/ecat/nikos/parallel/src/test.c File Reference</title>
+<title>Parallel pagerank: /home/ecat/nikos/parallel/include/ntw_debug.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,42 +70,16 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">test.c File Reference</div>  </div>
+<div class="title">ntw_debug.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Test script used for development.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;time.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="ntwpr__wg_8h_source.html">../include/ntwpr_wg.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntwpr_8h_source.html">../include/ntwpr.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntw__math_8h_source.html">../include/ntw_math.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntw__debug_8h_source.html">../include/ntw_debug.h</a>&quot;</code><br />
-</div>
-<p><a href="test_8c_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a67b053252f69cdbde21d914d4100273e"><td class="memItemLeft" align="right" valign="top"><a id="a67b053252f69cdbde21d914d4100273e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, char *argv[argc+1])</td></tr>
-<tr class="separator:a67b053252f69cdbde21d914d4100273e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p class="">Test script used for development. </p>
-<dl class="section author"><dt>Author</dt><dd>Katomeris Nikolaos, 8551, <a href="#" onclick="location.href='mai'+'lto:'+'ngk'+'at'+'ome'+'r@'+'aut'+'h.'+'gr'; return false;">ngkat<span style="display: none;">.nosp@m.</span>omer<span style="display: none;">.nosp@m.</span>@auth<span style="display: none;">.nosp@m.</span>.gr</a> </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>09-08-2018 </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="test_8c_source.html">test.c</a>.</p>
-</div></div><!-- contents -->
+<a href="ntw__debug_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef NTW_DEBUG_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define NTW_DEBUG_H 1</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ntw__debug_8h.html#abf8596836fe05b703cec2dc8c5a1ae08">NTW_DEBUG_printElapsedTime</a>(FILE* restrict stream, <span class="keyword">const</span> <span class="keyword">struct</span> timespec start, <span class="keyword">const</span> <span class="keyword">struct</span> timespec finish, <span class="keyword">const</span> <span class="keywordtype">char</span> message[<span class="keyword">static</span> 1]);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="ntw__debug_8h_html_abf8596836fe05b703cec2dc8c5a1ae08"><div class="ttname"><a href="ntw__debug_8h.html#abf8596836fe05b703cec2dc8c5a1ae08">NTW_DEBUG_printElapsedTime</a></div><div class="ttdeci">void NTW_DEBUG_printElapsedTime(FILE *restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1])</div><div class="ttdoc">Prints: message: &lt;elapsed time from start to finish in ms&gt; to stream.</div><div class="ttdef"><b>Definition:</b> <a href="ntw__debug_8c_source.html#l00011">ntw_debug.c:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -10,19 +10,12 @@
 #include "ntwpr_wg.h"
 
 /**
- * @brief Initializes the pagerank vector uniformely.
- * 
- * @param nodeNum The number of nodes (size of the vector).
- * @param vector The vector that will be initialized.
- */
-void NTWPR_pr_init(const uint32_t nodeNum, double vector[static nodeNum]);
-
-/**
  * @brief Calculates the pagerank of the nodes of a web graph.
  * 
  * @param webGraph The web graf in ntw_crs representation.
  * @param c The teleportation coefficient.
  * @param e The converge tolerance.
+ * @param stream Opened FILE* stream for printing results.
  * @return double* The calculated pagerank vector.
  */
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* stream);
@@ -41,7 +34,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
  * @param d The vector containing the "dangling node"' indices of @a matrix.
  * @return double The squared norm difference of the old and new @a x_vec.
  */
-double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const uint32_t m, const size_t d[static 1]);
+double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const uint32_t m, const size_t d[static m]);
 
 /**
  * @brief Returns the squered norm of a vector.

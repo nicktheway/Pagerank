@@ -85,6 +85,8 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="ntwpr_8h_source.html">../include/ntwpr.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ntw__math_8h_source.html">../include/ntw_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ntw__debug_8h_source.html">../include/ntw_debug.h</a>&quot;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
 </div>
 <p><a href="ntwpr_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -93,12 +95,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a22512677be7968cc1af3ce7d3653bcf0"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8c.html#a22512677be7968cc1af3ce7d3653bcf0">NTWPR_pagerank</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> webGraph[static 1], double c, double e, FILE *stream)</td></tr>
 <tr class="memdesc:a22512677be7968cc1af3ce7d3653bcf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the pagerank of the nodes of a web graph.  <a href="#a22512677be7968cc1af3ce7d3653bcf0">More...</a><br /></td></tr>
 <tr class="separator:a22512677be7968cc1af3ce7d3653bcf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeb887148b493cfa1359e1f29e29bfa7"><td class="memItemLeft" align="right" valign="top"><a id="abeb887148b493cfa1359e1f29e29bfa7"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>NTWPR_GS_iter</b> (const <a class="el" href="structntw__crs.html">ntw_crs</a> matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const uint32_t m, const size_t d[static m])</td></tr>
+<tr class="memitem:abeb887148b493cfa1359e1f29e29bfa7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8c.html#abeb887148b493cfa1359e1f29e29bfa7">NTWPR_GS_iter</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const uint32_t m, const size_t d[static m])</td></tr>
+<tr class="memdesc:abeb887148b493cfa1359e1f29e29bfa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates one iteration of \((I-A)x = b\).  <a href="#abeb887148b493cfa1359e1f29e29bfa7">More...</a><br /></td></tr>
 <tr class="separator:abeb887148b493cfa1359e1f29e29bfa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37f94e58ec12588c95d479fd6a342161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr_8c.html#a37f94e58ec12588c95d479fd6a342161">NTWPR_pr_init</a> (const uint32_t nodeNum, double vector[static nodeNum])</td></tr>
-<tr class="memdesc:a37f94e58ec12588c95d479fd6a342161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the pagerank vector uniformely.  <a href="#a37f94e58ec12588c95d479fd6a342161">More...</a><br /></td></tr>
-<tr class="separator:a37f94e58ec12588c95d479fd6a342161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">File containing the definitions of the functions declared at <a class="el" href="ntwpr_8h.html" title="Methods for calculating the pagerank of web graphs.">ntwpr.h</a>. </p>
@@ -107,6 +106,75 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>NTWPR_GS_iter</b> (
 
 <p class="definition">Definition in file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="abeb887148b493cfa1359e1f29e29bfa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb887148b493cfa1359e1f29e29bfa7">&#9670;&nbsp;</a></span>NTWPR_GS_iter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double NTWPR_GS_iter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structntw__crs.html">ntw_crs</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x_vec</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>b_vec</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>d</em>[static m]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates one iteration of \((I-A)x = b\). </p>
+<p class="">Uses the Gauss-Sneidel method, using forward substitution.</p>
+<p class="formulaDsp">
+\[\vec{x}_i^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^{k+1} + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\]
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>The sparse matrix A in CRS form. </td></tr>
+    <tr><td class="paramname">x_vec</td><td>The vector x that will be replaced. </td></tr>
+    <tr><td class="paramname">b_vec</td><td>The vector b. </td></tr>
+    <tr><td class="paramname">m</td><td>The size of the vector <em>d</em>. </td></tr>
+    <tr><td class="paramname">d</td><td>The vector containing the "dangling node"' indices of <em>matrix</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double The squared norm difference of the old and new <em>x_vec</em>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00058">58</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00013">NTWPR_pagerank()</a>.</p>
+
+</div>
+</div>
 <a id="a22512677be7968cc1af3ce7d3653bcf0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22512677be7968cc1af3ce7d3653bcf0">&#9670;&nbsp;</a></span>NTWPR_pagerank()</h2>
 
@@ -151,6 +219,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>NTWPR_GS_iter</b> (
     <tr><td class="paramname">webGraph</td><td>The web graf in <a class="el" href="structntw__crs.html" title="A Compressed Row Storage struct.">ntw_crs</a> representation. </td></tr>
     <tr><td class="paramname">c</td><td>The teleportation coefficient. </td></tr>
     <tr><td class="paramname">e</td><td>The converge tolerance. </td></tr>
+    <tr><td class="paramname">stream</td><td>Opened FILE* stream for printing results. </td></tr>
   </table>
   </dd>
 </dl>
@@ -160,48 +229,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>NTWPR_GS_iter</b> (
 <p class="">DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph);</p>
 <p class="">DEBUG:* NTWM_printDV(stdout, wgSize, b, 4); </p>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00011">11</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00013">13</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
 
-<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8c_source.html#l00042">NTW_CRS_cmult()</a>, <a class="el" href="ntw__crs_8c_source.html#l00112">NTW_CRS_colNorm()</a>, <a class="el" href="ntw__crs_8c_source.html#l00143">NTW_CRS_getEmptyRowIndices()</a>, <a class="el" href="ntw__math_8c_source.html#l00101">NTWM_newUniVectorD()</a>, and <a class="el" href="ntwpr_8h.html#ab1adf545d7093c9e0bd912769e617203">NTWPR_GS_iter()</a>.</p>
-
-</div>
-</div>
-<a id="a37f94e58ec12588c95d479fd6a342161"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37f94e58ec12588c95d479fd6a342161">&#9670;&nbsp;</a></span>NTWPR_pr_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NTWPR_pr_init </td>
-          <td>(</td>
-          <td class="paramtype">const uint32_t&#160;</td>
-          <td class="paramname"><em>nodeNum</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>vector</em>[static nodeNum]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes the pagerank vector uniformely. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nodeNum</td><td>The number of nodes (size of the vector). </td></tr>
-    <tr><td class="paramname">vector</td><td>The vector that will be initialized. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="ntwpr_8c_source.html#l00083">83</a> of file <a class="el" href="ntwpr_8c_source.html">ntwpr.c</a>.</p>
+<p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8c_source.html#l00042">NTW_CRS_cmult()</a>, <a class="el" href="ntw__crs_8c_source.html#l00112">NTW_CRS_colNorm()</a>, <a class="el" href="ntw__crs_8c_source.html#l00143">NTW_CRS_getEmptyRowIndices()</a>, <a class="el" href="ntw__debug_8c_source.html#l00011">NTW_DEBUG_printElapsedTime()</a>, <a class="el" href="ntw__math_8c_source.html#l00101">NTWM_newUniVectorD()</a>, and <a class="el" href="ntwpr_8c_source.html#l00058">NTWPR_GS_iter()</a>.</p>
 
 </div>
 </div>
