@@ -20,11 +20,17 @@ double \mbox{\hyperlink{ntw__math_8c_aa94d1d267d234c4198ebd0c8cb4f1442}{N\+T\+W\
 \begin{DoxyCompactList}\small\item\em Calculates the dot product of {\itshape vectorA} and {\itshape vectorB}. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ntw__math_8c_ac50fb8fad76d471ac2a6d447e8c5cfa8}{N\+T\+W\+M\+\_\+sq\+Magn\+DV}} (const size\+\_\+t n, const double vector\mbox{[}static n\mbox{]})
 \begin{DoxyCompactList}\small\item\em Returns the squered magnitude of the {\itshape vector}. \end{DoxyCompactList}\item 
+<<<<<<< HEAD
 void \mbox{\hyperlink{ntw__math_8c_a401fcf7e0818f9d686fbd5b5025e4476}{N\+T\+W\+M\+\_\+normalize\+DV}} (const size\+\_\+t n, double vector\mbox{[}static n\mbox{]})
 \begin{DoxyCompactList}\small\item\em Normalizes the {\itshape vector}. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ntw__math_8c_a3c74d9dbe4e72be66ef1b575e4feceb0}{N\+T\+W\+M\+\_\+partial\+Sum\+DV}} (const size\+\_\+t n, const size\+\_\+t indices\mbox{[}static n\mbox{]}, const double vector\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em Returns $\sum_{i=0}^{n}V(ind[i])$. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntw__math_8c_a8c268e6c5c37f8d0263c7a059448548b}{N\+T\+W\+M\+\_\+assign\+DV}} (const size\+\_\+t n, double vectorA\mbox{[}static n\mbox{]}, const double vectorB\mbox{[}static n\mbox{]})
+=======
+double \mbox{\hyperlink{ntw__math_8c_acd992c59b87c82ab54cb267312768293}{N\+T\+W\+\_\+partial\+Sum\+DV}} (const size\+\_\+t n, const size\+\_\+t indices\mbox{[}static n\mbox{]}, const double vector\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Returns $\sum_{i=0}^{n}V(ind[i])$. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__math_8c_a07ea6fbf31937d399d557563de1e9adc}{N\+T\+W\+\_\+assign\+DV}} (const size\+\_\+t n, double vectorA\mbox{[}static n\mbox{]}, const double vectorB\mbox{[}static n\mbox{]})
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 \begin{DoxyCompactList}\small\item\em Assign the values of vectorB to vectorA \[\vec{A} = \vec{B}\]. \end{DoxyCompactList}\item 
 double $\ast$ \mbox{\hyperlink{ntw__math_8c_a2ea0bfda945824a9b6bf832f722c50af}{N\+T\+W\+M\+\_\+new\+Zero\+VectorD}} (const size\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em Creates a {\itshape n} length zero vector. \end{DoxyCompactList}\item 
@@ -92,7 +98,11 @@ Assign the values of vectorB to vectorA \[\vec{A} = \vec{B}\].
 \end{DoxyParams}
 
 
+<<<<<<< HEAD
 Definition at line 84 of file ntw\+\_\+math.\+c.
+=======
+Definition at line 64 of file ntw\+\_\+math.\+c.
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
 \mbox{\Hypertarget{ntw__math_8c_aa94d1d267d234c4198ebd0c8cb4f1442}\label{ntw__math_8c_aa94d1d267d234c4198ebd0c8cb4f1442}} 
 \index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+M\+\_\+dot\+DV@{N\+T\+W\+M\+\_\+dot\+DV}}
@@ -171,7 +181,11 @@ double$\ast$ Pointer to the new copy.
 \end{DoxyReturn}
 
 
+<<<<<<< HEAD
 Definition at line 118 of file ntw\+\_\+math.\+c.
+=======
+Definition at line 98 of file ntw\+\_\+math.\+c.
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
 \mbox{\Hypertarget{ntw__math_8c_a2ff7e50279647f99c77503b01d40330b}\label{ntw__math_8c_a2ff7e50279647f99c77503b01d40330b}} 
 \index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+M\+\_\+new\+Uni\+VectorD@{N\+T\+W\+M\+\_\+new\+Uni\+VectorD}}
@@ -197,7 +211,11 @@ double$\ast$ Pointer to the vector\+: $\overbrace{\begin{pmatrix}v & v & \cdots 
 \end{DoxyReturn}
 
 
+<<<<<<< HEAD
 Definition at line 103 of file ntw\+\_\+math.\+c.
+=======
+Definition at line 83 of file ntw\+\_\+math.\+c.
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
 
 
@@ -225,6 +243,7 @@ double$\ast$ Pointer to the vector\+: $\overbrace{\begin{pmatrix}0 & 0 & \cdots 
 \end{DoxyReturn}
 
 
+<<<<<<< HEAD
 Definition at line 92 of file ntw\+\_\+math.\+c.
 
 \mbox{\Hypertarget{ntw__math_8c_a401fcf7e0818f9d686fbd5b5025e4476}\label{ntw__math_8c_a401fcf7e0818f9d686fbd5b5025e4476}} 
@@ -258,6 +277,35 @@ References N\+T\+W\+M\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+P\+R\+ES.
 \subsubsection{\texorpdfstring{N\+T\+W\+M\+\_\+partial\+Sum\+D\+V()}{NTWM\_partialSumDV()}}
 {\footnotesize\ttfamily double N\+T\+W\+M\+\_\+partial\+Sum\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{const size\+\_\+t}]{indices\mbox{[}static n\mbox{]},  }\item[{const double}]{vector\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
 
+=======
+Definition at line 72 of file ntw\+\_\+math.\+c.
+
+\mbox{\Hypertarget{ntw__math_8c_acd992c59b87c82ab54cb267312768293}\label{ntw__math_8c_acd992c59b87c82ab54cb267312768293}} 
+\index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+\_\+partial\+Sum\+DV@{N\+T\+W\+\_\+partial\+Sum\+DV}}
+\index{N\+T\+W\+\_\+partial\+Sum\+DV@{N\+T\+W\+\_\+partial\+Sum\+DV}!ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+partial\+Sum\+D\+V()}{NTW\_partialSumDV()}}
+{\footnotesize\ttfamily double N\+T\+W\+\_\+partial\+Sum\+DV (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{const size\+\_\+t}]{indices\mbox{[}static n\mbox{]},  }\item[{const double}]{vector\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Returns $\sum_{i=0}^{n}V(ind[i])$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number $n$ of the sumation elements. \\
+\hline
+{\em indices} & The {\itshape n} indices of the vector that will be in the sum. \\
+\hline
+{\em vector} & The vector $\vec{V}$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The partial sum of the {\itshape vector} elements. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file ntw\+\_\+math.\+c.
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
 
 Returns $\sum_{i=0}^{n}V(ind[i])$. 
@@ -301,7 +349,11 @@ Prints a double {\itshape vector} to the {\itshape stream}.
 \end{DoxyParams}
 
 
+<<<<<<< HEAD
 Definition at line 133 of file ntw\+\_\+math.\+c.
+=======
+Definition at line 113 of file ntw\+\_\+math.\+c.
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
 \mbox{\Hypertarget{ntw__math_8c_ac50fb8fad76d471ac2a6d447e8c5cfa8}\label{ntw__math_8c_ac50fb8fad76d471ac2a6d447e8c5cfa8}} 
 \index{ntw\+\_\+math.\+c@{ntw\+\_\+math.\+c}!N\+T\+W\+M\+\_\+sq\+Magn\+DV@{N\+T\+W\+M\+\_\+sq\+Magn\+DV}}

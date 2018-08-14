@@ -52,6 +52,7 @@ double NTWM_sqMagnDV(const size_t n, const double vector[static n])
     return norm;
 }
 
+<<<<<<< HEAD
 void NTWM_normalizeDV(const size_t n, double vector[static n])
 {
     double norm = 0;
@@ -69,6 +70,8 @@ void NTWM_normalizeDV(const size_t n, double vector[static n])
     }
 }
 
+=======
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 double NTWM_partialSumDV(const size_t n, const size_t indices[static n], const double vector[static 1])
 {
 	double sum = 0;

@@ -323,8 +323,11 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8c_source.html#l00133">NTW_CRS_getEmptyRowsNum()</a>, and <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>.</p>
 
+<<<<<<< HEAD
 <p class="reference">Referenced by <a class="el" href="ntwpr_8c_source.html#l00011">NTWPR_pagerank()</a>.</p>
 
+=======
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 </div>
 </div>
 <a id="a648c37ba5979101abb5e505dc10801eb"></a>
@@ -740,6 +743,7 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00061">61</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, and <a class="el" href="ntw__crs_8c_source.html#l00050">NTW_CRS_vmult()</a>.</p>
+<<<<<<< HEAD
 
 </div>
 </div>
@@ -785,6 +789,53 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
+=======
+
+</div>
+</div>
+<a id="a7767a2af3a68e2400e1758d66af02456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7767a2af3a68e2400e1758d66af02456">&#9670;&nbsp;</a></span>NTW_CRS_vmultTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTW_CRS_vmultTranspose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structntw__crs.html">ntw_crs</a>&#160;</td>
+          <td class="paramname"><em>crs</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>vector</em>[static 1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>product</em>[static 1]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the product of the transpose of the CRS table <em>crs</em> with the <em>vector</em> and stores the result in <em>product</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">crs</td><td>The CRS representation of the matrix \(A\). </td></tr>
+    <tr><td class="paramname">vector</td><td>The vector \(v\). </td></tr>
+    <tr><td class="paramname">product</td><td>The product \(A^T*v\). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 <p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00074">74</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntw__crs_8h_source.html#l00032">ntw_crs::col_ind</a>, <a class="el" href="ntw__crs_8h_source.html#l00029">ntw_crs::node_num</a>, <a class="el" href="ntw__crs_8h_source.html#l00031">ntw_crs::row_ptr</a>, and <a class="el" href="ntw__crs_8h_source.html#l00033">ntw_crs::val</a>.</p>

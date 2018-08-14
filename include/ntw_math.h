@@ -70,6 +70,7 @@ double NTWM_dotDV(const size_t n, const double vectorA[static n], const double v
  * @return double \f$\|\vec{V}\|^{2}\f$
  */
 double NTWM_sqMagnDV(const size_t n, const double vector[static n]);
+<<<<<<< HEAD
 
 /**
  * @brief Normalizes the @a vector.
@@ -78,6 +79,8 @@ double NTWM_sqMagnDV(const size_t n, const double vector[static n]);
  * @param vector 
  */
 void NTWM_normalizeDV(const size_t n, double vector[static n]);
+=======
+>>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
 /**
  * @brief Returns \f$\sum_{i=0}^{n}V(ind[i])\f$
