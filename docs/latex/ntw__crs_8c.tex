@@ -33,7 +33,7 @@ void \mbox{\hyperlink{ntw__crs_8c_a6cde7a7cfd8c0af52fc9bb5efd56bd91}{N\+T\+W\+\_
 \begin{DoxyCompactList}\small\item\em Normalizes the columns of the C\+RS table so they sum to one. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{ntw__crs_8c_a648c37ba5979101abb5e505dc10801eb}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em Returns the number of empty rows of the {\itshape crs}. \end{DoxyCompactList}\item 
-uint32\+\_\+t $\ast$ \mbox{\hyperlink{ntw__crs_8c_a40293be2ebdb25f330d4d608b9daedee}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t $\ast$restrict out\+Indices\+Num)
+size\+\_\+t $\ast$ \mbox{\hyperlink{ntw__crs_8c_a2a6428b018a3bfb0ea39641c078e0623}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t $\ast$restrict out\+Indices\+Num)
 \begin{DoxyCompactList}\small\item\em Returns a vector with the indices of empty rows of the {\itshape crs}. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ntw__crs_8c_a16aa5023529756790dc54d54f370ccd2}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t row, uint32\+\_\+t col)
 \begin{DoxyCompactList}\small\item\em Returns the value at ({\itshape row}, {\itshape col}) of the matrix of the C\+RS. \end{DoxyCompactList}\item 
@@ -136,11 +136,11 @@ Definition at line 28 of file ntw\+\_\+crs.\+c.
 
 References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
 
-\mbox{\Hypertarget{ntw__crs_8c_a40293be2ebdb25f330d4d608b9daedee}\label{ntw__crs_8c_a40293be2ebdb25f330d4d608b9daedee}} 
+\mbox{\Hypertarget{ntw__crs_8c_a2a6428b018a3bfb0ea39641c078e0623}\label{ntw__crs_8c_a2a6428b018a3bfb0ea39641c078e0623}} 
 \index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices}!ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}}
 \subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices()}{NTW\_CRS\_getEmptyRowIndices()}}
-{\footnotesize\ttfamily uint32\+\_\+t$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t $\ast$restrict}]{out\+Indices\+Num }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily size\+\_\+t$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t $\ast$restrict}]{out\+Indices\+Num }\end{DoxyParamCaption})}
 
 
 
@@ -154,7 +154,7 @@ Returns a vector with the indices of empty rows of the {\itshape crs}.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-uint32\+\_\+t The number of empty rows in the crs matrix. 
+size\+\_\+t The number of empty rows in the crs matrix. 
 \end{DoxyReturn}
 
 
@@ -164,13 +164,10 @@ Definition at line 143 of file ntw\+\_\+crs.\+c.
 
 References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num(), and ntw\+\_\+crs\+::row\+\_\+ptr.
 
-<<<<<<< HEAD
 
 
 Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
 
-=======
->>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 \mbox{\Hypertarget{ntw__crs_8c_a648c37ba5979101abb5e505dc10801eb}\label{ntw__crs_8c_a648c37ba5979101abb5e505dc10801eb}} 
 \index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num}!ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}}

@@ -12,8 +12,8 @@ File containing the definitions of the functions declared at \mbox{\hyperlink{nt
 \item 
 double $\ast$ \mbox{\hyperlink{ntwpr_8c_a22512677be7968cc1af3ce7d3653bcf0}{N\+T\+W\+P\+R\+\_\+pagerank}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} web\+Graph\mbox{[}static 1\mbox{]}, double c, double e, F\+I\+LE $\ast$stream)
 \begin{DoxyCompactList}\small\item\em Calculates the pagerank of the nodes of a web graph. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{ntwpr_8c_a0e5542c4c380351cb25bee20e16ac964}\label{ntwpr_8c_a0e5542c4c380351cb25bee20e16ac964}} 
-double {\bfseries N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} matrix\mbox{[}static 1\mbox{]}, double x\+\_\+vec\mbox{[}static 1\mbox{]}, const double b\+\_\+vec\mbox{[}static 1\mbox{]}, const uint32\+\_\+t m, const uint32\+\_\+t d\mbox{[}static m\mbox{]})
+\mbox{\Hypertarget{ntwpr_8c_abeb887148b493cfa1359e1f29e29bfa7}\label{ntwpr_8c_abeb887148b493cfa1359e1f29e29bfa7}} 
+double {\bfseries N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} matrix\mbox{[}static 1\mbox{]}, double x\+\_\+vec\mbox{[}static 1\mbox{]}, const double b\+\_\+vec\mbox{[}static 1\mbox{]}, const uint32\+\_\+t m, const size\+\_\+t d\mbox{[}static m\mbox{]})
 \item 
 void \mbox{\hyperlink{ntwpr_8c_a37f94e58ec12588c95d479fd6a342161}{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}} (const uint32\+\_\+t node\+Num, double vector\mbox{[}static node\+Num\mbox{]})
 \begin{DoxyCompactList}\small\item\em Initializes the pagerank vector uniformely. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -31,49 +31,7 @@ Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth
 
 
 \subsection{Function Documentation}
-<<<<<<< HEAD
 \mbox{\Hypertarget{ntwpr_8c_a22512677be7968cc1af3ce7d3653bcf0}\label{ntwpr_8c_a22512677be7968cc1af3ce7d3653bcf0}} 
-=======
-\mbox{\Hypertarget{ntwpr_8c_a270d8ab35b1ca3759bc377885af69c88}\label{ntwpr_8c_a270d8ab35b1ca3759bc377885af69c88}} 
-\index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter@{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}}
-\index{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter@{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}!ntwpr.\+c@{ntwpr.\+c}}
-\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter()}{NTWPR\_GS\_iter()}}
-{\footnotesize\ttfamily double N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{matrix\mbox{[}static 1\mbox{]},  }\item[{double}]{x\+\_\+vec\mbox{[}static 1\mbox{]},  }\item[{const double}]{b\+\_\+vec\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Calculates one iteration of $(I-A)x = b$. 
-
-Uses the Gauss-\/Sneidel method, using forward substitution.
-
-\[\vec{x}_i^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^{k+1} + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\]
-
-
-\begin{DoxyParams}{Parameters}
-{\em matrix} & The sparse matrix A in C\+RS form. \\
-\hline
-{\em x\+\_\+vec} & The vector x that will be replaced. \\
-\hline
-{\em b\+\_\+vec} & The vector b. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-double The squared norm difference of the old and new {\itshape x\+\_\+vec}. 
-\end{DoxyReturn}
-
-
-Definition at line 48 of file ntwpr.\+c.
-
-
-
-References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
-
-
-
-Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
-
-\mbox{\Hypertarget{ntwpr_8c_af77c56f0f2a93fcd5d91eb426cc6d122}\label{ntwpr_8c_af77c56f0f2a93fcd5d91eb426cc6d122}} 
->>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 \index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}}
 \index{N\+T\+W\+P\+R\+\_\+pagerank@{N\+T\+W\+P\+R\+\_\+pagerank}!ntwpr.\+c@{ntwpr.\+c}}
 \subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+pagerank()}{NTWPR\_pagerank()}}
@@ -95,7 +53,6 @@ Calculates the pagerank of the nodes of a web graph.
 \begin{DoxyReturn}{Returns}
 double$\ast$ The calculated pagerank vector. 
 \end{DoxyReturn}
-<<<<<<< HEAD
 D\+E\+B\+UG\+:$\ast$ N\+T\+W\+M\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(stdout, web\+Graph);
 
 D\+E\+B\+UG\+:$\ast$ N\+T\+W\+M\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(stdout, web\+Graph);
@@ -103,25 +60,12 @@ D\+E\+B\+UG\+:$\ast$ N\+T\+W\+M\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(stdout, 
 D\+E\+B\+UG\+:$\ast$ N\+T\+W\+M\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(stdout, web\+Graph);
 
 D\+E\+B\+UG\+:$\ast$ N\+T\+W\+M\+\_\+print\+D\+V(stdout, wg\+Size, b, 4); 
-=======
-D\+E\+B\+UG\+:$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(stdout, web\+Graph);
-
-D\+E\+B\+UG\+:$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(stdout, web\+Graph);
-
-D\+E\+B\+UG\+:$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(stdout, web\+Graph);
-
-D\+E\+B\+UG\+:$\ast$ N\+T\+W\+\_\+print\+D\+V(stdout, wg\+Size, b, 4); 
->>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
 Definition at line 11 of file ntwpr.\+c.
 
 
 
-<<<<<<< HEAD
 References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices(), N\+T\+W\+M\+\_\+new\+Uni\+Vector\+D(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
-=======
-References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm(), N\+T\+W\+\_\+new\+Uni\+Vector\+D(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
->>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
 \mbox{\Hypertarget{ntwpr_8c_a37f94e58ec12588c95d479fd6a342161}\label{ntwpr_8c_a37f94e58ec12588c95d479fd6a342161}} 
 \index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+pr\+\_\+init@{N\+T\+W\+P\+R\+\_\+pr\+\_\+init}}
@@ -142,9 +86,5 @@ Initializes the pagerank vector uniformely.
 \end{DoxyParams}
 
 
-<<<<<<< HEAD
-Definition at line 82 of file ntwpr.\+c.
-=======
-Definition at line 75 of file ntwpr.\+c.
->>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
+Definition at line 83 of file ntwpr.\+c.
 

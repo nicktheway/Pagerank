@@ -23,7 +23,6 @@ int main(int argc, char* argv[argc+1])
     // Convert the input from the Stanford's U. form to a WGFile at path argv[2]
     NTWPR_WGF_convertSU(argv[1], argv[2], n);
     
-<<<<<<< HEAD
     // Prepare Edges
     // NTWPR_WGF_convert2Transpose(argv[2], "./data/new_input.mat");
 
@@ -35,20 +34,6 @@ int main(int argc, char* argv[argc+1])
     // Load it at memory using ntw_crs
     ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
     //NTW_CRS_print(mat, myCRS);
-=======
-    // Transpose for the Gauss Sneilel.
-    NTWPR_WGF_convert2Transpose(argv[2], "./data/new_input.mat");
-
-    // Open the file.
-    NTWPR_WGFile* file = NTWPR_WGF_fopen("./data/new_input.mat");
-
-    // Load it at memory using ntw_crs
-    ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
-
-    // DEBUG print the matrix
-    FILE* mat = fopen("./data/mat.txt", "w");
-    NTW_CRS_printFullMatrix(mat, myCRS);
->>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
 
     // DEBUG print the matrix
     //NTW_CRS_printFullMatrix(mat, myCRS);
@@ -56,11 +41,7 @@ int main(int argc, char* argv[argc+1])
     double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-12, mat);
     
     fprintf(mat, "\n---START PR RESULT---\n");
-<<<<<<< HEAD
     NTWM_printDV(mat, myCRS->node_num, pr, 9);
-=======
-    NTWM_printDV(mat, myCRS->node_num, pr, 4);
->>>>>>> 9bb2f511c0262561d9a5ddc42c75fce9d058a3ea
     fprintf(mat, "\n---END PR RESULT---\n");
 
 	free(pr);
