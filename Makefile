@@ -34,4 +34,4 @@ debug: $(OBJ)
 .PHONY: clean
 
 clean:
-	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~ $(SDIR)/*~ 
+	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~ $(SDIR)/*~

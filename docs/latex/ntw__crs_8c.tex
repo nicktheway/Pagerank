@@ -15,16 +15,26 @@ The definitions for the functions declared at \mbox{\hyperlink{ntw__crs_8h}{ntw\
 \begin{DoxyCompactList}\small\item\em Creates a new C\+RS structure to store a matrix. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntw__crs_8c_a305e64535f13c75705e10ac0c55b135d}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+free}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} $\ast$crs)
 \begin{DoxyCompactList}\small\item\em Unloads a \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} from memory (frees allocated memory). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} $\ast$ \mbox{\hyperlink{ntw__crs_8c_ad1934c183e244be92d4423a4c7a1a664}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new\+Transpose}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} storing the transpose of {\itshape crs}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntw__crs_8c_a623b227a7c44c98cc9e5910510c9d29d}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, const double c)
 \begin{DoxyCompactList}\small\item\em Multiplies the values of the sparse table in the C\+RS form {\itshape crs} with the constant value {\itshape c}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntw__crs_8c_a6654f7dea85510e5a553c47130b4d293}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, const double vector\mbox{[}static 1\mbox{]}, double product\mbox{[}static crs-\/$>$node\+\_\+num\mbox{]})
 \begin{DoxyCompactList}\small\item\em Calculates the product of the C\+RS table {\itshape crs} with the {\itshape vector} and stores the result in {\itshape product}. \end{DoxyCompactList}\item 
 double $\ast$ \mbox{\hyperlink{ntw__crs_8c_aec240d09f69f88b56cc72e14c266c8ae}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, const double vector\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em Calculates the product of the C\+RS table {\itshape crs} with the {\itshape vector} and return the result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8c_a7767a2af3a68e2400e1758d66af02456}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, const double vector\mbox{[}static 1\mbox{]}, double product\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calculates the product of the transpose of the C\+RS table {\itshape crs} with the {\itshape vector} and stores the result in {\itshape product}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntw__crs_8c_a9f8e401f5151b982e7a40c40ce2ea040}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
-\begin{DoxyCompactList}\small\item\em Normalizes the rows of the C\+RS table. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Normalizes the rows of the C\+RS table so they sum to one. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntw__crs_8c_a051627d1d5da22de040dcd4aafe3faa6}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
-\begin{DoxyCompactList}\small\item\em Normalizes the rows of the C\+RS table giving all the edges in each row, the same value. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Normalizes the rows of the C\+RS table giving all the edges in each row the same value in order to sum to one. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__crs_8c_a6cde7a7cfd8c0af52fc9bb5efd56bd91}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Normalizes the columns of the C\+RS table so they sum to one. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{ntw__crs_8c_a648c37ba5979101abb5e505dc10801eb}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Returns the number of empty rows of the {\itshape crs}. \end{DoxyCompactList}\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{ntw__crs_8c_a40293be2ebdb25f330d4d608b9daedee}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t $\ast$restrict out\+Indices\+Num)
+\begin{DoxyCompactList}\small\item\em Returns a vector with the indices of empty rows of the {\itshape crs}. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ntw__crs_8c_a16aa5023529756790dc54d54f370ccd2}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]}, uint32\+\_\+t row, uint32\+\_\+t col)
 \begin{DoxyCompactList}\small\item\em Returns the value at ({\itshape row}, {\itshape col}) of the matrix of the C\+RS. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntw__crs_8c_ad2927841d2ac3dd3965750a1028ca18e}{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print}} (F\+I\+LE $\ast$restrict stream, const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} crs\mbox{[}static 1\mbox{]})
@@ -64,11 +74,40 @@ Multiplies the values of the sparse table in the C\+RS form {\itshape crs} with 
 \end{DoxyParams}
 
 
-Definition at line 37 of file ntw\+\_\+crs.\+c.
+Definition at line 42 of file ntw\+\_\+crs.\+c.
 
 
 
 References ntw\+\_\+crs\+::edge\+\_\+num, and ntw\+\_\+crs\+::val.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
+
+\mbox{\Hypertarget{ntw__crs_8c_a6cde7a7cfd8c0af52fc9bb5efd56bd91}\label{ntw__crs_8c_a6cde7a7cfd8c0af52fc9bb5efd56bd91}} 
+\index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm}!ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm()}{NTW\_CRS\_colNorm()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Normalizes the columns of the C\+RS table so they sum to one. 
+
+O(crs-\/$>$edge\+\_\+num) complexity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & The C\+RS representation of the table. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::edge\+\_\+num, ntw\+\_\+crs\+::node\+\_\+num, and ntw\+\_\+crs\+::val.
 
 
 
@@ -96,6 +135,64 @@ Definition at line 28 of file ntw\+\_\+crs.\+c.
 
 
 References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+
+\mbox{\Hypertarget{ntw__crs_8c_a40293be2ebdb25f330d4d608b9daedee}\label{ntw__crs_8c_a40293be2ebdb25f330d4d608b9daedee}} 
+\index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices}!ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices()}{NTW\_CRS\_getEmptyRowIndices()}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]},  }\item[{uint32\+\_\+t $\ast$restrict}]{out\+Indices\+Num }\end{DoxyParamCaption})}
+
+
+
+Returns a vector with the indices of empty rows of the {\itshape crs}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & \\
+\hline
+{\em out\+Indices\+Num} & Pass the adress of a uint32\+\_\+t to be filled with the size of the returned array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t The number of empty rows in the crs matrix. 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num(), and ntw\+\_\+crs\+::row\+\_\+ptr.
+
+\mbox{\Hypertarget{ntw__crs_8c_a648c37ba5979101abb5e505dc10801eb}\label{ntw__crs_8c_a648c37ba5979101abb5e505dc10801eb}} 
+\index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num}!ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num()}{NTW\_CRS\_getEmptyRowsNum()}}
+{\footnotesize\ttfamily uint32\+\_\+t N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Returns the number of empty rows of the {\itshape crs}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t The number of empty rows in the crs matrix. 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::node\+\_\+num, and ntw\+\_\+crs\+::row\+\_\+ptr.
+
+
+
+Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices().
 
 \mbox{\Hypertarget{ntw__crs_8c_ae4a307c637e1bded2ffb6bcc9bbf960b}\label{ntw__crs_8c_ae4a307c637e1bded2ffb6bcc9bbf960b}} 
 \index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+new@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new}}
@@ -133,6 +230,34 @@ Definition at line 13 of file ntw\+\_\+crs.\+c.
 
 References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::edge\+\_\+num, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
 
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs().
+
+\mbox{\Hypertarget{ntw__crs_8c_ad1934c183e244be92d4423a4c7a1a664}\label{ntw__crs_8c_ad1934c183e244be92d4423a4c7a1a664}} 
+\index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+new\+Transpose@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new\+Transpose}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new\+Transpose@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new\+Transpose}!ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+new\+Transpose()}{NTW\_CRS\_newTranspose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}$\ast$ N\+T\+W\+\_\+\+C\+R\+S\+\_\+new\+Transpose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates a new \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} storing the transpose of {\itshape crs}. 
+
+... Allocates memory for the new \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} that should be freed using the N\+T\+W\+\_\+\+C\+R\+S\+\_\+free when non needed anymore.
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ntw\+\_\+crs$\ast$ Pointer to the created struct or null if unsuccessful. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file ntw\+\_\+crs.\+c.
+
 \mbox{\Hypertarget{ntw__crs_8c_ad2927841d2ac3dd3965750a1028ca18e}\label{ntw__crs_8c_ad2927841d2ac3dd3965750a1028ca18e}} 
 \index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+print@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print}}
 \index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+print}!ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}}
@@ -154,7 +279,7 @@ Useful for debugging.
 \end{DoxyParams}
 
 
-Definition at line 108 of file ntw\+\_\+crs.\+c.
+Definition at line 180 of file ntw\+\_\+crs.\+c.
 
 
 
@@ -181,15 +306,11 @@ Useful for debugging. Avoid using it for $nodes > 10000$.
 \end{DoxyParams}
 
 
-Definition at line 128 of file ntw\+\_\+crs.\+c.
+Definition at line 200 of file ntw\+\_\+crs.\+c.
 
 
 
 References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
-
-
-
-Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
 
 \mbox{\Hypertarget{ntw__crs_8c_a9f8e401f5151b982e7a40c40ce2ea040}\label{ntw__crs_8c_a9f8e401f5151b982e7a40c40ce2ea040}} 
 \index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm}}
@@ -199,7 +320,7 @@ Referenced by N\+T\+W\+P\+R\+\_\+pagerank().
 
 
 
-Normalizes the rows of the C\+RS table. 
+Normalizes the rows of the C\+RS table so they sum to one. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -208,7 +329,7 @@ Normalizes the rows of the C\+RS table.
 \end{DoxyParams}
 
 
-Definition at line 69 of file ntw\+\_\+crs.\+c.
+Definition at line 85 of file ntw\+\_\+crs.\+c.
 
 
 
@@ -222,7 +343,7 @@ References ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\
 
 
 
-Normalizes the rows of the C\+RS table giving all the edges in each row, the same value. 
+Normalizes the rows of the C\+RS table giving all the edges in each row the same value in order to sum to one. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -231,7 +352,7 @@ Normalizes the rows of the C\+RS table giving all the edges in each row, the sam
 \end{DoxyParams}
 
 
-Definition at line 81 of file ntw\+\_\+crs.\+c.
+Definition at line 97 of file ntw\+\_\+crs.\+c.
 
 
 
@@ -263,7 +384,7 @@ double The value at \mbox{[}{\itshape row}, {\itshape col}\mbox{]}
 \end{DoxyReturn}
 
 
-Definition at line 96 of file ntw\+\_\+crs.\+c.
+Definition at line 168 of file ntw\+\_\+crs.\+c.
 
 
 
@@ -290,7 +411,7 @@ Calculates the product of the C\+RS table {\itshape crs} with the {\itshape vect
 \end{DoxyParams}
 
 
-Definition at line 45 of file ntw\+\_\+crs.\+c.
+Definition at line 50 of file ntw\+\_\+crs.\+c.
 
 
 
@@ -324,9 +445,36 @@ double$\ast$ The product vector $A*v$.
 \end{DoxyReturn}
 
 
-Definition at line 56 of file ntw\+\_\+crs.\+c.
+Definition at line 61 of file ntw\+\_\+crs.\+c.
 
 
 
 References ntw\+\_\+crs\+::node\+\_\+num, and N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult().
+
+\mbox{\Hypertarget{ntw__crs_8c_a7767a2af3a68e2400e1758d66af02456}\label{ntw__crs_8c_a7767a2af3a68e2400e1758d66af02456}} 
+\index{ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}!N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose}}
+\index{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose@{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose}!ntw\+\_\+crs.\+c@{ntw\+\_\+crs.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose()}{NTW\_CRS\_vmultTranspose()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{crs\mbox{[}static 1\mbox{]},  }\item[{const double}]{vector\mbox{[}static 1\mbox{]},  }\item[{double}]{product\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Calculates the product of the transpose of the C\+RS table {\itshape crs} with the {\itshape vector} and stores the result in {\itshape product}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crs} & The C\+RS representation of the matrix $A$. \\
+\hline
+{\em vector} & The vector $v$. \\
+\hline
+{\em product} & The product $A^T*v$. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file ntw\+\_\+crs.\+c.
+
+
+
+References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::node\+\_\+num, ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
 

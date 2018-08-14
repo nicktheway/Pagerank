@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Parallel pagerank: /home/ecat/nikos/parallel/src/test.c File Reference</title>
+<title>Parallel pagerank: NTWPR_WGEdge Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,42 +68,73 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">test.c File Reference</div>  </div>
+<div class="title">NTWPR_WGEdge Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Test script used for development.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="ntwpr__wg_8h_source.html">../include/ntwpr_wg.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntwpr_8h_source.html">../include/ntwpr.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ntw__math_8h_source.html">../include/ntw_math.h</a>&quot;</code><br />
-</div>
-<p><a href="test_8c_source.html">Go to the source code of this file.</a></p>
+<p>A struct for storing web-graph edges.  
+ <a href="structNTWPR__WGEdge.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a67b053252f69cdbde21d914d4100273e"><td class="memItemLeft" align="right" valign="top"><a id="a67b053252f69cdbde21d914d4100273e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, char *argv[argc+1])</td></tr>
-<tr class="separator:a67b053252f69cdbde21d914d4100273e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a817882eb86490ad61dd36c6ed7ac47f8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNTWPR__WGEdge.html#a817882eb86490ad61dd36c6ed7ac47f8">nodeA</a></td></tr>
+<tr class="separator:a817882eb86490ad61dd36c6ed7ac47f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9b43039574824cc76908125ad3661d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNTWPR__WGEdge.html#a0f9b43039574824cc76908125ad3661d">nodeB</a></td></tr>
+<tr class="separator:a0f9b43039574824cc76908125ad3661d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p class="">Test script used for development. </p>
-<dl class="section author"><dt>Author</dt><dd>Katomeris Nikolaos, 8551, <a href="#" onclick="location.href='mai'+'lto:'+'ngk'+'at'+'ome'+'r@'+'aut'+'h.'+'gr'; return false;">ngkat<span style="display: none;">.nosp@m.</span>omer<span style="display: none;">.nosp@m.</span>@auth<span style="display: none;">.nosp@m.</span>.gr</a> </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>09-08-2018 </dd></dl>
+<div class="textblock"><p class="">A struct for storing web-graph edges. </p>
+<p class="">Useful for preparing edges before applying a Pagerank algorithm. For example, the gauss sneidel method needs the transpose of the web graph matrix. </p>
 
-<p class="definition">Definition in file <a class="el" href="test_8c_source.html">test.c</a>.</p>
-</div></div><!-- contents -->
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00069">69</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a817882eb86490ad61dd36c6ed7ac47f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a817882eb86490ad61dd36c6ed7ac47f8">&#9670;&nbsp;</a></span>nodeA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t NTWPR_WGEdge::nodeA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">The first node of the edge. </p>
+
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00071">71</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
+
+</div>
+</div>
+<a id="a0f9b43039574824cc76908125ad3661d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9b43039574824cc76908125ad3661d">&#9670;&nbsp;</a></span>nodeB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t NTWPR_WGEdge::nodeB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">The second node of the edge. </p>
+
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00072">72</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00358">NTWPR_WGF_edgeCompare()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/ecat/nikos/parallel/include/<a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

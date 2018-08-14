@@ -13,7 +13,9 @@ Web-\/Graph import/export functions.
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}
-\begin{DoxyCompactList}\small\item\em A struct containing a web-\/graph file and the graphs info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A struct containing a web-\/graph file and the graphs info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structNTWPR__WGEdge}{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}}
+\begin{DoxyCompactList}\small\item\em A struct for storing web-\/graph edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,7 +28,9 @@ struct \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} \mbox{\hyperlink{ntwpr__wg_8h_a991a879882127f21fb6693371ffb5dc6}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}
-\begin{DoxyCompactList}\small\item\em A struct containing a web-\/graph file and the graphs info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A struct containing a web-\/graph file and the graphs info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structNTWPR__WGEdge}{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}} \mbox{\hyperlink{ntwpr__wg_8h_a77490cf00f6ca65f60c417a11c84d95e}{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}}
+\begin{DoxyCompactList}\small\item\em A struct for storing web-\/graph edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,8 +46,14 @@ void \mbox{\hyperlink{ntwpr__wg_8h_a5c8e2ee5ea6ae1d95077293d28357a47}{N\+T\+W\+P
 \begin{DoxyCompactList}\small\item\em Exports the edges to a text file at {\itshape export\+Path}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} $\ast$ \mbox{\hyperlink{ntwpr__wg_8h_a7de28416dbf08fff7b53404ca887f2f7}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs}} (\mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}} $\ast$restrict wgf)
 \begin{DoxyCompactList}\small\item\em Loads a web graph in memory using the C\+RS data structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_ae222205d7ec37b1cf59d341ab10d96ae}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose}} (const char orig\+W\+G\+F\+Path\mbox{[}static 1\mbox{]}, const char export\+W\+G\+F\+Path\mbox{[}static 1\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates a web graph file with the transpose of the web graph in {\itshape orig\+W\+G\+F\+Path}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ntwpr__wg_8h_aaa736e093db117a284824bee85784ce3}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+SU}} (const char su\+Data\+Path\mbox{[}static 1\mbox{]}, const char export\+Path\mbox{[}static 1\mbox{]}, uint32\+\_\+t node\+Num)
-\begin{DoxyCompactList}\small\item\em Converts web graph files from the format Stanford U. (SU) used to the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}\textquotesingle{} edge\+\_\+data file format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Converts web graph files from the format Stanford U. (SU) used to the \mbox{\hyperlink{structNTWPR__WGFile}{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}\textquotesingle{} edge\+\_\+data file format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntwpr__wg_8h_ac5b7e40ba0184d6a28064dafbb79ce13}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges}} (const size\+\_\+t n, \mbox{\hyperlink{structNTWPR__WGEdge}{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}} edges\mbox{[}static n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Transposes the edges of a graph described with {\itshape edges}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ntwpr__wg_8h_aabd73ca055f4ab669f7bc75548fa682d}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare}} (const void $\ast$restrict edgeA, const void $\ast$restrict edgeB)
+\begin{DoxyCompactList}\small\item\em Compares two edges, used for sorting with qsort(). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -101,7 +111,17 @@ Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+S\+U(), N\+T\+W\+P\+R\+
 
 
 \subsection{Typedef Documentation}
-\mbox{\Hypertarget{ntwpr__wg_8h_a991a879882127f21fb6693371ffb5dc6}\label{ntwpr__wg_8h_a991a879882127f21fb6693371ffb5dc6}} 
+\mbox{\Hypertarget{ntwpr__wg_8h_a77490cf00f6ca65f60c417a11c84d95e}\label{ntwpr__wg_8h_a77490cf00f6ca65f60c417a11c84d95e}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge@{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge@{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}{NTWPR\_WGEdge}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structNTWPR__WGEdge}{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}}  \mbox{\hyperlink{structNTWPR__WGEdge}{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}}}
+
+
+
+A struct for storing web-\/graph edges. 
+
+Useful for preparing edges before applying a Pagerank algorithm. For example, the gauss sneidel method needs the transpose of the web graph matrix. \mbox{\Hypertarget{ntwpr__wg_8h_a991a879882127f21fb6693371ffb5dc6}\label{ntwpr__wg_8h_a991a879882127f21fb6693371ffb5dc6}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+File@{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+File@{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
 \subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+File}{NTWPR\_WGFile}}
@@ -114,6 +134,33 @@ A struct containing a web-\/graph file and the graphs info.
 Used as a \char`\"{}middle\char`\"{} save format. This A\+PI uses this type to compute the pagerank of the nodes. Any dataset\textquotesingle{}s pagerank vector can be computed by extracting such struct from the dataset. 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{ntwpr__wg_8h_ae222205d7ec37b1cf59d341ab10d96ae}\label{ntwpr__wg_8h_ae222205d7ec37b1cf59d341ab10d96ae}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose()}{NTWPR\_WGF\_convert2Transpose()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose (\begin{DoxyParamCaption}\item[{const char}]{orig\+W\+G\+F\+Path\mbox{[}static 1\mbox{]},  }\item[{const char}]{export\+W\+G\+F\+Path\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates a web graph file with the transpose of the web graph in {\itshape orig\+W\+G\+F\+Path}. 
+
+If the path is the same the file will be replaced.
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig\+W\+G\+F\+Path} & The path of the web graph file containing the graph $G$. \\
+\hline
+{\em export\+W\+G\+F\+Path} & The path of the web graph file that will contain the output graph $G^T$. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 214 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::node\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare(), N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose(), N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen(), and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges().
+
 \mbox{\Hypertarget{ntwpr__wg_8h_aaa736e093db117a284824bee85784ce3}\label{ntwpr__wg_8h_aaa736e093db117a284824bee85784ce3}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+SU@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+SU}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+SU@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+SU}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
@@ -137,11 +184,43 @@ Extra\+: The output can be loaded into M\+A\+T\+L\+AB with\+: fread(file\+\_\+id
 \end{DoxyParams}
 
 
-Definition at line 214 of file ntwpr\+\_\+wg.\+c.
+Definition at line 265 of file ntwpr\+\_\+wg.\+c.
 
 
 
 References L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+N\+T\+\_\+\+SU, and N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit.
+
+\mbox{\Hypertarget{ntwpr__wg_8h_aabd73ca055f4ab669f7bc75548fa682d}\label{ntwpr__wg_8h_aabd73ca055f4ab669f7bc75548fa682d}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare()}{NTWPR\_WGF\_edgeCompare()}}
+{\footnotesize\ttfamily int N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare (\begin{DoxyParamCaption}\item[{const void $\ast$restrict}]{edgeA,  }\item[{const void $\ast$restrict}]{edgeB }\end{DoxyParamCaption})}
+
+
+
+Compares two edges, used for sorting with qsort(). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edgeA} & \\
+\hline
+{\em edgeB} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int edgeA-\/$>$nodeA -\/ edgeB-\/$>$nodeB 
+\end{DoxyReturn}
+
+
+Definition at line 358 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge\+::nodeB.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose().
 
 \mbox{\Hypertarget{ntwpr__wg_8h_ae1e79e9dc654e3514269d78748e4a394}\label{ntwpr__wg_8h_ae1e79e9dc654e3514269d78748e4a394}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+FM@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+FM}}
@@ -227,6 +306,10 @@ Definition at line 78 of file ntwpr\+\_\+wg.\+c.
 
 References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data.
 
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose().
+
 \mbox{\Hypertarget{ntwpr__wg_8h_ae73521afd221df1b6f0af044c35e2f96}\label{ntwpr__wg_8h_ae73521afd221df1b6f0af044c35e2f96}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
@@ -255,6 +338,10 @@ Definition at line 56 of file ntwpr\+\_\+wg.\+c.
 
 References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::node\+\_\+num, and N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit.
 
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose().
+
 \mbox{\Hypertarget{ntwpr__wg_8h_a7de28416dbf08fff7b53404ca887f2f7}\label{ntwpr__wg_8h_a7de28416dbf08fff7b53404ca887f2f7}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs}}
 \index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
@@ -281,7 +368,7 @@ Definition at line 11 of file ntwpr\+\_\+wg.\+c.
 
 
 
-References ntw\+\_\+crs\+::col\+\_\+ind, ntw\+\_\+crs\+::edge\+\_\+num, ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind(), ntw\+\_\+crs\+::row\+\_\+ptr, and ntw\+\_\+crs\+::val.
+References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind().
 
 \mbox{\Hypertarget{ntwpr__wg_8h_a900ec9963949f8e50b80772f502fbc63}\label{ntwpr__wg_8h_a900ec9963949f8e50b80772f502fbc63}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+rewind}}
@@ -314,4 +401,29 @@ References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data.
 
 
 Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+F\+M(), N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+export\+S\+M(), and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs().
+
+\mbox{\Hypertarget{ntwpr__wg_8h_ac5b7e40ba0184d6a28064dafbb79ce13}\label{ntwpr__wg_8h_ac5b7e40ba0184d6a28064dafbb79ce13}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges()}{NTWPR\_WGF\_transposeEdges()}}
+{\footnotesize\ttfamily void N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{structNTWPR__WGEdge}{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}}}]{edges\mbox{[}static n\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Transposes the edges of a graph described with {\itshape edges}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of edges in the graph. \\
+\hline
+{\em edges} & The edges of the graph. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 348 of file ntwpr\+\_\+wg.\+c.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert2\+Transpose().
 

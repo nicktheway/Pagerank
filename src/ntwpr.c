@@ -13,22 +13,22 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double d, double e)
     // For more readable code wgSize <- webGraph->node_num
     const uint32_t wgSize = webGraph->node_num;
 
-	/** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
+	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
 
     // Make the matrix a probability matrix.
     NTW_CRS_colNorm(webGraph);
-	/** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
+	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
 
     // Multiply with the teleportation coefficient.
     NTW_CRS_cmult(webGraph, -d);
-    /** DEBUG:* NTW_CRS_printFullMatrix(stdout, webGraph); */
+    /** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
 
     // Create the initial pagerank vector (unified) and the b vector.
-    double* pagerank = NTW_newUniVectorD(wgSize, 1.0 / wgSize);
+    double* pagerank = NTWM_newUniVectorD(wgSize, 1.0 / wgSize);
 	
 	// Create the b vector.
-    double* b = NTW_newUniVectorD(wgSize, (1 - d) / wgSize);
-    /** DEBUG:* NTW_printDV(stdout, wgSize, b, 4); */
+    double* b = NTWM_newUniVectorD(wgSize, (1 - d) / wgSize);
+    /** DEBUG:* NTWM_printDV(stdout, wgSize, b, 4); */
 
 	// Start the Gauss-Sneidel Algorithm.
     double delta = 1.0;
