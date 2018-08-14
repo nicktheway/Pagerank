@@ -30,10 +30,11 @@ int main(int argc, char* argv[argc+1])
     // NTWPR_WGF_convert2Transpose(argv[2], "./data/new_input.mat");
 
     FILE* mat = fopen("./data/mat.txt", "w");
-
+    
     // Open the file.
     NTWPR_WGFile* file = NTWPR_WGF_fopen(argv[2]);
-
+    fprintf(mat, "File: %s, Nodes: %u, Edges: %u\n", argv[1], file->node_num, file->edge_num);
+    NTWPR_WGF_exportSM(file, "./data/whatRead.txt", file->node_num);
     // Load it at memory using ntw_crs
     clock_gettime(CLOCK_MONOTONIC, &start);
     ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
@@ -47,7 +48,7 @@ int main(int argc, char* argv[argc+1])
     NTW_DEBUG_printElapsedTime(mat, start, finish, "Whole pagerank time");
     
     fprintf(mat, "\n---START PR RESULT---\n");
-    //NTWM_printDV(mat, myCRS->node_num, pr, 12);
+    NTW_DEBUG_printBinaryDoubleArray("./data/cA.data", myCRS->node_num, pr);
     fprintf(mat, "\n---END PR RESULT---\n");
 
 	free(pr);

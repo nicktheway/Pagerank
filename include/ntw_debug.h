@@ -21,4 +21,15 @@
  */
 void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1]);
 
+/**
+ * @brief Creates a binary file at @a filePath with the @a array's @a n values.
+ * 
+ * If unsuccessful will exit(EXIT_FAILURE) with a debug message!
+ * 
+ * @param filePath 
+ * @param n 
+ * @param array 
+ */
+void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const size_t n, const double array[static n]);
+
 #endif

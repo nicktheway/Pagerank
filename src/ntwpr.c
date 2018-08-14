@@ -9,6 +9,8 @@
 #include "../include/ntw_math.h"
 #include "../include/ntw_debug.h"
 #include <time.h>
+#include <string.h>
+#include <math.h>
 
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* stream)
 {
@@ -36,35 +38,47 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
 
 	// Start the Gauss-Sneidel Algorithm.
     double delta = 1.0;
-    uint32_t emptyRows;
-    size_t *d = NTW_CRS_getEmptyRowIndices(webGraph, &emptyRows);
+    // Array to store converged nodes.
+    char* d = calloc(wgSize, sizeof *d);
+    double *dd = NTWM_newZeroVectorD(wgSize);
     
-    unsigned max_iterations = 50, curr_iteration = 0;
+    unsigned max_iterations = 150, curr_iteration = 0;
     while (delta > e && curr_iteration++ < max_iterations)
     {
         clock_gettime(CLOCK_MONOTONIC, &start);
-        delta = NTWPR_GS_iter(webGraph, pagerank, b, emptyRows, d);
+        delta = NTWPR_GS_iter(webGraph, pagerank, b, d, dd);
         clock_gettime(CLOCK_MONOTONIC, &finish);
         NTW_DEBUG_printElapsedTime(stream, start, finish, "Iteration");
+
+        if (curr_iteration % 10 == 0)
+        {
+            for (uint32_t i = 0; i < wgSize; i++)
+            {
+                if (dd[i] < e) d[i] = 1;
+                dd[i] = 0;
+            }
+        }
     }
     fprintf(stdout, "DEBUG: Converged after #%u iterations.\tDelta = %0.2e\n", curr_iteration - 1, delta);
 
 	// Clear allocated vars except from pagerank of course.
     free(b);
+    free(d);
+    free(dd);
 
     return pagerank;
 }
 
-double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const uint32_t m, const size_t d[static m])
+double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1])
 {
     double sqnorm_diff = 0;
     
     for (uint32_t i = 0; i < matrix->node_num; i++)
     {
+        if (d[i]) continue; // Makes it slower when resetted, wrong when not?
         double den = 1.0;
         
-        //const double dv = NTWM_partialSumDV(m, d, x_vec);
-        double num = b_vec[i];// + 0.85*dv / matrix->node_num;
+        double num = b_vec[i];
         const double old_xi = x_vec[i];
 
         for (uint32_t j = matrix->row_ptr[i]; j < matrix->row_ptr[i+1]; j++)
@@ -80,7 +94,10 @@ double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], con
         }
         // printf("\nnum = %0.3f\t den=%0.3f\n", num, den);
         x_vec[i] = num / den;
-        sqnorm_diff += (x_vec[i] - old_xi) * (x_vec[i] - old_xi);
+        const double partDiff = (x_vec[i] - old_xi) * (x_vec[i] - old_xi);
+        sqnorm_diff += partDiff;
+
+        dd[i] += fabs(partDiff);
     }
     
     // NTWM_printDV(stdout, matrix->node_num, x_vec, 3);
