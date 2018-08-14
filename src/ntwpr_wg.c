@@ -234,7 +234,7 @@ void NTWPR_WGF_convert2Transpose(const char origWGFPath[static 1], const char ex
 
 	NTWPR_WGF_fclose(wgfFrom);
 	// Sort them incrementaly based on edgeB. And transpose them.
-	qsort(edges, sizes[1], sizeof(edges[0]), NTWPR_WGF_edgeCompare);
+	qsort(edges, sizes[1], sizeof(edges[0]), NTWPR_WGF_edgeCompareForT);
 	NTWPR_WGF_transposeEdges(sizes[1], edges);
 /* DEBUG:
 	for (int i = 0; i < edge_num; i++)
@@ -273,11 +273,12 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
 
     // Buffer variables and counters.
     char line_buffer[125];
-    uint32_t edge_nodes[2];
+    uint32_t sizes[2];
     uint32_t registered_edges = 0;
-
+    NTWPR_WGEdge* edges;
+    
     if (nodeNum == 0) nodeNum = UINT32_MAX;
-    unsigned read_data_size = 0;
+    unsigned read_data_size = 0; //flag . bad name I know.
     do{
         if (!fgets(line_buffer, 125, NTWPR_SU_fp))
         {
@@ -291,56 +292,73 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
         {
             if (read_data_size) continue;
 
-            if (sscanf(line_buffer, "%*c %*s %u %*s %u", &edge_nodes[0], &edge_nodes[1]) != 2)
+            if (sscanf(line_buffer, "%*c %*s %u %*s %u", &sizes[0], &sizes[1]) != 2)
             {
                 continue;
             }
 
             read_data_size = 1;
             // Write the read edge and nodes' number
-            if (fwrite(edge_nodes, sizeof(edge_nodes[0]), 2, NTWPR_WGFile_fp) != 2)
+            if (fwrite(sizes, sizeof(sizes[0]), 2, NTWPR_WGFile_fp) != 2)
             {
                 fprintf(stderr, "Error at writing to file at %s\n", exportPath);
+                exit(EXIT_FAILURE);
+            }
+            
+            edges = malloc(sizes[1] * sizeof *edges);
+            if (!edges)
+            {
+                fprintf(stderr, "%s: Error at allocating memory for the convertion.\n", __func__);
                 exit(EXIT_FAILURE);
             }
             continue;
         }
 
+        if (!read_data_size) 
+        {
+            fprintf(stderr, "Couldn't read data size at starting comments of %s\n", exportPath);
+            exit(EXIT_FAILURE);
+        }
         // Read the nodes of the edge from the file's line.
-        if (sscanf(line_buffer, "%u %u", &edge_nodes[0], &edge_nodes[1]) != 2)
+        if (sscanf(line_buffer, "%u %u", &sizes[0], &sizes[1]) != 2)
         {
             fprintf(stderr, "%s:%d: found corrupted edge line in input file: %s", __FILE__, __LINE__, line_buffer);
             exit(EXIT_FAILURE);
         }
 
         // Stay in range.
-        if (edge_nodes[1] >= nodeNum) continue;
-        if (edge_nodes[0] >= nodeNum) break;
-
-        // If in range, write the sparce data.
-        registered_edges++;
-        if (fwrite(edge_nodes, sizeof(edge_nodes[0]), 2, NTWPR_WGFile_fp) != 2)
+        if (sizes[0] >= nodeNum || sizes[1] >= nodeNum) 
         {
-            fprintf(stderr, "Error at writing to file at %s\n", exportPath);
-            exit(EXIT_FAILURE);
+            continue;
         }
-
+        
+        // If in range, write the sparce data.
+        edges[registered_edges++] = (NTWPR_WGEdge) {.nodeA = sizes[0], .nodeB = sizes[1]};
     } while(!feof(NTWPR_SU_fp));
+
+    qsort(edges, registered_edges, sizeof(edges[0]), NTWPR_WGF_edgeCompare);
+
+    if (fwrite(edges, sizeof(edges[0]), registered_edges, NTWPR_WGFile_fp) != registered_edges)
+    {
+        fprintf(stderr, "Error at writing to file at %s\n", exportPath);
+        exit(EXIT_FAILURE);
+    }
 
     // Write the real number of edges/nodes if not all
     if (nodeNum != UINT32_MAX)
     {
-        edge_nodes[0] = nodeNum;
-        edge_nodes[1] = registered_edges;
+        sizes[0] = nodeNum;
+        sizes[1] = registered_edges;
         fseek(NTWPR_WGFile_fp, 0, SEEK_SET);
 
-        if (fwrite(edge_nodes, sizeof(edge_nodes[0]), 2, NTWPR_WGFile_fp) != 2)
+        if (fwrite(sizes, sizeof(sizes[0]), 2, NTWPR_WGFile_fp) != 2)
         {
             fprintf(stderr, "Error at writing to file at %s\n", exportPath);
             exit(EXIT_FAILURE);
         }
     }
 
+    free(edges);
     fclose(NTWPR_SU_fp);
     fclose(NTWPR_WGFile_fp);
 }
@@ -356,6 +374,14 @@ void NTWPR_WGF_transposeEdges(const size_t n, NTWPR_WGEdge edges[static n])
 }
 
 int NTWPR_WGF_edgeCompare(const void* restrict edgeA, const void* restrict edgeB)
+{
+    NTWPR_WGEdge* a = (NTWPR_WGEdge*) edgeA;
+	NTWPR_WGEdge* b = (NTWPR_WGEdge*) edgeB;
+
+	return (a->nodeA - b->nodeA);
+}
+
+int NTWPR_WGF_edgeCompareForT(const void* restrict edgeA, const void* restrict edgeB)
 {
 	NTWPR_WGEdge* a = (NTWPR_WGEdge*) edgeA;
 	NTWPR_WGEdge* b = (NTWPR_WGEdge*) edgeB;

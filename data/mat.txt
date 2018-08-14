@@ -1,85 +1,10 @@
-File: ./data/web-NotreDame.txt, Nodes: 8, Edges: 16
-Load to crs time:: 0.058751 ms
+File: ./data/web-Google.txt, Nodes: 8, Edges: 0
+Load to crs time:: 0.007570 ms
 NTWPR_pagerank:
-Make graph stochastic time: 0.002885 ms
-Iteration: 0.000516 ms
-Iteration: 0.000393 ms
-Iteration: 0.000291 ms
-Iteration: 0.000225 ms
-Iteration: 0.000228 ms
-Iteration: 0.000201 ms
-Iteration: 0.000248 ms
-Iteration: 0.000204 ms
-Iteration: 0.000203 ms
-Iteration: 0.000206 ms
-Iteration: 0.000233 ms
-Iteration: 0.000206 ms
-Iteration: 0.000265 ms
-Iteration: 0.000216 ms
-Iteration: 0.000193 ms
-Iteration: 0.000203 ms
-Iteration: 0.000203 ms
-Iteration: 0.000213 ms
-Iteration: 0.000206 ms
-Iteration: 0.000213 ms
-Iteration: 0.000259 ms
-Iteration: 0.000253 ms
-Iteration: 0.000225 ms
-Iteration: 0.000218 ms
-Iteration: 0.000216 ms
-Iteration: 0.000191 ms
-Iteration: 0.000188 ms
-Iteration: 0.000213 ms
-Iteration: 0.000225 ms
-Iteration: 0.000198 ms
-Iteration: 0.000225 ms
-Iteration: 0.000205 ms
-Iteration: 0.000206 ms
-Iteration: 0.000207 ms
-Iteration: 0.000214 ms
-Iteration: 0.000210 ms
-Iteration: 0.000213 ms
-Iteration: 0.000198 ms
-Iteration: 0.000200 ms
-Iteration: 0.000178 ms
-Iteration: 0.000213 ms
-Iteration: 0.000208 ms
-Iteration: 0.000178 ms
-Iteration: 0.000228 ms
-Iteration: 0.000183 ms
-Iteration: 0.000188 ms
-Iteration: 0.000193 ms
-Iteration: 0.000205 ms
-Iteration: 0.000194 ms
-Iteration: 0.000177 ms
-Iteration: 0.000188 ms
-Iteration: 0.000188 ms
-Iteration: 0.000215 ms
-Iteration: 0.000220 ms
-Iteration: 0.000183 ms
-Iteration: 0.000205 ms
-Iteration: 0.000200 ms
-Iteration: 0.000175 ms
-Iteration: 0.000200 ms
-Iteration: 0.000190 ms
-Iteration: 0.000193 ms
-Iteration: 0.000180 ms
-Iteration: 0.000183 ms
-Iteration: 0.000223 ms
-Iteration: 0.000213 ms
-Iteration: 0.000222 ms
-Iteration: 0.000203 ms
-Iteration: 0.000218 ms
-Iteration: 0.000221 ms
-Iteration: 0.000198 ms
-Iteration: 0.000208 ms
-Iteration: 0.000193 ms
-Iteration: 0.000198 ms
-Iteration: 0.000203 ms
-Iteration: 0.000201 ms
-Iteration: 0.000233 ms
-Iteration: 0.000205 ms
-Whole pagerank time: 0.139606 ms
+Make graph stochastic time: 0.000549 ms
+Iteration: 0.000403 ms
+Iteration: 0.000187 ms
+Whole pagerank time: 0.025660 ms
 
 ---START PR RESULT---
 

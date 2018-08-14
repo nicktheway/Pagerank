@@ -176,4 +176,13 @@ void NTWPR_WGF_transposeEdges(const size_t n, NTWPR_WGEdge edges[static n]);
  */
 int NTWPR_WGF_edgeCompare(const void* restrict edgeA, const void* restrict edgeB);
 
+/**
+ * @brief Compares two edges, used for sorting with qsort().
+ * 
+ * @param edgeA
+ * @param edgeB
+ * @return int edgeA->nodeA - edgeB->nodeB
+ */
+int NTWPR_WGF_edgeCompareForT(const void* restrict edgeA, const void* restrict edgeB);
+
 #endif

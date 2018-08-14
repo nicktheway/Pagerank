@@ -26,8 +26,8 @@ int main(int argc, char* argv[argc+1])
     // Convert the input from the Stanford's U. form to a WGFile at path argv[2]
     NTWPR_WGF_convertSU(argv[1], argv[2], n);
     
-    // Prepare Edges
-    // NTWPR_WGF_convert2Transpose(argv[2], "./data/new_input.mat");
+    // Prepared Edges?
+    
 
     FILE* mat = fopen("./data/mat.txt", "w");
     
