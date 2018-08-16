@@ -11,6 +11,8 @@
 #include <time.h>
 #include <string.h>
 #include <math.h>
+#include <cilk/cilk.h>
+#include <cilk/cilk_api.h>
 
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* stream)
 {
@@ -73,7 +75,7 @@ double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], con
 {
     double sqnorm_diff = 0;
     
-    for (uint32_t i = 0; i < matrix->node_num; i++)
+    cilk_for (uint32_t i = 0; i < matrix->node_num; i++)
     {
         if (d[i]) continue; // Makes it slower when resetted, wrong when not?
         double den = 1.0;
