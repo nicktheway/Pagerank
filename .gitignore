@@ -8,3 +8,6 @@ data/pagerank/*
 
 # MathJax
 docs/MathJax-master/
+
+# .o files
+src/obj/
