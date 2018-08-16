@@ -27,7 +27,7 @@ CALCULATOR = $(patsubst %,$(ODIR)/%,$(_CALCULATOR))
 
 # Rules
 $(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CC) -c -o $@ $< $(CFLAGS) $(LIBS)
 
 all: PRcalculator WFGcreator
 
