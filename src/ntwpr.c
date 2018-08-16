@@ -11,6 +11,7 @@
 #include <time.h>
 #include <string.h>
 #include <math.h>
+#include <omp.h>
 
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double e, FILE* stream)
 {
@@ -73,7 +74,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double 
 double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1])
 {
     double sqnorm_diff = 0;
-    
+    #pragma omp parallel for
     for (uint32_t i = 0; i < matrix->node_num; i++)
     {
         if (d[i]) continue; // Makes it slower when resetted, wrong when not?
