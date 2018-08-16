@@ -1,5 +1,10 @@
 # local resources for studying
 etc/
 
+# WGFiles
+data/WGFiles/*
+data/logs/*
+data/pagerank/*
+
 # MathJax
 docs/MathJax-master/

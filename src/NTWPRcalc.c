@@ -20,7 +20,7 @@ int main(int argc, char const *argv[argc+1])
         return EXIT_FAILURE;
     }
 
-    FILE* mat = fopen("./data/mat.txt", "w");
+    FILE* mat = fopen("./data/logs/log.txt", "w");
     
     // Open the file.
     NTWPR_WGFile* file = NTWPR_WGF_fopen(argv[1]);
@@ -43,7 +43,7 @@ int main(int argc, char const *argv[argc+1])
     NTW_DEBUG_printElapsedTime(mat, start, finish, "Whole pagerank time");
     
     fprintf(mat, "\n---START PR RESULT---\n");
-    NTW_DEBUG_printBinaryDoubleArray("./data/cA.data", myCRS->node_num, pr);
+    NTW_DEBUG_printBinaryDoubleArray("./data/pagerank/result.data", myCRS->node_num, pr);
     fprintf(mat, "\n---END PR RESULT---\n");
 
 	free(pr);
