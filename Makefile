@@ -6,7 +6,7 @@ ifeq ($(DEBUG), 1)
 else
     CFLAGS= -std=c11 -D_POSIX_C_SOURCE=199309L -Wall -O3
 endif
-LIBS= -lm
+LIBS= -lm -fopenmp
 
 # Files
 _DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h ntw_debug.h
@@ -27,7 +27,7 @@ CALCULATOR = $(patsubst %,$(ODIR)/%,$(_CALCULATOR))
 
 # Rules
 $(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CC) -c -o $@ $< $(CFLAGS) $(LIBS)
 
 all: PRcalculator WFGcreator
 
