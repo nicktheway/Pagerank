@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include "../include/ntwpr.h"
 #include "../include/ntw_debug.h"
+#include <cilk/cilk_api.h>
+#include <cilk/cilk.h>
 
 int main(int argc, char const *argv[argc+1])
 {
