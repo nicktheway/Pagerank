@@ -21,7 +21,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
 	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
     clock_gettime(CLOCK_MONOTONIC, &start);
     // Make the matrix a probability matrix.
-    NTW_CRS_colNorm(webGraph);
+    NTW_CRS_stochasticizeCols(webGraph);
 	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
     clock_gettime(CLOCK_MONOTONIC, &finish);
     NTW_DEBUG_printElapsedTime(stream, start, finish, "Make graph stochastic time");

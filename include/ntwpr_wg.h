@@ -116,9 +116,11 @@ void NTWPR_WGF_exportFM(NTWPR_WGFile* restrict wgfp, const char exportPath[stati
  * @brief Exports the edges to a text file at @a exportPath.
  * 
  * Extra: Can be loaded into a sparse MATLAB matrix using:
+ * <pre>
  *      > load -ASCII exported_file_path
  *      > sparce(file_name(:,1)+1, file_name(:,2)+1, ...
  *      ones(size(file_name, 1), 1), node_num, node_num)
+ * </pre>
  * 
  * @param wgfp The input NTWPR_WGFile pointer.
  * @param exportPath The output file's path.

@@ -31,7 +31,7 @@ Used to save web graph tables in R\+AM.
 
 The represented matrix can be easily converted into a probability matrix and the dangling nodes (all zero rows) can be found easily as well because row\+\_\+ptr\mbox{[}i\mbox{]} == row\+\_\+ptr\mbox{[}i+1\mbox{]} if the node i is dangling.
 
-See \href{http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000}\texttt{ C\+RS} 
+See \href{http://netlib.org/linalg/html_templates/node91.html}\texttt{ C\+RS Format} 
 
 Definition at line 27 of file ntw\+\_\+crs.\+h.
 
@@ -44,13 +44,13 @@ Definition at line 27 of file ntw\+\_\+crs.\+h.
 \subsubsection{\texorpdfstring{col\+\_\+ind}{col\_ind}}
 {\footnotesize\ttfamily uint32\+\_\+t$\ast$ restrict ntw\+\_\+crs\+::col\+\_\+ind}
 
-A vector containing the columns of the val\textquotesingle{}s values. 
+A vector for storing the columns of the non zero values. 
 
 Definition at line 32 of file ntw\+\_\+crs.\+h.
 
 
 
-Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+free(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
+Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+free(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+stochasticize\+Cols(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
 
 \mbox{\Hypertarget{structntw__crs_a85160ebade6d93ba77c9e90f2f237cea}\label{structntw__crs_a85160ebade6d93ba77c9e90f2f237cea}} 
 \index{ntw\+\_\+crs@{ntw\+\_\+crs}!edge\+\_\+num@{edge\+\_\+num}}
@@ -64,7 +64,7 @@ Definition at line 30 of file ntw\+\_\+crs.\+h.
 
 
 
-Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), and N\+T\+W\+\_\+\+C\+R\+S\+\_\+print().
+Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), and N\+T\+W\+\_\+\+C\+R\+S\+\_\+stochasticize\+Cols().
 
 \mbox{\Hypertarget{structntw__crs_a36a11fbae59bf6159e40cb18e5f37ada}\label{structntw__crs_a36a11fbae59bf6159e40cb18e5f37ada}} 
 \index{ntw\+\_\+crs@{ntw\+\_\+crs}!node\+\_\+num@{node\+\_\+num}}
@@ -78,7 +78,7 @@ Definition at line 29 of file ntw\+\_\+crs.\+h.
 
 
 
-Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose(), N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter(), N\+T\+W\+P\+R\+\_\+pagerank(), and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs().
+Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+stochasticize\+Cols(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+stochasticize\+Rows(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Alloc(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose(), N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter(), N\+T\+W\+P\+R\+\_\+pagerank(), and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+load2crs().
 
 \mbox{\Hypertarget{structntw__crs_abf117885ca226f2a82ff28dca7177c34}\label{structntw__crs_abf117885ca226f2a82ff28dca7177c34}} 
 \index{ntw\+\_\+crs@{ntw\+\_\+crs}!row\+\_\+ptr@{row\+\_\+ptr}}
@@ -86,13 +86,13 @@ Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\
 \subsubsection{\texorpdfstring{row\+\_\+ptr}{row\_ptr}}
 {\footnotesize\ttfamily uint32\+\_\+t$\ast$ restrict ntw\+\_\+crs\+::row\+\_\+ptr}
 
-A pointer to the val vector indicating the start of a matrix\textquotesingle{} row. 
+A vector for storing the indices of the {\itshape val} vector that start a row. 
 
 Definition at line 31 of file ntw\+\_\+crs.\+h.
 
 
 
-Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+free(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
+Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+free(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Rows\+Num(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+stochasticize\+Rows(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
 
 \mbox{\Hypertarget{structntw__crs_a5ed2cc918a69051b395e9b151a66867f}\label{structntw__crs_a5ed2cc918a69051b395e9b151a66867f}} 
 \index{ntw\+\_\+crs@{ntw\+\_\+crs}!val@{val}}
@@ -106,7 +106,7 @@ Definition at line 33 of file ntw\+\_\+crs.\+h.
 
 
 
-Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+free(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+row\+Norm\+Unif(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
+Referenced by N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+free(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+new(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+stochasticize\+Cols(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+stochasticize\+Rows(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+value\+At(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+vmult\+Transpose(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
 
 
 

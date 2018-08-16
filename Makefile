@@ -10,26 +10,32 @@ LIBS= -lm
 
 # Files
 _DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h ntw_debug.h
-_OBJ = ntw_math.o ntw_crs.o ntwpr_wg.o ntwpr.o ntw_debug.o test.o
+_OBJ = ntw_math.o ntw_crs.o ntwpr_wg.o ntwpr.o ntw_debug.o
+_CONVERTER = WGFcreator.o
+_CALCULATOR = NTWPRcalc.o
 
-# Folders, Paths
+# Folders
 IDIR=include
 SDIR=src
 ODIR=src/obj
-BPATH=bin/pr
+BDIR =bin
 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+CONVERTER = $(patsubst %,$(ODIR)/%,$(_CONVERTER))
+CALCULATOR = $(patsubst %,$(ODIR)/%,$(_CALCULATOR))
 
 # Rules
 $(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-all: $(OBJ)
-	$(CC) -o $(BPATH) $^ $(CFLAGS) $(LIBS)
+all: PRcalculator WFGcreator
 
-debug: $(OBJ)
-	$(CC) -o $(BPATH) $^ $(CFLAGS) $(LIBS)
+PRcalculator: $(OBJ) $(CALCULATOR)
+	$(CC) -o $(BDIR)/PRcalculator $^ $(CFLAGS) $(LIBS)
+
+WFGcreator: $(OBJ) $(CONVERTER)
+	$(CC) -o $(BDIR)/WGFcreator $^ $(CFLAGS) $(LIBS)
 
 .PHONY: clean
 

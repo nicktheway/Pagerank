@@ -153,6 +153,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aabd73ca055f4ab669f7bc75548fa682d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#aabd73ca055f4ab669f7bc75548fa682d">NTWPR_WGF_edgeCompare</a> (const void *restrict edgeA, const void *restrict edgeB)</td></tr>
 <tr class="memdesc:aabd73ca055f4ab669f7bc75548fa682d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two edges, used for sorting with qsort().  <a href="#aabd73ca055f4ab669f7bc75548fa682d">More...</a><br /></td></tr>
 <tr class="separator:aabd73ca055f4ab669f7bc75548fa682d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d382961eb82df4d61a07defd37a0ff4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwpr__wg_8h.html#a4d382961eb82df4d61a07defd37a0ff4">NTWPR_WGF_edgeCompareForT</a> (const void *restrict edgeA, const void *restrict edgeB)</td></tr>
+<tr class="memdesc:a4d382961eb82df4d61a07defd37a0ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two edges, used for sorting with qsort().  <a href="#a4d382961eb82df4d61a07defd37a0ff4">More...</a><br /></td></tr>
+<tr class="separator:a4d382961eb82df4d61a07defd37a0ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">Web-Graph import/export functions. </p>
@@ -269,7 +272,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00214">214</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
 
-<p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00059">NTWPR_WGFile::edge_data</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00057">NTWPR_WGFile::edge_num</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00058">NTWPR_WGFile::node_num</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00358">NTWPR_WGF_edgeCompare()</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00078">NTWPR_WGF_fclose()</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00056">NTWPR_WGF_fopen()</a>, and <a class="el" href="ntwpr__wg_8c_source.html#l00348">NTWPR_WGF_transposeEdges()</a>.</p>
+<p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00059">NTWPR_WGFile::edge_data</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00057">NTWPR_WGFile::edge_num</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00058">NTWPR_WGFile::node_num</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00384">NTWPR_WGF_edgeCompareForT()</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00078">NTWPR_WGF_fclose()</a>, <a class="el" href="ntwpr__wg_8c_source.html#l00056">NTWPR_WGF_fopen()</a>, and <a class="el" href="ntwpr__wg_8c_source.html#l00366">NTWPR_WGF_transposeEdges()</a>.</p>
 
 </div>
 </div>
@@ -318,7 +321,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00265">265</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
 
-<p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00027">LINE_COMMENT_SU</a>, and <a class="el" href="ntwpr__wg_8h_source.html#l00034">NTWPR_invalid_fp_exit</a>.</p>
+<p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00027">LINE_COMMENT_SU</a>, <a class="el" href="ntwpr__wg_8h_source.html#l00034">NTWPR_invalid_fp_exit</a>, and <a class="el" href="ntwpr__wg_8c_source.html#l00376">NTWPR_WGF_edgeCompare()</a>.</p>
 
 </div>
 </div>
@@ -358,7 +361,51 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int edgeA-&gt;nodeA - edgeB-&gt;nodeB </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00358">358</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00376">376</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
+
+<p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00070">NTWPR_WGEdge::nodeA</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00265">NTWPR_WGF_convertSU()</a>.</p>
+
+</div>
+</div>
+<a id="a4d382961eb82df4d61a07defd37a0ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d382961eb82df4d61a07defd37a0ff4">&#9670;&nbsp;</a></span>NTWPR_WGF_edgeCompareForT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NTWPR_WGF_edgeCompareForT </td>
+          <td>(</td>
+          <td class="paramtype">const void *restrict&#160;</td>
+          <td class="paramname"><em>edgeA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *restrict&#160;</td>
+          <td class="paramname"><em>edgeB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares two edges, used for sorting with qsort(). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edgeA</td><td></td></tr>
+    <tr><td class="paramname">edgeB</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int edgeA-&gt;nodeA - edgeB-&gt;nodeB </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00384">384</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
 
 <p class="reference">References <a class="el" href="ntwpr__wg_8h_source.html#l00071">NTWPR_WGEdge::nodeB</a>.</p>
 
@@ -448,8 +495,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Exports the edges to a text file at <em>exportPath</em>. </p>
-<p class="">Extra: Can be loaded into a sparse MATLAB matrix using: &gt; load -ASCII exported_file_path &gt; sparce(file_name(:,1)+1, file_name(:,2)+1, ... ones(size(file_name, 1), 1), node_num, node_num)</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p class="">Extra: Can be loaded into a sparse MATLAB matrix using: </p><pre>
+     &gt; load -ASCII exported_file_path
+     &gt; sparce(file_name(:,1)+1, file_name(:,2)+1, ...
+     ones(size(file_name, 1), 1), node_num, node_num)
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wgfp</td><td>The input <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info.">NTWPR_WGFile</a> pointer. </td></tr>
     <tr><td class="paramname">exportPath</td><td>The output file's path. </td></tr>
@@ -633,7 +683,7 @@ false If an error occured. </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00348">348</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8c_source.html#l00366">366</a> of file <a class="el" href="ntwpr__wg_8c_source.html">ntwpr_wg.c</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ntwpr__wg_8c_source.html#l00214">NTWPR_WGF_convert2Transpose()</a>.</p>
 

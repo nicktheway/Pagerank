@@ -53,6 +53,8 @@ void \mbox{\hyperlink{ntwpr__wg_8h_aaa736e093db117a284824bee85784ce3}{N\+T\+W\+P
 void \mbox{\hyperlink{ntwpr__wg_8h_ac5b7e40ba0184d6a28064dafbb79ce13}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges}} (const size\+\_\+t n, \mbox{\hyperlink{structNTWPR__WGEdge}{N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge}} edges\mbox{[}static n\mbox{]})
 \begin{DoxyCompactList}\small\item\em Transposes the edges of a graph described with {\itshape edges}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{ntwpr__wg_8h_aabd73ca055f4ab669f7bc75548fa682d}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare}} (const void $\ast$restrict edgeA, const void $\ast$restrict edgeB)
+\begin{DoxyCompactList}\small\item\em Compares two edges, used for sorting with qsort(). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ntwpr__wg_8h_a4d382961eb82df4d61a07defd37a0ff4}{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare\+ForT}} (const void $\ast$restrict edgeA, const void $\ast$restrict edgeB)
 \begin{DoxyCompactList}\small\item\em Compares two edges, used for sorting with qsort(). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -159,7 +161,7 @@ Definition at line 214 of file ntwpr\+\_\+wg.\+c.
 
 
 
-References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::node\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare(), N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose(), N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen(), and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges().
+References N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+data, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::edge\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+File\+::node\+\_\+num, N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare\+For\+T(), N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fclose(), N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+fopen(), and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+transpose\+Edges().
 
 \mbox{\Hypertarget{ntwpr__wg_8h_aaa736e093db117a284824bee85784ce3}\label{ntwpr__wg_8h_aaa736e093db117a284824bee85784ce3}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+SU@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+SU}}
@@ -188,7 +190,7 @@ Definition at line 265 of file ntwpr\+\_\+wg.\+c.
 
 
 
-References L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+N\+T\+\_\+\+SU, and N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit.
+References L\+I\+N\+E\+\_\+\+C\+O\+M\+M\+E\+N\+T\+\_\+\+SU, N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit, and N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare().
 
 \mbox{\Hypertarget{ntwpr__wg_8h_aabd73ca055f4ab669f7bc75548fa682d}\label{ntwpr__wg_8h_aabd73ca055f4ab669f7bc75548fa682d}} 
 \index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare}}
@@ -212,7 +214,39 @@ int edgeA-\/$>$nodeA -\/ edgeB-\/$>$nodeB
 \end{DoxyReturn}
 
 
-Definition at line 358 of file ntwpr\+\_\+wg.\+c.
+Definition at line 376 of file ntwpr\+\_\+wg.\+c.
+
+
+
+References N\+T\+W\+P\+R\+\_\+\+W\+G\+Edge\+::nodeA.
+
+
+
+Referenced by N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+convert\+S\+U().
+
+\mbox{\Hypertarget{ntwpr__wg_8h_a4d382961eb82df4d61a07defd37a0ff4}\label{ntwpr__wg_8h_a4d382961eb82df4d61a07defd37a0ff4}} 
+\index{ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}!N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare\+ForT@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare\+ForT}}
+\index{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare\+ForT@{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare\+ForT}!ntwpr\+\_\+wg.\+h@{ntwpr\+\_\+wg.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare\+For\+T()}{NTWPR\_WGF\_edgeCompareForT()}}
+{\footnotesize\ttfamily int N\+T\+W\+P\+R\+\_\+\+W\+G\+F\+\_\+edge\+Compare\+ForT (\begin{DoxyParamCaption}\item[{const void $\ast$restrict}]{edgeA,  }\item[{const void $\ast$restrict}]{edgeB }\end{DoxyParamCaption})}
+
+
+
+Compares two edges, used for sorting with qsort(). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edgeA} & \\
+\hline
+{\em edgeB} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int edgeA-\/$>$nodeA -\/ edgeB-\/$>$nodeB 
+\end{DoxyReturn}
+
+
+Definition at line 384 of file ntwpr\+\_\+wg.\+c.
 
 
 
@@ -261,7 +295,13 @@ References N\+T\+W\+P\+R\+\_\+invalid\+\_\+fp\+\_\+exit, and N\+T\+W\+P\+R\+\_\+
 
 Exports the edges to a text file at {\itshape export\+Path}. 
 
-Extra\+: Can be loaded into a sparse M\+A\+T\+L\+AB matrix using\+: $>$ load -\/A\+S\+C\+II exported\+\_\+file\+\_\+path $>$ sparce(file\+\_\+name(\+:,1)+1, file\+\_\+name(\+:,2)+1, ... ones(size(file\+\_\+name, 1), 1), node\+\_\+num, node\+\_\+num)
+Extra\+: Can be loaded into a sparse M\+A\+T\+L\+AB matrix using\+: 
+\begin{DoxyPre}
+     > load -ASCII exported\_file\_path
+     > sparce(file\_name(:,1)+1, file\_name(:,2)+1, ...
+     ones(size(file\_name, 1), 1), node\_num, node\_num)
+\end{DoxyPre}
+
 
 
 \begin{DoxyParams}{Parameters}
@@ -421,7 +461,7 @@ Transposes the edges of a graph described with {\itshape edges}.
 \end{DoxyParams}
 
 
-Definition at line 348 of file ntwpr\+\_\+wg.\+c.
+Definition at line 366 of file ntwpr\+\_\+wg.\+c.
 
 
 

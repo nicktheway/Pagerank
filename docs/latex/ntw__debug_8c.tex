@@ -2,11 +2,14 @@
 \label{ntw__debug_8c}\index{/home/ecat/nikos/parallel/src/ntw\+\_\+debug.\+c@{/home/ecat/nikos/parallel/src/ntw\+\_\+debug.\+c}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{ntw__debug_8c_abf8596836fe05b703cec2dc8c5a1ae08}{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time}} (F\+I\+LE $\ast$restrict stream, const struct timespec start, const struct timespec finish, const char message\mbox{[}static 1\mbox{]})
-\begin{DoxyCompactList}\small\item\em Prints\+: {\itshape message\+:} $<$elapsed time from {\itshape start} to {\itshape finish} in ms$>$ to {\itshape stream}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints\+: {\itshape message\+:} $<$elapsed time from {\itshape start} to {\itshape finish} in ms$>$ to {\itshape stream}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntw__debug_8c_a93b0b36f8eb27bcac56923fd1db9e03d}{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Binary\+Double\+Array}} (const char file\+Path\mbox{[}static 1\mbox{]}, const size\+\_\+t n, const double array\mbox{[}static n\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates a binary file at {\itshape file\+Path} with the {\itshape array\textquotesingle{}s} {\itshape n} values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -19,6 +22,31 @@ Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth
 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{ntw__debug_8c_a93b0b36f8eb27bcac56923fd1db9e03d}\label{ntw__debug_8c_a93b0b36f8eb27bcac56923fd1db9e03d}} 
+\index{ntw\+\_\+debug.\+c@{ntw\+\_\+debug.\+c}!N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Binary\+Double\+Array@{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Binary\+Double\+Array}}
+\index{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Binary\+Double\+Array@{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Binary\+Double\+Array}!ntw\+\_\+debug.\+c@{ntw\+\_\+debug.\+c}}
+\subsubsection{\texorpdfstring{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Binary\+Double\+Array()}{NTW\_DEBUG\_printBinaryDoubleArray()}}
+{\footnotesize\ttfamily void N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Binary\+Double\+Array (\begin{DoxyParamCaption}\item[{const char}]{file\+Path\mbox{[}static 1\mbox{]},  }\item[{const size\+\_\+t}]{n,  }\item[{const double}]{array\mbox{[}static n\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates a binary file at {\itshape file\+Path} with the {\itshape array\textquotesingle{}s} {\itshape n} values. 
+
+If unsuccessful will exit(\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E) with a debug message!
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \\
+\hline
+{\em n} & \\
+\hline
+{\em array} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file ntw\+\_\+debug.\+c.
+
 \mbox{\Hypertarget{ntw__debug_8c_abf8596836fe05b703cec2dc8c5a1ae08}\label{ntw__debug_8c_abf8596836fe05b703cec2dc8c5a1ae08}} 
 \index{ntw\+\_\+debug.\+c@{ntw\+\_\+debug.\+c}!N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time@{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time}}
 \index{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time@{N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time}!ntw\+\_\+debug.\+c@{ntw\+\_\+debug.\+c}}
@@ -42,7 +70,7 @@ Prints\+: {\itshape message\+:} $<$elapsed time from {\itshape start} to {\itsha
 \end{DoxyParams}
 
 
-Definition at line 11 of file ntw\+\_\+debug.\+c.
+Definition at line 12 of file ntw\+\_\+debug.\+c.
 
 
 

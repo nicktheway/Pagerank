@@ -31,6 +31,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
  * @param x_vec The vector x that will be replaced.
  * @param b_vec The vector b.
  * @param d The vector containing the state of the nodes (converged or not).
+ * @param dd The vector that contains accumulatively the latest changes of each node's pr.
  * @return double The squared norm difference of the old and new @a x_vec.
  */
 double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1]);

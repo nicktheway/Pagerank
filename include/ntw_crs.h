@@ -21,15 +21,15 @@
  * and the dangling nodes (all zero rows) can be found easily as well because
  * row_ptr[i] == row_ptr[i+1] if the node i is dangling.
  * 
- * See <a href="http://netlib.org/linalg/html_templates/node91.html#SECTION00931100000000000000">CRS</a> 
+ * See <a href="http://netlib.org/linalg/html_templates/node91.html">CRS Format</a> 
  * 
  */
 typedef struct ntw_crs
 {
     uint32_t node_num;  /**< The number of nodes of the graph. */
     uint32_t edge_num;  /**< The number of non zero elements (edges) */
-    uint32_t* restrict row_ptr;  /**< A pointer to the val vector indicating the start of a matrix' row. */
-    uint32_t* restrict col_ind;  /**< A vector containing the columns of the val's values. */
+    uint32_t* restrict row_ptr;  /**< A vector for storing the indices of the @a val vector that start a row. */
+    uint32_t* restrict col_ind;  /**< A vector for storing the columns of the non zero values. */
     double* restrict val;        /**< The non zero values of the matrix. */
 } ntw_crs;
 
@@ -39,38 +39,27 @@ typedef struct ntw_crs
  * Should be freed using the NTW_CRS_free when non needed anymore.
  * 
  * @param nodeNum The number of nodes (rows) of the matrix.
- * @param edgeNum The number of non-zero elements of the matrix.
- * @param rowPtr Array of @a nodeNum + 1 elements with the indeces of the @a val where each row begins and the end of the @a val array.
+ * @param edgeNum The number of non-zero elements of the matrix (edges).
+ * @param rowPtr Array of @a nodeNum + 1 elements with the indeces of the @a val where each row begins and the end of the @a val array (where last row ends).
  * @param colInd Array of @a edgeNum elements with the columns of each non zero element of the matrix.
  * @param val Array of @a edgeNum elements with the non zero values of the matrix.
- * @return ntw_crs* The created struct or null if unsuccessful.
+ * @return ntw_crs* The created struct or 0 (NULL) if unsuccessful.
  */
 ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t rowPtr[static nodeNum+1], uint32_t colInd[static edgeNum], double val[static edgeNum]);
 
 /**
  * @brief Unloads a ntw_crs from memory (frees allocated memory).
  * 
- * @param crs 
+ * @param crs Pointer to the structure that will be freed.
  */
 void NTW_CRS_free(ntw_crs* crs);
-
-/**
- * NOT defined. TODO...
- * @brief Creates a new ntw_crs storing the transpose of @a crs.
- * 
- * Allocates memory for the new ntw_crs that should be freed using the NTW_CRS_free when non needed anymore.
- * 
- * @param crs
- * @return ntw_crs* Pointer to the created struct or null if unsuccessful. 
- */
-ntw_crs* NTW_CRS_newTranspose(const ntw_crs crs[static 1]);
 
 /**
  * @brief Multiplies the values of the sparse table in the CRS form 
  *          @a crs with the constant value @a c.
  * 
  * @param crs The ntw_crs representation of the sparse table.
- * @param c The constant multiplicator.
+ * @param c The constant multiplier.
  */
 void NTW_CRS_cmult(ntw_crs crs[static 1], const double c);
 
@@ -100,6 +89,8 @@ double* NTW_CRS_vmultAlloc(const ntw_crs crs[static 1], const double vector[stat
  * @brief Calculates the product of the transpose of the CRS table @a crs
  *          with the @a vector and stores the result in @a product. 
  * 
+ * Not cache efficient function. Therefore slow.
+ * 
  * @param crs The CRS representation of the matrix @f$A@f$.
  * @param vector The vector @f$v@f$.
  * @param product The product @f$A^T*v@f$.
@@ -107,28 +98,22 @@ double* NTW_CRS_vmultAlloc(const ntw_crs crs[static 1], const double vector[stat
 void NTW_CRS_vmultTranspose(const ntw_crs crs[static 1], const double vector[static 1], double product[static 1]);
 
 /**
- * @brief Normalizes the rows of the CRS table so they sum to one.
+ * @brief Makes the rows of the CRS table stochastic.
+ * 
+ * Their elements will then sum to 1 (at each row).
  * 
  * @param crs The CRS representation of the table.
  */
-void NTW_CRS_rowNorm(ntw_crs crs[static 1]);
+void NTW_CRS_stochasticizeRows(ntw_crs crs[static 1]);
 
 /**
- * @brief Normalizes the rows of the CRS table giving all the
- *          edges in each row the same value in order to sum to one.
+ * @brief Makes the columns of the CRS table stochastic.
+ * 
+ * Their elements will then sum to 1 (at each column).
  * 
  * @param crs The CRS representation of the table.
  */
-void NTW_CRS_rowNormUnif(ntw_crs crs[static 1]);
-
-/**
- * @brief Normalizes the columns of the CRS table so they sum to one.
- *
- * O(crs->edge_num) complexity.
- * 
- * @param crs The CRS representation of the table.
- */
-void NTW_CRS_colNorm(ntw_crs crs[static 1]);
+void NTW_CRS_stochasticizeCols(ntw_crs crs[static 1]);
 
 /**
  * @brief Returns the number of empty rows of the @a crs.

@@ -275,7 +275,7 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
     char line_buffer[125];
     uint32_t sizes[2];
     uint32_t registered_edges = 0;
-    NTWPR_WGEdge* edges;
+    NTWPR_WGEdge* restrict edges;
     
     if (nodeNum == 0) nodeNum = UINT32_MAX;
     unsigned read_data_size = 0; //flag . bad name I know.
@@ -332,7 +332,7 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
             continue;
         }
         
-        // If in range, write the sparce data.
+        // If in range, write the sparse data.
         edges[registered_edges++] = (NTWPR_WGEdge) {.nodeA = sizes[0], .nodeB = sizes[1]};
     } while(!feof(NTWPR_SU_fp));
 

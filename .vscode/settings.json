@@ -8,6 +8,7 @@
         "stdint.h": "c",
         "ntw_crs.h": "c",
         "ntw_math.h": "c",
-        "ntwpr.h": "c"
+        "ntwpr.h": "c",
+        "ntw_debug.h": "c"
     }
 }

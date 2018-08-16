@@ -6,9 +6,9 @@
  * @date 11-08-2018
  */
 
-#include "../include/ntw_crs.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "../include/ntw_crs.h"
 
 ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t rowPtr[static nodeNum+1], uint32_t colInd[static edgeNum], double val[static edgeNum])
 {
@@ -32,11 +32,6 @@ void NTW_CRS_free(ntw_crs* crs)
     free(crs->row_ptr);
 
     free(crs);
-}
-
-ntw_crs* NTW_CRS_newTranspose(const ntw_crs crs[static 1])
-{
-	return (void *) 0;
 }
 
 void NTW_CRS_cmult(ntw_crs crs[static 1], const double c)
@@ -82,26 +77,14 @@ void NTW_CRS_vmultTranspose(const ntw_crs crs[static 1], const double vector[sta
 	}
 }
 
-void NTW_CRS_rowNorm(ntw_crs crs[static 1])
+void NTW_CRS_stochasticizeRows(ntw_crs crs[static 1])
 {
     for (uint32_t i = 0; i < crs->node_num; i++)
     {
-        uint32_t diff_value = crs->row_ptr[i+1] - crs->row_ptr[i];
-        for (uint32_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
-        {
-            crs->val[j] /= diff_value;
-        }
-    }
-}
-
-void NTW_CRS_rowNormUnif(ntw_crs crs[static 1])
-{
-    for (uint32_t i = 0; i < crs->node_num; i++)
-    {
-        uint32_t diff_value = crs->row_ptr[i+1] - crs->row_ptr[i];
+        const uint32_t diff_value = crs->row_ptr[i+1] - crs->row_ptr[i];
         if (diff_value == 0 || diff_value == 1) continue;
         
-        register double u_value = 1.0f / diff_value;
+        const double u_value = 1.0f / diff_value;
         for (uint32_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
         {
             crs->val[j] = u_value;
@@ -109,7 +92,7 @@ void NTW_CRS_rowNormUnif(ntw_crs crs[static 1])
     }
 }
 
-void NTW_CRS_colNorm(ntw_crs crs[static 1])
+void NTW_CRS_stochasticizeCols(ntw_crs crs[static 1])
 {
 	// Allocate memory array to store the number of non zero elements in each column.
 	uint32_t* counter = calloc(crs->node_num, sizeof *counter);
@@ -125,7 +108,7 @@ void NTW_CRS_colNorm(ntw_crs crs[static 1])
 	for (uint32_t i = 0; i < crs->edge_num; i++)
 	{
 		if (counter[crs->col_ind[i]])
-			crs->val[i] /= counter[crs->col_ind[i]];
+			crs->val[i] = 1.0 / counter[crs->col_ind[i]];
 	}
 	free(counter);
 }

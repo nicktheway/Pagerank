@@ -9,12 +9,14 @@ File containing the definitions of the functions declared at \mbox{\hyperlink{nt
 {\ttfamily \#include \char`\"{}../include/ntw\+\_\+math.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../include/ntw\+\_\+debug.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 double $\ast$ \mbox{\hyperlink{ntwpr_8c_a22512677be7968cc1af3ce7d3653bcf0}{N\+T\+W\+P\+R\+\_\+pagerank}} (\mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} web\+Graph\mbox{[}static 1\mbox{]}, double c, double e, F\+I\+LE $\ast$stream)
 \begin{DoxyCompactList}\small\item\em Calculates the pagerank of the nodes of a web graph. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{ntwpr_8c_abeb887148b493cfa1359e1f29e29bfa7}{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} matrix\mbox{[}static 1\mbox{]}, double x\+\_\+vec\mbox{[}static 1\mbox{]}, const double b\+\_\+vec\mbox{[}static 1\mbox{]}, const uint32\+\_\+t m, const size\+\_\+t d\mbox{[}static m\mbox{]})
+double \mbox{\hyperlink{ntwpr_8c_a9993838fbee6e5a214576ab341f3d8a0}{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}} (const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}} matrix\mbox{[}static 1\mbox{]}, double x\+\_\+vec\mbox{[}static 1\mbox{]}, const double b\+\_\+vec\mbox{[}static 1\mbox{]}, char d\mbox{[}static 1\mbox{]}, double dd\mbox{[}static 1\mbox{]})
 \begin{DoxyCompactList}\small\item\em Calculates one iteration of $(I-A)x = b$. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -30,11 +32,11 @@ Katomeris Nikolaos, 8551, \href{mailto:ngkatomer@auth.gr}\texttt{ ngkatomer@auth
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{ntwpr_8c_abeb887148b493cfa1359e1f29e29bfa7}\label{ntwpr_8c_abeb887148b493cfa1359e1f29e29bfa7}} 
+\mbox{\Hypertarget{ntwpr_8c_a9993838fbee6e5a214576ab341f3d8a0}\label{ntwpr_8c_a9993838fbee6e5a214576ab341f3d8a0}} 
 \index{ntwpr.\+c@{ntwpr.\+c}!N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter@{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}}
 \index{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter@{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter}!ntwpr.\+c@{ntwpr.\+c}}
 \subsubsection{\texorpdfstring{N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter()}{NTWPR\_GS\_iter()}}
-{\footnotesize\ttfamily double N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{matrix\mbox{[}static 1\mbox{]},  }\item[{double}]{x\+\_\+vec\mbox{[}static 1\mbox{]},  }\item[{const double}]{b\+\_\+vec\mbox{[}static 1\mbox{]},  }\item[{const uint32\+\_\+t}]{m,  }\item[{const size\+\_\+t}]{d\mbox{[}static m\mbox{]} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structntw__crs}{ntw\+\_\+crs}}}]{matrix\mbox{[}static 1\mbox{]},  }\item[{double}]{x\+\_\+vec\mbox{[}static 1\mbox{]},  }\item[{const double}]{b\+\_\+vec\mbox{[}static 1\mbox{]},  }\item[{char}]{d\mbox{[}static 1\mbox{]},  }\item[{double}]{dd\mbox{[}static 1\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -52,9 +54,9 @@ Uses the Gauss-\/Sneidel method, using forward substitution.
 \hline
 {\em b\+\_\+vec} & The vector b. \\
 \hline
-{\em m} & The size of the vector {\itshape d}. \\
+{\em d} & The vector containing the state of the nodes (converged or not). \\
 \hline
-{\em d} & The vector containing the \char`\"{}dangling node\char`\"{}\textquotesingle{} indices of {\itshape matrix}. \\
+{\em dd} & The vector that contains accumulatively the latest changes of each node\textquotesingle{}s pr. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -62,7 +64,7 @@ double The squared norm difference of the old and new {\itshape x\+\_\+vec}.
 \end{DoxyReturn}
 
 
-Definition at line 58 of file ntwpr.\+c.
+Definition at line 72 of file ntwpr.\+c.
 
 
 
@@ -104,9 +106,9 @@ D\+E\+B\+UG\+:$\ast$ N\+T\+W\+M\+\_\+\+C\+R\+S\+\_\+print\+Full\+Matrix(stdout, 
 
 D\+E\+B\+UG\+:$\ast$ N\+T\+W\+M\+\_\+print\+D\+V(stdout, wg\+Size, b, 4); 
 
-Definition at line 13 of file ntwpr.\+c.
+Definition at line 15 of file ntwpr.\+c.
 
 
 
-References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+col\+Norm(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+get\+Empty\+Row\+Indices(), N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time(), N\+T\+W\+M\+\_\+new\+Uni\+Vector\+D(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
+References ntw\+\_\+crs\+::node\+\_\+num, N\+T\+W\+\_\+\+C\+R\+S\+\_\+cmult(), N\+T\+W\+\_\+\+C\+R\+S\+\_\+stochasticize\+Cols(), N\+T\+W\+\_\+\+D\+E\+B\+U\+G\+\_\+print\+Elapsed\+Time(), N\+T\+W\+M\+\_\+new\+Uni\+Vector\+D(), N\+T\+W\+M\+\_\+new\+Zero\+Vector\+D(), and N\+T\+W\+P\+R\+\_\+\+G\+S\+\_\+iter().
 
