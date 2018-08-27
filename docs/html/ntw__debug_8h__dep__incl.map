@@ -1,0 +1,5 @@
+<map id="Pagerank/include/ntw_debug.h" name="Pagerank/include/ntw_debug.h">
+<area shape="rect" id="node2" href="$ntwpr_8c.html" title="File containing the definitions of the functions declared at ntwpr.h. " alt="" coords="5,95,151,121"/>
+<area shape="rect" id="node3" href="$NTWPRcalc_8c.html" title="Calculated the pagerank vector of a web graph saved in an NTWPR_WGFile form. " alt="" coords="175,95,360,121"/>
+<area shape="rect" id="node4" href="$WGFcreator_8c.html" title="This script produces a program that can convert web graph files to WGFiles that can be opened with NT..." alt="" coords="384,95,569,121"/>
+</map>
