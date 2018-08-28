@@ -18,7 +18,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-/******************* MACRO DEFINITIONS *******************/
+/******************* MACRO DECLARATIONS *******************/
 
 /**
  * @brief The character used to indicate comment lines
@@ -43,7 +43,7 @@ do {                                                                \
 
 
 
-/******************* TYPE DEFINITIONS *******************/
+/******************* TYPE DECLARATIONS *******************/
 
 /**
  * @brief A struct containing a web-graph file and the graphs info.
@@ -71,7 +71,7 @@ typedef struct NTWPR_WGEdge
 	uint32_t nodeB; /**< The second node of the edge. */
 } NTWPR_WGEdge;
 
-/******************* FUNCTION DEFINITIONS *******************/
+/******************* FUNCTION DECLARATIONS *******************/
 
 /**
  * @brief Creates a new WGFile at @a path.
