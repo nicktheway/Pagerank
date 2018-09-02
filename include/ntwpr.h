@@ -25,7 +25,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
  * 
  * Uses the Gauss-Sneidel method, using forward substitution.
  * 
- * \f[\vec{x}_i^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^{k+1} + \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\f]
+ * \f[\vec{x}_i^{k+1} = \frac{1}{1-a_{ii}}(b_i - \sum_{j=1}^{i-1} a_{ij}\vec{x}_j^{k+1} - \sum_{j=i+1}^{n} a_{ij}\vec{x}_j^k)\f]
  * 
  * @param matrix The sparse matrix A in CRS form.
  * @param x_vec The vector x that will be replaced.
