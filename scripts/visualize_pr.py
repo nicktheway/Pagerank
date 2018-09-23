@@ -27,9 +27,9 @@ for line in logLines:
         errorProgression.append(a[5])
     i += 1
 
-print(dataPath)
-print(loadToCrsTime)
-print(makeStochasticTime)
+
+loadToCrsTime = float(loadToCrsTime)
+makeStochasticTime = float(makeStochasticTime)
 
 iterationTimes = np.asarray(list(map(float, iterationTimes)))
 errorProgression = np.asarray(list(map(float, errorProgression)))
@@ -37,8 +37,6 @@ errorProgression = np.asarray(list(map(float, errorProgression)))
 # Get the database name from the log file's path.
 dataPath = os.path.basename(dataPath)
 dataPath = os.path.splitext(dataPath)[0]
-
-
 
 fig, ax = plt.subplots()
 ax.tick_params(axis='y', colors='blue')
@@ -57,6 +55,11 @@ plt.title('Pagerank calculation\'s iteration times.')
 plt.xlabel('Iteration #')
 plt.suptitle(dataPath, fontweight='bold')
 plt.show()
+
+prCalcTime = sum(iterationTimes)
+print("Data preperation time:\n\tLoad from memory = %0.2fms\n\tMake matrix stochastic = %0.2fms" % (loadToCrsTime, makeStochasticTime))
+print("Pagerank calculation time: %0.2fms" % prCalcTime)
+print("Total Time = %0.2fms" % (prCalcTime+loadToCrsTime+makeStochasticTime))
 '''
 pr = np.fromfile(pagerankFilePath, dtype=float)
 
