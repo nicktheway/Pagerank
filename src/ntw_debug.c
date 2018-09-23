@@ -9,7 +9,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1])
+void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1], const char endDelim)
 {
     time_t seconds = finish.tv_sec - start.tv_sec; 
     long nano_seconds = finish.tv_nsec - start.tv_nsec; 
@@ -18,7 +18,7 @@ void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec sta
         seconds--; 
         nano_seconds += 1e9; 
     } 
-    fprintf(stream, "%s: %lf ms\n", message, seconds * 1000 + (double)nano_seconds/1e6);
+    fprintf(stream, "%s: %lf ms%c", message, seconds * 1000 + (double)nano_seconds/1e6, endDelim);
 }
 
 void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const size_t n, const double array[static n])

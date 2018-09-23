@@ -27,6 +27,7 @@
             "name": "Linux",
             "includePath": [
                 "/usr/include",
+                "/usr/include/linux",
                 "/usr/local/include",
                 "/usr/lib/gcc/*/*/include",
                 "${workspaceRoot}"

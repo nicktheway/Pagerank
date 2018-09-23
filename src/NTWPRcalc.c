@@ -20,12 +20,12 @@ int main(int argc, char const *argv[argc+1])
         return EXIT_FAILURE;
     }
 
-    FILE* mat = fopen("./data/logs/log.txt", "w");
+    FILE* log_fp = fopen("./results/logs/log.txt", "w");
     
     // Open the file.
     NTWPR_WGFile* file = NTWPR_WGF_fopen(argv[1]);
-    fprintf(mat, "File: %s, Nodes: %u, Edges: %u\n", argv[1], file->node_num, file->edge_num);
-    //NTWPR_WGF_exportSM(file, "./data/whatRead.txt", file->node_num);
+    fprintf(log_fp, "File: %s, Nodes: %u, Edges: %u\n", argv[1], file->node_num, file->edge_num);
+    //NTWPR_WGF_exportSM(file, "./results/whatRead.txt", file->node_num);
 
     // Structs used for time point values.
     struct timespec start, finish;
@@ -34,22 +34,20 @@ int main(int argc, char const *argv[argc+1])
     clock_gettime(CLOCK_MONOTONIC, &start);
     ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
     clock_gettime(CLOCK_MONOTONIC, &finish);
-    NTW_DEBUG_printElapsedTime(mat, start, finish, "Load to crs time");
+    NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Load to crs time", '\n');
     
-    fprintf(mat, "NTWPR_pagerank:\n");
+    fprintf(log_fp, "NTWPR_pagerank:\n");
     clock_gettime(CLOCK_MONOTONIC, &start);
-    double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-24, mat);
+    double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-12, log_fp);
     clock_gettime(CLOCK_MONOTONIC, &finish);
-    NTW_DEBUG_printElapsedTime(mat, start, finish, "Whole pagerank time");
+    NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Whole pagerank time", '\n');
     
-    fprintf(mat, "\n---START PR RESULT---\n");
-    NTW_DEBUG_printBinaryDoubleArray("./data/pagerank/result.data", myCRS->node_num, pr);
-    fprintf(mat, "\n---END PR RESULT---\n");
+    NTW_DEBUG_printBinaryDoubleArray("./results/pageranks/result.data", myCRS->node_num, pr);
 
 	free(pr);
     NTWPR_WGF_fclose(file);
     NTW_CRS_free(myCRS);
-    fclose(mat);
+    fclose(log_fp);
 
     return EXIT_SUCCESS;
 }

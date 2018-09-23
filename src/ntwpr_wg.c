@@ -262,6 +262,8 @@ void NTWPR_WGF_convert2Transpose(const char origWGFPath[static 1], const char ex
 	fclose(fp);
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
 void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[static 1], uint32_t nodeNum)
 {
     FILE* NTWPR_SU_fp = fopen(suDataPath, "r");
@@ -333,7 +335,9 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
         }
         
         // If in range, write the sparse data.
+        
         edges[registered_edges++] = (NTWPR_WGEdge) {.nodeA = sizes[0], .nodeB = sizes[1]};
+        
     } while(!feof(NTWPR_SU_fp));
 
     qsort(edges, registered_edges, sizeof(edges[0]), NTWPR_WGF_edgeCompare);
@@ -362,6 +366,7 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
     fclose(NTWPR_SU_fp);
     fclose(NTWPR_WGFile_fp);
 }
+#pragma GCC diagnostic pop
 
 void NTWPR_WGF_transposeEdges(const size_t n, NTWPR_WGEdge edges[static n])
 {

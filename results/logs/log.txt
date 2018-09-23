@@ -1,0 +1,34 @@
+File: ./data/WGFiles/web-NotreDame.wg, Nodes: 325729, Edges: 1497134
+Load to crs time: 29.375480 ms
+NTWPR_pagerank:
+Make graph stochastic time: 7.022400 ms
+Iteration: 4.979285 ms	Current error: 4.91e-04
+Iteration: 3.605261 ms	Current error: 8.23e-04
+Iteration: 3.503965 ms	Current error: 2.13e-04
+Iteration: 3.600507 ms	Current error: 4.34e-05
+Iteration: 3.597500 ms	Current error: 1.98e-05
+Iteration: 3.605251 ms	Current error: 5.64e-06
+Iteration: 3.568597 ms	Current error: 2.58e-06
+Iteration: 3.616180 ms	Current error: 1.12e-06
+Iteration: 3.475512 ms	Current error: 4.77e-07
+Iteration: 3.523612 ms	Current error: 2.19e-07
+Iteration: 2.706251 ms	Current error: 1.08e-07
+Iteration: 2.646707 ms	Current error: 4.71e-08
+Iteration: 2.675613 ms	Current error: 2.54e-08
+Iteration: 2.702434 ms	Current error: 1.41e-08
+Iteration: 2.736255 ms	Current error: 7.52e-09
+Iteration: 2.764747 ms	Current error: 4.22e-09
+Iteration: 2.769661 ms	Current error: 2.37e-09
+Iteration: 2.768407 ms	Current error: 1.33e-09
+Iteration: 2.758795 ms	Current error: 7.58e-10
+Iteration: 2.770236 ms	Current error: 4.35e-10
+Iteration: 0.626310 ms	Current error: 2.35e-10
+Iteration: 0.586915 ms	Current error: 1.11e-10
+Iteration: 0.562363 ms	Current error: 5.40e-11
+Iteration: 0.537461 ms	Current error: 2.70e-11
+Iteration: 0.518342 ms	Current error: 1.37e-11
+Iteration: 0.519239 ms	Current error: 7.00e-12
+Iteration: 0.497229 ms	Current error: 3.58e-12
+Iteration: 0.474958 ms	Current error: 1.81e-12
+Iteration: 0.478902 ms	Current error: 9.15e-13
+Whole pagerank time: 80.056525 ms

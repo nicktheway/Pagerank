@@ -31,7 +31,7 @@ int main(int argc, const char* argv[argc+1])
     clock_gettime(CLOCK_MONOTONIC, &finish);
 
     fprintf(stdout, "Convertion successfully completed!\n");
-    NTW_DEBUG_printElapsedTime(stdout, start, finish, "Convertion time");
+    NTW_DEBUG_printElapsedTime(stdout, start, finish, "Convertion time", '\n');
     
     return EXIT_SUCCESS;
 }

@@ -18,8 +18,9 @@
  * @param start The starting time point.
  * @param finish The end's time point.
  * @param message Debug message to print before the elapsed time.
+ * @param endDelim How the debug message will end. Eg: '\n'
  */
-void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1]);
+void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1], const char endDelim);
 
 /**
  * @brief Creates a binary file at @a filePath with the @a array's @a n values.

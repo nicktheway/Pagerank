@@ -10,5 +10,8 @@
         "ntw_math.h": "c",
         "ntwpr.h": "c",
         "ntw_debug.h": "c"
-    }
+    },
+    "python.pythonPath": "/usr/bin/python3",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true
 }

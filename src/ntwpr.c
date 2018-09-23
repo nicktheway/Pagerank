@@ -24,7 +24,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
     NTW_CRS_stochasticizeCols(webGraph);
 	/** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
     clock_gettime(CLOCK_MONOTONIC, &finish);
-    NTW_DEBUG_printElapsedTime(stream, start, finish, "Make graph stochastic time");
+    NTW_DEBUG_printElapsedTime(stream, start, finish, "Make graph stochastic time", '\n');
     // Multiply with the teleportation coefficient.
     NTW_CRS_cmult(webGraph, -c);
     /** DEBUG:* NTWM_CRS_printFullMatrix(stdout, webGraph); */
@@ -48,7 +48,8 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* str
         clock_gettime(CLOCK_MONOTONIC, &start);
         delta = NTWPR_GS_iter(webGraph, pagerank, b, d, dd);
         clock_gettime(CLOCK_MONOTONIC, &finish);
-        NTW_DEBUG_printElapsedTime(stream, start, finish, "Iteration");
+        NTW_DEBUG_printElapsedTime(stream, start, finish, "Iteration", '\t');
+        fprintf(stream, "Current error: %0.2e\n", delta);
 
         if (curr_iteration % 10 == 0)
         {
@@ -97,7 +98,7 @@ double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], con
         const double partDiff = (x_vec[i] - old_xi) * (x_vec[i] - old_xi);
         sqnorm_diff += partDiff;
 
-        dd[i] += fabs(partDiff);
+        dd[i] += partDiff;
     }
     
     // NTWM_printDV(stdout, matrix->node_num, x_vec, 3);
