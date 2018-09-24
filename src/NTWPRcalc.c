@@ -38,7 +38,7 @@ int main(int argc, char const *argv[argc+1])
     
     fprintf(log_fp, "NTWPR_pagerank:\n");
     clock_gettime(CLOCK_MONOTONIC, &start);
-    double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-12, log_fp);
+    double* pr = NTWPR_pagerank(myCRS, 0.85, 1e-24, log_fp);
     clock_gettime(CLOCK_MONOTONIC, &finish);
     NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Whole pagerank time", '\n');
     
