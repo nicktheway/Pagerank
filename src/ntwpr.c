@@ -12,7 +12,7 @@
 #include <string.h>
 #include <math.h>
 
-double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* stream)
+double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double e, FILE* stream)
 {
     struct timespec start, finish;
     // For more readable code wgSize <- webGraph->node_num

@@ -1,6 +1,9 @@
 # local resources for studying
 etc/
 
+# binary files
+bin/
+
 # WGFiles
 data/WGFiles/*
 data/logs/*

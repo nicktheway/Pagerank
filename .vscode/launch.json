@@ -8,11 +8,9 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/pr",
+            "program": "${workspaceFolder}/bin/PRcalculator",
             "args": [
-                        "${workspaceFolder}/data/web-NotreDame.txt", 
-                        "${workspaceFolder}/matlab_scripts/matrices/ha.txt", 
-                        "20"
+                        "${workspaceFolder}/data/WGFiles/web-Google.wg", 
                     ],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",

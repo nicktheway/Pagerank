@@ -14,11 +14,11 @@
  * 
  * @param webGraph The web graf in ntw_crs representation.
  * @param c The teleportation coefficient.
- * @param e The converge tolerance.
+ * @param e The convergence's tolerance.
  * @param stream Opened FILE* stream for printing results.
  * @return double* The calculated pagerank vector.
  */
-double* NTWPR_pagerank(ntw_crs webGraph[static 1], double c, double e, FILE* stream);
+double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double e, FILE* stream);
 
 /**
  * @brief Calculates one iteration of @f$(I-A)x = b@f$

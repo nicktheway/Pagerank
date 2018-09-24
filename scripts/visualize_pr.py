@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 
 pagerankFilePath = "./results/pageranks/result.data"
+validationFilePath = "./results/serial/result.data"
 logFilePath = "./results/logs/log.txt"
 
 iterationTimes = []
@@ -60,20 +61,20 @@ prCalcTime = sum(iterationTimes)
 print("Data preperation time:\n\tLoad from memory = %0.2fms\n\tMake matrix stochastic = %0.2fms" % (loadToCrsTime, makeStochasticTime))
 print("Pagerank calculation time: %0.2fms" % prCalcTime)
 print("Total Time = %0.2fms" % (prCalcTime+loadToCrsTime+makeStochasticTime))
-'''
+
 pr = np.fromfile(pagerankFilePath, dtype=float)
 
-fig, ax = plt.subplots()
+#pr_cor = np.fromfile(validationFilePath, dtype=float)
 
-cax = ax.plot(pr)
+fig2, ax3 = plt.subplots()
+cax3 = ax3.plot(pr)
 
 plt.xlim([0, pr.size])
 plt.ylim(bottom=0)
-plt.title('web-NotreDame', fontsize=14, fontweight='bold')
+plt.title(dataPath, fontweight='bold')
 plt.xlabel('index')
 plt.ylabel('pagerank')
 
 plt.show()
 
 
-'''

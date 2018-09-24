@@ -1,0 +1,26 @@
+File: ./data/WGFiles/web-BerkStan.wg, Nodes: 685230, Edges: 7600595
+Load to crs time: 143.906663 ms
+NTWPR_pagerank:
+Make graph stochastic time: 35.994453 ms
+Iteration: 16.144456 ms	Current error: 6.14e-06
+Iteration: 12.696737 ms	Current error: 6.35e-06
+Iteration: 13.009041 ms	Current error: 2.19e-06
+Iteration: 12.978470 ms	Current error: 4.46e-07
+Iteration: 12.822384 ms	Current error: 1.76e-07
+Iteration: 12.816031 ms	Current error: 5.06e-08
+Iteration: 12.890109 ms	Current error: 2.39e-08
+Iteration: 12.781707 ms	Current error: 8.70e-09
+Iteration: 12.819182 ms	Current error: 4.90e-09
+Iteration: 12.889829 ms	Current error: 2.03e-09
+Iteration: 9.116759 ms	Current error: 1.19e-09
+Iteration: 9.449130 ms	Current error: 4.71e-10
+Iteration: 9.580270 ms	Current error: 2.73e-10
+Iteration: 8.109687 ms	Current error: 1.10e-10
+Iteration: 8.005524 ms	Current error: 6.70e-11
+Iteration: 8.015274 ms	Current error: 2.66e-11
+Iteration: 7.813090 ms	Current error: 1.62e-11
+Iteration: 7.653754 ms	Current error: 6.72e-12
+Iteration: 7.670939 ms	Current error: 4.12e-12
+Iteration: 7.903694 ms	Current error: 1.67e-12
+Iteration: 0.408139 ms	Current error: 9.80e-13
+Whole pagerank time: 263.785764 ms
