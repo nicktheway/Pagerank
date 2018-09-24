@@ -10,7 +10,6 @@
 
 ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf)
 {
-	
     const uint32_t node_num = wgf->node_num;
     const uint32_t edge_num = wgf->edge_num; 
     uint32_t* row_ptr = calloc(node_num + 1, sizeof *row_ptr);
