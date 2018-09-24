@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/bin/PRcalculator",
             "args": [
-                        "${workspaceFolder}/data/WGFiles/web-Google.wg", 
+                        "${workspaceFolder}/data/WGFiles/input_test.wg", 
                     ],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",

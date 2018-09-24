@@ -6,7 +6,94 @@
  * @date 10-08-2018
  */
 #include "../include/ntwpr_wg.h"
+#include "../include/ntw_collections.h"
+#include "../include/ntw_debug.h"
 #include <stdio.h>
+
+ntw_crs* NTWPR_WGF_load2crsColored(NTWPR_WGFile* restrict wgf, ntw_vector* restrict colors)
+{
+    const uint32_t node_num = wgf->node_num;
+    const uint32_t edge_num = wgf->edge_num; 
+    uint32_t* row_ptr = calloc(node_num + 1, sizeof *row_ptr);
+	uint32_t* col_ind = calloc(edge_num, sizeof *col_ind);
+	double* val = calloc(edge_num, sizeof *val);
+    
+    uint32_t* nodeColors = calloc(node_num + 1, sizeof *nodeColors);
+    uint32_t maxColor = 0;
+
+	if (!val || !col_ind || !row_ptr || !nodeColors)
+    {
+        fprintf(stderr, "%s: Error when allocating memory for the CRS struct or coloring.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+
+    uint32_t edges_read = 0;
+    uint32_t curr_row = 0;
+    uint32_t edge_nodes[2];
+
+	// Skip node_num and edge_num
+    fseek(wgf->edge_data, 2*sizeof(uint32_t), SEEK_SET);
+    while (fread(edge_nodes, sizeof(edge_nodes[0]), 2, wgf->edge_data) == 2)
+    {
+        col_ind[edges_read] = edge_nodes[1];
+        val[edges_read] = 1.0;
+
+        if (nodeColors[edge_nodes[1]+1] > maxColor) 
+            maxColor = nodeColors[edge_nodes[1]+1];
+
+        if (edge_nodes[0] > curr_row)
+        {
+            for (uint32_t i = curr_row + 1; i <= edge_nodes[0]; i++)
+            {
+                row_ptr[i] = edges_read;
+                nodeColors[i] = maxColor+1;
+                if (nodeColors[i] > colors->length)
+                {
+                    ntw_vector* newColor = calloc(1, sizeof *newColor);
+                    if (!newColor)
+                    {
+                        fprintf(stderr, "%s: Error when allocating memory for coloring.\n", __func__);
+                        exit(EXIT_FAILURE);
+                    }
+                    NTW_vector_add(colors, newColor);
+                }
+                NTW_vector_add(colors->data[nodeColors[i]-1], (void *) (uint64_t) i-1);
+                maxColor = 0;
+            }
+            curr_row = edge_nodes[0];
+        }
+        edges_read++;
+    }
+	
+	for (uint32_t i = curr_row + 1; i <= node_num; i++)
+    {
+        if (i == curr_row+1) 
+        {
+            nodeColors[i] = maxColor + 1;
+            if (nodeColors[i] > colors->length)
+            {
+                ntw_vector* newColor = calloc(1, sizeof *newColor);
+                if (!newColor)
+                {
+                    fprintf(stderr, "%s: Error when allocating memory for coloring.\n", __func__);
+                    exit(EXIT_FAILURE);
+                }
+                NTW_vector_add(colors, newColor);
+            }
+        }
+        else 
+        {
+            nodeColors[i] = 1;
+        }
+        NTW_vector_add(colors->data[nodeColors[i]-1], (void *) (uint64_t) i-1);
+    	row_ptr[i] = edge_num;
+    }
+
+    //NTW_DEBUG_printArray_uint32(stderr, nodeColors+1, node_num);
+    NTWPR_WGF_rewind(wgf);
+    free(nodeColors);
+	return NTW_CRS_new(node_num, edge_num, row_ptr, col_ind, val);
+}
 
 ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf)
 {
@@ -368,9 +455,9 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
 }
 #pragma GCC diagnostic pop
 
-void NTWPR_WGF_transposeEdges(const size_t n, NTWPR_WGEdge edges[static n])
+void NTWPR_WGF_transposeEdges(const uint64_t n, NTWPR_WGEdge edges[static n])
 {
-	for (size_t i = 0; i < n; i++)
+	for (uint64_t i = 0; i < n; i++)
 	{
 		uint32_t temp = edges[i].nodeA;
 		edges[i].nodeA = edges[i].nodeB;

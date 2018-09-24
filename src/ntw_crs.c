@@ -123,13 +123,13 @@ uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1])
 	return counter;
 }
 
-size_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum)
+uint64_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum)
 {
 	*outIndicesNum = NTW_CRS_getEmptyRowsNum(crs);
 	if (*outIndicesNum == 0) 
 		return (void *) 0;
 
-	size_t* emptyRows = malloc(*outIndicesNum * sizeof *emptyRows);
+	uint64_t* emptyRows = malloc(*outIndicesNum * sizeof *emptyRows);
 	if (!emptyRows)
 	{
 		fprintf(stderr, "%s: Error at allocating memory for the row indices\n", __func__);

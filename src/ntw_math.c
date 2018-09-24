@@ -8,54 +8,54 @@
 #include "../include/ntw_math.h"
 #include <math.h>
 
-void NTWM_multDV(const size_t n, double vector[static n], const double c)
+void NTWM_multDV(const uint64_t n, double vector[static n], const double c)
 {
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         vector[i] *= c;
     }
 }
 
-void NTWM_addDV(const size_t n, double vectorA[static n], const double vectorB[static n])
+void NTWM_addDV(const uint64_t n, double vectorA[static n], const double vectorB[static n])
 {
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         vectorA[i] += vectorB[i];
     }
 }
 
-void NTWM_subDV(const size_t n, double vectorA[static n], const double vectorB[static n])
+void NTWM_subDV(const uint64_t n, double vectorA[static n], const double vectorB[static n])
 {
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         vectorA[i] -= vectorB[i];
     }
 }
 
-double NTWM_dotDV(const size_t n, const double vectorA[static n], const double vectorB[static n])
+double NTWM_dotDV(const uint64_t n, const double vectorA[static n], const double vectorB[static n])
 {
     double dot = 0;
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         dot += vectorA[i] * vectorB[i];
     }
     return dot;
 }
 
-double NTWM_sqMagnDV(const size_t n, const double vector[static n])
+double NTWM_sqMagnDV(const uint64_t n, const double vector[static n])
 {
     double norm = 0;
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         norm += vector[i] * vector[i];
     }
     return norm;
 }
 
-void NTWM_normalizeDV(const size_t n, double vector[static n])
+void NTWM_normalizeDV(const uint64_t n, double vector[static n])
 {
     double norm = 0;
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         norm += vector[i] * vector[i];
     }
@@ -63,31 +63,31 @@ void NTWM_normalizeDV(const size_t n, double vector[static n])
     if (fabs(norm - 0) < NTWM_DOUBLE_PRES) return;
     
     norm = sqrt(norm);
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         vector[i] /= norm;
     }
 }
 
-double NTWM_partialSumDV(const size_t n, const size_t indices[static n], const double vector[static 1])
+double NTWM_partialSumDV(const uint64_t n, const uint64_t indices[static n], const double vector[static 1])
 {
 	double sum = 0;
-	for (size_t i = 0; i < n; i++)
+	for (uint64_t i = 0; i < n; i++)
 	{
 		sum += vector[indices[i]];
 	}
 	return sum;
 }
 
-void NTWM_assignDV(const size_t n, double vectorA[static n], const double vectorB[static n])
+void NTWM_assignDV(const uint64_t n, double vectorA[static n], const double vectorB[static n])
 {
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         vectorA[i] = vectorB[i];
     }
 }
 
-double* NTWM_newZeroVectorD(const size_t n)
+double* NTWM_newZeroVectorD(const uint64_t n)
 {
     double* vector = calloc(n, sizeof *vector);
     if (!vector)
@@ -98,7 +98,7 @@ double* NTWM_newZeroVectorD(const size_t n)
     return vector;
 }
 
-double* NTWM_newUniVectorD(const size_t n, const double value)
+double* NTWM_newUniVectorD(const uint64_t n, const double value)
 {
     double* vector = malloc(n * sizeof *vector);
     if (!vector)
@@ -106,14 +106,14 @@ double* NTWM_newUniVectorD(const size_t n, const double value)
         fprintf(stderr, "%s: Error at memory allocation.\n", __func__);
         exit(EXIT_FAILURE);
     }
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         vector[i] = value;
     }
     return vector;
 }
 
-double* NTWM_newCopyDV(const size_t n, const double vector[static n])
+double* NTWM_newCopyDV(const uint64_t n, const double vector[static n])
 {
     double* newCopy = malloc(n * sizeof *newCopy);
     if (!newCopy)
@@ -121,14 +121,14 @@ double* NTWM_newCopyDV(const size_t n, const double vector[static n])
         fprintf(stderr, "%s: Error at memory allocation.\n", __func__);
         exit(EXIT_FAILURE);
     }
-    for (size_t i = 0; i < n; i++)
+    for (uint64_t i = 0; i < n; i++)
     {
         newCopy[i] = vector[i];
     }
     return newCopy;
 }
 
-void NTWM_printDV(FILE* restrict stream, const size_t n, const double vector[static n], const unsigned decimalDigits)
+void NTWM_printDV(FILE* restrict stream, const uint64_t n, const double vector[static n], const unsigned decimalDigits)
 {
     fprintf(stream, "[");
     for (int i = 0; i < n - 1; i++)
