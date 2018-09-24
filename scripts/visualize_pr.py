@@ -63,6 +63,7 @@ print("Pagerank calculation time: %0.2fms" % prCalcTime)
 print("Total Time = %0.2fms" % (prCalcTime+loadToCrsTime+makeStochasticTime))
 
 pr = np.fromfile(pagerankFilePath, dtype=float)
+pr_cor = np.fromfile(validationFilePath, dtype=float)
 
 #pr_cor = np.fromfile(validationFilePath, dtype=float)
 
