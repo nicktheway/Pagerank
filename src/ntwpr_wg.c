@@ -279,7 +279,6 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
     uint32_t registered_edges = 0;
     NTWPR_WGEdge* restrict edges;
     
-    if (nodeNum == 0) nodeNum = UINT32_MAX;
     unsigned read_data_size = 0; //flag . bad name I know.
     do{
         if (!fgets(line_buffer, 125, NTWPR_SU_fp))
@@ -313,6 +312,8 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
                 fprintf(stderr, "%s: Error at allocating memory for the convertion.\n", __func__);
                 exit(EXIT_FAILURE);
             }
+            // Read the number of nodes that are in the description of the file.
+            if (nodeNum == 0) nodeNum = sizes[0];
             continue;
         }
 
