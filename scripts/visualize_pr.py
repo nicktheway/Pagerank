@@ -4,9 +4,9 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 
-pagerankFilePath = "./results/pageranks/result.data"
+pagerankFilePath = "./results/serial/pageranks/web-Google.data"
 validationFilePath = "./results/serial/result.data"
-logFilePath = "./results/logs/log.txt"
+logFilePath = "./results/serial/logs/web-Google.txt"
 
 iterationTimes = []
 errorProgression = []

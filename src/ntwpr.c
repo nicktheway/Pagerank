@@ -49,7 +49,7 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double 
         delta = NTWPR_GS_iter(webGraph, pagerank, b, d, dd);
         clock_gettime(CLOCK_MONOTONIC, &finish);
         NTW_DEBUG_printElapsedTime(stream, start, finish, "Iteration", '\t');
-        fprintf(stream, "Current error: %0.2e\n", delta);
+        fprintf(stream, "Convergence's delta: %0.2e\n", delta);
 
         if (curr_iteration % 10 == 0)
         {
