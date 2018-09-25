@@ -1,5 +1,7 @@
 <map id="NTWPR_WGF_rewind" name="NTWPR_WGF_rewind">
-<area shape="rect" id="node2" href="$ntwpr__wg_8c.html#a7de28416dbf08fff7b53404ca887f2f7" title="Loads a web graph in memory using the CRS data structure. " alt="" coords="208,5,371,32"/>
-<area shape="rect" id="node3" href="$ntwpr__wg_8c.html#ae1e79e9dc654e3514269d78748e4a394" title="Exports the full graph matrix of a NTWPR_WGFile to the file at exportPath. " alt="" coords="205,56,374,83"/>
-<area shape="rect" id="node4" href="$ntwpr__wg_8c.html#a5c8e2ee5ea6ae1d95077293d28357a47" title="Exports the edges to a text file at exportPath. " alt="" coords="204,107,375,133"/>
+<area shape="rect" id="node2" href="$ntwpr__wg_8c.html#a79470f4f698059985cb8fef3ed7d507f" title="Loads a web graph in memory using the CRS data structure and creates color vectors. " alt="" coords="208,5,419,32"/>
+<area shape="rect" id="node3" href="$ntwpr__wg_8c.html#a7de28416dbf08fff7b53404ca887f2f7" title="Loads a web graph in memory using the CRS data structure. " alt="" coords="230,56,397,83"/>
+<area shape="rect" id="node5" href="$ntwpr__wg_8c.html#ae1e79e9dc654e3514269d78748e4a394" title="Exports the full graph matrix of a NTWPR_WGFile to the file at exportPath. " alt="" coords="227,107,399,133"/>
+<area shape="rect" id="node6" href="$ntwpr__wg_8c.html#a5c8e2ee5ea6ae1d95077293d28357a47" title="Exports the edges to a text file at exportPath. " alt="" coords="227,157,400,184"/>
+<area shape="rect" id="node4" href="$NTWPRcalc_8c.html#a9a3bceb40e284c86f801493a79f051e3" title="A program that calculates pageranks of web&#45;graph files. " alt="" coords="467,56,517,83"/>
 </map>

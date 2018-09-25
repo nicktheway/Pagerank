@@ -1,3 +1,4 @@
 <map id="NTWPR_WGF_fclose" name="NTWPR_WGF_fclose">
-<area shape="rect" id="node2" href="$ntwpr__wg_8c.html#ae222205d7ec37b1cf59d341ab10d96ae" title="Creates a web graph file with the transpose of the web graph in origWGFPath. " alt="" coords="201,5,424,32"/>
+<area shape="rect" id="node2" href="$ntwpr__wg_8c.html#ae222205d7ec37b1cf59d341ab10d96ae" title="Creates a web graph file with the transpose of the web graph in origWGFPath. " alt="" coords="205,5,433,32"/>
+<area shape="rect" id="node3" href="$NTWPRcalc_8c.html#a9a3bceb40e284c86f801493a79f051e3" title="A program that calculates pageranks of web&#45;graph files. " alt="" coords="294,56,345,83"/>
 </map>

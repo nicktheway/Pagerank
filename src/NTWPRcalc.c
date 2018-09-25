@@ -12,6 +12,13 @@
 #include "../include/ntw_collections.h"
 #include "../include/ntw_debug.h"
 
+/**
+ * @brief A program that calculates pageranks of web-graph files.
+ * 
+ * @param argc The number of arguments passed when executing the program.
+ * @param argv The input arguments.
+ * @return int Usually zero if the program terminated successfully, 1 if not.
+ */
 int main(int argc, char const *argv[argc+1])
 {
     const double delta_default = 1e-18;
