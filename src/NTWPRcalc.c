@@ -83,6 +83,12 @@ int main(int argc, char const *argv[argc+1])
     
     ntw_vector* colors = NTW_CRS_getColoredGroups(myCRS);
 
+    ntw_CRSReshapeSequence* reshape_seq = NTW_CRS_getColorOptimizedIds(colors, myCRS->node_num);
+    NTW_CRS_printFullMatrix(log_fp, myCRS);
+    fprintf(log_fp, "\n-------------\n");
+    NTW_CRS_IdReshape(myCRS, reshape_seq);
+    NTW_CRS_printFullMatrix(log_fp, myCRS);
+
     fprintf(log_fp, "NTWPR_pagerank:\n");
     clock_gettime(CLOCK_MONOTONIC, &start);
     double* pr = NTWPR_pagerank(myCRS, tel_coeff, delta, colors, log_fp);
@@ -92,7 +98,7 @@ int main(int argc, char const *argv[argc+1])
     NTW_DEBUG_printBinaryDoubleArray(pagerank_file_path, myCRS->node_num, pr);
 
     
-    printf("ZEHA: %lu\n", colors->length);
+    printf("Color groups: %lu\n", colors->length);
     for (uint64_t i = 0; i < colors->length; i++)
     {
         fprintf(log_fp, "\t%lu\n", ((ntw_vector *) colors->data[i])->length);
@@ -101,6 +107,7 @@ int main(int argc, char const *argv[argc+1])
         free(colors->data[i]);
     }
     
+    free(reshape_seq);
     NTW_vector_free(colors);
     free(colors);
 	free(pr);

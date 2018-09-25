@@ -230,6 +230,104 @@ ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs)
     return colors;
 }
 
+ntw_CRSReshapeSequence* NTW_CRS_getColorOptimizedIds(ntw_vector* colors, const uint32_t nodes)
+{
+    // Make a new temporary crs holder.
+    uint32_t* optimized_sequence = calloc(nodes, sizeof *optimized_sequence);
+    uint32_t* look_ups = calloc(nodes, sizeof *look_ups);
+    ntw_CRSReshapeSequence* reshape_seq = calloc(1, sizeof *reshape_seq);
+    if (!optimized_sequence || !look_ups || !reshape_seq)
+    {
+        fprintf(stderr, "%s: Error at allocating memory for the reshape sequence.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+    uint32_t node_counter = 0;
+    for (uint64_t color = 0; color < colors->length; color++)
+    {
+        uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
+        for (uint64_t groupEl = 0; groupEl < groupSize; groupEl++)
+        {
+            const uint64_t node = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];
+            optimized_sequence[node_counter] = (uint32_t) node;
+            look_ups[node] = node_counter;
+            node_counter++;
+        }
+    }
+    reshape_seq->new_pos = optimized_sequence;
+    reshape_seq->look_up = look_ups;
+    reshape_seq->node_num = nodes;
+
+    return reshape_seq;
+}
+
+void NTW_CRS_RowReshape(ntw_crs* restrict crs, const uint32_t* const rowIdArray)
+{
+    uint32_t* row_ptr = calloc(crs->node_num+1, sizeof *row_ptr);
+    uint32_t* col_ind = calloc(crs->edge_num, sizeof *col_ind);
+    double* val = calloc(crs->edge_num, sizeof *val);
+
+    if (!row_ptr || !col_ind || !val)
+    {
+        fprintf(stderr, "%s: Error at allocating memory for the reshape operation.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+
+    uint32_t reshaped_edges = 0;
+    for (uint32_t i = 0; i < crs->node_num; i++)
+    {
+        uint32_t current_element = rowIdArray[i];
+        for (uint32_t j = crs->row_ptr[current_element]; j < crs->row_ptr[current_element+1]; j++)
+        {
+            col_ind[reshaped_edges] = crs->col_ind[j];
+            val[reshaped_edges] = crs->val[j];
+            reshaped_edges++;
+        }
+        row_ptr[i+1] = reshaped_edges;
+    }
+
+    free(crs->val);
+    free(crs->col_ind);
+    free(crs->row_ptr);
+
+    crs->val = val;
+    crs->col_ind = col_ind;
+    crs->row_ptr = row_ptr;
+}
+
+void NTW_CRS_IdReshape(ntw_crs* restrict crs, const ntw_CRSReshapeSequence* const reshapeData)
+{
+    uint32_t* row_ptr = calloc(crs->node_num+1, sizeof *row_ptr);
+    uint32_t* col_ind = calloc(crs->edge_num, sizeof *col_ind);
+    double* val = calloc(crs->edge_num, sizeof *val);
+
+    if (!row_ptr || !col_ind || !val)
+    {
+        fprintf(stderr, "%s: Error at allocating memory for the reshape operation.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+
+    uint32_t reshaped_edges = 0;
+    for (uint32_t i = 0; i < crs->node_num; i++)
+    {
+        uint32_t current_element = reshapeData->new_pos[i];
+        for (uint32_t j = crs->row_ptr[current_element]; j < crs->row_ptr[current_element+1]; j++)
+        {
+            col_ind[reshaped_edges] = reshapeData->look_up[crs->col_ind[j]];
+            val[reshaped_edges] = crs->val[j];
+            reshaped_edges++;
+        }
+        row_ptr[i+1] = reshaped_edges;
+    }
+
+    free(crs->val);
+    free(crs->col_ind);
+    free(crs->row_ptr);
+
+    crs->val = val;
+    crs->col_ind = col_ind;
+    crs->row_ptr = row_ptr;
+}
+
 void NTW_CRS_print(FILE* restrict stream, const ntw_crs crs[static 1])
 {
     fprintf(stream, "Nodes: %u, Edges: %u\nColumn indeces:\n", crs->node_num, crs->edge_num);

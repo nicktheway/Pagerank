@@ -47,6 +47,17 @@ typedef struct ntw_CRSEdge
 } ntw_CRSEdge;
 
 /**
+ * @brief A struct for fast crs id reshaping.
+ * 
+ */
+typedef struct ntw_CRSReshapeSequence
+{
+    uint32_t node_num; /**< The number of elements of @a new_pos and @a look_up arrays. */
+    uint32_t* restrict new_pos; /**< The new id at each index. */
+    uint32_t* restrict look_up; /**< Where the old id will be. */
+} ntw_CRSReshapeSequence;
+
+/**
  * @brief Creates a new CRS structure to store a matrix.
  * 
  * Should be freed using the NTW_CRS_free when non needed anymore.
@@ -148,10 +159,44 @@ uint64_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* rest
 /**
  * @brief Divides the @a crs matrix into groups with lower-only dependencies.
  * 
+ * For example: a node with color 3 will only have dependencies with nodes of colors 1 and 2.
+ * 
  * @param crs The crs representation of the matrix.
  * @return ntw_vector* A vector containing the groups in ntw_vector datasets.
  */
 ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs);
+
+/**
+ * @brief How the crs should be reshaped for color optimization?
+ * 
+ * Rebasing the crs based on the returned sequence should reduce cache-misses 
+ * resulting from color based access to the matrix.
+ * 
+ * Don't forget to free() the returned sequence when not needed anymore.
+ * 
+ * @param colors The color groups of the nodes.
+ * @param nodes The number of nodes in the matrix.
+ * @return The optimized index based sequence of nodes.
+ */
+ntw_CRSReshapeSequence* NTW_CRS_getColorOptimizedIds(ntw_vector* colors, const uint32_t nodes);
+
+/**
+ * @brief Reshapes the crs matrix' rows based on @a rowIdArray.
+ * 
+ * Assumes that the @a rowIdArray has at least @a crs->node_num elements.
+ * 
+ * @param crs The crs to be reshaped.
+ * @param rowIdArray A vector with the id's of the new row sequence.
+ */
+void NTW_CRS_RowReshape(ntw_crs* restrict crs, const uint32_t* const rowIdArray);
+
+/**
+ * @brief Reshapes the crs matrix' id's based on @a reshapeData.
+ * 
+ * @param crs The crs to be reshaped.
+ * @param reshapeData How the id's will change.
+ */
+void NTW_CRS_IdReshape(ntw_crs* restrict crs, const ntw_CRSReshapeSequence* const reshapeData);
 
 /**
  * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.

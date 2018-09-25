@@ -1,122 +1,73 @@
-File: ./data/WGFiles/web-Google.wg, Nodes: 875713, Edges: 4563235
-Load to crs time: 93.257597 ms
+File: ./data/WGFiles/input_test.wg, Nodes: 9, Edges: 10
+Load to crs time: 0.004156 ms
+0.00	1.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	1.00	1.00	0.00	0.00	0.00	0.00	0.00	
+0.00	1.00	0.00	1.00	0.00	0.00	0.00	0.00	0.00	
+1.00	1.00	0.00	1.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	1.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+1.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+
+
+-------------
+0.00	0.00	0.00	0.00	0.00	1.00	0.00	0.00	0.00	
+0.00	1.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	
+1.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+0.00	0.00	0.00	0.00	0.00	1.00	0.00	0.00	1.00	
+1.00	0.00	0.00	0.00	0.00	1.00	0.00	0.00	1.00	
+
 NTWPR_pagerank:
-Make graph stochastic time: 45.053104 ms
-Iteration: 81.381370 ms	Convergence's delta: 1.78e-06
-Iteration: 76.054974 ms	Convergence's delta: 5.65e-07
-Iteration: 79.486802 ms	Convergence's delta: 8.33e-08
-Iteration: 78.095499 ms	Convergence's delta: 1.30e-08
-Iteration: 78.377656 ms	Convergence's delta: 2.61e-09
-Iteration: 78.734332 ms	Convergence's delta: 7.72e-10
-Iteration: 79.436524 ms	Convergence's delta: 2.75e-10
-Iteration: 76.266989 ms	Convergence's delta: 1.08e-10
-Iteration: 75.794820 ms	Convergence's delta: 4.49e-11
-Iteration: 77.460791 ms	Convergence's delta: 1.94e-11
-Iteration: 76.167648 ms	Convergence's delta: 8.62e-12
-Iteration: 75.433148 ms	Convergence's delta: 3.94e-12
-Iteration: 75.434103 ms	Convergence's delta: 1.83e-12
-Iteration: 75.522828 ms	Convergence's delta: 8.72e-13
-Iteration: 75.508114 ms	Convergence's delta: 4.18e-13
-Iteration: 75.121315 ms	Convergence's delta: 2.07e-13
-Iteration: 77.216664 ms	Convergence's delta: 1.02e-13
-Iteration: 76.724984 ms	Convergence's delta: 5.25e-14
-Iteration: 75.960284 ms	Convergence's delta: 2.67e-14
-Iteration: 75.273919 ms	Convergence's delta: 1.42e-14
-Iteration: 35.584878 ms	Convergence's delta: 7.35e-15
-Iteration: 34.356344 ms	Convergence's delta: 3.96e-15
-Iteration: 34.322702 ms	Convergence's delta: 2.09e-15
-Iteration: 34.393458 ms	Convergence's delta: 1.18e-15
-Iteration: 34.494340 ms	Convergence's delta: 6.43e-16
-Iteration: 35.039752 ms	Convergence's delta: 3.77e-16
-Iteration: 34.472447 ms	Convergence's delta: 2.10e-16
-Iteration: 34.187941 ms	Convergence's delta: 1.26e-16
-Iteration: 34.318986 ms	Convergence's delta: 7.15e-17
-Iteration: 34.339853 ms	Convergence's delta: 4.39e-17
-Iteration: 1.721485 ms	Convergence's delta: 2.33e-17
-Iteration: 1.459807 ms	Convergence's delta: 1.41e-17
-Iteration: 1.423403 ms	Convergence's delta: 8.17e-18
-Iteration: 1.411057 ms	Convergence's delta: 5.20e-18
-Iteration: 1.438642 ms	Convergence's delta: 3.02e-18
-Iteration: 1.389597 ms	Convergence's delta: 1.94e-18
-Iteration: 1.380885 ms	Convergence's delta: 1.13e-18
-Iteration: 1.367815 ms	Convergence's delta: 7.26e-19
-Whole pagerank time: 1953.515684 ms
-	251053
-	66521
-	65904
-	38981
-	32091
-	26015
-	21473
-	19550
-	15975
-	16136
-	13490
-	12481
-	13339
-	10928
-	9924
-	9254
-	9707
-	8360
-	10438
-	8435
-	9059
-	7569
-	8372
-	7666
-	10120
-	7529
-	8621
-	7704
-	7631
-	7469
-	6167
-	6623
-	6353
-	7043
-	6143
-	5744
-	5375
-	5467
-	4962
-	4918
-	4168
-	6177
-	4085
-	4760
-	4698
-	3930
-	4147
-	3407
-	4367
-	3024
-	4507
-	3218
-	3319
-	2715
-	2330
-	1748
-	1724
-	1385
-	2788
-	1579
-	1738
-	987
-	956
-	992
-	501
-	662
-	598
-	230
-	153
-	135
-	27
-	43
-	6
-	8
-	3
-	4
-	3
+Make graph stochastic time: 0.000247 ms
+Iteration: 0.007209 ms	Convergence's delta: 3.77e-02
+Iteration: 0.001741 ms	Convergence's delta: 5.43e-04
+Iteration: 0.001541 ms	Convergence's delta: 1.18e-04
+Iteration: 0.001537 ms	Convergence's delta: 3.21e-05
+Iteration: 0.001593 ms	Convergence's delta: 1.65e-05
+Iteration: 0.001531 ms	Convergence's delta: 7.04e-06
+Iteration: 0.001536 ms	Convergence's delta: 3.04e-06
+Iteration: 0.001705 ms	Convergence's delta: 1.34e-06
+Iteration: 0.001528 ms	Convergence's delta: 5.85e-07
+Iteration: 0.001591 ms	Convergence's delta: 2.56e-07
+Iteration: 0.001585 ms	Convergence's delta: 1.12e-07
+Iteration: 0.001553 ms	Convergence's delta: 4.90e-08
+Iteration: 0.001541 ms	Convergence's delta: 2.14e-08
+Iteration: 0.001530 ms	Convergence's delta: 9.37e-09
+Iteration: 0.001526 ms	Convergence's delta: 4.10e-09
+Iteration: 0.001537 ms	Convergence's delta: 1.79e-09
+Iteration: 0.001537 ms	Convergence's delta: 7.84e-10
+Iteration: 0.001526 ms	Convergence's delta: 3.43e-10
+Iteration: 0.001532 ms	Convergence's delta: 1.50e-10
+Iteration: 0.001525 ms	Convergence's delta: 6.56e-11
+Iteration: 0.001598 ms	Convergence's delta: 2.87e-11
+Iteration: 0.001535 ms	Convergence's delta: 1.25e-11
+Iteration: 0.001512 ms	Convergence's delta: 5.49e-12
+Iteration: 0.001515 ms	Convergence's delta: 2.40e-12
+Iteration: 0.001529 ms	Convergence's delta: 1.05e-12
+Iteration: 0.001534 ms	Convergence's delta: 4.59e-13
+Iteration: 0.001519 ms	Convergence's delta: 2.01e-13
+Iteration: 0.001515 ms	Convergence's delta: 8.78e-14
+Iteration: 0.001514 ms	Convergence's delta: 3.84e-14
+Iteration: 0.001515 ms	Convergence's delta: 1.68e-14
+Iteration: 0.001508 ms	Convergence's delta: 7.34e-15
+Iteration: 0.001518 ms	Convergence's delta: 3.21e-15
+Iteration: 0.001522 ms	Convergence's delta: 1.40e-15
+Iteration: 0.001510 ms	Convergence's delta: 6.14e-16
+Iteration: 0.001508 ms	Convergence's delta: 2.69e-16
+Iteration: 0.001510 ms	Convergence's delta: 1.18e-16
+Iteration: 0.001644 ms	Convergence's delta: 5.14e-17
+Iteration: 0.001508 ms	Convergence's delta: 2.25e-17
+Iteration: 0.001514 ms	Convergence's delta: 9.83e-18
+Iteration: 0.001509 ms	Convergence's delta: 4.30e-18
+Iteration: 0.001520 ms	Convergence's delta: 1.88e-18
+Iteration: 0.001513 ms	Convergence's delta: 8.23e-19
+Whole pagerank time: 0.103447 ms
+	5
+	2
 	1
-	0
+	1
