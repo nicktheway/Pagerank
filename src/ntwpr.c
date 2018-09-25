@@ -11,7 +11,10 @@
 #include <time.h>
 #include <string.h>
 #include <math.h>
-#include <omp.h>
+#include <cilk/cilk_api.h>
+#include <cilk/reducer.h>
+#include <cilk/reducer_opadd.h>
+#include <cilk/cilk.h>
 
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double e, const ntw_vector* const colors, FILE* stream)
 {
@@ -76,12 +79,14 @@ double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], con
     double sqnorm_diff = 0;
     uint64_t first_group_node = 0;
     uint64_t next = 0;
+    CILK_C_REDUCER_OPADD(re_sqnorm_diff, double, 0);
+    CILK_C_REGISTER_REDUCER(re_sqnorm_diff);
     for (uint64_t color = 0; color < colors->length; color++)
     {
         const uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
         next = first_group_node + groupSize;
-        #pragma omp parallel for num_threads(8) if (groupSize > 600) reduction (+:sqnorm_diff)
-        for (uint64_t i = first_group_node; i < next; i++)
+ 
+        cilk_for (uint64_t i = first_group_node; i < next; i++)
         {
             // uint64_t i = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];
             if (d[i]) continue;
@@ -104,13 +109,14 @@ double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], con
             // printf("\nnum = %0.3f\t den=%0.3f\n", num, den);
             x_vec[i] = num / den;
             const double partDiff = (x_vec[i] - old_xi) * (x_vec[i] - old_xi);
-            sqnorm_diff += partDiff;
+            REDUCER_VIEW(re_sqnorm_diff) += partDiff;
 
             dd[i] += partDiff;
         }
         first_group_node = next;
     }
-    
+    CILK_C_UNREGISTER_REDUCER(re_sqnorm_diff);
+    sqnorm_diff = REDUCER_VIEW(re_sqnorm_diff);
     // NTWM_printDV(stdout, matrix->node_num, x_vec, 3);
     return sqnorm_diff;
 }

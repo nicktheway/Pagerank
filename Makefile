@@ -6,7 +6,7 @@ ifeq ($(DEBUG), 1)
 else
     CFLAGS= -std=c11 -D_POSIX_C_SOURCE=199309L -Wall -O3
 endif
-LIBS= -lm -fopenmp
+LIBS= -lm -fcilkplus
 
 # Files
 _DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h ntw_debug.h ntw_collections.h
