@@ -187,6 +187,14 @@ void NTW_CRS_print(FILE* restrict stream, const ntw_crs crs[static 1]);
 void NTW_CRS_printFullMatrix(FILE* restrict stream, const ntw_crs crs[static 1]);
 
 /**
+ * @brief Transposes the edges of a graph described with @a edges.
+ * 
+ * @param n The number of edges in the graph.
+ * @param edges The edges of the graph.
+ */
+void NTW_CRS_transposeEdges(const uint64_t n, ntw_CRSEdge edges[static n]);
+
+/**
  * @brief Compares two edges, used for sorting with qsort().
  * 
  * @param edgeA

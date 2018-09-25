@@ -74,10 +74,11 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double 
 double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1], const ntw_vector* const colors)
 {
     double sqnorm_diff = 0;
-    //#pragma omp parallel for num_threads(8) if (0 > 1)
-    for (uint64_t color = 0; color < colors->length; color++){
+
+    for (uint64_t color = 0; color < colors->length; color++)
+    {
         uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
-        #pragma omp parallel for num_threads(8) if (groupSize > 500)
+        #pragma omp parallel for num_threads(8) if (groupSize > 500) reduction (+:sqnorm_diff)
         for (uint64_t groupEl = 0; groupEl < groupSize; groupEl++)
         {
             uint64_t i = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];

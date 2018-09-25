@@ -172,7 +172,7 @@ ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs)
     uint32_t currentEdge = 0;
     for (uint32_t i = 0; i < crs->node_num; i++)
     {
-        for (uint32_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; i++)
+        for (uint32_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
         {
             edges[currentEdge].nodeA = i; 
             edges[currentEdge].nodeB = crs->col_ind[j];
@@ -181,6 +181,7 @@ ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs)
     }
 
     qsort(edges, currentEdge, sizeof(edges[0]), NTW_CRSEdgeCompareForT);
+    NTW_CRS_transposeEdges(currentEdge, edges);
 
     ntw_vector* colors = calloc(1, sizeof *colors);
     uint32_t* nodeColors = calloc(crs->node_num, sizeof *nodeColors);
@@ -283,6 +284,16 @@ void NTW_CRS_printFullMatrix(FILE* restrict stream, const ntw_crs crs[static 1])
 		fprintf(stream, "\n");
 	}
 	fprintf(stream, "\n");
+}
+
+void NTW_CRS_transposeEdges(const uint64_t n, ntw_CRSEdge edges[static n])
+{
+	for (uint64_t i = 0; i < n; i++)
+	{
+		uint32_t temp = edges[i].nodeA;
+		edges[i].nodeA = edges[i].nodeB;
+		edges[i].nodeB = temp;
+	}
 }
 
 int NTW_CRSEdgeCompareForT(const void* restrict edgeA, const void* restrict edgeB)

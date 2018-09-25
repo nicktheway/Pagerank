@@ -91,14 +91,16 @@ int main(int argc, char const *argv[argc+1])
     
     NTW_DEBUG_printBinaryDoubleArray(pagerank_file_path, myCRS->node_num, pr);
 
-    //NTW_DEBUG_printArray_uint64(stdout,(uint64_t *)((ntw_vector *) colors->data[281])->data, ((ntw_vector *) colors->data[281])->length);
-
+    
+    printf("ZEHA: %lu\n", colors->length);
     for (uint64_t i = 0; i < colors->length; i++)
     {
+        fprintf(log_fp, "\t%lu\n", ((ntw_vector *) colors->data[i])->length);
+        //NTW_DEBUG_printArray_uint64(log_fp,(uint64_t *)((ntw_vector *) colors->data[i])->data, ((ntw_vector *) colors->data[i])->length);
         NTW_vector_free(colors->data[i]);
         free(colors->data[i]);
     }
-    printf("ZEHA: %lu\n", colors->length);
+    
     NTW_vector_free(colors);
     free(colors);
 	free(pr);
