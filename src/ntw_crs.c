@@ -6,8 +6,6 @@
  * @date 11-08-2018
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "../include/ntw_crs.h"
 
 ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t rowPtr[static nodeNum+1], uint32_t colInd[static edgeNum], double val[static edgeNum])
@@ -105,6 +103,8 @@ void NTW_CRS_stochasticizeCols(ntw_crs crs[static 1])
 	{
 		counter[crs->col_ind[i]]++;
 	}
+    
+    #pragma omp parallel for num_threads(8)
 	for (uint32_t i = 0; i < crs->edge_num; i++)
 	{
 		if (counter[crs->col_ind[i]])

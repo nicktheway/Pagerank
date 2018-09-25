@@ -81,13 +81,16 @@ int main(int argc, char const *argv[argc+1])
     clock_gettime(CLOCK_MONOTONIC, &finish);
     NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Load to crs time", '\n');
     
+    // Data coloring
+    clock_gettime(CLOCK_MONOTONIC, &start);
     ntw_vector* colors = NTW_CRS_getColoredGroups(myCRS);
-
     ntw_CRSReshapeSequence* reshape_seq = NTW_CRS_getColorOptimizedIds(colors, myCRS->node_num);
-    
     NTW_CRS_IdReshape(myCRS, reshape_seq);
+    clock_gettime(CLOCK_MONOTONIC, &finish);
+    fprintf(log_fp, "Color groups: %lu\n", colors->length);
+    NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Data coloring and matrix reshaping time", '\n');
     
-
+    // Pagerank
     fprintf(log_fp, "NTWPR_pagerank:\n");
     clock_gettime(CLOCK_MONOTONIC, &start);
     double* pr = NTWPR_pagerank(myCRS, tel_coeff, delta, colors, log_fp);
@@ -96,8 +99,7 @@ int main(int argc, char const *argv[argc+1])
     
     NTW_DEBUG_printBinaryDoubleArray(pagerank_file_path, myCRS->node_num, pr);
 
-    
-    printf("Color groups: %lu\n", colors->length);
+    // No memory leaks
     for (uint64_t i = 0; i < colors->length; i++)
     {
         //fprintf(log_fp, "\t%lu\n", ((ntw_vector *) colors->data[i])->length);

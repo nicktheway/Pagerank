@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
+#include <omp.h>
 #include "ntw_collections.h"
 
 /**

@@ -21,7 +21,11 @@ for line in logLines:
         dataPath = a[1]
     elif i == 1:
         loadToCrsTime = a[4]
+    elif i == 2:
+        colorGroups = a[2]
     elif i == 3:
+        colorTime = a[6]
+    elif i ==5:
         makeStochasticTime = a[4]
     if a[0] == "Iteration:":
         iterationTimes.append(a[1])
@@ -31,6 +35,8 @@ for line in logLines:
 
 loadToCrsTime = float(loadToCrsTime)
 makeStochasticTime = float(makeStochasticTime)
+colorTime = float(colorTime)
+colorGroups = int(colorGroups)
 
 iterationTimes = np.asarray(list(map(float, iterationTimes)))
 errorProgression = np.asarray(list(map(float, errorProgression)))
@@ -58,9 +64,9 @@ plt.suptitle(dataPath, fontweight='bold')
 plt.show()
 
 prCalcTime = sum(iterationTimes)
-print("Data preperation time:\n\tLoad to memory = %0.2fms\n\tMake matrix stochastic = %0.2fms" % (loadToCrsTime, makeStochasticTime))
+print("Data preperation time:\n\tLoad to memory = %0.2fms\n\tColor data in %d groups = %0.2fms\n\tMake matrix stochastic = %0.2fms" % (loadToCrsTime, colorGroups, colorTime, makeStochasticTime))
 print("Pagerank calculation time: %0.2fms" % prCalcTime)
-print("Total Time = %0.2fms" % (prCalcTime+loadToCrsTime+makeStochasticTime))
+print("Total Time = %0.2fms" % (prCalcTime+loadToCrsTime+makeStochasticTime+colorTime))
 
 pr = np.fromfile(pagerankFilePath, dtype=float)
 
