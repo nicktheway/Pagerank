@@ -186,7 +186,7 @@ void NTWPR_WGF_transposeEdges(const uint64_t n, NTWPR_WGEdge edges[static n]);
  * 
  * @param edgeA
  * @param edgeB
- * @return int edgeA->nodeA - edgeB->nodeB
+ * @return int edgeA->nodeA - edgeB->nodeA
  */
 int NTWPR_WGF_edgeCompare(const void* restrict edgeA, const void* restrict edgeB);
 
@@ -195,7 +195,7 @@ int NTWPR_WGF_edgeCompare(const void* restrict edgeA, const void* restrict edgeB
  * 
  * @param edgeA
  * @param edgeB
- * @return int edgeA->nodeA - edgeB->nodeB
+ * @return int edgeA->nodeB - edgeB->nodeB
  */
 int NTWPR_WGF_edgeCompareForT(const void* restrict edgeA, const void* restrict edgeB);
 

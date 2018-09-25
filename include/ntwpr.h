@@ -8,6 +8,7 @@
 #ifndef NTWPR_H
 #define NTWPR_H 1
 #include "ntwpr_wg.h"
+#include "../include/ntw_collections.h"
 
 /**
  * @brief Calculates the pagerank of the nodes of a web graph.
@@ -15,10 +16,11 @@
  * @param webGraph The web graf in ntw_crs representation.
  * @param c The teleportation coefficient.
  * @param e The convergence's tolerance.
+ * @param colors The color groups of the nodes.
  * @param stream Opened FILE* stream for printing results.
  * @return double* The calculated pagerank vector.
  */
-double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double e, FILE* stream);
+double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double e, const ntw_vector* const colors, FILE* stream);
 
 /**
  * @brief Calculates one iteration of @f$(I-A)x = b@f$
@@ -32,9 +34,10 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double 
  * @param b_vec The vector b.
  * @param d The vector containing the state of the nodes (converged or not).
  * @param dd The vector that contains accumulatively the latest changes of each node's pr.
+ * @param colors The color groups of the nodes.
  * @return double The squared norm difference of the old and new @a x_vec.
  */
-double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1]);
+double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1], const ntw_vector* const colors);
 
 /**
  * @brief Returns the squered norm of a vector.

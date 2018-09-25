@@ -4,9 +4,9 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 
-pagerankFilePath = "./results/serial/pageranks/web-Google.data"
+pagerankFilePath = "./results/pageranks/result.data"
 validationFilePath = "./results/serial/result.data"
-logFilePath = "./results/serial/logs/web-Google.txt"
+logFilePath = "./results/logs/log.txt"
 
 iterationTimes = []
 errorProgression = []
@@ -58,12 +58,11 @@ plt.suptitle(dataPath, fontweight='bold')
 plt.show()
 
 prCalcTime = sum(iterationTimes)
-print("Data preperation time:\n\tLoad from memory = %0.2fms\n\tMake matrix stochastic = %0.2fms" % (loadToCrsTime, makeStochasticTime))
+print("Data preperation time:\n\tLoad to memory = %0.2fms\n\tMake matrix stochastic = %0.2fms" % (loadToCrsTime, makeStochasticTime))
 print("Pagerank calculation time: %0.2fms" % prCalcTime)
 print("Total Time = %0.2fms" % (prCalcTime+loadToCrsTime+makeStochasticTime))
 
 pr = np.fromfile(pagerankFilePath, dtype=float)
-pr_cor = np.fromfile(validationFilePath, dtype=float)
 
 #pr_cor = np.fromfile(validationFilePath, dtype=float)
 

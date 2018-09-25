@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include "ntw_collections.h"
 
 /**
  * @brief A Compressed Row Storage struct.
@@ -32,6 +33,18 @@ typedef struct ntw_crs
     uint32_t* restrict col_ind;  /**< A vector for storing the columns of the non zero values. */
     double* restrict val;        /**< The non zero values of the matrix. */
 } ntw_crs;
+
+/**
+ * @brief A struct for storing web-graph edges.
+ *
+ * Useful for preparing edges before applying a Pagerank algorithm.
+ * For example, the gauss sneidel method needs sorted edges.
+ */
+typedef struct ntw_CRSEdge
+{
+	uint32_t nodeA; /**< The first node of the edge. */
+	uint32_t nodeB; /**< The second node of the edge. */
+} ntw_CRSEdge;
 
 /**
  * @brief Creates a new CRS structure to store a matrix.
@@ -133,6 +146,14 @@ uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1]);
 uint64_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum);
 
 /**
+ * @brief Divides the @a crs matrix into groups with lower-only dependencies.
+ * 
+ * @param crs The crs representation of the matrix.
+ * @return ntw_vector* A vector containing the groups in ntw_vector datasets.
+ */
+ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs);
+
+/**
  * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.
  * 
  * Use it sparingly because it's relatively slow. (Depends on how sparse the
@@ -164,5 +185,14 @@ void NTW_CRS_print(FILE* restrict stream, const ntw_crs crs[static 1]);
  * @param crs The CRS of the matrix that will be visualized.
  */
 void NTW_CRS_printFullMatrix(FILE* restrict stream, const ntw_crs crs[static 1]);
+
+/**
+ * @brief Compares two edges, used for sorting with qsort().
+ * 
+ * @param edgeA
+ * @param edgeB
+ * @return int edgeA->nodeB - edgeB->nodeB
+ */
+int NTW_CRSEdgeCompareForT(const void* restrict edgeA, const void* restrict edgeB);
 
 #endif

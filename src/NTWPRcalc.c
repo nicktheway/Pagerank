@@ -74,23 +74,24 @@ int main(int argc, char const *argv[argc+1])
 
     // Structs used for time point values.
     struct timespec start, finish;
-    ntw_vector* colors = calloc(1, sizeof *colors);;
 
     // Load it at memory using ntw_crs
     clock_gettime(CLOCK_MONOTONIC, &start);
-    ntw_crs* myCRS = NTWPR_WGF_load2crsColored(file, colors);
+    ntw_crs* myCRS = NTWPR_WGF_load2crs(file);
     clock_gettime(CLOCK_MONOTONIC, &finish);
     NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Load to crs time", '\n');
     
+    ntw_vector* colors = NTW_CRS_getColoredGroups(myCRS);
+
     fprintf(log_fp, "NTWPR_pagerank:\n");
     clock_gettime(CLOCK_MONOTONIC, &start);
-    double* pr = NTWPR_pagerank(myCRS, tel_coeff, delta, log_fp);
+    double* pr = NTWPR_pagerank(myCRS, tel_coeff, delta, colors, log_fp);
     clock_gettime(CLOCK_MONOTONIC, &finish);
     NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Whole pagerank time", '\n');
     
     NTW_DEBUG_printBinaryDoubleArray(pagerank_file_path, myCRS->node_num, pr);
 
-    NTW_DEBUG_printArray_uint64(stdout,(uint64_t *)((ntw_vector *) colors->data[281])->data, ((ntw_vector *) colors->data[281])->length);
+    //NTW_DEBUG_printArray_uint64(stdout,(uint64_t *)((ntw_vector *) colors->data[281])->data, ((ntw_vector *) colors->data[281])->length);
 
     for (uint64_t i = 0; i < colors->length; i++)
     {

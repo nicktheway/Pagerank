@@ -160,6 +160,75 @@ double NTW_CRS_valueAt(const ntw_crs crs[static 1], uint32_t row, uint32_t col)
     return 0;
 }
 
+ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs)
+{
+    ntw_CRSEdge* edges = malloc(crs->edge_num * sizeof *edges);
+    if (!edges)
+    {
+        fprintf(stderr, "%s: Not enough memory for data coloring.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+    
+    uint32_t currentEdge = 0;
+    for (uint32_t i = 0; i < crs->node_num; i++)
+    {
+        for (uint32_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; i++)
+        {
+            edges[currentEdge].nodeA = i; 
+            edges[currentEdge].nodeB = crs->col_ind[j];
+            currentEdge++;
+        }
+    }
+
+    qsort(edges, currentEdge, sizeof(edges[0]), NTW_CRSEdgeCompareForT);
+
+    ntw_vector* colors = calloc(1, sizeof *colors);
+    uint32_t* nodeColors = calloc(crs->node_num, sizeof *nodeColors);
+
+    if (!colors || !nodeColors)
+    {
+        fprintf(stderr, "%s: Error when allocating memory for data coloring.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+    // Reset the edge counter.
+    currentEdge = 0;
+    for (uint64_t i = 0; i < crs->node_num; i++)
+    {
+        uint32_t maxColorID = 0;
+        for (uint64_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
+        {
+            if (nodeColors[crs->col_ind[j]] > maxColorID)
+            {
+                maxColorID = nodeColors[crs->col_ind[j]];
+            }
+        }
+
+        for (uint64_t j = currentEdge; edges[j].nodeA == i; j++, currentEdge++)
+        {
+            if (nodeColors[edges[j].nodeB] > maxColorID)
+            {
+                maxColorID = nodeColors[edges[j].nodeB];
+            }
+        }
+        nodeColors[i] = maxColorID + 1;
+        if (nodeColors[i] >= colors->length)
+        {
+            ntw_vector* newColor = calloc(1, sizeof *newColor);
+            if (!newColor)
+            {
+                fprintf(stderr, "%s: Error when allocating memory for coloring.\n", __func__);
+                exit(EXIT_FAILURE);
+            }
+            NTW_vector_add(colors, newColor);
+        }
+        NTW_vector_add(colors->data[nodeColors[i]-1], (void *) i);
+    }
+    free(edges);
+    free(nodeColors);
+
+    return colors;
+}
+
 void NTW_CRS_print(FILE* restrict stream, const ntw_crs crs[static 1])
 {
     fprintf(stream, "Nodes: %u, Edges: %u\nColumn indeces:\n", crs->node_num, crs->edge_num);
@@ -214,4 +283,12 @@ void NTW_CRS_printFullMatrix(FILE* restrict stream, const ntw_crs crs[static 1])
 		fprintf(stream, "\n");
 	}
 	fprintf(stream, "\n");
+}
+
+int NTW_CRSEdgeCompareForT(const void* restrict edgeA, const void* restrict edgeB)
+{
+	ntw_CRSEdge* a = (ntw_CRSEdge*) edgeA;
+	ntw_CRSEdge* b = (ntw_CRSEdge*) edgeB;
+
+	return (a->nodeB - b->nodeB);
 }
