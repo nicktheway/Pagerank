@@ -74,14 +74,16 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double 
 double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1], const ntw_vector* const colors)
 {
     double sqnorm_diff = 0;
-
+    uint64_t first_group_node = 0;
+    uint64_t next = 0;
     for (uint64_t color = 0; color < colors->length; color++)
     {
-        uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
+        const uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
+        next = first_group_node + groupSize;
         #pragma omp parallel for num_threads(8) if (groupSize > 500) reduction (+:sqnorm_diff)
-        for (uint64_t groupEl = 0; groupEl < groupSize; groupEl++)
+        for (uint64_t i = first_group_node; i < next; i++)
         {
-            uint64_t i = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];
+            // uint64_t i = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];
             if (d[i]) continue;
             double den = 1.0;
             
@@ -106,6 +108,7 @@ double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], con
 
             dd[i] += partDiff;
         }
+        first_group_node = next;
     }
     
     // NTWM_printDV(stdout, matrix->node_num, x_vec, 3);

@@ -84,10 +84,10 @@ int main(int argc, char const *argv[argc+1])
     ntw_vector* colors = NTW_CRS_getColoredGroups(myCRS);
 
     ntw_CRSReshapeSequence* reshape_seq = NTW_CRS_getColorOptimizedIds(colors, myCRS->node_num);
-    NTW_CRS_printFullMatrix(log_fp, myCRS);
-    fprintf(log_fp, "\n-------------\n");
+    
+    
     NTW_CRS_IdReshape(myCRS, reshape_seq);
-    NTW_CRS_printFullMatrix(log_fp, myCRS);
+    
 
     fprintf(log_fp, "NTWPR_pagerank:\n");
     clock_gettime(CLOCK_MONOTONIC, &start);
@@ -101,7 +101,7 @@ int main(int argc, char const *argv[argc+1])
     printf("Color groups: %lu\n", colors->length);
     for (uint64_t i = 0; i < colors->length; i++)
     {
-        fprintf(log_fp, "\t%lu\n", ((ntw_vector *) colors->data[i])->length);
+        //fprintf(log_fp, "\t%lu\n", ((ntw_vector *) colors->data[i])->length);
         //NTW_DEBUG_printArray_uint64(log_fp,(uint64_t *)((ntw_vector *) colors->data[i])->data, ((ntw_vector *) colors->data[i])->length);
         NTW_vector_free(colors->data[i]);
         free(colors->data[i]);
