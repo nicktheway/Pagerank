@@ -12,6 +12,13 @@
 #include "../include/ntwpr_wg.h"
 #include "../include/ntw_debug.h"
 
+/**
+ * @brief A program that creates web graph files supported by this API.
+ * 
+ * @param argc The number of arguments passed when executing the program.
+ * @param argv The input arguments.
+ * @return int Usually zero if the program terminated successfully, 1 if not.
+ */
 int main(int argc, const char* argv[argc+1])
 {
     int n = 0;
@@ -30,6 +37,7 @@ int main(int argc, const char* argv[argc+1])
     NTWPR_WGF_convertSU(argv[1], argv[2], n);
     clock_gettime(CLOCK_MONOTONIC, &finish);
 
+    // Some closing messages to stdout.
     fprintf(stdout, "Convertion successfully completed!\n");
     NTW_DEBUG_printElapsedTime(stdout, start, finish, "Convertion time", '\n');
     

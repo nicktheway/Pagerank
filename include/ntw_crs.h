@@ -11,6 +11,9 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
+#include <omp.h>
+#include "ntw_collections.h"
 
 /**
  * @brief A Compressed Row Storage struct.
@@ -32,6 +35,29 @@ typedef struct ntw_crs
     uint32_t* restrict col_ind;  /**< A vector for storing the columns of the non zero values. */
     double* restrict val;        /**< The non zero values of the matrix. */
 } ntw_crs;
+
+/**
+ * @brief A struct for storing web-graph edges.
+ *
+ * Useful for preparing edges before applying a Pagerank algorithm.
+ * For example, the gauss sneidel method needs sorted edges.
+ */
+typedef struct ntw_CRSEdge
+{
+	uint32_t nodeA; /**< The first node of the edge. */
+	uint32_t nodeB; /**< The second node of the edge. */
+} ntw_CRSEdge;
+
+/**
+ * @brief A struct for fast crs id reshaping.
+ * 
+ */
+typedef struct ntw_CRSReshapeSequence
+{
+    uint32_t node_num; /**< The number of elements of @a new_pos and @a look_up arrays. */
+    uint32_t* restrict new_pos; /**< The new id at each index. */
+    uint32_t* restrict look_up; /**< Where the old id will be. */
+} ntw_CRSReshapeSequence;
 
 /**
  * @brief Creates a new CRS structure to store a matrix.
@@ -128,9 +154,51 @@ uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1]);
  *
  * @param crs
  * @param outIndicesNum Pass the adress of a uint32_t to be filled with the size of the returned array.
- * @return size_t The number of empty rows in the crs matrix.
+ * @return uint64_t The number of empty rows in the crs matrix.
  */
-size_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum);
+uint64_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum);
+
+/**
+ * @brief Divides the @a crs matrix into groups with lower-only dependencies.
+ * 
+ * For example: a node with color 3 will only have dependencies with nodes of colors 1 and 2.
+ * 
+ * @param crs The crs representation of the matrix.
+ * @return ntw_vector* A vector containing the groups in ntw_vector datasets.
+ */
+ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs);
+
+/**
+ * @brief How the crs should be reshaped for color optimization?
+ * 
+ * Rebasing the crs based on the returned sequence should reduce cache-misses 
+ * resulting from color based access to the matrix.
+ * 
+ * Don't forget to free() the returned sequence when not needed anymore.
+ * 
+ * @param colors The color groups of the nodes.
+ * @param nodes The number of nodes in the matrix.
+ * @return The optimized index based sequence of nodes.
+ */
+ntw_CRSReshapeSequence* NTW_CRS_getColorOptimizedIds(ntw_vector* colors, const uint32_t nodes);
+
+/**
+ * @brief Reshapes the crs matrix' rows based on @a rowIdArray.
+ * 
+ * Assumes that the @a rowIdArray has at least @a crs->node_num elements.
+ * 
+ * @param crs The crs to be reshaped.
+ * @param rowIdArray A vector with the id's of the new row sequence.
+ */
+void NTW_CRS_RowReshape(ntw_crs* restrict crs, const uint32_t* const rowIdArray);
+
+/**
+ * @brief Reshapes the crs matrix' id's based on @a reshapeData.
+ * 
+ * @param crs The crs to be reshaped.
+ * @param reshapeData How the id's will change.
+ */
+void NTW_CRS_IdReshape(ntw_crs* restrict crs, const ntw_CRSReshapeSequence* const reshapeData);
 
 /**
  * @brief Returns the value at (@a row, @a col) of the matrix of the CRS.
@@ -164,5 +232,22 @@ void NTW_CRS_print(FILE* restrict stream, const ntw_crs crs[static 1]);
  * @param crs The CRS of the matrix that will be visualized.
  */
 void NTW_CRS_printFullMatrix(FILE* restrict stream, const ntw_crs crs[static 1]);
+
+/**
+ * @brief Transposes the edges of a graph described with @a edges.
+ * 
+ * @param n The number of edges in the graph.
+ * @param edges The edges of the graph.
+ */
+void NTW_CRS_transposeEdges(const uint64_t n, ntw_CRSEdge edges[static n]);
+
+/**
+ * @brief Compares two edges, used for sorting with qsort().
+ * 
+ * @param edgeA
+ * @param edgeB
+ * @return int edgeA->nodeB - edgeB->nodeB
+ */
+int NTW_CRSEdgeCompareForT(const void* restrict edgeA, const void* restrict edgeB);
 
 #endif

@@ -15,6 +15,7 @@ var ntwpr__wg_8h =
     [ "NTWPR_WGF_fclose", "ntwpr__wg_8h.html#adfdab5767853d9fda8f38bca9460ea1f", null ],
     [ "NTWPR_WGF_fopen", "ntwpr__wg_8h.html#ae73521afd221df1b6f0af044c35e2f96", null ],
     [ "NTWPR_WGF_load2crs", "ntwpr__wg_8h.html#a7de28416dbf08fff7b53404ca887f2f7", null ],
+    [ "NTWPR_WGF_load2crsColored", "ntwpr__wg_8h.html#a79470f4f698059985cb8fef3ed7d507f", null ],
     [ "NTWPR_WGF_rewind", "ntwpr__wg_8h.html#a900ec9963949f8e50b80772f502fbc63", null ],
-    [ "NTWPR_WGF_transposeEdges", "ntwpr__wg_8h.html#ac5b7e40ba0184d6a28064dafbb79ce13", null ]
+    [ "NTWPR_WGF_transposeEdges", "ntwpr__wg_8h.html#ae3b87614038cb8386417c85e0c8aaf9d", null ]
 ];

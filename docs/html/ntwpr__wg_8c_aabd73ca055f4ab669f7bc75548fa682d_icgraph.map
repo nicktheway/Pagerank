@@ -1,3 +1,4 @@
 <map id="NTWPR_WGF_edgeCompare" name="NTWPR_WGF_edgeCompare">
-<area shape="rect" id="node2" href="$ntwpr__wg_8c.html#aaa736e093db117a284824bee85784ce3" title="Converts web graph files from the format Stanford U. (SU) used to the NTWPR_WGFile&#39; edge_data file fo..." alt="" coords="248,5,421,32"/>
+<area shape="rect" id="node2" href="$ntwpr__wg_8c.html#aaa736e093db117a284824bee85784ce3" title="Converts web graph files from the format Stanford U. (SU) used to the NTWPR_WGFile&#39; edge_data file fo..." alt="" coords="252,5,431,32"/>
+<area shape="rect" id="node3" href="$WGFcreator_8c.html#ac4ee59bbfff75af29423237c5c582259" title="A program that creates web graph files supported by this API. " alt="" coords="479,5,529,32"/>
 </map>

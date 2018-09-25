@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['node_5fnum',['node_num',['../structntw__crs.html#a36a11fbae59bf6159e40cb18e5f37ada',1,'ntw_crs::node_num()'],['../structNTWPR__WGFile.html#a473237730653419df2494e0f2f52995c',1,'NTWPR_WGFile::node_num()']]],
-  ['nodea',['nodeA',['../structNTWPR__WGEdge.html#a817882eb86490ad61dd36c6ed7ac47f8',1,'NTWPR_WGEdge']]],
-  ['nodeb',['nodeB',['../structNTWPR__WGEdge.html#a0f9b43039574824cc76908125ad3661d',1,'NTWPR_WGEdge']]]
+  ['edge_5fdata',['edge_data',['../structNTWPR__WGFile.html#a00a45d3ce6764e40dcc382f3c5e3c8e9',1,'NTWPR_WGFile']]],
+  ['edge_5fnum',['edge_num',['../structntw__crs.html#a85160ebade6d93ba77c9e90f2f237cea',1,'ntw_crs::edge_num()'],['../structNTWPR__WGFile.html#a76b00f9ef8cd1938f7b9ece2db7c686d',1,'NTWPR_WGFile::edge_num()']]]
 ];

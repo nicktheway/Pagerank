@@ -33,10 +33,11 @@
                 "${workspaceRoot}"
             ],
             "defines": [],
-            "intelliSenseMode": "clang-x64",
+            "intelliSenseMode": "gcc-x64",
             "browse": {
                 "path": [
                     "/usr/include",
+                    "/usr/include/linux",
                     "/usr/local/include",
                     "/usr/lib/gcc/*/*/include",
                     "${workspaceRoot}"

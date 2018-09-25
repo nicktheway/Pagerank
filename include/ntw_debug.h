@@ -9,6 +9,7 @@
 #define NTW_DEBUG_H 1
 
 #include <stdio.h>
+#include <stdint.h>
 #include <time.h>
 
 /**
@@ -31,6 +32,23 @@ void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec sta
  * @param n 
  * @param array 
  */
-void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const size_t n, const double array[static n]);
+void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const uint64_t n, const double array[static n]);
 
+/**
+ * @brief @a array is printed to @a stream.
+ * 
+ * @param stream Where the array will be printed. 
+ * @param array The array to be printed.
+ * @param n The size of the @a array.
+ */
+void NTW_DEBUG_printArray_uint32(FILE* restrict stream, const uint32_t* const array, const uint64_t n);
+
+/**
+ * @brief @a array is printed to @a stream.
+ * 
+ * @param stream Where the array will be printed. 
+ * @param array The array to be printed.
+ * @param n The size of the @a array.
+ */
+void NTW_DEBUG_printArray_uint64(FILE* restrict stream, const uint64_t* const array, const uint64_t n);
 #endif

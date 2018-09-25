@@ -9,8 +9,8 @@ endif
 LIBS= -lm
 
 # Files
-_DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h ntw_debug.h
-_OBJ = ntw_math.o ntw_crs.o ntwpr_wg.o ntwpr.o ntw_debug.o
+_DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h ntw_debug.h ntw_collections.h
+_OBJ = ntw_math.o ntw_crs.o ntwpr_wg.o ntwpr.o ntw_debug.o ntw_collections.o
 _CONVERTER = WGFcreator.o
 _CALCULATOR = NTWPRcalc.o
 

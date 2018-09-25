@@ -13,5 +13,7 @@
     },
     "python.pythonPath": "/usr/bin/python3",
     "python.linting.pylintEnabled": false,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "doxdocgen.generic.authorTag": "@author Nikolaos Katomeris, 8551, ngkatomer@auth.gr",
+    "doxdocgen.generic.dateFormat": "DD-MM-YYYY",
 }

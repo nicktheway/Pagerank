@@ -14,6 +14,7 @@
 #define NTWPR_WG_H 1
 
 #include "ntw_crs.h"
+#include "ntw_collections.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -139,6 +140,17 @@ void NTWPR_WGF_exportSM(NTWPR_WGFile* restrict wgfp, const char exportPath[stati
 ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf);
 
 /**
+ * @brief Loads a web graph in memory using the CRS data structure and creates color vectors.
+ * 
+ * The CRS structure's memory should be freed with NTWPR_CRSfree() later.
+ * 
+ * @param wgf The input web graph data.
+ * @param colors Pointer to the vector that will hold the color groups.
+ * @return ntw_crs* pointing to the loaded CRS or null.
+ */
+ntw_crs* NTWPR_WGF_load2crsColored(NTWPR_WGFile* restrict wgf, ntw_vector* restrict colors);
+
+/**
  * @brief Creates a web graph file with the transpose of the web graph in @a origWGFPath.
  * 
  * If the path is the same the file will be replaced. 
@@ -167,14 +179,14 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
  * @param n The number of edges in the graph.
  * @param edges The edges of the graph.
  */
-void NTWPR_WGF_transposeEdges(const size_t n, NTWPR_WGEdge edges[static n]);
+void NTWPR_WGF_transposeEdges(const uint64_t n, NTWPR_WGEdge edges[static n]);
 
 /**
  * @brief Compares two edges, used for sorting with qsort().
  * 
  * @param edgeA
  * @param edgeB
- * @return int edgeA->nodeA - edgeB->nodeB
+ * @return int edgeA->nodeA - edgeB->nodeA
  */
 int NTWPR_WGF_edgeCompare(const void* restrict edgeA, const void* restrict edgeB);
 
@@ -183,7 +195,7 @@ int NTWPR_WGF_edgeCompare(const void* restrict edgeA, const void* restrict edgeB
  * 
  * @param edgeA
  * @param edgeB
- * @return int edgeA->nodeA - edgeB->nodeB
+ * @return int edgeA->nodeB - edgeB->nodeB
  */
 int NTWPR_WGF_edgeCompareForT(const void* restrict edgeA, const void* restrict edgeB);
 
