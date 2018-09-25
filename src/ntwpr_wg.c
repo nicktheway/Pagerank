@@ -119,7 +119,7 @@ ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf)
     {
         col_ind[edges_read] = edge_nodes[1];
         val[edges_read] = 1.0;
-
+    
         if (edge_nodes[0] > curr_row)
         {
             for (int i = curr_row + 1; i <= edge_nodes[0]; i++)

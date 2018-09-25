@@ -85,7 +85,6 @@ int main(int argc, char const *argv[argc+1])
 
     ntw_CRSReshapeSequence* reshape_seq = NTW_CRS_getColorOptimizedIds(colors, myCRS->node_num);
     
-    
     NTW_CRS_IdReshape(myCRS, reshape_seq);
     
 

@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/bin/PRcalculator",
             "args": [
-                        "${workspaceFolder}/data/WGFiles/input_test.wg", 
+                        "${workspaceFolder}/data/WGFiles/web-BerkStan.wg", 
                     ],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",

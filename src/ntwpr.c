@@ -80,7 +80,7 @@ double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], con
     {
         const uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
         next = first_group_node + groupSize;
-        #pragma omp parallel for num_threads(8) if (groupSize > 500) reduction (+:sqnorm_diff)
+        #pragma omp parallel for num_threads(8) if (groupSize > 600) reduction (+:sqnorm_diff)
         for (uint64_t i = first_group_node; i < next; i++)
         {
             // uint64_t i = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];
