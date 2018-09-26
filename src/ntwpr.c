@@ -8,9 +8,6 @@
 #include "../include/ntwpr.h"
 #include "../include/ntw_math.h"
 #include "../include/ntw_debug.h"
-#include <time.h>
-#include <string.h>
-#include <math.h>
 #include <omp.h>
 
 double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double e, FILE* stream)

@@ -12,7 +12,7 @@
 
 void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1], const char endDelim)
 {
-    time_t seconds = finish.tv_sec - start.tv_sec; 
+    uint64_t seconds = finish.tv_sec - start.tv_sec; 
     long nano_seconds = finish.tv_nsec - start.tv_nsec; 
     
     if (start.tv_nsec > finish.tv_nsec) {

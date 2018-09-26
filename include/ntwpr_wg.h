@@ -15,9 +15,6 @@
 
 #include "ntw_crs.h"
 #include "ntw_collections.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
 
 /******************* MACRO DECLARATIONS *******************/
 

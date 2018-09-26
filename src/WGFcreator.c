@@ -7,8 +7,6 @@
  * @author Katomeris Nikolaos, 8551, ngkatomer@auth.gr
  * @date 13-08-2018
  */
-#include <stdio.h>
-#include <time.h>
 #include "../include/ntwpr_wg.h"
 #include "../include/ntw_debug.h"
 

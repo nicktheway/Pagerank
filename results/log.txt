@@ -1,0 +1,12 @@
+File: ./data/WGFiles/web-Stanford.wg, Nodes: 281903, Edges: 2312485
+Load to crs time: 48.904334 ms
+NTWPR_pagerank:
+Make graph stochastic time: 16.513045 ms
+Iteration: 10.077044 ms	Convergence's delta: 9.27e-06
+Iteration: 7.890260 ms	Convergence's delta: 7.66e-06
+Iteration: 7.520843 ms	Convergence's delta: 6.04e-07
+Iteration: 7.684815 ms	Convergence's delta: 5.74e-08
+Iteration: 7.678201 ms	Convergence's delta: 8.06e-09
+Iteration: 7.642593 ms	Convergence's delta: 5.70e-10
+Iteration: 7.490655 ms	Convergence's delta: 7.10e-11
+Whole pagerank time: 76.288384 ms

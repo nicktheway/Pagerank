@@ -9,8 +9,6 @@
  * @author Katomeris Nikolaos, 8551, ngkatomer@auth.gr
  * @date 26-09-2018
  */
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include "../include/ntwpr.h"
 #include "../include/ntw_debug.h"

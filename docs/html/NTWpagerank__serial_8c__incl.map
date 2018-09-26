@@ -1,7 +1,7 @@
 <map id="Pagerank/src/NTWpagerank_serial.c" name="Pagerank/src/NTWpagerank_serial.c">
-<area shape="rect" id="node5" href="$ntwpr_8h.html" title="Methods for calculating the pagerank of web graphs. " alt="" coords="425,95,548,121"/>
-<area shape="rect" id="node12" href="$ntw__debug_8h.html" title="Contains the declarations of useful debugging functions. " alt="" coords="577,319,730,345"/>
-<area shape="rect" id="node6" href="$ntwpr__wg_8h.html" title="Web&#45;Graph import/export functions. " alt="" coords="345,169,434,196"/>
-<area shape="rect" id="node7" href="$ntw__crs_8h.html" title="File containing CRS (compressed row storage) type and functions. " alt="" coords="302,244,381,271"/>
-<area shape="rect" id="node10" href="$ntw__collections_8h.html" title="A C implementation imitating C++&#39;s vector&lt;int&gt; " alt="" coords="144,319,267,345"/>
+<area shape="rect" id="node3" href="$ntwpr_8h.html" title="Methods for calculating the pagerank of web graphs. " alt="" coords="181,95,304,121"/>
+<area shape="rect" id="node12" href="$ntw__debug_8h.html" title="Contains the declarations of useful debugging functions. " alt="" coords="295,319,449,345"/>
+<area shape="rect" id="node4" href="$ntwpr__wg_8h.html" title="Web&#45;Graph import/export functions. " alt="" coords="187,169,277,196"/>
+<area shape="rect" id="node5" href="$ntw__crs_8h.html" title="File containing CRS (compressed row storage) type and functions. " alt="" coords="193,244,271,271"/>
+<area shape="rect" id="node7" href="$ntw__collections_8h.html" title="A C implementation imitating C++&#39;s vector&lt;int&gt; " alt="" coords="65,319,188,345"/>
 </map>

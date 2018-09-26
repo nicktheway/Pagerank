@@ -1,5 +1,6 @@
 <map id="Pagerank/src/WGFcreator.c" name="Pagerank/src/WGFcreator.c">
-<area shape="rect" id="node4" href="$ntwpr__wg_8h.html" title="Web&#45;Graph import/export functions. " alt="" coords="26,80,170,107"/>
-<area shape="rect" id="node8" href="$ntw__debug_8h.html" title="Contains the declarations of useful debugging functions. " alt="" coords="194,80,346,107"/>
-<area shape="rect" id="node5" href="$ntw__crs_8h.html" title="File containing CRS (compressed row storage) type and functions. " alt="" coords="23,155,101,181"/>
+<area shape="rect" id="node2" href="$ntwpr__wg_8h.html" title="Web&#45;Graph import/export functions. " alt="" coords="159,80,305,107"/>
+<area shape="rect" id="node10" href="$ntw__debug_8h.html" title="Contains the declarations of useful debugging functions. " alt="" coords="295,229,449,256"/>
+<area shape="rect" id="node3" href="$ntw__crs_8h.html" title="File containing CRS (compressed row storage) type and functions. " alt="" coords="193,155,271,181"/>
+<area shape="rect" id="node5" href="$ntw__collections_8h.html" title="A C implementation imitating C++&#39;s vector&lt;int&gt; " alt="" coords="65,229,188,256"/>
 </map>

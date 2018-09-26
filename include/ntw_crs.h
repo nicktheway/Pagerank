@@ -9,9 +9,6 @@
 #ifndef NTW_CRS_H
 #define NTW_CRS_H 1
 
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
 #include <omp.h>
 #include "ntw_collections.h"
 

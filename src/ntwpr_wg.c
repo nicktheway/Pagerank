@@ -8,7 +8,6 @@
 #include "../include/ntwpr_wg.h"
 #include "../include/ntw_collections.h"
 #include "../include/ntw_debug.h"
-#include <stdio.h>
 
 ntw_crs* NTWPR_WGF_load2crsColored(NTWPR_WGFile* restrict wgf, ntw_vector* restrict colors)
 {
