@@ -1,5 +1,8 @@
 var NAVTREEINDEX0 =
 {
+"NTWpagerank_8c.html":[1,0,0,1,4],
+"NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b":[1,0,0,1,4,0],
+"NTWpagerank_8c.html#aeb1c7ecc012135ec9ff491c1aaa7f7ee":[1,0,0,1,4,1],
 "NTWpagerank_8c_source.html":[1,0,0,1,4],
 "NTWpagerank__serial_8c.html":[1,0,0,1,5],
 "NTWpagerank__serial_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b":[1,0,0,1,5,0],
@@ -21,6 +24,10 @@ var NAVTREEINDEX0 =
 "globals_func.html":[1,1,1],
 "globals_type.html":[1,1,2],
 "index.html":[],
+"ntw__collections_8c.html":[1,0,0,1,0],
+"ntw__collections_8c.html#a322eb772bf9045af4651396d40407ded":[1,0,0,1,0,1],
+"ntw__collections_8c.html#aad341a319f04c48f731c3804f25d1b9f":[1,0,0,1,0,0],
+"ntw__collections_8c.html#acbd32f4dc2b613de80b1d37a5f66b602":[1,0,0,1,0,2],
 "ntw__collections_8c_source.html":[1,0,0,1,0],
 "ntw__collections_8h.html":[1,0,0,0,0],
 "ntw__collections_8h.html#a322eb772bf9045af4651396d40407ded":[1,0,0,0,0,3],

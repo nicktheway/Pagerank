@@ -5,7 +5,7 @@
  * Documentation for the whole API behind this program can be found at:
  *  https://nicktheway.github.io/Pagerank/html/index.html
  * 
- * @file NTWpagerank_serial.c
+ * @file NTWpagerank.c
  * @author Katomeris Nikolaos, 8551, ngkatomer@auth.gr
  * @date 26-09-2018
  */

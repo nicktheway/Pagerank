@@ -1,3 +1,12 @@
+/**
+ * @brief Generic vector methods in C.
+ * 
+ * Something like vector<> of C++, just a little more dangerous.
+ * 
+ * @file ntw_collections.c
+ * @author Nikolaos Katomeris, 8551, ngkatomer@auth.gr
+ * @date 27-09-2018
+ */
 #include "../include/ntw_collections.h"
 
 void* NTW_vector_get(ntw_vector *vec, uint64_t index)
