@@ -141,7 +141,7 @@ ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf)
 
 NTWPR_WGFile* NTWPR_WGF_fopen(const char path[static 1])
 {
-    NTWPR_WGFile* wgfile_p = malloc(sizeof(NTWPR_WGFile));
+    NTWPR_WGFile* wgfile_p = malloc(sizeof *wgfile_p);
     FILE* edge_data_file = fopen(path, "rb");
     NTWPR_invalid_fp_exit(edge_data_file);
     

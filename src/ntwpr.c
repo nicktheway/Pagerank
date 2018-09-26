@@ -42,8 +42,8 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double 
     char* d = calloc(wgSize, sizeof *d);
     double *dd = NTWM_newZeroVectorD(wgSize);
     
-    unsigned max_iterations = 150, curr_iteration = 0;
-    while (delta > e && curr_iteration++ < max_iterations)
+    unsigned max_iterations = 150, curr_iteration = 1;
+    while (delta > e && curr_iteration < max_iterations)
     {
         clock_gettime(CLOCK_MONOTONIC, &start);
         delta = NTWPR_GS_iter(webGraph, pagerank, b, d, dd);
@@ -59,6 +59,8 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double 
                 dd[i] = 0;
             }
         }
+
+        curr_iteration++;
     }
     fprintf(stdout, "DEBUG: Converged after #%u iterations.\tDelta = %0.2e\n", curr_iteration - 1, delta);
 
