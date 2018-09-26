@@ -1,5 +1,4 @@
 <map id="NTW_vector_add" name="NTW_vector_add">
 <area shape="rect" id="node2" href="$ntw__crs_8c.html#a39c1d3a3d7c8fbcadce8eb443a8492de" title="Divides the crs matrix into groups with lower&#45;only dependencies. " alt="" coords="182,5,383,32"/>
-<area shape="rect" id="node4" href="$ntwpr__wg_8c.html#a79470f4f698059985cb8fef3ed7d507f" title="Loads a web graph in memory using the CRS data structure and creates color vectors. " alt="" coords="177,56,388,83"/>
-<area shape="rect" id="node3" href="$NTWPRcalc_8c.html#a9a3bceb40e284c86f801493a79f051e3" title="A program that calculates pageranks of web&#45;graph files. " alt="" coords="436,5,487,32"/>
+<area shape="rect" id="node3" href="$ntwpr__wg_8c.html#a79470f4f698059985cb8fef3ed7d507f" title="Loads a web graph in memory using the CRS data structure and creates color vectors. " alt="" coords="177,56,388,83"/>
 </map>

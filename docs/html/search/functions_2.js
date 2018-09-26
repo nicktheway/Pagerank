@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector_5fsqnorm',['Vector_sqnorm',['../ntwpr_8h.html#a8ebacef8d2edcabf2d227550b50bb260',1,'ntwpr.h']]]
+  ['parsearguments',['parseArguments',['../NTWpagerank__serial_8c.html#aeb1c7ecc012135ec9ff491c1aaa7f7ee',1,'NTWpagerank_serial.c']]]
 ];

@@ -23,7 +23,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"NTWPRcalc_8c.html"
+"NTWpagerank_8c_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

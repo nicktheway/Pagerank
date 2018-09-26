@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['row_5fptr',['row_ptr',['../structntw__crs.html#abf117885ca226f2a82ff28dca7177c34',1,'ntw_crs']]]
+  ['parsearguments',['parseArguments',['../NTWpagerank__serial_8c.html#aeb1c7ecc012135ec9ff491c1aaa7f7ee',1,'NTWpagerank_serial.c']]]
 ];
