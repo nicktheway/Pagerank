@@ -125,9 +125,9 @@ Include dependency graph for NTWpagerank.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aeb1c7ecc012135ec9ff491c1aaa7f7ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NTWpagerank_8c.html#aeb1c7ecc012135ec9ff491c1aaa7f7ee">parseArguments</a> (int argc, char *const argv[argc+1], double *delta, double *tel_coeff, char **log_file_path, char **pagerank_file_path, char **wg_file_path)</td></tr>
-<tr class="memdesc:aeb1c7ecc012135ec9ff491c1aaa7f7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refactored <a class="el" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. ">main()</a>'s code that handles command line arguments.  <a href="#aeb1c7ecc012135ec9ff491c1aaa7f7ee">More...</a><br /></td></tr>
-<tr class="separator:aeb1c7ecc012135ec9ff491c1aaa7f7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac69240b8a62f3936b295a7ebbe3f5b51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NTWpagerank_8c.html#ac69240b8a62f3936b295a7ebbe3f5b51">parseArguments</a> (int argc, char *const argv[argc+1], int *threadNum, double *delta, double *tel_coeff, char **log_file_path, char **pagerank_file_path, char **wg_file_path)</td></tr>
+<tr class="memdesc:ac69240b8a62f3936b295a7ebbe3f5b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refactored <a class="el" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. ">main()</a>'s code that handles command line arguments.  <a href="#ac69240b8a62f3936b295a7ebbe3f5b51">More...</a><br /></td></tr>
+<tr class="separator:ac69240b8a62f3936b295a7ebbe3f5b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47d77c298c6283e9ee92f0739d7b6c0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b">main</a> (int argc, char *const argv[argc+1])</td></tr>
 <tr class="memdesc:a47d77c298c6283e9ee92f0739d7b6c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the pagerank of a web graph.  <a href="#a47d77c298c6283e9ee92f0739d7b6c0b">More...</a><br /></td></tr>
 <tr class="separator:a47d77c298c6283e9ee92f0739d7b6c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,8 +180,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aeb1c7ecc012135ec9ff491c1aaa7f7ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb1c7ecc012135ec9ff491c1aaa7f7ee">&#9670;&nbsp;</a></span>parseArguments()</h2>
+<a id="ac69240b8a62f3936b295a7ebbe3f5b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69240b8a62f3936b295a7ebbe3f5b51">&#9670;&nbsp;</a></span>parseArguments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,6 +197,12 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">char *const&#160;</td>
           <td class="paramname"><em>argv</em>[argc+1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>threadNum</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -251,12 +257,12 @@ Functions</h2></td></tr>
 </dl>
 <p>Argument parsing. opting and optarg are defined in &lt;unistd.h&gt;</p>
 
-<p class="definition">Definition at line <a class="el" href="NTWpagerank_8c_source.html#l00108">108</a> of file <a class="el" href="NTWpagerank_8c_source.html">NTWpagerank.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="NTWpagerank_8c_source.html#l00109">109</a> of file <a class="el" href="NTWpagerank_8c_source.html">NTWpagerank.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="NTWpagerank_8c_aeb1c7ecc012135ec9ff491c1aaa7f7ee_icgraph.png" border="0" usemap="#NTWpagerank_8c_aeb1c7ecc012135ec9ff491c1aaa7f7ee_icgraph" alt=""/></div>
-<map name="NTWpagerank_8c_aeb1c7ecc012135ec9ff491c1aaa7f7ee_icgraph" id="NTWpagerank_8c_aeb1c7ecc012135ec9ff491c1aaa7f7ee_icgraph">
+<div class="center"><img src="NTWpagerank_8c_ac69240b8a62f3936b295a7ebbe3f5b51_icgraph.png" border="0" usemap="#NTWpagerank_8c_ac69240b8a62f3936b295a7ebbe3f5b51_icgraph" alt=""/></div>
+<map name="NTWpagerank_8c_ac69240b8a62f3936b295a7ebbe3f5b51_icgraph" id="NTWpagerank_8c_ac69240b8a62f3936b295a7ebbe3f5b51_icgraph">
 <area shape="rect" id="node2" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="171,5,221,32"/>
 </map>
 </div>

@@ -104,7 +104,10 @@ ntw_crs* NTWPR_WGF_load2crs(NTWPR_WGFile* restrict wgf)
     
 	if (!val || !col_ind || !row_ptr)
     {
-        fprintf(stderr, "%s: Error when allocating memory for the CRS struct.\n", __func__);
+        fprintf(stderr, "%s: Error when allocating memory for the CRS struct.\n"
+                        "Tried to allocate memory for %u nodes and %u edges.\n"
+                        "If these numbers seem wrong, the web graph file path is most likely incorrect.\n"
+                , __func__, node_num, edge_num);
         exit(EXIT_FAILURE);
     }
 

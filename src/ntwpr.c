@@ -135,8 +135,8 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
     char* d = calloc(wgSize, sizeof *d);
     double *dd = NTWM_newZeroVectorD(wgSize);
     
-    unsigned max_iterations = 150, curr_iteration = 0;
-    while (delta > e && curr_iteration++ < max_iterations)
+    unsigned max_iterations = 150, curr_iteration = 1;
+    while (delta > e && curr_iteration < max_iterations)
     {
         clock_gettime(CLOCK_MONOTONIC, &start);
         delta = NTWPR_GS_parallel_iter(webGraph, pagerank, b, d, dd, colors);
@@ -152,6 +152,8 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
                 dd[i] = 0;
             }
         }
+        
+        curr_iteration++;
     }
     fprintf(stdout, "DEBUG: Converged after #%u iterations.\tDelta = %0.2e\n", curr_iteration - 1, delta);
 
@@ -172,7 +174,7 @@ double NTWPR_GS_parallel_iter(const ntw_crs matrix[static 1], double x_vec[stati
     {
         const uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
         next = first_group_node + groupSize;
-        #pragma omp parallel for num_threads(8) if (groupSize > 1000) reduction (+:sqnorm_diff)
+        #pragma omp parallel for if (groupSize > 1000) reduction (+:sqnorm_diff)
         for (uint64_t i = first_group_node; i < next; i++)
         {
             // uint64_t i = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];

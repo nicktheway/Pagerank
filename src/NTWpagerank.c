@@ -24,7 +24,7 @@
  * @param pagerank_file_path Address of the output pagerank's file path variable.
  * @param wg_file_path Address of the input web graph's file path variable.
  */
-void parseArguments(int argc, char * const argv[argc+1], double *delta, double *tel_coeff, 
+void parseArguments(int argc, char * const argv[argc+1], int* threadNum, double* delta, double* tel_coeff, 
                         char** log_file_path, char** pagerank_file_path, char** wg_file_path);
 
 /**
@@ -37,6 +37,7 @@ void parseArguments(int argc, char * const argv[argc+1], double *delta, double *
 int main(int argc, char * const argv[argc+1])
 {
     // Default values.
+    int specificNumberOfThreads = 0; // 0 -> dynamic number, not chosen by the user.
     double delta = 1e-18;
     double tel_coeff = 0.85;
     char* log_file_path = "./results/logs/log.txt";
@@ -44,7 +45,7 @@ int main(int argc, char * const argv[argc+1])
     char* wg_file_path = (void *) 0; // Must be provided as argument by the user.
 
     // Get wg_file_path. Possibly, update values from the default ones to the specified ones.
-    parseArguments(argc, argv, &delta, &tel_coeff, &log_file_path, &pagerank_file_path, &wg_file_path);
+    parseArguments(argc, argv, &specificNumberOfThreads, &delta, &tel_coeff, &log_file_path, &pagerank_file_path, &wg_file_path);
     
     // Try to open the file at wg_file_path.
     NTWPR_WGFile* file = NTWPR_WGF_fopen(wg_file_path);
@@ -105,7 +106,7 @@ int main(int argc, char * const argv[argc+1])
     return EXIT_SUCCESS;
 }
 
-void parseArguments(int argc, char * const argv[argc+1], double *delta, double *tel_coeff, 
+void parseArguments(int argc, char * const argv[argc+1], int* threadNum, double *delta, double *tel_coeff, 
                         char** log_file_path, char** pagerank_file_path, char** wg_file_path)
 {
     /**
@@ -115,7 +116,7 @@ void parseArguments(int argc, char * const argv[argc+1], double *delta, double *
     int opt = 0; 
     while (optind < argc) 
     {
-        if ((opt = getopt(argc, argv, "l:o:E:d:")) != -1)
+        if ((opt = getopt(argc, argv, "l:o:E:d:t:")) != -1)
         {
             switch (opt) 
             {
@@ -125,24 +126,33 @@ void parseArguments(int argc, char * const argv[argc+1], double *delta, double *
                 case 'o':
                     *pagerank_file_path = optarg;
                     break;
+                case 't':
+                    *threadNum = atoi(optarg);
+                    if (*threadNum <= 0)
+                    {
+                        printf("The number of threads [-t thread_number] must be a positive integer value.\n"
+                                "Currently entered value: %s\n", optarg);
+                        exit(EXIT_FAILURE);
+                    }
+                    break;
                 case 'E':
                     if (sscanf(optarg, "%lf", delta) != 1 || *delta <= 1e-36 || *delta >= 1e-1)
                     {
                         printf("The convergence_delta must be in (1e-36, 0.1). Scientific notation (eg. 1e-4) is also supported.\n"
-                                "Current value: %0.2lE\n", *delta);
+                                "Currently entered value: %s\n", optarg);
                         exit(EXIT_FAILURE);
                     }
                     break;
                 case 'd':
                     if (sscanf(optarg, "%lf", tel_coeff) != 1 || *tel_coeff <= 0 || *tel_coeff >= 1)
                     {
-                        printf("The teleportation_coefficient must be in (0, 1).\nCurrent value: %lf\n", *tel_coeff);
+                        printf("The teleportation_coefficient must be in (0, 1).\nCurrently entered value: %s\n", optarg);
                         exit(EXIT_FAILURE);
                     }
                     break;
                 default:
                     fprintf(stderr, "Usage: %s input_NTW_WGFile_path [-E convergence_delta] [-d teleportation_coefficient]\n"
-                                    "\t\t\t\t\t\t[-o pagerank_vector_binary_file_path] [-l log_text_file_path]\n",
+                                    "\t\t\t\t\t\t[-t specific_thread_number] [-o pagerank_vector_binary_file_path] [-l log_text_file_path]\n",
                             argv[0]);
                     exit(EXIT_FAILURE);
             }
@@ -163,5 +173,12 @@ void parseArguments(int argc, char * const argv[argc+1], double *delta, double *
     {
         fprintf(stderr, "Mandatory WebGraph file argument has not been provided.\n");
         exit(EXIT_FAILURE);
+    }
+
+    // Set the number of threads.
+    if (*threadNum > 0)
+    {
+        omp_set_dynamic(0);
+        omp_set_num_threads(*threadNum);
     }
 }

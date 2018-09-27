@@ -46,7 +46,7 @@ $(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
 
 all: PRcalculator PRcalculatorSerial WFGcreator
 
-PRcalculator: $(OBJ) $(CALCULATOR)
+PRcalculator: $(OBJ) $(PCALCULATOR)
 	$(CC) -o $(BDIR)/PRcalculator $^ $(CFLAGS) $(LIBS)
 
 PRcalculatorSerial: $(OBJ) $(CALCULATOR)
