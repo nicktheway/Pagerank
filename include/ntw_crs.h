@@ -71,11 +71,28 @@ typedef struct ntw_CRSReshapeSequence
 ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t rowPtr[static nodeNum+1], uint32_t colInd[static edgeNum], double val[static edgeNum]);
 
 /**
- * @brief Unloads a ntw_crs from memory (frees allocated memory).
+ * @brief Frees a ntw_crs from memory (frees allocated memory).
  * 
  * @param crs Pointer to the structure that will be freed.
  */
 void NTW_CRS_free(ntw_crs* crs);
+
+/**
+ * @brief Creates a new ntw_CRSReshapeSequence structure.
+ * 
+ * @param nodeNum The number of elements in the sequence.
+ * @param new_pos The new sequence of the array elements.
+ * @param look_up Where each element ended up.
+ * @return ntw_CRSReshapeSequence* Pointer to the newly created sequence.
+ */
+ntw_CRSReshapeSequence* NTW_CRS_reshapeSec_new(const uint32_t nodeNum, uint32_t new_pos[static nodeNum], uint32_t look_up[static nodeNum]);
+
+/**
+ * @brief Frees a ntw_CRSReshapeSequence object from memory.
+ * 
+ * @param reshSeq Pointer to the structure that will be freed.
+ */
+void NTW_CRS_reshapeSec_free(ntw_CRSReshapeSequence* reshSeq);
 
 /**
  * @brief Multiplies the values of the sparse table in the CRS form 
@@ -151,9 +168,9 @@ uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1]);
  *
  * @param crs
  * @param outIndicesNum Pass the adress of a uint32_t to be filled with the size of the returned array.
- * @return uint64_t The number of empty rows in the crs matrix.
+ * @return uint32_t The number of empty rows in the crs matrix.
  */
-uint64_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum);
+uint32_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum);
 
 /**
  * @brief Divides the @a crs matrix into groups with lower-only dependencies.
@@ -236,7 +253,7 @@ void NTW_CRS_printFullMatrix(FILE* restrict stream, const ntw_crs crs[static 1])
  * @param n The number of edges in the graph.
  * @param edges The edges of the graph.
  */
-void NTW_CRS_transposeEdges(const uint64_t n, ntw_CRSEdge edges[static n]);
+void NTW_CRS_transposeEdges(const uint32_t n, ntw_CRSEdge edges[static n]);
 
 /**
  * @brief Compares two edges, used for sorting with qsort().

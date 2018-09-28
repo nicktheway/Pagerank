@@ -20,8 +20,8 @@
 typedef struct NTW_Vector
 {
     void** data; /**< The actual vector with the data in memory. */
-    uint64_t capacity; /**< The @a data 's memory limit. */
-    uint64_t length; /**< The number elements in the vector. */
+    uint32_t capacity; /**< The @a data 's memory limit. */
+    uint32_t length; /**< The number elements in the vector. */
 } ntw_vector;
 
 /**
@@ -33,7 +33,7 @@ typedef struct NTW_Vector
  * @param index The index.
  * @return void* The returned element. Cast to the right type to use.
  */
-void* NTW_vector_get(ntw_vector *vec, uint64_t index);
+void* NTW_vector_get(ntw_vector *vec, uint32_t index);
 
 /**
  * @brief Add a new @a element to the @a vec.

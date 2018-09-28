@@ -168,16 +168,16 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
 double NTWPR_GS_parallel_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1], const ntw_vector* const colors)
 {
     double sqnorm_diff = 0;
-    uint64_t first_group_node = 0;
-    uint64_t next = 0;
-    for (uint64_t color = 0; color < colors->length; color++)
+    uint32_t first_group_node = 0;
+    uint32_t next = 0;
+    for (uint32_t color = 0; color < colors->length; color++)
     {
-        const uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
+        const uint32_t groupSize = ((ntw_vector*) colors->data[color])->length;
         next = first_group_node + groupSize;
         #pragma omp parallel for if (groupSize > 1000) reduction (+:sqnorm_diff)
-        for (uint64_t i = first_group_node; i < next; i++)
+        for (uint32_t i = first_group_node; i < next; i++)
         {
-            // uint64_t i = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];
+            // uint32_t i = (uint32_t) ((ntw_vector*) colors->data[color])->data[groupEl];
             if (d[i]) continue;
             double den = 1.0;
             

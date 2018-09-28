@@ -32,7 +32,7 @@ void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec sta
  * @param n 
  * @param array 
  */
-void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const uint64_t n, const double array[static n]);
+void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const uint32_t n, const double array[static n]);
 
 /**
  * @brief @a array is printed to @a stream.
@@ -41,7 +41,7 @@ void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const uint6
  * @param array The array to be printed.
  * @param n The size of the @a array.
  */
-void NTW_DEBUG_printArray_uint32(FILE* restrict stream, const uint32_t* const array, const uint64_t n);
+void NTW_DEBUG_printArray_uint32(FILE* restrict stream, const uint32_t* const array, const uint32_t n);
 
 /**
  * @brief @a array is printed to @a stream.
@@ -50,5 +50,5 @@ void NTW_DEBUG_printArray_uint32(FILE* restrict stream, const uint32_t* const ar
  * @param array The array to be printed.
  * @param n The size of the @a array.
  */
-void NTW_DEBUG_printArray_uint64(FILE* restrict stream, const uint64_t* const array, const uint64_t n);
+void NTW_DEBUG_printArray_uint64(FILE* restrict stream, const uint32_t* const array, const uint32_t n);
 #endif

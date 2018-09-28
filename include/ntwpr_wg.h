@@ -176,7 +176,7 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
  * @param n The number of edges in the graph.
  * @param edges The edges of the graph.
  */
-void NTWPR_WGF_transposeEdges(const uint64_t n, NTWPR_WGEdge edges[static n]);
+void NTWPR_WGF_transposeEdges(const uint32_t n, NTWPR_WGEdge edges[static n]);
 
 /**
  * @brief Compares two edges, used for sorting with qsort().

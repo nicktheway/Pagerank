@@ -9,7 +9,7 @@
  */
 #include "../include/ntw_collections.h"
 
-void* NTW_vector_get(ntw_vector *vec, uint64_t index)
+void* NTW_vector_get(ntw_vector *vec, uint32_t index)
 {
 	if (index >= vec->length) 
     {
@@ -52,4 +52,5 @@ void NTW_vector_add(ntw_vector* vec, void* element)
 void NTW_vector_free(ntw_vector *vec)
 {
 	free(vec->data);
+	free(vec);
 }

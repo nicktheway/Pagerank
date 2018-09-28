@@ -19,6 +19,11 @@ ntw_crs* NTW_CRS_new(const uint32_t nodeNum, const uint32_t edgeNum, uint32_t ro
         newCrs->col_ind = colInd;
         newCrs->val = val;
     }
+    else
+    {
+        fprintf(stderr, "%s: Error at memory allocation for the crs structure.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
 
     return newCrs;
 }
@@ -30,6 +35,32 @@ void NTW_CRS_free(ntw_crs* crs)
     free(crs->row_ptr);
 
     free(crs);
+}
+
+ntw_CRSReshapeSequence* NTW_CRS_reshapeSec_new(const uint32_t nodeNum, uint32_t new_pos[static nodeNum], uint32_t look_up[static nodeNum])
+{
+    ntw_CRSReshapeSequence* const newReshapeSequence = malloc(sizeof *newReshapeSequence);
+    if (newReshapeSequence)
+    {
+        newReshapeSequence->node_num = nodeNum;
+        newReshapeSequence->new_pos = new_pos;
+        newReshapeSequence->look_up = look_up;
+    }
+    else
+    {
+        fprintf(stderr, "%s: Error at memory allocation for the reshape sequence.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+
+    return newReshapeSequence;
+}
+
+void NTW_CRS_reshapeSec_free(ntw_CRSReshapeSequence* reshSeq)
+{
+    free(reshSeq->new_pos);
+    free(reshSeq->look_up);
+
+    free(reshSeq);
 }
 
 void NTW_CRS_cmult(ntw_crs crs[static 1], const double c)
@@ -122,13 +153,13 @@ uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1])
 	return counter;
 }
 
-uint64_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum)
+uint32_t* NTW_CRS_getEmptyRowIndices(const ntw_crs crs[static 1], uint32_t* restrict outIndicesNum)
 {
 	*outIndicesNum = NTW_CRS_getEmptyRowsNum(crs);
 	if (*outIndicesNum == 0) 
 		return (void *) 0;
 
-	uint64_t* emptyRows = malloc(*outIndicesNum * sizeof *emptyRows);
+	uint32_t* emptyRows = malloc(*outIndicesNum * sizeof *emptyRows);
 	if (!emptyRows)
 	{
 		fprintf(stderr, "%s: Error at allocating memory for the row indices\n", __func__);
@@ -178,8 +209,8 @@ ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs)
             currentEdge++;
         }
     }
-
-    qsort(edges, currentEdge, sizeof(edges[0]), NTW_CRSEdgeCompareForT);
+    
+    qsort(edges, currentEdge, sizeof *edges, NTW_CRSEdgeCompareForT);
     NTW_CRS_transposeEdges(currentEdge, edges);
 
     ntw_vector* colors = calloc(1, sizeof *colors);
@@ -192,24 +223,25 @@ ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs)
     }
     // Reset the edge counter.
     currentEdge = 0;
-    for (uint64_t i = 0; i < crs->node_num; i++)
+    for (uint32_t i = 0; i < crs->node_num; i++)
     {
         uint32_t maxColorID = 0;
-        for (uint64_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
+        for (uint32_t j = crs->row_ptr[i]; j < crs->row_ptr[i+1]; j++)
         {
             if (nodeColors[crs->col_ind[j]] > maxColorID)
             {
                 maxColorID = nodeColors[crs->col_ind[j]];
             }
         }
-
-        for (uint64_t j = currentEdge; edges[j].nodeA == i; j++, currentEdge++)
+        while (currentEdge < crs->edge_num && edges[currentEdge].nodeA == i)
         {
-            if (nodeColors[edges[j].nodeB] > maxColorID)
+            if (nodeColors[edges[currentEdge].nodeB] > maxColorID)
             {
-                maxColorID = nodeColors[edges[j].nodeB];
+                maxColorID = nodeColors[edges[currentEdge].nodeB];
             }
+            currentEdge++;
         }
+
         nodeColors[i] = maxColorID + 1;
         if (nodeColors[i] >= colors->length)
         {
@@ -221,7 +253,7 @@ ntw_vector* NTW_CRS_getColoredGroups(const ntw_crs* const crs)
             }
             NTW_vector_add(colors, newColor);
         }
-        NTW_vector_add(colors->data[nodeColors[i]-1], (void *) i);
+        NTW_vector_add(colors->data[nodeColors[i]-1], (void *) (uint64_t) i);
     }
     free(edges);
     free(nodeColors);
@@ -234,29 +266,26 @@ ntw_CRSReshapeSequence* NTW_CRS_getColorOptimizedIds(ntw_vector* colors, const u
     // Make a new temporary crs holder.
     uint32_t* optimized_sequence = calloc(nodes, sizeof *optimized_sequence);
     uint32_t* look_ups = calloc(nodes, sizeof *look_ups);
-    ntw_CRSReshapeSequence* reshape_seq = calloc(1, sizeof *reshape_seq);
-    if (!optimized_sequence || !look_ups || !reshape_seq)
+
+    if (!optimized_sequence || !look_ups)
     {
         fprintf(stderr, "%s: Error at allocating memory for the reshape sequence.\n", __func__);
         exit(EXIT_FAILURE);
     }
     uint32_t node_counter = 0;
-    for (uint64_t color = 0; color < colors->length; color++)
+    for (uint32_t color = 0; color < colors->length; color++)
     {
-        uint64_t groupSize = ((ntw_vector*) colors->data[color])->length;
-        for (uint64_t groupEl = 0; groupEl < groupSize; groupEl++)
+        uint32_t groupSize = ((ntw_vector*) colors->data[color])->length;
+        for (uint32_t groupEl = 0; groupEl < groupSize; groupEl++)
         {
-            const uint64_t node = (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];
-            optimized_sequence[node_counter] = (uint32_t) node;
+            const uint32_t node = (uint32_t) (uint64_t) ((ntw_vector*) colors->data[color])->data[groupEl];
+            optimized_sequence[node_counter] = node;
             look_ups[node] = node_counter;
             node_counter++;
         }
     }
-    reshape_seq->new_pos = optimized_sequence;
-    reshape_seq->look_up = look_ups;
-    reshape_seq->node_num = nodes;
 
-    return reshape_seq;
+    return NTW_CRS_reshapeSec_new(nodes, optimized_sequence, look_ups);
 }
 
 void NTW_CRS_RowReshape(ntw_crs* restrict crs, const uint32_t* const rowIdArray)
@@ -383,11 +412,11 @@ void NTW_CRS_printFullMatrix(FILE* restrict stream, const ntw_crs crs[static 1])
 	fprintf(stream, "\n");
 }
 
-void NTW_CRS_transposeEdges(const uint64_t n, ntw_CRSEdge edges[static n])
+void NTW_CRS_transposeEdges(const uint32_t n, ntw_CRSEdge edges[static n])
 {
-	for (uint64_t i = 0; i < n; i++)
+	for (uint32_t i = 0; i < n; i++)
 	{
-		uint32_t temp = edges[i].nodeA;
+		const uint32_t temp = edges[i].nodeA;
 		edges[i].nodeA = edges[i].nodeB;
 		edges[i].nodeB = temp;
 	}

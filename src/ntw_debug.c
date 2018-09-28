@@ -12,7 +12,7 @@
 
 void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1], const char endDelim)
 {
-    uint64_t seconds = finish.tv_sec - start.tv_sec; 
+    uint32_t seconds = finish.tv_sec - start.tv_sec; 
     long nano_seconds = finish.tv_nsec - start.tv_nsec; 
     
     if (start.tv_nsec > finish.tv_nsec) {
@@ -22,7 +22,7 @@ void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec sta
     fprintf(stream, "%s: %lf ms%c", message, seconds * 1000 + (double)nano_seconds/1e6, endDelim);
 }
 
-void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const uint64_t n, const double array[static n])
+void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const uint32_t n, const double array[static n])
 {
     FILE* fp = fopen(filePath, "wb");
     if (!fp)
@@ -44,9 +44,9 @@ void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const uint6
     }
 }
 
-void NTW_DEBUG_printArray_uint32(FILE* restrict stream, const uint32_t* const array, const uint64_t n)
+void NTW_DEBUG_printArray_uint32(FILE* restrict stream, const uint32_t* const array, const uint32_t n)
 {
-    for (uint64_t i = 0; i < n - 1; i++)
+    for (uint32_t i = 0; i < n - 1; i++)
     {
         fprintf(stream, "%u, ", array[i]);
     }
@@ -55,13 +55,13 @@ void NTW_DEBUG_printArray_uint32(FILE* restrict stream, const uint32_t* const ar
     return;
 }
 
-void NTW_DEBUG_printArray_uint64(FILE* restrict stream, const uint64_t* const array, const uint64_t n)
+void NTW_DEBUG_printArray_uint64(FILE* restrict stream, const uint32_t* const array, const uint32_t n)
 {
-    for (uint64_t i = 0; i < n - 1; i++)
+    for (uint32_t i = 0; i < n - 1; i++)
     {
-        fprintf(stream, "%lu, ", array[i]);
+        fprintf(stream, "%u, ", array[i]);
     }
-    fprintf(stream, "%lu\n", array[n-1]);
+    fprintf(stream, "%u\n", array[n-1]);
 
     return;
 }

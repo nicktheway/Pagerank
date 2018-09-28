@@ -78,7 +78,7 @@ int main(int argc, char * const argv[argc+1])
     ntw_CRSReshapeSequence* reshape_seq = NTW_CRS_getColorOptimizedIds(colors, myCRS->node_num);
     NTW_CRS_IdReshape(myCRS, reshape_seq);
     clock_gettime(CLOCK_MONOTONIC, &finish);
-    fprintf(log_fp, "Color groups: %lu\n", colors->length);
+    fprintf(log_fp, "Color groups: %u\n", colors->length);
     NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Data coloring and matrix reshaping time", '\n');
 
     // Calculate the web-graph's pagerank.
@@ -90,19 +90,18 @@ int main(int argc, char * const argv[argc+1])
     
     // Return to the starting ids.
     NTWM_reshapeDV(reshape_seq->node_num, pr, reshape_seq->look_up);
+
     // Print the pagerank array to the file with pagerank_file_path.
     NTW_DEBUG_printBinaryDoubleArray(pagerank_file_path, myCRS->node_num, pr);
 
     // Clean up and terminate.
-    for (uint64_t i = 0; i < colors->length; i++)
+    for (uint32_t i = 0; i < colors->length; i++)
     {
         NTW_vector_free(colors->data[i]);
-        free(colors->data[i]);
     }
-    free(reshape_seq);
+    free(pr);
+    NTW_CRS_reshapeSec_free(reshape_seq);
     NTW_vector_free(colors);
-    free(colors);
-	free(pr);
     NTWPR_WGF_fclose(file);
     NTW_CRS_free(myCRS);
     fclose(log_fp);

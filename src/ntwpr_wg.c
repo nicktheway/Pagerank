@@ -457,9 +457,9 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
 }
 #pragma GCC diagnostic pop
 
-void NTWPR_WGF_transposeEdges(const uint64_t n, NTWPR_WGEdge edges[static n])
+void NTWPR_WGF_transposeEdges(const uint32_t n, NTWPR_WGEdge edges[static n])
 {
-	for (uint64_t i = 0; i < n; i++)
+	for (uint32_t i = 0; i < n; i++)
 	{
 		uint32_t temp = edges[i].nodeA;
 		edges[i].nodeA = edges[i].nodeB;

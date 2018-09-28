@@ -11,5 +11,5 @@ var ntwpr__wg_8c =
     [ "NTWPR_WGF_load2crs", "ntwpr__wg_8c.html#a7de28416dbf08fff7b53404ca887f2f7", null ],
     [ "NTWPR_WGF_load2crsColored", "ntwpr__wg_8c.html#a79470f4f698059985cb8fef3ed7d507f", null ],
     [ "NTWPR_WGF_rewind", "ntwpr__wg_8c.html#a900ec9963949f8e50b80772f502fbc63", null ],
-    [ "NTWPR_WGF_transposeEdges", "ntwpr__wg_8c.html#ae3b87614038cb8386417c85e0c8aaf9d", null ]
+    [ "NTWPR_WGF_transposeEdges", "ntwpr__wg_8c.html#a8b339387180d1197f0708a1662b67210", null ]
 ];
