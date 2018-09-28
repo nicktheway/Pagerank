@@ -133,6 +133,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a27125ea5b6927dfedbb82e42a9d4ef9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__debug_8h.html#a27125ea5b6927dfedbb82e42a9d4ef9f">NTW_DEBUG_printElapsedTime</a> (FILE *restrict stream, const struct timespec start, const struct timespec finish, const char message[static 1], const char endDelim)</td></tr>
 <tr class="memdesc:a27125ea5b6927dfedbb82e42a9d4ef9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints: <em>message:</em> &lt;elapsed time from <em>start</em> to <em>finish</em> in ms&gt; to <em>stream</em>.  <a href="#a27125ea5b6927dfedbb82e42a9d4ef9f">More...</a><br /></td></tr>
 <tr class="separator:a27125ea5b6927dfedbb82e42a9d4ef9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a18708b43a990bb68a7af08a0425a40"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__debug_8h.html#a4a18708b43a990bb68a7af08a0425a40">NTW_DEBUG_getElapsedTimeMS</a> (const struct timespec start, const struct timespec finish)</td></tr>
+<tr class="memdesc:a4a18708b43a990bb68a7af08a0425a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the elapsed time between <em>start</em> and <em>finish</em> in milliseconds.  <a href="#a4a18708b43a990bb68a7af08a0425a40">More...</a><br /></td></tr>
+<tr class="separator:a4a18708b43a990bb68a7af08a0425a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32f8a6606ea024983b7df6ad48c3719a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__debug_8h.html#a32f8a6606ea024983b7df6ad48c3719a">NTW_DEBUG_printBinaryDoubleArray</a> (const char filePath[static 1], const uint32_t n, const double array[static n])</td></tr>
 <tr class="memdesc:a32f8a6606ea024983b7df6ad48c3719a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a binary file at <em>filePath</em> with the <em>array's</em> <em>n</em> values.  <a href="#a32f8a6606ea024983b7df6ad48c3719a">More...</a><br /></td></tr>
 <tr class="separator:a32f8a6606ea024983b7df6ad48c3719a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +153,46 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="ntw__debug_8h_source.html">ntw_debug.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a4a18708b43a990bb68a7af08a0425a40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a18708b43a990bb68a7af08a0425a40">&#9670;&nbsp;</a></span>NTW_DEBUG_getElapsedTimeMS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double NTW_DEBUG_getElapsedTimeMS </td>
+          <td>(</td>
+          <td class="paramtype">const struct timespec&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct timespec&#160;</td>
+          <td class="paramname"><em>finish</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the elapsed time between <em>start</em> and <em>finish</em> in milliseconds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The starting time point. </td></tr>
+    <tr><td class="paramname">finish</td><td>The finishing time point. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double The time between the two points in ms. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__debug_8c_source.html#l00025">25</a> of file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
+
+</div>
+</div>
 <a id="ac8527efca5aa3da9f673a9cacf798233"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8527efca5aa3da9f673a9cacf798233">&#9670;&nbsp;</a></span>NTW_DEBUG_printArray_uint32()</h2>
 
@@ -192,7 +235,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__debug_8c_source.html#l00047">47</a> of file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__debug_8c_source.html#l00060">60</a> of file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
 
 </div>
 </div>
@@ -238,7 +281,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__debug_8c_source.html#l00058">58</a> of file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__debug_8c_source.html#l00071">71</a> of file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
 
 </div>
 </div>
@@ -285,7 +328,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__debug_8c_source.html#l00025">25</a> of file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__debug_8c_source.html#l00038">38</a> of file <a class="el" href="ntw__debug_8c_source.html">ntw_debug.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -346,7 +389,7 @@ Here is the caller graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">stream</td><td>Where the debug message will be printed. Must be open. </td></tr>
     <tr><td class="paramname">start</td><td>The starting time point. </td></tr>
-    <tr><td class="paramname">finish</td><td>The end's time point. </td></tr>
+    <tr><td class="paramname">finish</td><td>The finishing time point. </td></tr>
     <tr><td class="paramname">message</td><td>Debug message to print before the elapsed time. </td></tr>
     <tr><td class="paramname">endDelim</td><td>How the debug message will end. Eg: '<br />
 ' </td></tr>

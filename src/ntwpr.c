@@ -142,6 +142,7 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
         delta = NTWPR_GS_parallel_iter(webGraph, pagerank, b, d, dd, colors);
         clock_gettime(CLOCK_MONOTONIC, &finish);
         NTW_DEBUG_printElapsedTime(stream, start, finish, "Iteration", '\t');
+        
         fprintf(stream, "Convergence's delta: %0.2e\n", delta);
 
         if (curr_iteration % 10 == 0)

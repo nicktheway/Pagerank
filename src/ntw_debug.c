@@ -22,6 +22,19 @@ void NTW_DEBUG_printElapsedTime(FILE* restrict stream, const struct timespec sta
     fprintf(stream, "%s: %lf ms%c", message, seconds * 1000 + (double)nano_seconds/1e6, endDelim);
 }
 
+double NTW_DEBUG_getElapsedTimeMS(const struct timespec start, const struct timespec finish)
+{
+    uint32_t seconds = finish.tv_sec - start.tv_sec; 
+    long nano_seconds = finish.tv_nsec - start.tv_nsec; 
+    
+    if (start.tv_nsec > finish.tv_nsec) {
+        seconds--; 
+        nano_seconds += 1e9; 
+    } 
+
+    return seconds * 1000 + (double)nano_seconds/1e6;
+}
+
 void NTW_DEBUG_printBinaryDoubleArray(const char filePath[static 1], const uint32_t n, const double array[static n])
 {
     FILE* fp = fopen(filePath, "wb");
