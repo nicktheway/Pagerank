@@ -1,4 +1,5 @@
 <map id="Pagerank/include/ntw_math.h" name="Pagerank/include/ntw_math.h">
 <area shape="rect" id="node2" href="$ntw__math_8c.html" title="Definitions of the functions declared at ntw_math.h. " alt="" coords="5,95,176,121"/>
-<area shape="rect" id="node3" href="$ntwpr_8c.html" title="File containing the definitions of the functions declared at ntwpr.h. " alt="" coords="201,95,346,121"/>
+<area shape="rect" id="node3" href="$NTWpagerank_8c.html" title="Calculates the pagerank vector of a web graph saved in an NTWPR_WGFile form. " alt="" coords="201,95,399,121"/>
+<area shape="rect" id="node4" href="$ntwpr_8c.html" title="File containing the definitions of the functions declared at ntwpr.h. " alt="" coords="424,95,571,121"/>
 </map>

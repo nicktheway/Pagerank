@@ -120,7 +120,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="ntw__math_8h__dep__incl.png" border="0" usemap="#Pagerank_2include_2ntw__math_8hdep" alt=""/></div>
 <map name="Pagerank_2include_2ntw__math_8hdep" id="Pagerank_2include_2ntw__math_8hdep">
 <area shape="rect" id="node2" href="ntw__math_8c.html" title="Definitions of the functions declared at ntw_math.h. " alt="" coords="5,95,176,121"/>
-<area shape="rect" id="node3" href="ntwpr_8c.html" title="File containing the definitions of the functions declared at ntwpr.h. " alt="" coords="201,95,346,121"/>
+<area shape="rect" id="node3" href="NTWpagerank_8c.html" title="Calculates the pagerank vector of a web graph saved in an NTWPR_WGFile form. " alt="" coords="201,95,399,121"/>
+<area shape="rect" id="node4" href="ntwpr_8c.html" title="File containing the definitions of the functions declared at ntwpr.h. " alt="" coords="424,95,571,121"/>
 </map>
 </div>
 </div>
@@ -162,6 +163,9 @@ Functions</h2></td></tr>
 </p>
 <p>.  <a href="#a5f3c16e150f548695a8f8c3ac3b2ddbc">More...</a><br /></td></tr>
 <tr class="separator:a5f3c16e150f548695a8f8c3ac3b2ddbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644a55f1b7726f1af4217bfc8b7626cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__math_8h.html#a644a55f1b7726f1af4217bfc8b7626cb">NTWM_reshapeDV</a> (const uint32_t n, double vector[static n], const uint32_t sequence[static n])</td></tr>
+<tr class="memdesc:a644a55f1b7726f1af4217bfc8b7626cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the sequence of the elements of <em>vector</em> based on <em>sequence</em>..  <a href="#a644a55f1b7726f1af4217bfc8b7626cb">More...</a><br /></td></tr>
+<tr class="separator:a644a55f1b7726f1af4217bfc8b7626cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a679f1500933d35f3d7f3b3a81b4eafa4"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__math_8h.html#a679f1500933d35f3d7f3b3a81b4eafa4">NTWM_newZeroVectorD</a> (const uint64_t n)</td></tr>
 <tr class="memdesc:a679f1500933d35f3d7f3b3a81b4eafa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <em>n</em> length zero vector.  <a href="#a679f1500933d35f3d7f3b3a81b4eafa4">More...</a><br /></td></tr>
 <tr class="separator:a679f1500933d35f3d7f3b3a81b4eafa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,6 +278,15 @@ Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00082">82</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ntw__math_8h_a5f3c16e150f548695a8f8c3ac3b2ddbc_icgraph.png" border="0" usemap="#ntw__math_8h_a5f3c16e150f548695a8f8c3ac3b2ddbc_icgraph" alt=""/></div>
+<map name="ntw__math_8h_a5f3c16e150f548695a8f8c3ac3b2ddbc_icgraph" id="ntw__math_8h_a5f3c16e150f548695a8f8c3ac3b2ddbc_icgraph">
+<area shape="rect" id="node2" href="ntw__math_8c.html#a644a55f1b7726f1af4217bfc8b7626cb" title="Changes the sequence of the elements of vector based on sequence.. " alt="" coords="181,5,317,32"/>
+<area shape="rect" id="node3" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="365,5,416,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -409,7 +422,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double* Pointer to the new copy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00116">116</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00133">133</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
 
 </div>
 </div>
@@ -450,7 +463,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double* Pointer to the vector: \(\overbrace{\begin{pmatrix}v &amp; v &amp; \cdots &amp;v\end{pmatrix}}^{n}\). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00101">101</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00118">118</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -491,7 +504,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double* Pointer to the vector: \(\overbrace{\begin{pmatrix}0 &amp; 0 &amp; \cdots &amp;0\end{pmatrix}}^{n}\). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00090">90</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00107">107</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -641,7 +654,62 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00131">131</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00148">148</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+
+</div>
+</div>
+<a id="a644a55f1b7726f1af4217bfc8b7626cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644a55f1b7726f1af4217bfc8b7626cb">&#9670;&nbsp;</a></span>NTWM_reshapeDV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTWM_reshapeDV </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vector</em>[static n], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>sequence</em>[static n]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the sequence of the elements of <em>vector</em> based on <em>sequence</em>.. </p>
+<p><em>sequence</em> must contain all the numbers 0,...,<em>n</em> once. There is no check if that is the case, use carefully.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The size of the <em>vector</em> and <em>sequence</em>. </td></tr>
+    <tr><td class="paramname">vector</td><td></td></tr>
+    <tr><td class="paramname">sequence</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__math_8c_source.html#l00090">90</a> of file <a class="el" href="ntw__math_8c_source.html">ntw_math.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ntw__math_8h_a644a55f1b7726f1af4217bfc8b7626cb_icgraph.png" border="0" usemap="#ntw__math_8h_a644a55f1b7726f1af4217bfc8b7626cb_icgraph" alt=""/></div>
+<map name="ntw__math_8h_a644a55f1b7726f1af4217bfc8b7626cb_icgraph" id="ntw__math_8h_a644a55f1b7726f1af4217bfc8b7626cb_icgraph">
+<area shape="rect" id="node2" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="189,5,240,32"/>
+</map>
+</div>
 
 </div>
 </div>

@@ -87,6 +87,23 @@ void NTWM_assignDV(const uint64_t n, double vectorA[static n], const double vect
     }
 }
 
+void NTWM_reshapeDV(const uint32_t n, double vector[static n], const uint32_t sequence[static n])
+{
+    double* temp = calloc(n, sizeof *temp);
+    if (!temp)
+    {
+        fprintf(stderr, "%s: Error at memory allocation.\n", __func__);
+        exit(EXIT_FAILURE);
+    }
+    for (uint64_t i = 0; i < n; i++)
+    {
+        temp[i] = vector[sequence[i]];
+    }
+    NTWM_assignDV(n, vector, temp);
+
+    free(temp);
+}
+
 double* NTWM_newZeroVectorD(const uint64_t n)
 {
     double* vector = calloc(n, sizeof *vector);

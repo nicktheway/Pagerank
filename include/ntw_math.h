@@ -101,6 +101,18 @@ double NTWM_partialSumDV(const uint64_t n, const uint64_t indices[static n], con
 void NTWM_assignDV(const uint64_t n, double vectorA[static n], const double vectorB[static n]);
 
 /**
+ * @brief Changes the sequence of the elements of @a vector based on @a sequence..
+ * 
+ *      @a sequence must contain all the numbers 0,...,@a n once.
+ * There is no check if that is the case, use carefully.
+ * 
+ * @param n The size of the @a vector and @a sequence.
+ * @param vector 
+ * @param sequence 
+ */
+void NTWM_reshapeDV(const uint32_t n, double vector[static n], const uint32_t sequence[static n]);
+
+/**
  * @brief Creates a @a n length zero vector.
  * 
  * Allocates memory that should be freed later.

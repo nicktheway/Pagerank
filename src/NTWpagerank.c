@@ -12,12 +12,14 @@
 #include <unistd.h>
 #include "../include/ntwpr.h"
 #include "../include/ntw_debug.h"
+#include "../include/ntw_math.h"
 
 /**
  * @brief Refactored main()'s code that handles command line arguments.
  * 
  * @param argc The number of command line arguments.
  * @param argv The command line arguments as char arrays.
+ * @param threadNum Address of the number of threads variable.
  * @param delta Address of the convergence's delta variable.
  * @param tel_coeff Address of the teleport coefficient's variable.
  * @param log_file_path Address of the log file's path variable.
@@ -86,6 +88,8 @@ int main(int argc, char * const argv[argc+1])
     clock_gettime(CLOCK_MONOTONIC, &finish);
     NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Whole pagerank time", '\n');
     
+    // Return to the starting ids.
+    NTWM_reshapeDV(reshape_seq->node_num, pr, reshape_seq->look_up);
     // Print the pagerank array to the file with pagerank_file_path.
     NTW_DEBUG_printBinaryDoubleArray(pagerank_file_path, myCRS->node_num, pr);
 

@@ -11,6 +11,7 @@ var ntw__math_8h =
     [ "NTWM_normalizeDV", "ntw__math_8h.html#a1eeb87f9f41dc7e7b6b54494b762a84b", null ],
     [ "NTWM_partialSumDV", "ntw__math_8h.html#ace5a5160ad81a8c1a62cb5b5bf465782", null ],
     [ "NTWM_printDV", "ntw__math_8h.html#a25312ea4606c14a4d2466fc7bdc3fa72", null ],
+    [ "NTWM_reshapeDV", "ntw__math_8h.html#a644a55f1b7726f1af4217bfc8b7626cb", null ],
     [ "NTWM_sqMagnDV", "ntw__math_8h.html#af46e8d882f8ce65b94c51bb5571e068a", null ],
     [ "NTWM_subDV", "ntw__math_8h.html#a4335bbdd49d341f5e933b29f32be195b", null ]
 ];
