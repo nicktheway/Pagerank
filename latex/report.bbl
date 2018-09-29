@@ -18,44 +18,67 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{kamvar2004adaptive}{article}{}
-      \name{author}{3}{}{%
-        {{hash=73c55e74069152b3ac7680b13ebdd7b4}{%
-           family={Kamvar},
-           familyi={K\bibinitperiod},
-           given={Sepandar},
+  \datalist[entry]{none/global//global/global}
+    \entry{brin1998anatomy}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ade8269d287e9c1531e4a1cbad0b4b82}{%
+           family={Brin},
+           familyi={B\bibinitperiod},
+           given={Sergey},
            giveni={S\bibinitperiod}}}%
-        {{hash=7b7065e349af2a3505ccfbe205c56572}{%
-           family={Haveliwala},
-           familyi={H\bibinitperiod},
-           given={Taher},
-           giveni={T\bibinitperiod}}}%
-        {{hash=23923ccfdde2f6663af778e44cdfb81f}{%
-           family={Golub},
-           familyi={G\bibinitperiod},
-           given={Gene},
-           giveni={G\bibinitperiod}}}%
+        {{hash=5ca20489809aaab392f875d6bc785086}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Elsevier}%
       }
-      \strng{namehash}{efc491980f149e7fbf41ff2abce50a41}
-      \strng{fullhash}{efc491980f149e7fbf41ff2abce50a41}
-      \strng{bibnamehash}{efc491980f149e7fbf41ff2abce50a41}
-      \strng{authorbibnamehash}{efc491980f149e7fbf41ff2abce50a41}
-      \strng{authornamehash}{efc491980f149e7fbf41ff2abce50a41}
-      \strng{authorfullhash}{efc491980f149e7fbf41ff2abce50a41}
-      \field{sortinit}{K}
-      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \strng{namehash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{fullhash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{bibnamehash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{authorbibnamehash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{authornamehash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{authorfullhash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Linear Algebra and its Applications}
-      \field{title}{Adaptive methods for the computation of PageRank}
-      \field{volume}{386}
-      \field{year}{2004}
-      \field{pages}{51\bibrangedash 65}
-      \range{pages}{15}
+      \field{journaltitle}{Computer networks and ISDN systems}
+      \field{number}{1-7}
+      \field{title}{The anatomy of a large-scale hypertextual web search engine}
+      \field{volume}{30}
+      \field{year}{1998}
+      \field{pages}{107\bibrangedash 117}
+      \range{pages}{11}
+    \endentry
+    \entry{saad2003iterative}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7fe737d5e37812399cf79c29f4385a66}{%
+           family={Saad},
+           familyi={S\bibinitperiod},
+           given={Yousef},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {siam}%
+      }
+      \strng{namehash}{7fe737d5e37812399cf79c29f4385a66}
+      \strng{fullhash}{7fe737d5e37812399cf79c29f4385a66}
+      \strng{bibnamehash}{7fe737d5e37812399cf79c29f4385a66}
+      \strng{authorbibnamehash}{7fe737d5e37812399cf79c29f4385a66}
+      \strng{authornamehash}{7fe737d5e37812399cf79c29f4385a66}
+      \strng{authorfullhash}{7fe737d5e37812399cf79c29f4385a66}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Iterative methods for sparse linear systems}
+      \field{volume}{82}
+      \field{year}{2003}
+      \field{pages}{103\bibrangedash 105}
+      \range{pages}{3}
     \endentry
   \enddatalist
 \endrefsection

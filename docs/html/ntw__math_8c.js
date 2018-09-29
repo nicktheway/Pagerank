@@ -8,6 +8,7 @@ var ntw__math_8c =
     [ "NTWM_newUniVectorD", "ntw__math_8c.html#ae87bda6a5fd5afa1cc4d27613ba01ef4", null ],
     [ "NTWM_newZeroVectorD", "ntw__math_8c.html#a4ae8f2dfeb888d84666eaa016a93008d", null ],
     [ "NTWM_normalizeDV", "ntw__math_8c.html#a6a5e7a3df62b0b60ef260a9090b2827a", null ],
+    [ "NTWM_normalizeSumDV", "ntw__math_8c.html#a933b0c109853c7216ed605f7c51fd954", null ],
     [ "NTWM_partialSumDV", "ntw__math_8c.html#a8deaf1527d03fbb89391c16731743f53", null ],
     [ "NTWM_printDV", "ntw__math_8c.html#ab68215886435ffbe80d6dc4d2063fbef", null ],
     [ "NTWM_reshapeDV", "ntw__math_8c.html#a644a55f1b7726f1af4217bfc8b7626cb", null ],

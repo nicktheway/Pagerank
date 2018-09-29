@@ -19,7 +19,7 @@
  * @param argc The number of command line arguments.
  * @param argv The command line arguments as char arrays.
  * @param delta Address of the convergence's delta variable.
- * @param tel_coeff Address of the teleport coefficient's variable.
+ * @param tel_coeff Address of the teleportation coefficient's variable.
  * @param log_file_path Address of the log file's path variable.
  * @param pagerank_file_path Address of the output pagerank's file path variable.
  * @param wg_file_path Address of the input web graph's file path variable.
@@ -37,8 +37,8 @@ void parseArguments(int argc, char * const argv[argc+1], double *delta, double *
 int main(int argc, char * const argv[argc+1])
 {
     // Default values.
-    double delta = 1e-18;
-    double tel_coeff = 0.85;
+    double delta = 1e-12;
+    double tel_coeff = 0.15;
     char* log_file_path = "./results/logs/log.txt";
     char* pagerank_file_path = "./results/pageranks/result.data";
     char* wg_file_path = (void *) 0; // Must be provided as argument by the user.

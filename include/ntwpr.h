@@ -30,11 +30,8 @@ double* NTWPR_pagerank(ntw_crs webGraph[static 1], const double c, const double 
  * @param matrix The sparse matrix A in CRS form.
  * @param x_vec The vector x that will be replaced.
  * @param b_vec The vector b.
- * @param d The vector containing the state of the nodes (converged or not).
- * @param dd The vector that contains accumulatively the latest changes of each node's pr.
- * @return double The squared norm difference of the old and new @a x_vec.
  */
-double NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1]);
+void NTWPR_GS_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1]);
 
 /**
  * @brief Calculates the pagerank of the nodes of a web graph.
@@ -58,12 +55,9 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
  * @param matrix The sparse matrix A in CRS form.
  * @param x_vec The vector x that will be replaced.
  * @param b_vec The vector b.
- * @param d The vector containing the state of the nodes (converged or not).
- * @param dd The vector that contains accumulatively the latest changes of each node's pr.
  * @param colors The color groups of the nodes.
- * @return double The squared norm difference of the old and new @a x_vec.
  */
-double NTWPR_GS_parallel_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], char d[static 1], double dd[static 1], const ntw_vector* const colors);
+void NTWPR_GS_parallel_iter(const ntw_crs matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const ntw_vector* const colors);
 
 /**
  * @brief Returns the squered norm of a vector.

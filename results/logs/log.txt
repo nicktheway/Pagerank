@@ -1,0 +1,28 @@
+File: ./data/WGFiles/web-Stanford.wg, Nodes: 281903, Edges: 2312485
+Load to crs time: 48.195970 ms
+Color groups: 195
+Data coloring and matrix reshaping time: 267.899686 ms
+NTWPR_pagerank:
+Make graph stochastic time: 12.115447 ms
+Iteration: 5.241609 ms	Convergence's delta: 2.50e-05
+Iteration: 4.557314 ms	Convergence's delta: 4.35e-05
+Iteration: 4.805815 ms	Convergence's delta: 1.36e-05
+Iteration: 4.591746 ms	Convergence's delta: 4.80e-06
+Iteration: 4.936697 ms	Convergence's delta: 1.95e-06
+Iteration: 4.574428 ms	Convergence's delta: 8.26e-07
+Iteration: 4.589264 ms	Convergence's delta: 2.71e-07
+Iteration: 4.650004 ms	Convergence's delta: 9.10e-08
+Iteration: 4.896517 ms	Convergence's delta: 2.24e-08
+Iteration: 4.735991 ms	Convergence's delta: 8.53e-09
+Iteration: 4.732756 ms	Convergence's delta: 2.51e-09
+Iteration: 4.705459 ms	Convergence's delta: 9.09e-10
+Iteration: 4.547895 ms	Convergence's delta: 3.67e-10
+Iteration: 4.749013 ms	Convergence's delta: 1.37e-10
+Iteration: 4.542540 ms	Convergence's delta: 6.52e-11
+Iteration: 6.022519 ms	Convergence's delta: 2.73e-11
+Iteration: 4.707816 ms	Convergence's delta: 1.38e-11
+Iteration: 4.840116 ms	Convergence's delta: 6.85e-12
+Iteration: 4.550485 ms	Convergence's delta: 3.41e-12
+Iteration: 4.783308 ms	Convergence's delta: 1.77e-12
+Iteration: 4.792107 ms	Convergence's delta: 9.44e-13
+Whole pagerank time: 116.205314 ms

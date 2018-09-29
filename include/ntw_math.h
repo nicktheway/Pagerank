@@ -81,6 +81,14 @@ double NTWM_sqMagnDV(const uint32_t n, const double vector[static n]);
 void NTWM_normalizeDV(const uint32_t n, double vector[static n]);
 
 /**
+ * @brief Normalizes the @a vector so that its elements sum to 1.
+ * 
+ * @param n The size of the @a vector.
+ * @param vector 
+ */
+void NTWM_normalizeSumDV(const uint32_t n, double vector[static n]);
+
+/**
  * @brief Returns \f$\sum_{i=0}^{n}V(ind[i])\f$
  * 
  * @param n The number \f$n\f$  of the sumation elements.

@@ -69,6 +69,22 @@ void NTWM_normalizeDV(const uint32_t n, double vector[static n])
     }
 }
 
+void NTWM_normalizeSumDV(const uint32_t n, double vector[static n])
+{
+    double norm = 0;
+    for (uint32_t i = 0; i < n; i++)
+    {
+        norm += vector[i];
+    }
+    
+    if (fabs(norm - 0) < NTWM_DOUBLE_PRES) return;
+    
+    for (uint32_t i = 0; i < n; i++)
+    {
+        vector[i] /= norm;
+    }
+}
+
 double NTWM_partialSumDV(const uint32_t n, const uint32_t indices[static n], const double vector[static 1])
 {
 	double sum = 0;
