@@ -3,5 +3,6 @@
 <area shape="rect" id="node3" href="$NTWpagerank__serial_8c.html" title="Calculates the pagerank vector of a web graph saved in an NTWPR_WGFile form. " alt="" coords="229,95,415,136"/>
 <area shape="rect" id="node4" href="$ntwpr_8c.html" title="File containing the definitions of the functions declared at ntwpr.h. " alt="" coords="439,102,586,129"/>
 <area shape="rect" id="node5" href="$ntwpr__wg_8c.html" title="File containing the implementations of ntwpr_wg.h. " alt="" coords="610,102,781,129"/>
-<area shape="rect" id="node6" href="$WGFcreator_8c.html" title="This script produces a program that can convert web graph files to WGFiles that can be opened with NT..." alt="" coords="805,102,991,129"/>
+<area shape="rect" id="node6" href="$ntwprp_8c.html" title="File containing the definitions of the functions declared at ntwprp.h. " alt="" coords="805,102,959,129"/>
+<area shape="rect" id="node7" href="$WGFcreator_8c.html" title="This script produces a program that can convert web graph files to WGFiles that can be opened with NT..." alt="" coords="983,102,1168,129"/>
 </map>

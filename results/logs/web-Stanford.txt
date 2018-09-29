@@ -1,45 +1,28 @@
 File: ./data/WGFiles/web-Stanford.wg, Nodes: 281903, Edges: 2312485
-Load to crs time: 41.306794 ms
+Load to crs time: 42.253821 ms
 Color groups: 195
-Data coloring and matrix reshaping time: 267.348356 ms
+Data coloring and matrix reshaping time: 264.417009 ms
 NTWPR_pagerank:
-Make graph stochastic time: 12.246585 ms
-Iteration: 5.600044 ms	Convergence's delta: 2.12e-05
-Iteration: 4.320628 ms	Convergence's delta: 3.47e-05
-Iteration: 4.117203 ms	Convergence's delta: 1.03e-05
-Iteration: 4.077115 ms	Convergence's delta: 3.35e-06
-Iteration: 4.123409 ms	Convergence's delta: 1.30e-06
-Iteration: 4.053959 ms	Convergence's delta: 5.16e-07
-Iteration: 4.167819 ms	Convergence's delta: 1.62e-07
-Iteration: 4.077915 ms	Convergence's delta: 5.15e-08
-Iteration: 4.059498 ms	Convergence's delta: 1.15e-08
-Iteration: 4.968092 ms	Convergence's delta: 4.12e-09
-Iteration: 4.155484 ms	Convergence's delta: 1.24e-09
-Iteration: 4.068489 ms	Convergence's delta: 3.85e-10
-Iteration: 4.185192 ms	Convergence's delta: 1.39e-10
-Iteration: 4.056249 ms	Convergence's delta: 5.36e-11
-Iteration: 4.045150 ms	Convergence's delta: 2.37e-11
-Iteration: 4.151290 ms	Convergence's delta: 8.48e-12
-Iteration: 4.245043 ms	Convergence's delta: 4.25e-12
-Iteration: 4.078207 ms	Convergence's delta: 2.05e-12
-Iteration: 4.048510 ms	Convergence's delta: 9.13e-13
-Iteration: 4.049889 ms	Convergence's delta: 4.41e-13
-Iteration: 3.388813 ms	Convergence's delta: 2.28e-13
-Iteration: 3.210157 ms	Convergence's delta: 1.10e-13
-Iteration: 3.197543 ms	Convergence's delta: 5.40e-14
-Iteration: 3.522470 ms	Convergence's delta: 2.75e-14
-Iteration: 3.245163 ms	Convergence's delta: 1.40e-14
-Iteration: 3.206247 ms	Convergence's delta: 6.97e-15
-Iteration: 3.212395 ms	Convergence's delta: 3.57e-15
-Iteration: 3.200522 ms	Convergence's delta: 1.84e-15
-Iteration: 3.210970 ms	Convergence's delta: 9.40e-16
-Iteration: 3.251620 ms	Convergence's delta: 4.82e-16
-Iteration: 0.845834 ms	Convergence's delta: 2.25e-16
-Iteration: 0.785214 ms	Convergence's delta: 7.56e-17
-Iteration: 0.774984 ms	Convergence's delta: 3.07e-17
-Iteration: 0.744882 ms	Convergence's delta: 1.49e-17
-Iteration: 0.727796 ms	Convergence's delta: 7.34e-18
-Iteration: 0.712984 ms	Convergence's delta: 3.65e-18
-Iteration: 0.695769 ms	Convergence's delta: 1.83e-18
-Iteration: 0.681738 ms	Convergence's delta: 9.19e-19
-Whole pagerank time: 140.336409 ms
+Make graph stochastic time: 12.066854 ms
+Iteration: 4.080851 ms	Convergence's delta: 2.50e-05
+Iteration: 3.688656 ms	Convergence's delta: 4.35e-05
+Iteration: 3.668782 ms	Convergence's delta: 1.36e-05
+Iteration: 3.667507 ms	Convergence's delta: 4.80e-06
+Iteration: 3.705964 ms	Convergence's delta: 1.95e-06
+Iteration: 3.702229 ms	Convergence's delta: 8.26e-07
+Iteration: 3.672203 ms	Convergence's delta: 2.71e-07
+Iteration: 3.677965 ms	Convergence's delta: 9.10e-08
+Iteration: 3.658696 ms	Convergence's delta: 2.24e-08
+Iteration: 3.685276 ms	Convergence's delta: 8.53e-09
+Iteration: 3.730939 ms	Convergence's delta: 2.51e-09
+Iteration: 3.658663 ms	Convergence's delta: 9.09e-10
+Iteration: 3.686612 ms	Convergence's delta: 3.67e-10
+Iteration: 3.747381 ms	Convergence's delta: 1.37e-10
+Iteration: 3.664396 ms	Convergence's delta: 6.52e-11
+Iteration: 3.697330 ms	Convergence's delta: 2.73e-11
+Iteration: 3.676667 ms	Convergence's delta: 1.38e-11
+Iteration: 3.651002 ms	Convergence's delta: 6.85e-12
+Iteration: 3.686026 ms	Convergence's delta: 3.41e-12
+Iteration: 3.660491 ms	Convergence's delta: 1.77e-12
+Iteration: 3.665686 ms	Convergence's delta: 9.44e-13
+Whole pagerank time: 93.344181 ms
