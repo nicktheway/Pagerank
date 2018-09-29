@@ -1,0 +1,187 @@
+%\title{Two column article template by M.A.}
+
+\documentclass[11pt, twocolumn]{article}
+
+\usepackage{authblk}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \textbf{\@title}
+
+  \@author
+\end{flushleft}\egroup
+}
+\makeatother
+
+\title{\Huge Αλγόριθμος Pagerank με παράλληλη υλοποίηση της μεθόδου Gauss-Seidel \vspace{0.5cm}}
+\author{\Large Νικόλαος Κατωμέρης \hspace{2cm} ΑΕΜ: 8551 \hspace{0.5cm} ngkatomer@auth.gr\normalsize \\ Παράλληλα και διανεμημένα συστήματα. \\Τμήμα ηλεκτρολόγων μηχανικών και μηχανικών υπολογιστών, ΑΠΘ}
+
+
+\date{\today}
+
+\usepackage[showframe=false, margin=.75in]{geometry}
+
+\usepackage{polyglossia}
+\newfontfamily\greekfontsf[Script=Greek]{texgyreheros-regular.otf}
+\newfontfamily\greekfonttt[Script=Greek]{Latin Modern Mono}
+\setdefaultlanguage{greek}
+\setotherlanguage{english}
+\setmainfont{Noto Serif}
+
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\usepackage{lipsum}
+
+\usepackage{afterpage}
+
+\renewenvironment{abstract}
+ {\small
+  \begin{center}
+  \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+  \end{center}
+  \list{}{%
+    \setlength{\leftmargin}{10mm}% <---------- Change margin here
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \item\relax}
+ {\endlist}
+
+\usepackage[utf8]{inputenc}
+%\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[lofdepth,lotdepth]{subfig}
+\usepackage{booktabs}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{10pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\usepackage{rotating}
+
+\usepackage{caption}
+%\usepackage{subcaption}
+
+%\usepackage[ngerman]{babel}
+
+\usepackage{csquotes}
+
+\usepackage{todonotes}
+
+\usepackage{stfloats}
+
+%\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{times}
+
+\usepackage{framed} %um Boxen zu machen
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+%\renewbibmacro*{volume+number+eid}{%
+%\printfield{volume}%
+%  \setunit*{\adddot}% DELETED
+%\setunit*{\addnbspace}% NEW (optional); there's also \addnbthinspace
+%\printfield{number}%
+%\setunit{\addcomma\space}%
+%\printfield{eid}}
+%\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
+
+\usepackage{setspace}
+\onehalfspacing
+
+\setlength{\columnsep}{0.8cm}
+
+\setlength{\parskip}{0em}
+
+\usepackage{color}
+\definecolor{black}{gray}{0} % 10% gray
+
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black]{hyperref}
+
+\usepackage{tabularx}
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+
+\usepackage{ntheorem}
+\newtheorem*{TRQ}{Research Question}
+
+\newtheorem{Hyp}{Hypothesis} 
+
+
+\begin{document}
+
+\twocolumn[
+\begin{@twocolumnfalse}
+\maketitle
+\begin{abstract}
+%\textit{\lipsum[2]
+%\bigskip}
+Στην παρούσα αναφορά περιγράφεται η διαδικασία παραλληλοποίησης του αλγορίθμου Gauss-Seidel για τον υπολογισμό του διανύσματος Pagerank γράφων του διαδικτύου. Επίσης, παρουσιάζονται αποτελέσματα σε ενδεικτικούς γράφους καθώς και αποδείξεις ορθότητας του υλοποιημένου προγράμματος.
+\end{abstract}
+\end{@twocolumnfalse}
+]
+
+\section*{Pagerank}
+\input{1_Pagerank.tex}
+
+\section*{Gauss Seidel}
+\input{2_gs_serial.tex}
+
+\begin{Hyp}
+A hypothesis is likely to be false if it is longer than this line
+\label{hyp:nd_conflictivity}
+\end{Hyp}
+
+\lipsum[1]
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \toprule
+  text & text & text & text & text & text  \\
+  \midrule
+  1 &  84 &  46 &   4 &   3 &   5 \\
+    2 &  67 &  24 &   5 &   1 &   5 \\
+    3 &  54 &  26 &   4 &   2 &   5 \\
+    4 &  44 &  16 &   5 &   2 &   5 \\
+    5 &  53 &  21 &   6 &   2 &   5 \\
+   \bottomrule
+\end{tabular}
+\caption{An example single column table}
+\label{tab:example}
+\end{table}
+
+\lipsum[1]
+
+\begin{figure*}[ht!]
+\centering
+\includegraphics[width=1\textwidth]{plots/google_times.png}
+\caption{A two column figure (indicate with figure*)}
+\label{fig:example}
+\end{figure*}
+
+\lipsum[1]
+
+\printbibliography
+
+
+ 
+\end{document}
+\clearpage
+\appendix
+\renewcommand\thefigure{A\arabic{figure}}
+\setcounter{figure}{0}
+
+
+\section*{Appendix}
+
+Appendix content
+
+
+\end{document}

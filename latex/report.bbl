@@ -1,0 +1,63 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{kamvar2004adaptive}{article}{}
+      \name{author}{3}{}{%
+        {{hash=73c55e74069152b3ac7680b13ebdd7b4}{%
+           family={Kamvar},
+           familyi={K\bibinitperiod},
+           given={Sepandar},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7b7065e349af2a3505ccfbe205c56572}{%
+           family={Haveliwala},
+           familyi={H\bibinitperiod},
+           given={Taher},
+           giveni={T\bibinitperiod}}}%
+        {{hash=23923ccfdde2f6663af778e44cdfb81f}{%
+           family={Golub},
+           familyi={G\bibinitperiod},
+           given={Gene},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{efc491980f149e7fbf41ff2abce50a41}
+      \strng{fullhash}{efc491980f149e7fbf41ff2abce50a41}
+      \strng{bibnamehash}{efc491980f149e7fbf41ff2abce50a41}
+      \strng{authorbibnamehash}{efc491980f149e7fbf41ff2abce50a41}
+      \strng{authornamehash}{efc491980f149e7fbf41ff2abce50a41}
+      \strng{authorfullhash}{efc491980f149e7fbf41ff2abce50a41}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Linear Algebra and its Applications}
+      \field{title}{Adaptive methods for the computation of PageRank}
+      \field{volume}{386}
+      \field{year}{2004}
+      \field{pages}{51\bibrangedash 65}
+      \range{pages}{15}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
