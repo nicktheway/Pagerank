@@ -22,8 +22,8 @@ endif
 LIBS= -lm -fopenmp
 
 # Files
-_DEPS = ntw_math.h ntw_crs.h ntwpr_wg.h ntwpr.h ntw_debug.h ntw_collections.h
-_OBJ = ntw_math.o ntw_crs.o ntwpr_wg.o ntwpr.o ntw_debug.o ntw_collections.o
+_DEPS = ntw_math.h ntw_mathp.h ntw_crs.h ntwpr_wg.h ntwpr.h ntw_debug.h ntw_collections.h
+_OBJ = ntw_math.o ntw_mathp.o ntw_crs.o ntwpr_wg.o ntwpr.o ntw_debug.o ntw_collections.o
 _CONVERTER = WGFcreator.o
 _CALCULATOR = NTWpagerank_serial.o
 _PCALCULATOR = NTWpagerank.o

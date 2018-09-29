@@ -7,6 +7,7 @@
  */
 #include "../include/ntwpr.h"
 #include "../include/ntw_math.h"
+#include "../include/ntw_mathp.h"
 #include "../include/ntw_debug.h"
 #include <math.h>
 #include <omp.h>
@@ -121,10 +122,10 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
         clock_gettime(CLOCK_MONOTONIC, &start);
 
         NTWPR_GS_parallel_iter(webGraph, pagerank, b, colors);
-        NTWM_normalizeSumDV(wgSize, pagerank);
-        NTWM_subDV(wgSize,prPagerank,pagerank);
-        delta = NTWM_sqMagnDV(wgSize, prPagerank);
-        NTWM_assignDV(wgSize, prPagerank, pagerank);
+        NTWMP_normalizeSumDV(wgSize, pagerank);
+        NTWMP_subDV(wgSize,prPagerank,pagerank);
+        delta = NTWMP_sqMagnDV(wgSize, prPagerank);
+        NTWMP_assignDV(wgSize, prPagerank, pagerank);
         curr_iteration++;
 
         clock_gettime(CLOCK_MONOTONIC, &finish);
@@ -148,7 +149,7 @@ void NTWPR_GS_parallel_iter(const ntw_crs matrix[static 1], double x_vec[static 
     {
         const uint32_t groupSize = ((ntw_vector*) colors->data[color])->length;
         next = first_group_node + groupSize;
-        #pragma omp parallel for if (groupSize > 40)
+        #pragma omp parallel for if (groupSize > 50)
         for (uint32_t i = first_group_node; i < next; i++)
         {
             double den = 1.0;

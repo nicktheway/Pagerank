@@ -8,6 +8,8 @@ var searchData=
   ['ntw_5fdebug_2eh',['ntw_debug.h',['../ntw__debug_8h.html',1,'']]],
   ['ntw_5fmath_2ec',['ntw_math.c',['../ntw__math_8c.html',1,'']]],
   ['ntw_5fmath_2eh',['ntw_math.h',['../ntw__math_8h.html',1,'']]],
+  ['ntw_5fmathp_2ec',['ntw_mathp.c',['../ntw__mathp_8c.html',1,'']]],
+  ['ntw_5fmathp_2eh',['ntw_mathp.h',['../ntw__mathp_8h.html',1,'']]],
   ['ntwpagerank_2ec',['NTWpagerank.c',['../NTWpagerank_8c.html',1,'']]],
   ['ntwpagerank_5fserial_2ec',['NTWpagerank_serial.c',['../NTWpagerank__serial_8c.html',1,'']]],
   ['ntwpr_2ec',['ntwpr.c',['../ntwpr_8c.html',1,'']]],

@@ -60,7 +60,11 @@ void NTWM_normalizeDV(const uint32_t n, double vector[static n])
         norm += vector[i] * vector[i];
     }
     
-    if (fabs(norm - 0) < NTWM_DOUBLE_PRES) return;
+    if (fabs(norm - 0) < NTWM_DOUBLE_PRES)
+    {
+        fprintf(stderr, "%s: The vector is zero, didn't normalize.\n", __func__);
+        return;
+    }
     
     norm = sqrt(norm);
     for (uint32_t i = 0; i < n; i++)
