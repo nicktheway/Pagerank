@@ -13,14 +13,20 @@
 /**
  * @brief Calculates the pagerank of the nodes of a web graph.
  * 
+ * If @a it_specific is non 0, the @e parameter won't be taken into account and the algorithm will run
+ * @a it_specific iterations.
+ * Else if @a it_specific is zero, the algorithm will run until it converges to @a e or the number of iterations
+ * grows more than a safety limit.
+ * 
  * @param webGraph The web graf in ntw_crs representation.
  * @param c The teleportation coefficient.
  * @param e The convergence's tolerance.
+ * @param it_specific If not 0, the algorithm will run @a it_specific iterations.
  * @param colors The color groups of the nodes.
  * @param stream Opened FILE* stream for printing results.
  * @return double* The calculated pagerank vector.
  */
-double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const double e, const ntw_vector* const colors, FILE* stream);
+double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const double e, const int32_t it_specific, const ntw_vector* const colors, FILE* stream);
 
 /**
  * @brief Calculates one iteration of @f$(I-A)x = b@f$

@@ -7,8 +7,10 @@
 # 	For the serial pagerank calculator: 	$ make PRcalculatorSerial
 #	For the parallel pagerank calculator:	$ make PRcalculator
 #	For the web graph file creator:			$ make WFGcreator
-# >To clean the extra files (.o and temp files) run:
+# >To clean the object files run:
 #	$ make clean
+# >To clean the object and the binary files run:
+#	$ make purge
 ##
 
 # Vars
@@ -21,17 +23,20 @@ else
 endif
 LIBS= -lm -fopenmp
 
-# Files
+# Source Files
 _DEPS = ntw_math.h ntw_mathp.h ntw_crs.h ntwpr_wg.h ntwpr.h ntwprp.h ntw_debug.h ntw_collections.h
 _OBJ = ntw_math.o ntw_mathp.o ntw_crs.o ntwpr_wg.o ntwpr.o ntwprp.o ntw_debug.o ntw_collections.o
 _CONVERTER = WGFcreator.o
 _CALCULATOR = NTWpagerank_serial.o
 _PCALCULATOR = NTWpagerank.o
 
+# Commands
+MKDIR = mkdir 
+
 # Folders
 IDIR=include
 SDIR=src
-ODIR=src/obj
+ODIR=obj
 BDIR =bin
 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
@@ -41,7 +46,7 @@ CALCULATOR = $(patsubst %,$(ODIR)/%,$(_CALCULATOR))
 PCALCULATOR = $(patsubst %,$(ODIR)/%,$(_PCALCULATOR))
 
 # Rules
-$(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
+$(ODIR)/%.o: $(SDIR)/%.c $(DEPS) | $(ODIR)
 	$(CC) -c -o $@ $< $(CFLAGS) $(LIBS)
 
 all: PRcalculator PRcalculatorSerial WFGcreator
@@ -55,7 +60,13 @@ PRcalculatorSerial: $(OBJ) $(CALCULATOR)
 WFGcreator: $(OBJ) $(CONVERTER)
 	$(CC) -o $(BDIR)/WGFcreator $^ $(CFLAGS) $(LIBS)
 
-.PHONY: clean
+.PHONY: clean purge
 
 clean:
-	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~ $(SDIR)/*~
+	rm -f $(ODIR)/*.o
+
+purge: clean
+	rm -f $(BDIR)/*
+
+$(ODIR):
+	$(MKDIR) $(ODIR)

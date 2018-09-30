@@ -4,13 +4,8 @@ etc/
 # binary files
 bin/
 
+# .o files
+obj/
+
 # WGFiles
 data/WGFiles/*
-data/logs/*
-data/pagerank/*
-
-# MathJax
-docs/MathJax-master/
-
-# .o files
-src/obj/

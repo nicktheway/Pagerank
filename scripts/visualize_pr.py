@@ -7,7 +7,7 @@ import matplotlib.ticker as mtick
 #import helper functions
 import helpers as hp
 
-dataset = "web-BerkStan"
+dataset = "web-Google"
 
 pagerankFilePath = "./results/pageranks/" + dataset + ".data"
 serialPagerankFilePath = "./results/serial/pageranks/" + dataset + ".data"

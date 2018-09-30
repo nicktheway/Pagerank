@@ -11,7 +11,7 @@
 #include "../include/ntw_debug.h"
 #include <math.h>
 
-double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const double e, const ntw_vector* const colors, FILE* stream)
+double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const double e, const int32_t it_specific, const ntw_vector* const colors, FILE* stream)
 {
     struct timespec start, finish;
     // For more readable code wgSize <- webGraph->node_num
@@ -40,7 +40,7 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
     double delta = 1.0;
     
     unsigned max_iterations = 150, curr_iteration = 1;
-    while (delta > e && curr_iteration <= max_iterations)
+    while ((!it_specific && delta > e && curr_iteration <= max_iterations) || (it_specific && curr_iteration <= it_specific))
     {
         clock_gettime(CLOCK_MONOTONIC, &start);
 
@@ -55,7 +55,7 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
         NTW_DEBUG_printElapsedTime(stream, start, finish, "Iteration", '\t');
         fprintf(stream, "Convergence's delta: %0.2e\n", delta);
     }
-    fprintf(stdout, "DEBUG: Converged after #%u iterations.\tDelta = %0.2e\n", curr_iteration - 1, delta);
+    fprintf(stdout, "After #%u iterations:\tDelta = %0.2e\n", curr_iteration - 1, delta);
 
 	// Clear allocated vars except from pagerank of course.
     free(b);

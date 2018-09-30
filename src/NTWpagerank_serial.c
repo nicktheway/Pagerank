@@ -14,17 +14,24 @@
 #include "../include/ntw_debug.h"
 
 /**
+ * @brief Τhe max number of specific iterations that are allowed.
+ * 
+ */
+const uint32_t NTWPR_Max_Iterations_Limit = 150;
+
+/**
  * @brief Refactored main()'s code that handles command line arguments.
  * 
  * @param argc The number of command line arguments.
  * @param argv The command line arguments as char arrays.
  * @param delta Address of the convergence's delta variable.
  * @param tel_coeff Address of the teleportation coefficient's variable.
+ * @param it_number Address of the specific_iterations variable.
  * @param log_file_path Address of the log file's path variable.
  * @param pagerank_file_path Address of the output pagerank's file path variable.
  * @param wg_file_path Address of the input web graph's file path variable.
  */
-void parseArguments(int argc, char * const argv[argc+1], double *delta, double *tel_coeff, 
+void parseArguments(int argc, char * const argv[argc+1], double *delta, double *tel_coeff, int32_t *it_number,
                         char** log_file_path, char** pagerank_file_path, char** wg_file_path);
 
 /**
@@ -39,12 +46,13 @@ int main(int argc, char * const argv[argc+1])
     // Default values.
     double delta = 1e-12;
     double tel_coeff = 0.15;
-    char* log_file_path = "./results/logs/log.txt";
-    char* pagerank_file_path = "./results/pageranks/result.data";
+    int32_t specific_iterations = 0; // If non zero, the pagerank calculation will run exactly that many iterations.
+    char* log_file_path = "./s_log.txt";
+    char* pagerank_file_path = "./s_pagerank.data";
     char* wg_file_path = (void *) 0; // Must be provided as argument by the user.
 
     // Get wg_file_path. Possibly, update values from the default ones to the specified ones.
-    parseArguments(argc, argv, &delta, &tel_coeff, &log_file_path, &pagerank_file_path, &wg_file_path);
+    parseArguments(argc, argv, &delta, &tel_coeff, &specific_iterations, &log_file_path, &pagerank_file_path, &wg_file_path);
     
     // Try to open the file at wg_file_path.
     NTWPR_WGFile* file = NTWPR_WGF_fopen(wg_file_path);
@@ -72,7 +80,7 @@ int main(int argc, char * const argv[argc+1])
     // Calculate the web-graph's pagerank.
     fprintf(log_fp, "NTWPR_pagerank:\n");
     clock_gettime(CLOCK_MONOTONIC, &start);
-    double* pr = NTWPR_pagerank(myCRS, tel_coeff, delta, log_fp);
+    double* pr = NTWPR_pagerank(myCRS, tel_coeff, delta, specific_iterations, log_fp);
     clock_gettime(CLOCK_MONOTONIC, &finish);
     NTW_DEBUG_printElapsedTime(log_fp, start, finish, "Whole pagerank time", '\n');
     
@@ -88,7 +96,7 @@ int main(int argc, char * const argv[argc+1])
     return EXIT_SUCCESS;
 }
 
-void parseArguments(int argc, char * const argv[argc+1], double *delta, double *tel_coeff, 
+void parseArguments(int argc, char * const argv[argc+1], double *delta, double *tel_coeff, int32_t *it_number,
                         char** log_file_path, char** pagerank_file_path, char** wg_file_path)
 {
     /**
@@ -98,7 +106,7 @@ void parseArguments(int argc, char * const argv[argc+1], double *delta, double *
     int opt = 0; 
     while (optind < argc) 
     {
-        if ((opt = getopt(argc, argv, "l:o:E:d:")) != -1)
+        if ((opt = getopt(argc, argv, "l:o:E:d:i:")) != -1)
         {
             switch (opt) 
             {
@@ -123,9 +131,17 @@ void parseArguments(int argc, char * const argv[argc+1], double *delta, double *
                         exit(EXIT_FAILURE);
                     }
                     break;
+                case 'i':
+                    *it_number = atoi(optarg);
+                    if (*it_number <= 0 || *it_number > NTWPR_Max_Iterations_Limit)
+                    {
+                        printf("The specified number of iterations must be a positive integer not bigger than %u\n", NTWPR_Max_Iterations_Limit);
+                        exit(EXIT_FAILURE);
+                    }
+                    break;
                 default:
-                    fprintf(stderr, "Usage: %s input_NTW_WGFile_path [-E convergence_delta] [-d teleportation_coefficient]\n"
-                                    "\t\t\t\t\t\t[-o pagerank_vector_binary_file_path] [-l log_text_file_path]\n",
+                    fprintf(stderr, "Usage: %s input_NTW_WGFile_path [-E convergence_delta][-d teleportation_coefficient]\n"
+                                    "\t\t\t\t\t\t[-i specific_iterations_number][-o pagerank_vector_binary_file_path][-l log_text_file_path]\n",
                             argv[0]);
                     exit(EXIT_FAILURE);
             }
