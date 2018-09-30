@@ -108,6 +108,61 @@
       \field{title}{{SNAP Datasets}: {Stanford} Large Network Dataset Collection}
       \field{year}{2014}
     \endentry
+    \entry{silvestrepagerank}{article}{}
+      \name{author}{3}{}{%
+        {{hash=91901be53dd42bdb01cfa5417db04421}{%
+           family={Silvestre},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d30eec2a9b5e13c65d7c4bbded3ac4a9}{%
+           family={Hespanha},
+           familyi={H\bibinitperiod},
+           given={Joao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=31279d14b07cb7a4a2bf6fa76255b5cc}{%
+           family={Silvestre},
+           familyi={S\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{2bf1d5826f2d0598e67653b36c48ac9b}
+      \strng{fullhash}{2bf1d5826f2d0598e67653b36c48ac9b}
+      \strng{bibnamehash}{2bf1d5826f2d0598e67653b36c48ac9b}
+      \strng{authorbibnamehash}{2bf1d5826f2d0598e67653b36c48ac9b}
+      \strng{authornamehash}{2bf1d5826f2d0598e67653b36c48ac9b}
+      \strng{authorfullhash}{2bf1d5826f2d0598e67653b36c48ac9b}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A PageRank Algorithm based on Asynchronous Gauss-Seidel Iterations}
+    \endentry
+    \entry{hasenplaugh2016parallel}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=bcd5341dd08e441bda37a1d87c784e74}{%
+           family={Hasenplaugh},
+           familyi={H\bibinitperiod},
+           given={William\bibnamedelima Cleaburn},
+           giveni={W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Massachusetts Institute of Technology}%
+      }
+      \strng{namehash}{bcd5341dd08e441bda37a1d87c784e74}
+      \strng{fullhash}{bcd5341dd08e441bda37a1d87c784e74}
+      \strng{bibnamehash}{bcd5341dd08e441bda37a1d87c784e74}
+      \strng{authorbibnamehash}{bcd5341dd08e441bda37a1d87c784e74}
+      \strng{authornamehash}{bcd5341dd08e441bda37a1d87c784e74}
+      \strng{authorfullhash}{bcd5341dd08e441bda37a1d87c784e74}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Parallel algorithms for scheduling data-graph computations}
+      \field{type}{phdthesis}
+      \field{year}{2016}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
