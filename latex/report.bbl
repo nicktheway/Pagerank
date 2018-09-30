@@ -80,6 +80,34 @@
       \field{pages}{103\bibrangedash 105}
       \range{pages}{3}
     \endentry
+    \entry{snapnets}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=900d107125ff0ca84698cb909e4f6c51}{%
+           family={Leskovec},
+           familyi={L\bibinitperiod},
+           given={Jure},
+           giveni={J\bibinitperiod}}}%
+        {{hash=767ff42ec330eeedea785558d350f6fa}{%
+           family={Krevl},
+           familyi={K\bibinitperiod},
+           given={Andrej},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{fullhash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{bibnamehash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{authorbibnamehash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{authornamehash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{authorfullhash}{8b6c59a3c7880c51055cf3864633578b}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://snap.stanford.edu/data}}
+      \field{month}{6}
+      \field{title}{{SNAP Datasets}: {Stanford} Large Network Dataset Collection}
+      \field{year}{2014}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

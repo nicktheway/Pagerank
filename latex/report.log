@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  30 SEP 2018 00:47
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  30 SEP 2018 06:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -625,26 +625,34 @@ Package: abstract 2009/06/08 v1.2a configurable abstracts
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count268
 )
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip59
+\enit@outerparindent=\dimen155
+\enit@toks=\toks23
+\enit@inbox=\box43
+\enitdp@description=\count269
+)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
-\AP@output=\toks23
-\AP@partial=\box43
-\AP@footins=\box44
+\AP@output=\toks24
+\AP@partial=\box44
+\AP@footins=\box45
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks24
-\inpenc@posthook=\toks25
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
 
 
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
 
 ) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen155
-\WF@size=\dimen156
-\c@WF@wrappedlines=\count269
-\WF@box=\box45
-\WF@everypar=\toks26
+\wrapoverhang=\dimen156
+\WF@size=\dimen157
+\c@WF@wrappedlines=\count270
+\WF@box=\box46
+\WF@everypar=\toks27
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
@@ -656,62 +664,62 @@ Package: caption 2017/03/19 v3.3-145 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/04/15 v1.7-167 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen157
-\captionmargin@=\dimen158
-\captionwidth=\dimen159
-\caption@tempdima=\dimen160
-\caption@indent=\dimen161
-\caption@parindent=\dimen162
-\caption@hangindent=\dimen163
+\captionmargin=\dimen158
+\captionmargin@=\dimen159
+\captionwidth=\dimen160
+\caption@tempdima=\dimen161
+\caption@indent=\dimen162
+\caption@parindent=\dimen163
+\caption@hangindent=\dimen164
 )
-\c@ContinuedFloat=\count270
+\c@ContinuedFloat=\count271
 Package caption Info: wrapfig package is loaded.
 )
-\c@KVtest=\count271
-\sf@farskip=\skip59
-\sf@captopadj=\dimen164
-\sf@capskip=\skip60
-\sf@nearskip=\skip61
-\c@subfigure=\count272
-\c@subfigure@save=\count273
-\c@lofdepth=\count274
-\c@subtable=\count275
-\c@subtable@save=\count276
-\c@lotdepth=\count277
-\sf@top=\skip62
-\sf@bottom=\skip63
+\c@KVtest=\count272
+\sf@farskip=\skip60
+\sf@captopadj=\dimen165
+\sf@capskip=\skip61
+\sf@nearskip=\skip62
+\c@subfigure=\count273
+\c@subfigure@save=\count274
+\c@lofdepth=\count275
+\c@subtable=\count276
+\c@subtable@save=\count277
+\c@lotdepth=\count278
+\sf@top=\skip63
+\sf@bottom=\skip64
 )
 (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen165
-\lightrulewidth=\dimen166
-\cmidrulewidth=\dimen167
-\belowrulesep=\dimen168
-\belowbottomsep=\dimen169
-\aboverulesep=\dimen170
-\abovetopsep=\dimen171
-\cmidrulesep=\dimen172
-\cmidrulekern=\dimen173
-\defaultaddspace=\dimen174
-\@cmidla=\count278
-\@cmidlb=\count279
-\@aboverulesep=\dimen175
-\@belowrulesep=\dimen176
-\@thisruleclass=\count280
-\@lastruleclass=\count281
-\@thisrulewidth=\dimen177
+\heavyrulewidth=\dimen166
+\lightrulewidth=\dimen167
+\cmidrulewidth=\dimen168
+\belowrulesep=\dimen169
+\belowbottomsep=\dimen170
+\aboverulesep=\dimen171
+\abovetopsep=\dimen172
+\cmidrulesep=\dimen173
+\cmidrulekern=\dimen174
+\defaultaddspace=\dimen175
+\@cmidla=\count279
+\@cmidlb=\count280
+\@aboverulesep=\dimen176
+\@belowrulesep=\dimen177
+\@thisruleclass=\count281
+\@lastruleclass=\count282
+\@thisrulewidth=\dimen178
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box46
-\beforetitleunit=\skip64
-\aftertitleunit=\skip65
-\ttl@plus=\dimen178
-\ttl@minus=\dimen179
-\ttl@toksa=\toks27
-\titlewidth=\dimen180
-\titlewidthlast=\dimen181
-\titlewidthfirst=\dimen182
+\ttl@box=\box47
+\beforetitleunit=\skip65
+\aftertitleunit=\skip66
+\ttl@plus=\dimen179
+\ttl@minus=\dimen180
+\ttl@toksa=\toks28
+\titlewidth=\dimen181
+\titlewidthlast=\dimen182
+\titlewidthfirst=\dimen183
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
@@ -733,27 +741,27 @@ Package graphics Info: Driver file: xetex.def on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen183
-\Gin@req@width=\dimen184
+\Gin@req@height=\dimen184
+\Gin@req@width=\dimen185
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count282
-\rotFPtop=\skip66
-\rotFPbot=\skip67
-\rot@float@box=\box47
-\rot@mess@toks=\toks28
+\c@r@tfl@t=\count283
+\rotFPtop=\skip67
+\rotFPbot=\skip68
+\rot@float@box=\box48
+\rot@mess@toks=\toks29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
-\csq@reset=\count283
-\csq@gtype=\count284
-\csq@glevel=\count285
-\csq@qlevel=\count286
-\csq@maxlvl=\count287
-\csq@tshold=\count288
-\csq@ltx@everypar=\toks29
+\csq@reset=\count284
+\csq@gtype=\count285
+\csq@glevel=\count286
+\csq@qlevel=\count287
+\csq@maxlvl=\count288
+\csq@tshold=\count289
+\csq@ltx@everypar=\toks30
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2018/04/13 v5.2d csquotes generic definitions (JAW)
@@ -788,13 +796,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks30
-\pgfutil@tempdima=\dimen185
-\pgfutil@tempdimb=\dimen186
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen186
+\pgfutil@tempdimb=\dimen187
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box48
+\pgfutil@abb=\box49
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -809,30 +817,30 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks31
-\pgfkeys@temptoks=\toks32
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks33
+\pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen187
-\pgf@y=\dimen188
-\pgf@xa=\dimen189
-\pgf@ya=\dimen190
-\pgf@xb=\dimen191
-\pgf@yb=\dimen192
-\pgf@xc=\dimen193
-\pgf@yc=\dimen194
+\pgf@x=\dimen188
+\pgf@y=\dimen189
+\pgf@xa=\dimen190
+\pgf@ya=\dimen191
+\pgf@xb=\dimen192
+\pgf@yb=\dimen193
+\pgf@xc=\dimen194
+\pgf@yc=\dimen195
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count289
-\c@pgf@countb=\count290
-\c@pgf@countc=\count291
-\c@pgf@countd=\count292
-\t@pgf@toka=\toks34
-\t@pgf@tokb=\toks35
-\t@pgf@tokc=\toks36
+\c@pgf@counta=\count290
+\c@pgf@countb=\count291
+\c@pgf@countc=\count292
+\c@pgf@countd=\count293
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -848,13 +856,13 @@ File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
 f
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )
-\pgfsys@objnum=\count293
+\pgfsys@objnum=\count294
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count294
-\pgfsyssoftpath@bigbuffer@items=\count295
+\pgfsyssoftpath@smallbuffer@items=\count295
+\pgfsyssoftpath@bigbuffer@items=\count296
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -867,12 +875,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen195
-\pgfmath@count=\count296
-\pgfmath@box=\box49
-\pgfmath@toks=\toks37
-\pgfmath@stack@operand=\toks38
-\pgfmath@stack@operation=\toks39
+\pgfmath@dimen=\dimen196
+\pgfmath@count=\count297
+\pgfmath@box=\box50
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -892,57 +900,57 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count297
+\c@pgfmathroundto@lastzeros=\count298
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen196
-\pgf@picmaxx=\dimen197
-\pgf@picminy=\dimen198
-\pgf@picmaxy=\dimen199
-\pgf@pathminx=\dimen256
-\pgf@pathmaxx=\dimen257
-\pgf@pathminy=\dimen258
-\pgf@pathmaxy=\dimen259
-\pgf@xx=\dimen260
-\pgf@xy=\dimen261
-\pgf@yx=\dimen262
-\pgf@yy=\dimen263
-\pgf@zx=\dimen264
-\pgf@zy=\dimen265
+\pgf@picminx=\dimen197
+\pgf@picmaxx=\dimen198
+\pgf@picminy=\dimen199
+\pgf@picmaxy=\dimen256
+\pgf@pathminx=\dimen257
+\pgf@pathmaxx=\dimen258
+\pgf@pathminy=\dimen259
+\pgf@pathmaxy=\dimen260
+\pgf@xx=\dimen261
+\pgf@xy=\dimen262
+\pgf@yx=\dimen263
+\pgf@yy=\dimen264
+\pgf@zx=\dimen265
+\pgf@zy=\dimen266
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen266
-\pgf@path@lasty=\dimen267
+\pgf@path@lastx=\dimen267
+\pgf@path@lasty=\dimen268
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen268
-\pgf@shorten@start@additional=\dimen269
+\pgf@shorten@end@additional=\dimen269
+\pgf@shorten@start@additional=\dimen270
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box50
-\pgf@hbox=\box51
-\pgf@layerbox@main=\box52
-\pgf@picture@serial@count=\count298
+\pgfpic=\box51
+\pgf@hbox=\box52
+\pgf@layerbox@main=\box53
+\pgf@picture@serial@count=\count299
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen270
+\pgflinewidth=\dimen271
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen271
-\pgf@pt@y=\dimen272
-\pgf@pt@temp=\dimen273
+\pgf@pt@x=\dimen272
+\pgf@pt@y=\dimen273
+\pgf@pt@temp=\dimen274
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -958,12 +966,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen274
+\pgfarrowsep=\dimen275
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen275
-\pgf@sys@shading@range@num=\count299
+\pgf@max=\dimen276
+\pgf@sys@shading@range@num=\count300
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -971,7 +979,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box53
+\pgfexternal@startupbox=\box54
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -987,15 +995,15 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box54
+\pgfnodeparttextbox=\box55
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen276
-\pgf@nodesepend=\dimen277
+\pgf@nodesepstart=\dimen277
+\pgf@nodesepend=\dimen278
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1009,10 +1017,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen278
-\pgffor@skip=\dimen279
-\pgffor@stack=\toks40
-\pgffor@toks=\toks41
+\pgffor@iter=\dimen279
+\pgffor@skip=\dimen280
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -1020,31 +1028,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count300
-\pgfplotmarksize=\dimen280
+\pgf@plot@mark@count=\count301
+\pgfplotmarksize=\dimen281
 )
-\tikz@lastx=\dimen281
-\tikz@lasty=\dimen282
-\tikz@lastxsaved=\dimen283
-\tikz@lastysaved=\dimen284
-\tikzleveldistance=\dimen285
-\tikzsiblingdistance=\dimen286
-\tikz@figbox=\box55
-\tikz@figbox@bg=\box56
-\tikz@tempbox=\box57
-\tikz@tempbox@bg=\box58
-\tikztreelevel=\count301
-\tikznumberofchildren=\count302
-\tikznumberofcurrentchild=\count303
-\tikz@fig@count=\count304
+\tikz@lastx=\dimen282
+\tikz@lasty=\dimen283
+\tikz@lastxsaved=\dimen284
+\tikz@lastysaved=\dimen285
+\tikzleveldistance=\dimen286
+\tikzsiblingdistance=\dimen287
+\tikz@figbox=\box56
+\tikz@figbox@bg=\box57
+\tikz@tempbox=\box58
+\tikz@tempbox@bg=\box59
+\tikztreelevel=\count302
+\tikznumberofchildren=\count303
+\tikznumberofcurrentchild=\count304
+\tikz@fig@count=\count305
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count305
-\pgfmatrixcurrentcolumn=\count306
-\pgf@matrix@numberofcolumns=\count307
+\pgfmatrixcurrentrow=\count306
+\pgfmatrixcurrentcolumn=\count307
+\pgf@matrix@numberofcolumns=\count308
 )
-\tikz@expandcount=\count308
+\tikz@expandcount=\count309
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1056,24 +1064,24 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count309
-\calc@Bcount=\count310
-\calc@Adimen=\dimen287
-\calc@Bdimen=\dimen288
-\calc@Askip=\skip68
-\calc@Bskip=\skip69
+\calc@Acount=\count310
+\calc@Bcount=\count311
+\calc@Adimen=\dimen288
+\calc@Bdimen=\dimen289
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count311
-\calc@Cskip=\skip70
+\calc@Ccount=\count312
+\calc@Cskip=\skip71
 )
-\c@@todonotes@numberoftodonotes=\count312
+\c@@todonotes@numberoftodonotes=\count313
 )
 (/usr/share/texlive/texmf-dist/tex/latex/sttools/stfloats.sty
 Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip sett
 ings
-\@dblbotnum=\count313
-\c@dblbotnumber=\count314
+\@dblbotnum=\count314
+\c@dblbotnumber=\count315
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
@@ -1162,11 +1170,11 @@ Package: times 2005/04/12 PSNFSS-v9.2a (SPQR)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip71
-\fb@frw=\dimen289
-\fb@frh=\dimen290
-\FrameRule=\dimen291
-\FrameSep=\dimen292
+\OuterFrameSep=\skip72
+\fb@frw=\dimen290
+\fb@frh=\dimen291
+\FrameRule=\dimen292
+\FrameSep=\dimen293
 )
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
@@ -1202,7 +1210,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count315
+\lrq@indent=\count316
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1214,62 +1222,62 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write4
-\integerpart=\count316
-\decimalpart=\count317
+\integerpart=\count317
+\decimalpart=\count318
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count318
-\c@listtotal=\count319
-\c@listcount=\count320
-\c@liststart=\count321
-\c@liststop=\count322
-\c@citecount=\count323
-\c@citetotal=\count324
-\c@multicitecount=\count325
-\c@multicitetotal=\count326
-\c@instcount=\count327
-\c@maxnames=\count328
-\c@minnames=\count329
-\c@maxitems=\count330
-\c@minitems=\count331
-\c@citecounter=\count332
-\c@savedcitecounter=\count333
-\c@uniquelist=\count334
-\c@uniquename=\count335
-\c@refsection=\count336
-\c@refsegment=\count337
-\c@maxextratitle=\count338
-\c@maxextratitleyear=\count339
-\c@maxextradate=\count340
-\c@maxextraalpha=\count341
-\c@abbrvpenalty=\count342
-\c@highnamepenalty=\count343
-\c@lownamepenalty=\count344
-\c@maxparens=\count345
-\c@parenlevel=\count346
-\blx@tempcnta=\count347
-\blx@tempcntb=\count348
-\blx@tempcntc=\count349
-\blx@maxsection=\count350
-\blx@maxsegment@0=\count351
-\blx@notetype=\count352
-\blx@parenlevel@text=\count353
-\blx@parenlevel@foot=\count354
-\blx@sectionciteorder@0=\count355
-\labelnumberwidth=\skip72
-\labelalphawidth=\skip73
-\biblabelsep=\skip74
-\bibitemsep=\skip75
-\bibnamesep=\skip76
-\bibinitsep=\skip77
-\bibparsep=\skip78
-\bibhang=\skip79
+\c@tabx@nest=\count319
+\c@listtotal=\count320
+\c@listcount=\count321
+\c@liststart=\count322
+\c@liststop=\count323
+\c@citecount=\count324
+\c@citetotal=\count325
+\c@multicitecount=\count326
+\c@multicitetotal=\count327
+\c@instcount=\count328
+\c@maxnames=\count329
+\c@minnames=\count330
+\c@maxitems=\count331
+\c@minitems=\count332
+\c@citecounter=\count333
+\c@savedcitecounter=\count334
+\c@uniquelist=\count335
+\c@uniquename=\count336
+\c@refsection=\count337
+\c@refsegment=\count338
+\c@maxextratitle=\count339
+\c@maxextratitleyear=\count340
+\c@maxextradate=\count341
+\c@maxextraalpha=\count342
+\c@abbrvpenalty=\count343
+\c@highnamepenalty=\count344
+\c@lownamepenalty=\count345
+\c@maxparens=\count346
+\c@parenlevel=\count347
+\blx@tempcnta=\count348
+\blx@tempcntb=\count349
+\blx@tempcntc=\count350
+\blx@maxsection=\count351
+\blx@maxsegment@0=\count352
+\blx@notetype=\count353
+\blx@parenlevel@text=\count354
+\blx@parenlevel@foot=\count355
+\blx@sectionciteorder@0=\count356
+\labelnumberwidth=\skip73
+\labelalphawidth=\skip74
+\biblabelsep=\skip75
+\bibitemsep=\skip76
+\bibnamesep=\skip77
+\bibinitsep=\skip78
+\bibparsep=\skip79
+\bibhang=\skip80
 \blx@bcfin=\read3
 \blx@bcfout=\write5
-\c@mincomprange=\count356
-\c@maxcomprange=\count357
-\c@mincompwidth=\count358
+\c@mincomprange=\count357
+\c@maxcomprange=\count358
+\c@mincompwidth=\count359
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1280,88 +1288,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count359
-\c@savedafterword=\count360
-\c@annotator=\count361
-\c@savedannotator=\count362
-\c@author=\count363
-\c@savedauthor=\count364
-\c@bookauthor=\count365
-\c@savedbookauthor=\count366
-\c@commentator=\count367
-\c@savedcommentator=\count368
-\c@editor=\count369
-\c@savededitor=\count370
-\c@editora=\count371
-\c@savededitora=\count372
-\c@editorb=\count373
-\c@savededitorb=\count374
-\c@editorc=\count375
-\c@savededitorc=\count376
-\c@foreword=\count377
-\c@savedforeword=\count378
-\c@holder=\count379
-\c@savedholder=\count380
-\c@introduction=\count381
-\c@savedintroduction=\count382
-\c@namea=\count383
-\c@savednamea=\count384
-\c@nameb=\count385
-\c@savednameb=\count386
-\c@namec=\count387
-\c@savednamec=\count388
-\c@translator=\count389
-\c@savedtranslator=\count390
-\c@shortauthor=\count391
-\c@savedshortauthor=\count392
-\c@shorteditor=\count393
-\c@savedshorteditor=\count394
-\c@labelname=\count395
-\c@savedlabelname=\count396
-\c@institution=\count397
-\c@savedinstitution=\count398
-\c@lista=\count399
-\c@savedlista=\count400
-\c@listb=\count401
-\c@savedlistb=\count402
-\c@listc=\count403
-\c@savedlistc=\count404
-\c@listd=\count405
-\c@savedlistd=\count406
-\c@liste=\count407
-\c@savedliste=\count408
-\c@listf=\count409
-\c@savedlistf=\count410
-\c@location=\count411
-\c@savedlocation=\count412
-\c@organization=\count413
-\c@savedorganization=\count414
-\c@origlocation=\count415
-\c@savedoriglocation=\count416
-\c@origpublisher=\count417
-\c@savedorigpublisher=\count418
-\c@publisher=\count419
-\c@savedpublisher=\count420
-\c@language=\count421
-\c@savedlanguage=\count422
-\c@origlanguage=\count423
-\c@savedoriglanguage=\count424
-\c@pageref=\count425
-\c@savedpageref=\count426
-\shorthandwidth=\skip80
-\shortjournalwidth=\skip81
-\shortserieswidth=\skip82
-\shorttitlewidth=\skip83
-\shortauthorwidth=\skip84
-\shorteditorwidth=\skip85
-\locallabelnumberwidth=\skip86
-\locallabelalphawidth=\skip87
-\localshorthandwidth=\skip88
-\localshortjournalwidth=\skip89
-\localshortserieswidth=\skip90
-\localshorttitlewidth=\skip91
-\localshortauthorwidth=\skip92
-\localshorteditorwidth=\skip93
+\c@afterword=\count360
+\c@savedafterword=\count361
+\c@annotator=\count362
+\c@savedannotator=\count363
+\c@author=\count364
+\c@savedauthor=\count365
+\c@bookauthor=\count366
+\c@savedbookauthor=\count367
+\c@commentator=\count368
+\c@savedcommentator=\count369
+\c@editor=\count370
+\c@savededitor=\count371
+\c@editora=\count372
+\c@savededitora=\count373
+\c@editorb=\count374
+\c@savededitorb=\count375
+\c@editorc=\count376
+\c@savededitorc=\count377
+\c@foreword=\count378
+\c@savedforeword=\count379
+\c@holder=\count380
+\c@savedholder=\count381
+\c@introduction=\count382
+\c@savedintroduction=\count383
+\c@namea=\count384
+\c@savednamea=\count385
+\c@nameb=\count386
+\c@savednameb=\count387
+\c@namec=\count388
+\c@savednamec=\count389
+\c@translator=\count390
+\c@savedtranslator=\count391
+\c@shortauthor=\count392
+\c@savedshortauthor=\count393
+\c@shorteditor=\count394
+\c@savedshorteditor=\count395
+\c@labelname=\count396
+\c@savedlabelname=\count397
+\c@institution=\count398
+\c@savedinstitution=\count399
+\c@lista=\count400
+\c@savedlista=\count401
+\c@listb=\count402
+\c@savedlistb=\count403
+\c@listc=\count404
+\c@savedlistc=\count405
+\c@listd=\count406
+\c@savedlistd=\count407
+\c@liste=\count408
+\c@savedliste=\count409
+\c@listf=\count410
+\c@savedlistf=\count411
+\c@location=\count412
+\c@savedlocation=\count413
+\c@organization=\count414
+\c@savedorganization=\count415
+\c@origlocation=\count416
+\c@savedoriglocation=\count417
+\c@origpublisher=\count418
+\c@savedorigpublisher=\count419
+\c@publisher=\count420
+\c@savedpublisher=\count421
+\c@language=\count422
+\c@savedlanguage=\count423
+\c@origlanguage=\count424
+\c@savedoriglanguage=\count425
+\c@pageref=\count426
+\c@savedpageref=\count427
+\shorthandwidth=\skip81
+\shortjournalwidth=\skip82
+\shortserieswidth=\skip83
+\shorttitlewidth=\skip84
+\shortauthorwidth=\skip85
+\shorteditorwidth=\skip86
+\locallabelnumberwidth=\skip87
+\locallabelalphawidth=\skip88
+\localshorthandwidth=\skip89
+\localshortjournalwidth=\skip90
+\localshortserieswidth=\skip91
+\localshorttitlewidth=\skip92
+\localshortauthorwidth=\skip93
+\localshorteditorwidth=\skip94
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1377,13 +1385,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count427
-\c@textcitetotal=\count428
-\c@textcitemaxnames=\count429
-\c@biburlnumpenalty=\count430
-\c@biburlucpenalty=\count431
-\c@biburllcpenalty=\count432
-\c@smartand=\count433
+\c@textcitecount=\count428
+\c@textcitetotal=\count429
+\c@textcitemaxnames=\count430
+\c@biburlnumpenalty=\count431
+\c@biburlucpenalty=\count432
+\c@biburllcpenalty=\count433
+\c@smartand=\count434
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -1405,8 +1413,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count434
-\c@bbx:relatedtotal=\count435
+\c@bbx:relatedcount=\count435
+\c@bbx:relatedtotal=\count436
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -1418,8 +1426,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 File: numeric-comp.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count436
-\c@cbx@tempcntb=\count437
+\c@cbx@tempcnta=\count437
+\c@cbx@tempcntb=\count438
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1482,14 +1490,14 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen293
-\Hy@linkcounter=\count438
-\Hy@pagecounter=\count439
+\@linkdim=\dimen294
+\Hy@linkcounter=\count439
+\Hy@pagecounter=\count440
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count440
+\Hy@SavedSpaceFactor=\count441
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1502,12 +1510,12 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count441
+\c@Hy@tempcnt=\count442
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen294
-\Fld@menulength=\count442
-\Field@Width=\dimen295
-\Fld@charsize=\dimen296
+\XeTeXLinkMargin=\dimen295
+\Fld@menulength=\count443
+\Field@Width=\dimen296
+\Fld@charsize=\dimen297
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -1517,9 +1525,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count443
-\c@Item=\count444
-\c@Hfootnote=\count445
+\Hy@abspage=\count444
+\c@Item=\count445
+\c@Hfootnote=\count446
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
@@ -1533,76 +1541,76 @@ File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box59
-\c@Hy@AnnotLevel=\count446
-\HyField@AnnotCount=\count447
-\Fld@listcount=\count448
-\c@bookmark@seq@number=\count449
+\pdfm@box=\box60
+\c@Hy@AnnotLevel=\count447
+\HyField@AnnotCount=\count448
+\Fld@listcount=\count449
+\c@bookmark@seq@number=\count450
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip94
+\Hy@SectionHShift=\skip95
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
-\col@sep=\dimen297
-\ar@mcellbox=\box60
-\extrarowheight=\dimen298
-\NC@list=\toks42
-\extratabsurround=\skip95
-\backup@length=\skip96
-\ar@cellbox=\box61
+\col@sep=\dimen298
+\ar@mcellbox=\box61
+\extrarowheight=\dimen299
+\NC@list=\toks43
+\extratabsurround=\skip96
+\backup@length=\skip97
+\ar@cellbox=\box62
 )
-\TX@col@width=\dimen299
-\TX@old@table=\dimen300
-\TX@old@col=\dimen301
-\TX@target=\dimen302
-\TX@delta=\dimen303
-\TX@cols=\count450
-\TX@ftn=\toks43
+\TX@col@width=\dimen300
+\TX@old@table=\dimen301
+\TX@old@col=\dimen302
+\TX@target=\dimen303
+\TX@delta=\dimen304
+\TX@cols=\count451
+\TX@ftn=\toks44
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
 Style `ntheorem', Version 1.33 <2011/08/15>
 Package: ntheorem 2011/08/15 1.33
-\theorem@style=\toks44
-\theorem@@style=\toks45
-\theorembodyfont=\toks46
-\theoremnumbering=\toks47
-\theorempreskipamount=\skip97
-\theorempostskipamount=\skip98
-\theoremframepreskipamount=\skip99
-\theoremframepostskipamount=\skip100
-\theoreminframepreskipamount=\skip101
-\theoreminframepostskipamount=\skip102
-\theorem@preskip=\toks48
-\theorem@postskip=\toks49
-\theorem@framepreskip=\toks50
-\theorem@framepostskip=\toks51
-\theorem@inframepreskip=\toks52
-\theorem@inframepostskip=\toks53
-\theoremindent=\dimen304
-\theorem@indent=\dimen305
-\theoremrightindent=\dimen306
-\theorem@rightindent=\dimen307
-\theoremheaderfont=\toks54
-\theoremseparator=\toks55
-\theoremprework=\toks56
-\theorempostwork=\toks57
-\theoremsymbol=\toks58
-\qedsymbol=\toks59
-\theoremkeyword=\toks60
-\qedsymbol=\toks61
-\thm@topsep=\skip103
-\thm@topsepadd=\skip104
+\theorem@style=\toks45
+\theorem@@style=\toks46
+\theorembodyfont=\toks47
+\theoremnumbering=\toks48
+\theorempreskipamount=\skip98
+\theorempostskipamount=\skip99
+\theoremframepreskipamount=\skip100
+\theoremframepostskipamount=\skip101
+\theoreminframepreskipamount=\skip102
+\theoreminframepostskipamount=\skip103
+\theorem@preskip=\toks49
+\theorem@postskip=\toks50
+\theorem@framepreskip=\toks51
+\theorem@framepostskip=\toks52
+\theorem@inframepreskip=\toks53
+\theorem@inframepostskip=\toks54
+\theoremindent=\dimen305
+\theorem@indent=\dimen306
+\theoremrightindent=\dimen307
+\theorem@rightindent=\dimen308
+\theoremheaderfont=\toks55
+\theoremseparator=\toks56
+\theoremprework=\toks57
+\theorempostwork=\toks58
+\theoremsymbol=\toks59
+\qedsymbol=\toks60
+\theoremkeyword=\toks61
+\qedsymbol=\toks62
+\thm@topsep=\skip104
+\thm@topsepadd=\skip105
 )
-\c@TRQ=\count451
-\c@Hyp=\count452
+\c@TRQ=\count452
+\c@Hyp=\count453
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
 Package csquotes Info: Adjusting default style.
@@ -1787,7 +1795,7 @@ Package biblatex Info: ... file 'report.bbl' found.
  (./report.bbl)
 Package biblatex Info: Reference section=0 on input line 117.
 Package biblatex Info: Reference segment=0 on input line 117.
-\AtBeginShipoutBox=\box62
+\AtBeginShipoutBox=\box63
 Package hyperref Info: Link coloring ON on input line 117.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1796,7 +1804,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count453
+\c@section@level=\count454
 )
 LaTeX Info: Redefining \ref on input line 117.
 LaTeX Info: Redefining \pageref on input line 117.
@@ -1836,7 +1844,7 @@ Underfull \hbox (badness 3098) in paragraph at lines 48--49
  []
 
 ) (./2_gs_serial.tex
-Underfull \vbox (badness 4291) has occurred while \output is active []
+Underfull \vbox (badness 5741) has occurred while \output is active []
 
 
 Overfull \hbox (8.56104pt too wide) detected at line 4
@@ -1862,174 +1870,170 @@ Underfull \hbox (badness 2582) in paragraph at lines 16--17
 \TU/NotoSerif(1)/m/n/10.95 άθροισμα όλων των πιθανοτήτων, εκφράζει
  []
 
+) (./3_wg.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2])
+(./4_serial_alg.tex
+Underfull \hbox (badness 6526) in paragraph at lines 19--20
+[]\TU/NotoSerif(1)/m/n/10.95 Κάθε στοιχείο $\OML/cmm/m/it/10.95 x[]$ \TU/NotoSe
+rif(1)/m/n/10.95 διαιρείται με το
+ []
+
+) (./5_parallel_alg.tex
+Underfull \hbox (badness 4316) in paragraph at lines 7--8
+[]\TU/NotoSerif(1)/m/n/10.95 Τον 1ο κόμβο τον εισάγουμε στην 1η
+ []
+
+
+Underfull \hbox (badness 1762) in paragraph at lines 12--13
+\TU/NotoSerif(1)/m/n/10.95 σε ομάδες προχωράμε σε ανακατάταξη των
+ []
+
+[3])
+Underfull \hbox (badness 2103) in paragraph at lines 16--144
+\TU/NotoSerif(1)/m/n/10.95 τους αλληλουχία ώστε να γίνει εύκολα σύ-
+ []
+
+(./6_conditions.tex
+Underfull \hbox (badness 8170) in paragraph at lines 7--8
+\TU/NotoSerif(1)/m/n/10.95 συνεχόμενων αριθμών που αναπαρι-
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 10--11
+[]\TU/NotoSerif(1)/m/n/10.95 Όλοι οι παραπάνω αριθμοί θα πρέπει να
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 12--13
+[]\TU/NotoSerif(1)/m/n/10.95 Στα παραδοτέα, συμπεριλαμβάνεται ειδικό
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 14--15
+\TU/NotoSerif(1)/m/n/10.95 δου gauss-seidel γίνεται μόνο στις ομάδες
+ []
+
+
+Underfull \hbox (badness 5316) in paragraph at lines 16--17
+\TU/NotoSerif(1)/m/n/10.95 μός των ομάδων που προκύπτει με τον
+ []
+
+
+Underfull \hbox (badness 2318) in paragraph at lines 16--17
+\TU/NotoSerif(1)/m/n/10.95 ταχύτερος. Ένας διαφορετικός αλγόριθμος
+ []
+
+) (./7_results.tex
+File: plots/it_time.png Graphic file (type bmp)
+<plots/it_time.png>
+File: plots/speed_up.png Graphic file (type bmp)
+<plots/speed_up.png>
+File: plots/diff.png Graphic file (type bmp)
+<plots/diff.png>
 )
 Package hyperref Info: bookmark level for unknown Hyp defaults to 0 on input li
-ne 137.
-
-Underfull \hbox (badness 6592) in paragraph at lines 141--141
+ne 152.
+ [4]
+Underfull \hbox (badness 6592) in paragraph at lines 156--156
 \TU/NotoSerif(1)/m/n/10.95 dictum gravida mauris. Nam arcu libero,
  []
 
 
-Underfull \hbox (badness 6047) in paragraph at lines 141--141
+Underfull \hbox (badness 6047) in paragraph at lines 156--156
 \TU/NotoSerif(1)/m/n/10.95 nonummy eget, consectetuer id, vulputate
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 141--141
+Underfull \hbox (badness 1325) in paragraph at lines 156--156
 \TU/NotoSerif(1)/m/n/10.95 a, magna. Donec vehicula augue eu neque.
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 141--141
+Underfull \hbox (badness 1838) in paragraph at lines 156--156
 \TU/NotoSerif(1)/m/n/10.95 Mauris ut leo. Cras viverra metus rhoncus
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 141--141
+Underfull \hbox (badness 1968) in paragraph at lines 156--156
 \TU/NotoSerif(1)/m/n/10.95 ultrices. Phasellus eu tellus sit amet tortor
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 141--141
+Underfull \hbox (badness 1946) in paragraph at lines 156--156
 \TU/NotoSerif(1)/m/n/10.95 gravida placerat. Integer sapien est, iaculis
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 141--141
+Underfull \hbox (badness 1629) in paragraph at lines 156--156
 \TU/NotoSerif(1)/m/n/10.95 faucibus. Morbi dolor nulla, malesuada eu,
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 141--141
-\TU/NotoSerif(1)/m/n/10.95 semper nulla. Donec varius orci eget risus.
- []
-
-[2]
-Underfull \hbox (badness 6592) in paragraph at lines 160--160
-\TU/NotoSerif(1)/m/n/10.95 dictum gravida mauris. Nam arcu libero,
- []
-
-
-Underfull \hbox (badness 6047) in paragraph at lines 160--160
-\TU/NotoSerif(1)/m/n/10.95 nonummy eget, consectetuer id, vulputate
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 160--160
-\TU/NotoSerif(1)/m/n/10.95 a, magna. Donec vehicula augue eu neque.
- []
-
-
-Underfull \hbox (badness 1838) in paragraph at lines 160--160
-\TU/NotoSerif(1)/m/n/10.95 Mauris ut leo. Cras viverra metus rhoncus
- []
-
-
-Underfull \hbox (badness 1968) in paragraph at lines 160--160
-\TU/NotoSerif(1)/m/n/10.95 ultrices. Phasellus eu tellus sit amet tortor
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 160--160
-\TU/NotoSerif(1)/m/n/10.95 gravida placerat. Integer sapien est, iaculis
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 160--160
-\TU/NotoSerif(1)/m/n/10.95 faucibus. Morbi dolor nulla, malesuada eu,
- []
-
-
-Underfull \hbox (badness 1314) in paragraph at lines 160--160
-\TU/NotoSerif(1)/m/n/10.95 semper nulla. Donec varius orci eget risus.
- []
-
-File: plots/google_times.png Graphic file (type bmp)
-<plots/google_times.png>
-
-Underfull \hbox (badness 6592) in paragraph at lines 169--169
-\TU/NotoSerif(1)/m/n/10.95 dictum gravida mauris. Nam arcu libero,
- []
-
-
-Underfull \hbox (badness 6047) in paragraph at lines 169--169
-\TU/NotoSerif(1)/m/n/10.95 nonummy eget, consectetuer id, vulputate
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 169--169
-\TU/NotoSerif(1)/m/n/10.95 a, magna. Donec vehicula augue eu neque.
- []
-
-
-Underfull \hbox (badness 1838) in paragraph at lines 169--169
-\TU/NotoSerif(1)/m/n/10.95 Mauris ut leo. Cras viverra metus rhoncus
- []
-
-
-Underfull \hbox (badness 1968) in paragraph at lines 169--169
-\TU/NotoSerif(1)/m/n/10.95 ultrices. Phasellus eu tellus sit amet tortor
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 169--169
-\TU/NotoSerif(1)/m/n/10.95 gravida placerat. Integer sapien est, iaculis
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 169--169
-\TU/NotoSerif(1)/m/n/10.95 faucibus. Morbi dolor nulla, malesuada eu,
- []
-
-
-Underfull \hbox (badness 1314) in paragraph at lines 169--169
+Underfull \hbox (badness 1314) in paragraph at lines 156--156
 \TU/NotoSerif(1)/m/n/10.95 semper nulla. Donec varius orci eget risus.
  []
 
 
-Underfull \hbox (badness 2717) in paragraph at lines 172--172
+Underfull \hbox (badness 2717) in paragraph at lines 177--177
 []\TU/NotoSerif(1)/m/n/10.95 S. Brin []και []L. Page, «  The anatomy of
  []
 
 
-Underfull \hbox (badness 4266) in paragraph at lines 172--172
+Underfull \hbox (badness 4266) in paragraph at lines 177--177
 \TU/NotoSerif(1)/m/n/10.95 a large-scale hypertextual web search
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 172--172
+Underfull \hbox (badness 3168) in paragraph at lines 177--177
 \TU/NotoSerif(1)/m/n/10.95 engine,» \TU/NotoSerif(1)/m/it/10.95 Computer networ
 ks and ISDN
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+\TU/NotoSerif(1)/m/it/10.95 Stanford Large Network Dataset
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 177--177
+\TU/NotoSerif(1)/m/it/10.95 Collection\TU/NotoSerif(1)/m/n/10.95 , [][]$[][][][
+] [] [] [] [][][][] [] [][][][][][][][] []
+ []
+
+[5]
 \tf@thm=\write7
 \openout7 = `report.thm'.
 
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
+ [6
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 175.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 180.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39972 strings out of 492970
- 775353 string characters out of 6136052
- 1344732 words of memory out of 5000000
- 43424 multiletter control sequences out of 15000+600000
- 537023 words of font info for 70 fonts, out of 8000000 for 9000
+ 40272 strings out of 492970
+ 780542 string characters out of 6136052
+ 1349835 words of memory out of 5000000
+ 43702 multiletter control sequences out of 15000+600000
+ 537031 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  62i,13n,96p,10500b,6006s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (4 pages).
+Output written on report.pdf (6 pages).

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  29 SEP 2018 23:57
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  30 SEP 2018 02:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -783,9 +783,22 @@ Overfull \hbox (7.50002pt too wide) in paragraph at lines 9--10
 \OML/cmm/m/it/10 A$
  []
 
+
+! LaTeX Error: Environment gather* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \begin{gather*}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Undefined control sequence.
-l.10 $$ \bm
-           {A}_{final}\vec{x} = \vec{x}\Rightarrow$$
+l.12 \bm
+        {A}_{final}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm{A}_{final})\vec{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -793,10 +806,609 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (64.9053pt too wide) detected at line 10
-\OML/cmm/m/it/10 A[][] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 )
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \bm{A
+          }_{final}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm{A}_{final})\vec{...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.12 \bm{A}_
+            {final}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm{A}_{final})\vec{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.12 ...}_{final}\vec{x} = \vec{x}\Rightarrow (\bm
+                                                  {I}-\bm{A}_{final})\vec{x}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.12 ...l}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm
+                                                  {A}_{final})\vec{x} = 0 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 \Rightarrow \bigg(\bm
+                          {I}-\frac{b}{N}\cdot\bm{1}_{N\times N}-(1-b)\bm{A}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 \Rightarrow \bigg(\bm{I}-\frac{b}{N}\cdot\bm
+                                                 {1}_{N\times N}-(1-b)\bm{A}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 ...frac{b}{N}\cdot\bm{1}_{N\times N}-(1-b)\bm
+                                                  {A}_s\bigg)\vec{x} = 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{gather*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{gather*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.14 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (56.13458pt too wide) in paragraph at lines 12--15
+[]$[][] \OT1/cmr/m/n/10 =
  []
 
+
+Overfull \hbox (18.493pt too wide) in paragraph at lines 12--15
+[] \OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (16.84724pt too wide) in paragraph at lines 12--15
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (47.5235pt too wide) in paragraph at lines 12--15
+\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )[] =
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 12--15
+\OT1/cmr/m/n/10 0[] 
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 12--15
+\OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (20.31949pt too wide) in paragraph at lines 12--15
+[]\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (12.26251pt too wide) in paragraph at lines 12--15
+[] \OMS/cmsy/m/n/10 ^^A
+ []
+
+
+Overfull \hbox (33.6973pt too wide) in paragraph at lines 12--15
+\OT1/cmr/m/n/10 1[] \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 12--15
+\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (43.58682pt too wide) in paragraph at lines 12--15
+\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 A[][][] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 12--15
+\OT1/cmr/m/n/10 0$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 Ό
+      μως, το $\bm{1}_{N\times N}\cdot\vec{x}$ είναι πάντα ίσο με $\bm{1}_{N...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ό in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ς in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ο in font nullfont!
+! Undefined control sequence.
+<recently read> \bm 
+                    
+l.16 Όμως, το $\bm
+                  {1}_{N\times N}\cdot\vec{x}$ είναι πάντα ίσο με $\bm{1}_{N...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no ά in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no ε in font nullfont!
+! Undefined control sequence.
+<recently read> \bm 
+                    
+l.16 ...es N}\cdot\vec{x}$ είναι πάντα ίσο με $\bm
+                                                  {1}_{N\times1}$ επειδή το ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ε in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no δ in font nullfont!
+Missing character: There is no ή in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ά in font nullfont!
+Missing character: There is no θ in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no χ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no υ in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ς in font nullfont!
+Missing character: There is no ά in font nullfont!
+Missing character: There is no θ in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ό in font nullfont!
+Missing character: There is no λ in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no θ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ή in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no κ in font nullfont!
+Missing character: There is no φ in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ά in font nullfont!
+Missing character: There is no ζ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no η in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no θ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no ό in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no η in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no η in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ή in font nullfont!
+Missing character: There is no ς in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no β in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no κ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no δ in font nullfont!
+Missing character: There is no ή in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no λ in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no δ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no Έ in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no ύ in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no η in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no ά in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ς in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no η in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no φ in font nullfont!
+Missing character: There is no ή in font nullfont!
+Missing character: There is no : in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--17
+[]
+ []
+
+
+Overfull \hbox (28.69728pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/n/10 1[] \OMS/cmsy/m/n/10 ^^A
+ []
+
+
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 16--17
+[]$
+ []
+
+
+Overfull \hbox (22.82089pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/n/10 1[]$
+ []
+
+
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 16--17
+[]$
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 $
+      $(\bm{I}-(1-b)\bm{A}_s)\vec{x} = \frac{b}{N}\bm{1}_{N\times1}$$
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 18--18
+[] 
+ []
+
+! Undefined control sequence.
+l.18 $$(\bm
+           {I}-(1-b)\bm{A}_s)\vec{x} = \frac{b}{N}\bm{1}_{N\times1}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.18 $$(\bm{I}-(1-b)\bm
+                       {A}_s)\vec{x} = \frac{b}{N}\bm{1}_{N\times1}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.18 ...{I}-(1-b)\bm{A}_s)\vec{x} = \frac{b}{N}\bm
+                                                  {1}_{N\times1}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (110.7521pt too wide) detected at line 18
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (1 \OM
+S/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 A[]\OT1/c
+mr/m/n/10 )[] = []1[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 π
+      ου μπορεί να λυθεί αναδρομικά με τη μέθοδο Gauss-Seidel, αρκεί διασφαλ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no π in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no υ in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no λ in font nullfont!
+Missing character: There is no υ in font nullfont!
+Missing character: There is no θ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no δ in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no κ in font nullfont!
+Missing character: There is no ά in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no η in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no έ in font nullfont!
+Missing character: There is no θ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no δ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no κ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no δ in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no φ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no λ in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no ό in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no κ in font nullfont!
+Missing character: There is no ά in font nullfont!
+Missing character: There is no θ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no β in font nullfont!
+Missing character: There is no ή in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no α in font nullfont!
+! Undefined control sequence.
+<recently read> \bm 
+                    
+l.20 ..., αρκεί διασφαλιστεί ότι σε κάθε βήμα $\bm
+                                                  {1}_{N\times N}\cdot\vec{x...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 ...ήμα $\bm{1}_{N\times N}\cdot\vec{x}_k =\bm
+                                                  {1}_{N\times1}$, δηλαδή ότ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no , in font nullfont!
+Missing character: There is no δ in font nullfont!
+Missing character: There is no η in font nullfont!
+Missing character: There is no λ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no δ in font nullfont!
+Missing character: There is no ή in font nullfont!
+Missing character: There is no ό in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ά in font nullfont!
+Missing character: There is no θ in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no σ in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no χ in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ί in font nullfont!
+Missing character: There is no ω in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no τ in font nullfont!
+Missing character: There is no ο in font nullfont!
+Missing character: There is no υ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no ρ in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no μ in font nullfont!
+Missing character: There is no έ in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no ε in font nullfont!
+Missing character: There is no ι in font nullfont!
+Missing character: There is no έ in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no α in font nullfont!
+Missing character: There is no . in font nullfont!
 )
 ! Emergency stop.
 <*> 2_gs_serial.tex
@@ -805,11 +1417,11 @@ Overfull \hbox (64.9053pt too wide) detected at line 10
 
  
 Here is how much of TeX's memory you used:
- 7 strings out of 492970
- 88 string characters out of 6136052
- 64701 words of memory out of 5000000
- 4115 multiletter control sequences out of 15000+600000
+ 8 strings out of 492970
+ 98 string characters out of 6136052
+ 65701 words of memory out of 5000000
+ 4116 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 17i,5n,12p,282b,58s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 17i,6n,12p,297b,58s stack positions out of 5000i,500n,10000p,200000b,80000s
 No pages of output.

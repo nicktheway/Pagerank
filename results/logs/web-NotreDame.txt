@@ -1,31 +1,31 @@
 File: ./data/WGFiles/web-NotreDame.wg, Nodes: 325729, Edges: 1497134
-Load to crs time: 27.263234 ms
+Load to crs time: 27.178510 ms
 Color groups: 435
-Data coloring and matrix reshaping time: 104.828652 ms
+Data coloring and matrix reshaping time: 103.751997 ms
 NTWPR_pagerank:
-Make graph stochastic time: 6.710821 ms
-Iteration: 2.994471 ms	Convergence's delta: 3.55e-04
-Iteration: 2.733246 ms	Convergence's delta: 5.11e-04
-Iteration: 2.760966 ms	Convergence's delta: 1.26e-04
-Iteration: 2.719805 ms	Convergence's delta: 2.26e-05
-Iteration: 2.723420 ms	Convergence's delta: 8.90e-06
-Iteration: 2.717834 ms	Convergence's delta: 1.97e-06
-Iteration: 2.936684 ms	Convergence's delta: 7.75e-07
-Iteration: 2.832551 ms	Convergence's delta: 2.55e-07
-Iteration: 2.720496 ms	Convergence's delta: 1.03e-07
-Iteration: 2.727919 ms	Convergence's delta: 3.77e-08
-Iteration: 2.719796 ms	Convergence's delta: 1.75e-08
-Iteration: 2.725462 ms	Convergence's delta: 5.95e-09
-Iteration: 2.819629 ms	Convergence's delta: 1.97e-09
-Iteration: 2.773638 ms	Convergence's delta: 8.19e-10
-Iteration: 2.787311 ms	Convergence's delta: 4.24e-10
-Iteration: 2.721555 ms	Convergence's delta: 1.53e-10
-Iteration: 2.720682 ms	Convergence's delta: 9.05e-11
-Iteration: 2.734651 ms	Convergence's delta: 4.20e-11
-Iteration: 2.718631 ms	Convergence's delta: 2.35e-11
-Iteration: 2.727235 ms	Convergence's delta: 9.94e-12
-Iteration: 2.718232 ms	Convergence's delta: 7.16e-12
-Iteration: 2.776517 ms	Convergence's delta: 3.02e-12
-Iteration: 2.740811 ms	Convergence's delta: 2.18e-12
-Iteration: 2.726211 ms	Convergence's delta: 9.88e-13
-Whole pagerank time: 76.009081 ms
+Make graph stochastic time: 6.770985 ms
+Iteration: 3.039539 ms	Convergence's delta: 3.55e-04
+Iteration: 2.899506 ms	Convergence's delta: 5.11e-04
+Iteration: 2.764130 ms	Convergence's delta: 1.26e-04
+Iteration: 2.840057 ms	Convergence's delta: 2.26e-05
+Iteration: 3.676269 ms	Convergence's delta: 8.90e-06
+Iteration: 2.862367 ms	Convergence's delta: 1.97e-06
+Iteration: 2.923707 ms	Convergence's delta: 7.75e-07
+Iteration: 2.931931 ms	Convergence's delta: 2.55e-07
+Iteration: 2.758399 ms	Convergence's delta: 1.03e-07
+Iteration: 2.826353 ms	Convergence's delta: 3.77e-08
+Iteration: 2.922046 ms	Convergence's delta: 1.75e-08
+Iteration: 2.795171 ms	Convergence's delta: 5.95e-09
+Iteration: 2.863121 ms	Convergence's delta: 1.97e-09
+Iteration: 2.758550 ms	Convergence's delta: 8.19e-10
+Iteration: 2.781046 ms	Convergence's delta: 4.24e-10
+Iteration: 2.999722 ms	Convergence's delta: 1.53e-10
+Iteration: 2.826025 ms	Convergence's delta: 9.05e-11
+Iteration: 2.762846 ms	Convergence's delta: 4.20e-11
+Iteration: 3.071118 ms	Convergence's delta: 2.35e-11
+Iteration: 2.778306 ms	Convergence's delta: 9.94e-12
+Iteration: 2.764940 ms	Convergence's delta: 7.16e-12
+Iteration: 2.800004 ms	Convergence's delta: 3.02e-12
+Iteration: 2.770251 ms	Convergence's delta: 2.18e-12
+Iteration: 2.811912 ms	Convergence's delta: 9.88e-13
+Whole pagerank time: 79.030086 ms

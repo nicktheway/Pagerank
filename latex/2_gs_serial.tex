@@ -10,11 +10,11 @@ $$x_i(k+1) = \frac{1}{A_{ii}}\bigg(b_i-\sum_{j=1}^{i-1}A_{ij}x_j(k+1)-\sum_{j=i+
 
 \begin{gather*}
 \bm{A}_{final}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm{A}_{final})\vec{x} = 0 \\
-\Rightarrow \bigg(\bm{I}-\frac{b}{N}\cdot\bm{1}_{N\times N}-(1-b)\bm{A}_s\bigg)\vec{x} = 0
+\Rightarrow \bigg(\bm{I}-\frac{c}{N}\cdot\bm{1}_{N\times N}-(1-c)\bm{A}_s\bigg)\vec{x} = 0
 \end{gather*}
 
 Όμως, το $\bm{1}_{N\times N}\cdot\vec{x}$ είναι πάντα ίσο με $\bm{1}_{N\times1}$ επειδή το άθροισμα των στοιχείων του $\vec{x}$, ως άθροισμα όλων των πιθανοτήτων, εκφράζει την πιθανότητα ο περιπατητής να βρίσκεται σε μια οποιαδήποτε σελίδα. Έτσι, το σύστημά μας παίρνει τη μορφή:
 
-$$(\bm{I}-(1-b)\bm{A}_s)\vec{x} = \frac{b}{N}\bm{1}_{N\times1}$$
+$$(\bm{I}-(1-c)\bm{A}_s)\vec{x} = \frac{c}{N}\bm{1}_{N\times1}$$
 
-που μπορεί να λυθεί αναδρομικά με τη μέθοδο Gauss-Seidel, αρκεί διασφαλιστεί ότι σε κάθε βήμα $\bm{1}_{N\times N}\cdot\vec{x}_k =\bm{1}_{N\times1}$.
+που μπορεί να λυθεί αναδρομικά με τη μέθοδο Gauss-Seidel, αρκεί διασφαλιστεί ότι σε κάθε βήμα $\bm{1}_{N\times N}\cdot\vec{x}_k =\bm{1}_{N\times1}$, δηλαδή ότι το άθροισμα των στοιχείων του $\vec{x}_k$ παραμένει ένα.
