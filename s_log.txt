@@ -1,0 +1,14 @@
+File: ./data/WGFiles/input_test.wg, Nodes: 4, Edges: 8
+Load to crs time: 0.004146 ms
+NTWPR_pagerank:
+Make graph stochastic time: 0.000592 ms
+Iteration: 0.000388 ms	Convergence's delta: 2.47e-02
+Iteration: 0.000074 ms	Convergence's delta: 2.67e-04
+Iteration: 0.000068 ms	Convergence's delta: 1.43e-05
+Iteration: 0.000069 ms	Convergence's delta: 2.02e-06
+Iteration: 0.000067 ms	Convergence's delta: 1.04e-07
+Iteration: 0.000068 ms	Convergence's delta: 2.73e-09
+Iteration: 0.000069 ms	Convergence's delta: 3.89e-10
+Iteration: 0.000068 ms	Convergence's delta: 2.58e-11
+Iteration: 0.000067 ms	Convergence's delta: 6.30e-13
+Whole pagerank time: 0.013707 ms
