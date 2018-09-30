@@ -49,6 +49,9 @@ do {                                                                \
  * Used as a "middle" save format. This API uses this type to
  * compute the pagerank of the nodes. Any dataset's pagerank vector can
  * be computed by extracting such struct from the dataset.
+ * 
+ * The data in this struct are edge_num pairs of node numbers. 
+ * Each pair means that the first node is pointed by the second.
  */
 typedef struct NTWPR_WGFile
 {
@@ -160,6 +163,9 @@ void NTWPR_WGF_convert2Transpose(const char origWGFPath[static 1], const char ex
 /**
  * @brief Converts web graph files from the format Stanford U. (SU) used to
  *        the NTWPR_WGFile' edge_data file format.
+ * 
+ * The stanford web graph files, after some comments and the node/edge numbers contain all the edges in
+ * the format: NodeFrom NodeTo.
  * 
  * Extra: The output can be loaded into MATLAB with: fread(file_id, [2,inf], 'uint32')';
  * 
