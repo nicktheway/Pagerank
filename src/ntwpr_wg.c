@@ -424,8 +424,8 @@ void NTWPR_WGF_convertSU(const char suDataPath[static 1], const char exportPath[
         }
         
         // If in range, write the sparse data.
-        
-        edges[registered_edges++] = (NTWPR_WGEdge) {.nodeA = sizes[0], .nodeB = sizes[1]};
+        // In the NTWPR_WGFile we will need the edges to show A<-B direction and not A->B.
+        edges[registered_edges++] = (NTWPR_WGEdge) {.nodeA = sizes[1], .nodeB = sizes[0]};
         
     } while(!feof(NTWPR_SU_fp));
 
