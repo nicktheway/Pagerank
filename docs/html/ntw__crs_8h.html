@@ -194,6 +194,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a988c87a4ca42d620ad46aa5b6e62f715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8h.html#a988c87a4ca42d620ad46aa5b6e62f715">NTW_CRS_stochasticizeCols</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1])</td></tr>
 <tr class="memdesc:a988c87a4ca42d620ad46aa5b6e62f715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the columns of the CRS table stochastic.  <a href="#a988c87a4ca42d620ad46aa5b6e62f715">More...</a><br /></td></tr>
 <tr class="separator:a988c87a4ca42d620ad46aa5b6e62f715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf345e8d8e8b054c832d21a4b68b974"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8h.html#aabf345e8d8e8b054c832d21a4b68b974">NTW_CRSP_stochasticizeCols</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1])</td></tr>
+<tr class="memdesc:aabf345e8d8e8b054c832d21a4b68b974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the columns of the CRS table stochastic using openMP.  <a href="#aabf345e8d8e8b054c832d21a4b68b974">More...</a><br /></td></tr>
+<tr class="separator:aabf345e8d8e8b054c832d21a4b68b974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648c37ba5979101abb5e505dc10801eb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntw__crs_8h.html#a648c37ba5979101abb5e505dc10801eb">NTW_CRS_getEmptyRowsNum</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> crs[static 1])</td></tr>
 <tr class="memdesc:a648c37ba5979101abb5e505dc10801eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of empty rows of the <em>crs</em>.  <a href="#a648c37ba5979101abb5e505dc10801eb">More...</a><br /></td></tr>
 <tr class="separator:a648c37ba5979101abb5e505dc10801eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -313,8 +316,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ntw__crs_8h_a623b227a7c44c98cc9e5910510c9d29d_icgraph.png" border="0" usemap="#ntw__crs_8h_a623b227a7c44c98cc9e5910510c9d29d_icgraph" alt=""/></div>
 <map name="ntw__crs_8h_a623b227a7c44c98cc9e5910510c9d29d_icgraph" id="ntw__crs_8h_a623b227a7c44c98cc9e5910510c9d29d_icgraph">
-<area shape="rect" id="node2" href="ntwpr_8c.html#aaa160f09c26fa30be7f2b4de4c7a1093" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="206,5,338,32"/>
-<area shape="rect" id="node4" href="ntwprp_8c.html#a6e668f8240e570dca521d2f59928ac73" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="181,56,363,83"/>
+<area shape="rect" id="node2" href="ntwpr_8c.html#a8aaf378ae90b4ca86420c4f0ea9bf1c3" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="206,5,338,32"/>
+<area shape="rect" id="node4" href="ntwprp_8c.html#abe11d49e4d53c07b8935b540fcf4db90" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="181,56,363,83"/>
 <area shape="rect" id="node3" href="NTWpagerank__serial_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="411,5,461,32"/>
 <area shape="rect" id="node5" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="411,56,461,83"/>
 </map>
@@ -384,7 +387,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ntw_vector* A vector containing the groups in ntw_vector datasets. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00193">193</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00215">215</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -434,7 +437,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The optimized index based sequence of nodes. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00264">264</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00286">286</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -482,7 +485,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t The number of empty rows in the crs matrix. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00156">156</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00178">178</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 </div>
 </div>
@@ -511,7 +514,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t The number of empty rows in the crs matrix. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00146">146</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00168">168</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -558,7 +561,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00325">325</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00347">347</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -678,7 +681,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00359">359</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00381">381</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 </div>
 </div>
@@ -718,7 +721,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00379">379</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00401">401</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 </div>
 </div>
@@ -850,7 +853,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00291">291</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00313">313</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 </div>
 </div>
@@ -885,10 +888,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ntw__crs_8h_a988c87a4ca42d620ad46aa5b6e62f715_icgraph.png" border="0" usemap="#ntw__crs_8h_a988c87a4ca42d620ad46aa5b6e62f715_icgraph" alt=""/></div>
 <map name="ntw__crs_8h_a988c87a4ca42d620ad46aa5b6e62f715_icgraph" id="ntw__crs_8h_a988c87a4ca42d620ad46aa5b6e62f715_icgraph">
-<area shape="rect" id="node2" href="ntwpr_8c.html#aaa160f09c26fa30be7f2b4de4c7a1093" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="278,5,410,32"/>
-<area shape="rect" id="node4" href="ntwprp_8c.html#a6e668f8240e570dca521d2f59928ac73" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="253,56,435,83"/>
-<area shape="rect" id="node3" href="NTWpagerank__serial_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="483,5,533,32"/>
-<area shape="rect" id="node5" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="483,56,533,83"/>
+<area shape="rect" id="node2" href="ntwpr_8c.html#a8aaf378ae90b4ca86420c4f0ea9bf1c3" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="253,5,385,32"/>
+<area shape="rect" id="node3" href="NTWpagerank__serial_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="433,5,484,32"/>
 </map>
 </div>
 
@@ -958,7 +959,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00415">415</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00437">437</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1015,7 +1016,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double The value at [<em>row</em>, <em>col</em>] </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00181">181</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00203">203</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 
 </div>
 </div>
@@ -1197,7 +1198,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int edgeA-&gt;nodeB - edgeB-&gt;nodeB </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00425">425</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00447">447</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1205,6 +1206,44 @@ Here is the caller graph for this function:</div>
 <map name="ntw__crs_8h_ab36522485a4dd33d3f5cf6fa4aa74377_icgraph" id="ntw__crs_8h_ab36522485a4dd33d3f5cf6fa4aa74377_icgraph">
 <area shape="rect" id="node2" href="ntw__crs_8c.html#a39c1d3a3d7c8fbcadce8eb443a8492de" title="Divides the crs matrix into groups with lower&#45;only dependencies. " alt="" coords="252,5,453,32"/>
 <area shape="rect" id="node3" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="501,5,552,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aabf345e8d8e8b054c832d21a4b68b974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf345e8d8e8b054c832d21a4b68b974">&#9670;&nbsp;</a></span>NTW_CRSP_stochasticizeCols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTW_CRSP_stochasticizeCols </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structntw__crs.html">ntw_crs</a>&#160;</td>
+          <td class="paramname"><em>crs</em>[static 1]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Makes the columns of the CRS table stochastic using openMP. </p>
+<p>Their elements will then sum to 1 (at each column).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">crs</td><td>The CRS representation of the table. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ntw__crs_8c_source.html#l00146">146</a> of file <a class="el" href="ntw__crs_8c_source.html">ntw_crs.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ntw__crs_8h_aabf345e8d8e8b054c832d21a4b68b974_icgraph.png" border="0" usemap="#ntw__crs_8h_aabf345e8d8e8b054c832d21a4b68b974_icgraph" alt=""/></div>
+<map name="ntw__crs_8h_aabf345e8d8e8b054c832d21a4b68b974_icgraph" id="ntw__crs_8h_aabf345e8d8e8b054c832d21a4b68b974_icgraph">
+<area shape="rect" id="node2" href="ntwprp_8c.html#abe11d49e4d53c07b8935b540fcf4db90" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="263,5,444,32"/>
+<area shape="rect" id="node3" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="492,5,543,32"/>
 </map>
 </div>
 

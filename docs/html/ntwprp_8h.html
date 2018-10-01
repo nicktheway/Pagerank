@@ -131,9 +131,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6e668f8240e570dca521d2f59928ac73"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwprp_8h.html#a6e668f8240e570dca521d2f59928ac73">NTWPR_colored_pagerank</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> webGraph[static 1], const double c, const double e, const <a class="el" href="ntw__collections_8h.html#ab703ef15b3a33dffaf1389fe78ea7122">ntw_vector</a> *const colors, FILE *stream)</td></tr>
-<tr class="memdesc:a6e668f8240e570dca521d2f59928ac73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the pagerank of the nodes of a web graph.  <a href="#a6e668f8240e570dca521d2f59928ac73">More...</a><br /></td></tr>
-<tr class="separator:a6e668f8240e570dca521d2f59928ac73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe11d49e4d53c07b8935b540fcf4db90"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwprp_8h.html#abe11d49e4d53c07b8935b540fcf4db90">NTWPR_colored_pagerank</a> (<a class="el" href="structntw__crs.html">ntw_crs</a> webGraph[static 1], const double c, const double e, const int32_t it_specific, const <a class="el" href="ntw__collections_8h.html#ab703ef15b3a33dffaf1389fe78ea7122">ntw_vector</a> *const colors, FILE *stream)</td></tr>
+<tr class="memdesc:abe11d49e4d53c07b8935b540fcf4db90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the pagerank of the nodes of a web graph.  <a href="#abe11d49e4d53c07b8935b540fcf4db90">More...</a><br /></td></tr>
+<tr class="separator:abe11d49e4d53c07b8935b540fcf4db90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a787b6df3ade576aa5f561a4227ff07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntwprp_8h.html#a3a787b6df3ade576aa5f561a4227ff07">NTWPR_GS_parallel_iter</a> (const <a class="el" href="structntw__crs.html">ntw_crs</a> matrix[static 1], double x_vec[static 1], const double b_vec[static 1], const <a class="el" href="ntw__collections_8h.html#ab703ef15b3a33dffaf1389fe78ea7122">ntw_vector</a> *const colors)</td></tr>
 <tr class="memdesc:a3a787b6df3ade576aa5f561a4227ff07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates one iteration of \((I-A)x = b\).  <a href="#a3a787b6df3ade576aa5f561a4227ff07">More...</a><br /></td></tr>
 <tr class="separator:a3a787b6df3ade576aa5f561a4227ff07"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,8 +148,8 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="ntwprp_8h_source.html">ntwprp.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a6e668f8240e570dca521d2f59928ac73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e668f8240e570dca521d2f59928ac73">&#9670;&nbsp;</a></span>NTWPR_colored_pagerank()</h2>
+<a id="abe11d49e4d53c07b8935b540fcf4db90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe11d49e4d53c07b8935b540fcf4db90">&#9670;&nbsp;</a></span>NTWPR_colored_pagerank()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,6 +175,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int32_t&#160;</td>
+          <td class="paramname"><em>it_specific</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const <a class="el" href="ntw__collections_8h.html#ab703ef15b3a33dffaf1389fe78ea7122">ntw_vector</a> *const&#160;</td>
           <td class="paramname"><em>colors</em>, </td>
         </tr>
@@ -193,11 +199,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates the pagerank of the nodes of a web graph. </p>
+<p>If <em>it_specific</em> is non 0, the <em>parameter</em> won't be taken into account and the algorithm will run <em>it_specific</em> iterations. Else if <em>it_specific</em> is zero, the algorithm will run until it converges to <em>e</em> or the number of iterations grows more than a safety limit.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">webGraph</td><td>The web graf in <a class="el" href="structntw__crs.html" title="A Compressed Row Storage struct. ">ntw_crs</a> representation. </td></tr>
     <tr><td class="paramname">c</td><td>The teleportation coefficient. </td></tr>
     <tr><td class="paramname">e</td><td>The convergence's tolerance. </td></tr>
+    <tr><td class="paramname">it_specific</td><td>If not 0, the algorithm will run <em>it_specific</em> iterations. </td></tr>
     <tr><td class="paramname">colors</td><td>The color groups of the nodes. </td></tr>
     <tr><td class="paramname">stream</td><td>Opened FILE* stream for printing results. </td></tr>
   </table>
@@ -209,8 +217,8 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="ntwprp_8h_a6e668f8240e570dca521d2f59928ac73_icgraph.png" border="0" usemap="#ntwprp_8h_a6e668f8240e570dca521d2f59928ac73_icgraph" alt=""/></div>
-<map name="ntwprp_8h_a6e668f8240e570dca521d2f59928ac73_icgraph" id="ntwprp_8h_a6e668f8240e570dca521d2f59928ac73_icgraph">
+<div class="center"><img src="ntwprp_8h_abe11d49e4d53c07b8935b540fcf4db90_icgraph.png" border="0" usemap="#ntwprp_8h_abe11d49e4d53c07b8935b540fcf4db90_icgraph" alt=""/></div>
+<map name="ntwprp_8h_abe11d49e4d53c07b8935b540fcf4db90_icgraph" id="ntwprp_8h_abe11d49e4d53c07b8935b540fcf4db90_icgraph">
 <area shape="rect" id="node2" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="235,5,285,32"/>
 </map>
 </div>
@@ -270,13 +278,13 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ntwprp_8c_source.html#l00067">67</a> of file <a class="el" href="ntwprp_8c_source.html">ntwprp.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwprp_8c_source.html#l00069">69</a> of file <a class="el" href="ntwprp_8c_source.html">ntwprp.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ntwprp_8h_a3a787b6df3ade576aa5f561a4227ff07_icgraph.png" border="0" usemap="#ntwprp_8h_a3a787b6df3ade576aa5f561a4227ff07_icgraph" alt=""/></div>
 <map name="ntwprp_8h_a3a787b6df3ade576aa5f561a4227ff07_icgraph" id="ntwprp_8h_a3a787b6df3ade576aa5f561a4227ff07_icgraph">
-<area shape="rect" id="node2" href="ntwprp_8c.html#a6e668f8240e570dca521d2f59928ac73" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="224,5,405,32"/>
+<area shape="rect" id="node2" href="ntwprp_8c.html#abe11d49e4d53c07b8935b540fcf4db90" title="Calculates the pagerank of the nodes of a web graph. " alt="" coords="224,5,405,32"/>
 <area shape="rect" id="node3" href="NTWpagerank_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="453,5,504,32"/>
 </map>
 </div>

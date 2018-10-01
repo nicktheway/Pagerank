@@ -97,7 +97,8 @@ $(document).ready(function(){initNavTree('NTWpagerank__serial_8c.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">NTWpagerank_serial.c File Reference</div>  </div>
 </div><!--header-->
@@ -125,12 +126,19 @@ Include dependency graph for NTWpagerank_serial.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aeb1c7ecc012135ec9ff491c1aaa7f7ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NTWpagerank__serial_8c.html#aeb1c7ecc012135ec9ff491c1aaa7f7ee">parseArguments</a> (int argc, char *const argv[argc+1], double *delta, double *tel_coeff, char **log_file_path, char **pagerank_file_path, char **wg_file_path)</td></tr>
-<tr class="memdesc:aeb1c7ecc012135ec9ff491c1aaa7f7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refactored <a class="el" href="NTWpagerank__serial_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. ">main()</a>'s code that handles command line arguments.  <a href="#aeb1c7ecc012135ec9ff491c1aaa7f7ee">More...</a><br /></td></tr>
-<tr class="separator:aeb1c7ecc012135ec9ff491c1aaa7f7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1e0ecb6dae74eb27bd9390ad169b8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NTWpagerank__serial_8c.html#a4c1e0ecb6dae74eb27bd9390ad169b8c">parseArguments</a> (int argc, char *const argv[argc+1], double *delta, double *tel_coeff, int32_t *it_number, char **log_file_path, char **pagerank_file_path, char **wg_file_path)</td></tr>
+<tr class="memdesc:a4c1e0ecb6dae74eb27bd9390ad169b8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refactored <a class="el" href="NTWpagerank__serial_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. ">main()</a>'s code that handles command line arguments.  <a href="#a4c1e0ecb6dae74eb27bd9390ad169b8c">More...</a><br /></td></tr>
+<tr class="separator:a4c1e0ecb6dae74eb27bd9390ad169b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47d77c298c6283e9ee92f0739d7b6c0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NTWpagerank__serial_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b">main</a> (int argc, char *const argv[argc+1])</td></tr>
 <tr class="memdesc:a47d77c298c6283e9ee92f0739d7b6c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the pagerank of a web graph.  <a href="#a47d77c298c6283e9ee92f0739d7b6c0b">More...</a><br /></td></tr>
 <tr class="separator:a47d77c298c6283e9ee92f0739d7b6c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3f46d03bcdf4e6be2a564e99d67d4b8d"><td class="memItemLeft" align="right" valign="top"><a id="a3f46d03bcdf4e6be2a564e99d67d4b8d"></a>
+const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NTWpagerank__serial_8c.html#a3f46d03bcdf4e6be2a564e99d67d4b8d">NTWPR_Max_Iterations_Limit</a> = 150</td></tr>
+<tr class="memdesc:a3f46d03bcdf4e6be2a564e99d67d4b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Τhe max number of specific iterations that are allowed. <br /></td></tr>
+<tr class="separator:a3f46d03bcdf4e6be2a564e99d67d4b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Calculates the pagerank vector of a web graph saved in an <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info. ">NTWPR_WGFile</a> form. </p>
@@ -176,12 +184,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Usually 0 for successful termination, 1 for not. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="NTWpagerank__serial_8c_source.html#l00037">37</a> of file <a class="el" href="NTWpagerank__serial_8c_source.html">NTWpagerank_serial.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="NTWpagerank__serial_8c_source.html#l00044">44</a> of file <a class="el" href="NTWpagerank__serial_8c_source.html">NTWpagerank_serial.c</a>.</p>
 
 </div>
 </div>
-<a id="aeb1c7ecc012135ec9ff491c1aaa7f7ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb1c7ecc012135ec9ff491c1aaa7f7ee">&#9670;&nbsp;</a></span>parseArguments()</h2>
+<a id="a4c1e0ecb6dae74eb27bd9390ad169b8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1e0ecb6dae74eb27bd9390ad169b8c">&#9670;&nbsp;</a></span>parseArguments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,6 +217,12 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">double *&#160;</td>
           <td class="paramname"><em>tel_coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>it_number</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -243,6 +257,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">argv</td><td>The command line arguments as char arrays. </td></tr>
     <tr><td class="paramname">delta</td><td>Address of the convergence's delta variable. </td></tr>
     <tr><td class="paramname">tel_coeff</td><td>Address of the teleportation coefficient's variable. </td></tr>
+    <tr><td class="paramname">it_number</td><td>Address of the specific_iterations variable. </td></tr>
     <tr><td class="paramname">log_file_path</td><td>Address of the log file's path variable. </td></tr>
     <tr><td class="paramname">pagerank_file_path</td><td>Address of the output pagerank's file path variable. </td></tr>
     <tr><td class="paramname">wg_file_path</td><td>Address of the input web graph's file path variable. </td></tr>
@@ -251,12 +266,12 @@ Functions</h2></td></tr>
 </dl>
 <p>Argument parsing. opting and optarg are defined in &lt;unistd.h&gt;</p>
 
-<p class="definition">Definition at line <a class="el" href="NTWpagerank__serial_8c_source.html#l00091">91</a> of file <a class="el" href="NTWpagerank__serial_8c_source.html">NTWpagerank_serial.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="NTWpagerank__serial_8c_source.html#l00099">99</a> of file <a class="el" href="NTWpagerank__serial_8c_source.html">NTWpagerank_serial.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="NTWpagerank__serial_8c_aeb1c7ecc012135ec9ff491c1aaa7f7ee_icgraph.png" border="0" usemap="#NTWpagerank__serial_8c_aeb1c7ecc012135ec9ff491c1aaa7f7ee_icgraph" alt=""/></div>
-<map name="NTWpagerank__serial_8c_aeb1c7ecc012135ec9ff491c1aaa7f7ee_icgraph" id="NTWpagerank__serial_8c_aeb1c7ecc012135ec9ff491c1aaa7f7ee_icgraph">
+<div class="center"><img src="NTWpagerank__serial_8c_a4c1e0ecb6dae74eb27bd9390ad169b8c_icgraph.png" border="0" usemap="#NTWpagerank__serial_8c_a4c1e0ecb6dae74eb27bd9390ad169b8c_icgraph" alt=""/></div>
+<map name="NTWpagerank__serial_8c_a4c1e0ecb6dae74eb27bd9390ad169b8c_icgraph" id="NTWpagerank__serial_8c_a4c1e0ecb6dae74eb27bd9390ad169b8c_icgraph">
 <area shape="rect" id="node2" href="NTWpagerank__serial_8c.html#a47d77c298c6283e9ee92f0739d7b6c0b" title="Calculates the pagerank of a web graph. " alt="" coords="171,5,221,32"/>
 </map>
 </div>

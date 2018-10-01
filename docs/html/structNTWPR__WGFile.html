@@ -119,9 +119,10 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A struct containing a web-graph file and the graphs info. </p>
-<p>Used as a "middle" save format. This API uses this type to compute the pagerank of the nodes. Any dataset's pagerank vector can be computed by extracting such struct from the dataset. </p>
+<p>Used as a "middle" save format. This API uses this type to compute the pagerank of the nodes. Any dataset's pagerank vector can be computed by extracting such struct from the dataset.</p>
+<p>The data in this struct are edge_num pairs of node numbers. Each pair means that the first node is pointed by the second. </p>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00053">53</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00056">56</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a00a45d3ce6764e40dcc382f3c5e3c8e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00a45d3ce6764e40dcc382f3c5e3c8e9">&#9670;&nbsp;</a></span>edge_data</h2>
@@ -136,7 +137,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>The edges represented as node pairs </p>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00057">57</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00060">60</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +154,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>The number of the graph's edges. </p>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00055">55</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00058">58</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
 
 </div>
 </div>
@@ -170,7 +171,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>The number of the graph's nodes. </p>
 
-<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00056">56</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ntwpr__wg_8h_source.html#l00059">59</a> of file <a class="el" href="ntwpr__wg_8h_source.html">ntwpr_wg.h</a>.</p>
 
 </div>
 </div>

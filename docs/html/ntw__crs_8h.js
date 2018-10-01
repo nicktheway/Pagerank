@@ -26,5 +26,6 @@ var ntw__crs_8h =
     [ "NTW_CRS_vmult", "ntw__crs_8h.html#a6654f7dea85510e5a553c47130b4d293", null ],
     [ "NTW_CRS_vmultAlloc", "ntw__crs_8h.html#aec240d09f69f88b56cc72e14c266c8ae", null ],
     [ "NTW_CRS_vmultTranspose", "ntw__crs_8h.html#a7767a2af3a68e2400e1758d66af02456", null ],
-    [ "NTW_CRSEdgeCompareForT", "ntw__crs_8h.html#ab36522485a4dd33d3f5cf6fa4aa74377", null ]
+    [ "NTW_CRSEdgeCompareForT", "ntw__crs_8h.html#ab36522485a4dd33d3f5cf6fa4aa74377", null ],
+    [ "NTW_CRSP_stochasticizeCols", "ntw__crs_8h.html#aabf345e8d8e8b054c832d21a4b68b974", null ]
 ];

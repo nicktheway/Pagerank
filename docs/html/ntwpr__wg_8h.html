@@ -273,7 +273,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A struct containing a web-graph file and the graphs info. </p>
-<p>Used as a "middle" save format. This API uses this type to compute the pagerank of the nodes. Any dataset's pagerank vector can be computed by extracting such struct from the dataset. </p>
+<p>Used as a "middle" save format. This API uses this type to compute the pagerank of the nodes. Any dataset's pagerank vector can be computed by extracting such struct from the dataset.</p>
+<p>The data in this struct are edge_num pairs of node numbers. Each pair means that the first node is pointed by the second. </p>
 
 </div>
 </div>
@@ -351,6 +352,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Converts web graph files from the format Stanford U. (SU) used to the <a class="el" href="structNTWPR__WGFile.html" title="A struct containing a web-graph file and the graphs info. ">NTWPR_WGFile</a>' edge_data file format. </p>
+<p>The stanford web graph files, after some comments and the node/edge numbers contain all the edges in the format: NodeFrom NodeTo.</p>
 <p>Extra: The output can be loaded into MATLAB with: fread(file_id, [2,inf], 'uint32')';</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
