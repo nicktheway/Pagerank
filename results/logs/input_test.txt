@@ -1,13 +1,26 @@
-File: ./data/WGFiles/input_test.wg, Nodes: 4, Edges: 8
-Load to crs time: 0.003979 ms
+File: ./data/WGFiles/input_test.wg, Nodes: 5, Edges: 10
+Load to crs time: 0.004423 ms
 Color groups: 4
-Data coloring and matrix reshaping time: 0.002973 ms
+Data coloring and matrix reshaping time: 0.002995 ms
 NTWPR_pagerank:
-Make graph stochastic time: 0.000187 ms
-Iteration: 0.160305 ms	Convergence's delta: 2.62e-02
-Iteration: 0.006252 ms	Convergence's delta: 1.95e-05
-Iteration: 0.006153 ms	Convergence's delta: 4.50e-07
-Iteration: 0.005908 ms	Convergence's delta: 4.31e-09
-Iteration: 0.005694 ms	Convergence's delta: 3.17e-11
-Iteration: 0.005865 ms	Convergence's delta: 2.13e-13
-Whole pagerank time: 0.201941 ms
+Make graph stochastic time: 0.219983 ms
+Iteration: 0.006064 ms	Convergence's delta: 2.41e-01
+Iteration: 0.004559 ms	Convergence's delta: 8.54e-02
+Iteration: 0.004371 ms	Convergence's delta: 2.09e-02
+Iteration: 0.004494 ms	Convergence's delta: 4.66e-03
+Iteration: 0.004431 ms	Convergence's delta: 1.06e-03
+Iteration: 0.004382 ms	Convergence's delta: 2.39e-04
+Iteration: 0.004529 ms	Convergence's delta: 5.41e-05
+Iteration: 0.004412 ms	Convergence's delta: 1.22e-05
+Iteration: 0.004455 ms	Convergence's delta: 2.77e-06
+Iteration: 0.004432 ms	Convergence's delta: 6.25e-07
+Iteration: 0.004443 ms	Convergence's delta: 1.41e-07
+Iteration: 0.004416 ms	Convergence's delta: 3.20e-08
+Iteration: 0.004521 ms	Convergence's delta: 7.24e-09
+Iteration: 0.004451 ms	Convergence's delta: 1.64e-09
+Iteration: 0.004463 ms	Convergence's delta: 3.70e-10
+Iteration: 0.004381 ms	Convergence's delta: 8.37e-11
+Iteration: 0.004457 ms	Convergence's delta: 1.89e-11
+Iteration: 0.004445 ms	Convergence's delta: 4.28e-12
+Iteration: 0.004410 ms	Convergence's delta: 9.69e-13
+Whole pagerank time: 0.332092 ms

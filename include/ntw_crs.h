@@ -156,6 +156,15 @@ void NTW_CRS_stochasticizeRows(ntw_crs crs[static 1]);
 void NTW_CRS_stochasticizeCols(ntw_crs crs[static 1]);
 
 /**
+ * @brief Makes the columns of the CRS table stochastic using openMP.
+ * 
+ * Their elements will then sum to 1 (at each column).
+ * 
+ * @param crs The CRS representation of the table.
+ */
+void NTW_CRSP_stochasticizeCols(ntw_crs crs[static 1]);
+
+/**
  * @brief Returns the number of empty rows of the @a crs.
  *
  * @param crs

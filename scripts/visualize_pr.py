@@ -96,7 +96,7 @@ plt.show()
 
 # Console messages
 prCalcTime = sum(iterationTimes)
-print("Data preperation time:\n\tLoad to memory = %0.2fms\n\tColor data in %d groups = %0.2fms\n\tMake matrix stochastic = %0.2fms" % (loadToCrsTime, colorGroups, colorTime, makeStochasticTime))
+print("Data preperation time:\n\tLoad to memory = %0.2fms\n\tColor data in %d groups = %0.2fms\n\tMake matrix stochastic = %0.2fms vs %0.2fms" % (loadToCrsTime, colorGroups, colorTime, makeStochasticTime, SmakeStochasticTime))
 print("Pagerank calculation time: %0.2fms" % prCalcTime)
 print("Total Time = %0.2fms" % (prCalcTime+loadToCrsTime+makeStochasticTime+colorTime))
 print("Pagerank vector sum = %0.2f" % (sum(pr)))

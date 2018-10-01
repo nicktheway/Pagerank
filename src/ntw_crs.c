@@ -143,6 +143,28 @@ void NTW_CRS_stochasticizeCols(ntw_crs crs[static 1])
 	free(counter);
 }
 
+void NTW_CRSP_stochasticizeCols(ntw_crs crs[static 1])
+{
+	// Allocate memory array to store the number of non zero elements in each column.
+	uint32_t* counter = calloc(crs->node_num, sizeof *counter);
+	if (!counter)
+	{
+		fprintf(stderr, "%s: There is not enough memory available for this process\n", __func__);
+		exit(EXIT_FAILURE);
+	}
+	for (uint32_t i = 0; i < crs->edge_num; i++)
+	{
+		counter[crs->col_ind[i]]++;
+	}
+    #pragma omp parallel for
+	for (uint32_t i = 0; i < crs->edge_num; i++)
+	{
+		if (counter[crs->col_ind[i]])
+			crs->val[i] = 1.0 / counter[crs->col_ind[i]];
+	}
+	free(counter);
+}
+
 uint32_t NTW_CRS_getEmptyRowsNum(const ntw_crs crs[static 1])
 {
 	uint32_t counter = 0;

@@ -1982,8 +1982,10 @@
     <bcf:citekey order="5">del2005fast</bcf:citekey>
     <bcf:citekey order="6">snapnets</bcf:citekey>
     <bcf:citekey order="7">snapnets</bcf:citekey>
-    <bcf:citekey order="8">silvestrepagerank</bcf:citekey>
-    <bcf:citekey order="9">hasenplaugh2016parallel</bcf:citekey>
+    <bcf:citekey order="8">snapnets</bcf:citekey>
+    <bcf:citekey order="9">snapnets</bcf:citekey>
+    <bcf:citekey order="10">silvestrepagerank</bcf:citekey>
+    <bcf:citekey order="11">hasenplaugh2016parallel</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

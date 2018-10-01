@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  1 OCT 2018 16:29
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  1 OCT 2018 22:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1902,9 +1902,14 @@ Underfull \hbox (badness 1325) in paragraph at lines 10--142
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 19--20
-[]\TU/NotoSerif(1)/m/n/10.95 Κάθε στοιχείο $\OML/cmm/m/it/10.95 x[]$ \TU/NotoSe
-rif(1)/m/n/10.95 διαιρείται με το
+Underfull \hbox (badness 1859) in paragraph at lines 4--5
+\TU/NotoSerif(1)/m/n/10.95 δεσμοι) και προαιρετικά συγκεκριμένου
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 12--13
+\OML/cmm/m/it/10.95 E$ \TU/NotoSerif(1)/m/n/10.95 ή $\OML/cmm/m/it/10.95 k > k[
+]$\TU/NotoSerif(1)/m/n/10.95 , όπου έχει προκαθορι-
  []
 
 ) (./5_parallel_alg.tex [3]
@@ -1923,36 +1928,35 @@ Underfull \hbox (badness 2103) in paragraph at lines 16--148
  []
 
 (./6_conditions.tex
-Underfull \hbox (badness 8170) in paragraph at lines 7--8
-\TU/NotoSerif(1)/m/n/10.95 συνεχόμενων αριθμών που αναπαρι-
- []
-
-
-Underfull \hbox (badness 2503) in paragraph at lines 10--11
-[]\TU/NotoSerif(1)/m/n/10.95 Όλοι οι παραπάνω αριθμοί θα πρέπει να
- []
-
-
-Underfull \hbox (badness 1546) in paragraph at lines 12--13
+Underfull \hbox (badness 1546) in paragraph at lines 5--6
 []\TU/NotoSerif(1)/m/n/10.95 Στα παραδοτέα, συμπεριλαμβάνεται ειδικό
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 14--15
+Underfull \hbox (badness 1117) in paragraph at lines 7--8
 \TU/NotoSerif(1)/m/n/10.95 δου gauss-seidel γίνεται μόνο στις ομάδες
  []
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 16--17
-\TU/NotoSerif(1)/m/n/10.95 μός των ομάδων που προκύπτει με τον
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+[]\TU/NotoSerif(1)/m/n/10.95 Δεν επιχειρήθηκε αναζήτηση ακολουθίας
  []
 
 
-Underfull \hbox (badness 2318) in paragraph at lines 16--17
-\TU/NotoSerif(1)/m/n/10.95 ταχύτερος. Ένας διαφορετικός αλγόριθμος
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/NotoSerif(1)/m/n/10.95 κόμβων που θα οδηγούσε σε καλύτερη
  []
 
 [4]) (./7_results.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+[]\TU/NotoSerif(1)/m/n/10.95 Intel(R) Core(TM) i5-4670 CPU @
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+[]\TU/NotoSerif(1)/m/n/10.95 Intel(R) Xeon(R) CPU E5420 @
+ []
+
 File: plots/it_time.png Graphic file (type bmp)
 <plots/it_time.png>
 File: plots/speed_up.png Graphic file (type bmp)
@@ -1965,17 +1969,7 @@ File: plots/speed_up_diades.png Graphic file (type bmp)
 <plots/speed_up_diades.png>
 File: plots/pagerank.png Graphic file (type bmp)
 <plots/pagerank.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
-[]\TU/NotoSerif(1)/m/n/10.95 Intel(R) Core(TM) i5-4670 CPU @
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-[]\TU/NotoSerif(1)/m/n/10.95 Intel(R) Xeon(R) CPU E5420 @
- []
-
-) (./8_correctness.tex
+[5]) (./8_correctness.tex
 Underfull \hbox (badness 1496) in paragraph at lines 1--2
 []\TU/NotoSerif(1)/m/n/10.95 Ο σειριακός αλγόριθμος που υλοποιήθηκε
  []
@@ -1985,12 +1979,12 @@ Underfull \hbox (badness 3009) in paragraph at lines 1--2
 \TU/NotoSerif(1)/m/n/10.95 θανότητα προγραμματιστικού λάθους, έγινε
  []
 
-[6]
+
 Underfull \hbox (badness 3019) in paragraph at lines 3--4
 []\TU/NotoSerif(1)/m/n/10.95 Η ορθότητα του παράλληλου αλγορίθμου
  []
 
-)
+[6])
 Underfull \hbox (badness 2735) in paragraph at lines 5--157
 []\TU/NotoSerif(1)/m/n/10.95 Τέλος, έχει επιβεβαιωθεί (με το εργαλείο
  []
@@ -2081,10 +2075,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  40530 strings out of 492970
  784714 string characters out of 6136052
- 1355576 words of memory out of 5000000
+ 1355594 words of memory out of 5000000
  43946 multiletter control sequences out of 15000+600000
  537015 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 62i,12n,96p,10500b,6006s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,96p,10500b,6114s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on report.pdf (7 pages).
