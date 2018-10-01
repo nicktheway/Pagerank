@@ -19,11 +19,6 @@ A lot of helper methods for debugging/visualizing have already been implemented 
 
 The documentation for the C source can be found [here](https://nicktheway.github.io/Pagerank/).
 
-Developed by *Katomeris Nikolaos*,\
-as the last project of *Parallel and Distributed Systems*,\
-*Aristotle University Of Thessaloniki, Greece,*\
-*7th Semester, 2017-2018.*
-
 ### Included programs:
 
 * PRcalculator
@@ -86,7 +81,12 @@ The python script can easilly be changed and produce any type of data visualizat
 For that reason the *helpers.py* script is included and contains two methods that load all the data from the log files 
 the PRcalculator programs produce.
 
+---
 
+Developed by *Katomeris Nikolaos*,\
+as the last project of *Parallel and Distributed Systems*,\
+*Aristotle University Of Thessaloniki, Greece,*\
+*7th Semester, 2017-2018.*
 
 
 
