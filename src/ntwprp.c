@@ -45,7 +45,7 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
         clock_gettime(CLOCK_MONOTONIC, &start);
 
         NTWPR_GS_parallel_iter(webGraph, pagerank, b, colors);
-        //NTWMP_normalizeSumDV(wgSize, pagerank);
+        
         NTWMP_subDV(wgSize,prPagerank,pagerank);
         delta = NTWMP_sqMagnDV(wgSize, prPagerank);
         NTWMP_assignDV(wgSize, prPagerank, pagerank);
