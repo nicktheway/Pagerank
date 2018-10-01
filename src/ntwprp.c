@@ -33,7 +33,7 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
     double* prPagerank = NTWM_newUniVectorD(wgSize, 1.0 / wgSize);
 	
 	// Create the b vector.
-    double* b = NTWM_newUniVectorD(wgSize, c / wgSize);
+    double* b = NTWM_newUniVectorD(wgSize, 1.0 / wgSize);
     // DEBUG: NTWM_printDV(stdout, wgSize, b, 4);
 
 	// Start the Gauss-Sneidel Algorithm.
@@ -45,7 +45,7 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
         clock_gettime(CLOCK_MONOTONIC, &start);
 
         NTWPR_GS_parallel_iter(webGraph, pagerank, b, colors);
-        NTWMP_normalizeSumDV(wgSize, pagerank);
+        //NTWMP_normalizeSumDV(wgSize, pagerank);
         NTWMP_subDV(wgSize,prPagerank,pagerank);
         delta = NTWMP_sqMagnDV(wgSize, prPagerank);
         NTWMP_assignDV(wgSize, prPagerank, pagerank);
@@ -56,6 +56,8 @@ double* NTWPR_colored_pagerank(ntw_crs webGraph[static 1], const double c, const
         fprintf(stream, "Convergence's delta: %0.2e\n", delta);
     }
     fprintf(stdout, "After #%u iterations:\tDelta = %0.2e\n", curr_iteration - 1, delta);
+
+    NTWMP_normalizeSumDV(wgSize, pagerank);
 
 	// Clear allocated vars except from pagerank of course.
     free(b);
