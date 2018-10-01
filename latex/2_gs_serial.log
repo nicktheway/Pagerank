@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  30 SEP 2018 02:52
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  1 OCT 2018 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -774,30 +774,20 @@ Missing character: There is no τ in font nullfont!
 Missing character: There is no ι in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 9--10
-[]
- []
-
-
-Overfull \hbox (7.50002pt too wide) in paragraph at lines 9--10
-\OML/cmm/m/it/10 A$
- []
-
-
-! LaTeX Error: Environment gather* undefined.
+! LaTeX Error: Environment multline* undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 \begin{gather*}
-                    
+l.10 \begin{multline*}
+                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.12 \bm
+l.11 \bm
         {A}_{final}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm{A}_{final})\vec{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -805,30 +795,17 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 \bm{A
-          }_{final}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm{A}_{final})\vec{...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no A in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.12 \bm{A}_
+l.11 \bm{A}_
             {final}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm{A}_{final})\vec{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Undefined control sequence.
-l.12 ...}_{final}\vec{x} = \vec{x}\Rightarrow (\bm
+l.11 ...}_{final}\vec{x} = \vec{x}\Rightarrow (\bm
                                                   {I}-\bm{A}_{final})\vec{x}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -837,8 +814,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.12 ...l}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm
-                                                  {A}_{final})\vec{x} = 0 \\
+l.11 ...l}\vec{x} = \vec{x}\Rightarrow (\bm{I}-\bm
+                                                  {A}_{final})\vec{x} = 0
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -846,8 +823,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.13 \Rightarrow \bigg(\bm
-                          {I}-\frac{b}{N}\cdot\bm{1}_{N\times N}-(1-b)\bm{A}...
+l.13 \bigg(\bm
+              {I}-\frac{c}{N}\cdot\bm{1}_{N\times N}-(1-c)\bm{A}_n\bigg)\vec...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -855,8 +832,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.13 \Rightarrow \bigg(\bm{I}-\frac{b}{N}\cdot\bm
-                                                 {1}_{N\times N}-(1-b)\bm{A}...
+l.13 \bigg(\bm{I}-\frac{c}{N}\cdot\bm
+                                     {1}_{N\times N}-(1-c)\bm{A}_n\bigg)\vec...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -864,8 +841,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.13 ...frac{b}{N}\cdot\bm{1}_{N\times N}-(1-b)\bm
-                                                  {A}_s\bigg)\vec{x} = 0
+l.13 ...frac{c}{N}\cdot\bm{1}_{N\times N}-(1-c)\bm
+                                                  {A}_n\bigg)\vec{x} = 0
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -873,14 +850,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-! LaTeX Error: \begin{document} ended by \end{gather*}.
+! LaTeX Error: \begin{document} ended by \end{multline*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 \end{gather*}
-                  
+l.14 \end{multline*}
+                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -888,8 +865,8 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.14 \end{gather*}
-                  
+l.14 \end{multline*}
+                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -897,62 +874,67 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (56.13458pt too wide) in paragraph at lines 12--15
-[]$[][] \OT1/cmr/m/n/10 =
+Overfull \hbox (20.0pt too wide) in paragraph at lines 9--15
+[]
  []
 
 
-Overfull \hbox (18.493pt too wide) in paragraph at lines 12--15
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 9--15
+\OML/cmm/m/it/10 A$
+ []
+
+
+Overfull \hbox (36.13458pt too wide) in paragraph at lines 9--15
+[][] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (18.493pt too wide) in paragraph at lines 9--15
 [] \OMS/cmsy/m/n/10 )
  []
 
 
-Overfull \hbox (16.84724pt too wide) in paragraph at lines 12--15
+Overfull \hbox (16.84724pt too wide) in paragraph at lines 9--15
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (47.5235pt too wide) in paragraph at lines 12--15
+Overfull \hbox (47.5235pt too wide) in paragraph at lines 9--15
 \OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )[] =
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 12--15
-\OT1/cmr/m/n/10 0[] 
+Overfull \hbox (17.77774pt too wide) in paragraph at lines 9--15
+\OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 )
  []
 
 
-Overfull \hbox (10.00002pt too wide) in paragraph at lines 12--15
-\OMS/cmsy/m/n/10 )
- []
-
-
-Overfull \hbox (20.31949pt too wide) in paragraph at lines 12--15
+Overfull \hbox (20.31949pt too wide) in paragraph at lines 9--15
 []\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (12.26251pt too wide) in paragraph at lines 12--15
+Overfull \hbox (12.26251pt too wide) in paragraph at lines 9--15
 [] \OMS/cmsy/m/n/10 ^^A
  []
 
 
-Overfull \hbox (33.6973pt too wide) in paragraph at lines 12--15
+Overfull \hbox (33.6973pt too wide) in paragraph at lines 9--15
 \OT1/cmr/m/n/10 1[] \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (16.66672pt too wide) in paragraph at lines 12--15
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 9--15
 \OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (43.58682pt too wide) in paragraph at lines 12--15
-\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 A[][][] \OT1/cmr/m/n/10 =
+Overfull \hbox (44.79173pt too wide) in paragraph at lines 9--15
+\OML/cmm/m/it/10 c\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 A[][][] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 12--15
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 9--15
 \OT1/cmr/m/n/10 0$ 
  []
 
@@ -1174,27 +1156,27 @@ Missing character: There is no φ in font nullfont!
 Missing character: There is no ή in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 16--17
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--18
 []
  []
 
 
-Overfull \hbox (28.69728pt too wide) in paragraph at lines 16--17
+Overfull \hbox (28.69728pt too wide) in paragraph at lines 16--18
 \OT1/cmr/m/n/10 1[] \OMS/cmsy/m/n/10 ^^A
  []
 
 
-Overfull \hbox (5.71527pt too wide) in paragraph at lines 16--17
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 16--18
 []$
  []
 
 
-Overfull \hbox (22.82089pt too wide) in paragraph at lines 16--17
+Overfull \hbox (22.82089pt too wide) in paragraph at lines 16--18
 \OT1/cmr/m/n/10 1[]$
  []
 
 
-Overfull \hbox (5.71527pt too wide) in paragraph at lines 16--17
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 16--18
 []$
  []
 
@@ -1205,19 +1187,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 $
-      $(\bm{I}-(1-b)\bm{A}_s)\vec{x} = \frac{b}{N}\bm{1}_{N\times1}$$
+l.19 \begin{equation}
+                      \label{eq:1}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 18--18
+Overfull \hbox (20.0pt too wide) in paragraph at lines 19--19
 [] 
  []
 
 ! Undefined control sequence.
-l.18 $$(\bm
-           {I}-(1-b)\bm{A}_s)\vec{x} = \frac{b}{N}\bm{1}_{N\times1}$$
+l.20 (\bm
+         {I}-(1-c)\bm{A}_n)\vec{x} = \frac{c}{N}\bm{1}_{N\times1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1225,8 +1207,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.18 $$(\bm{I}-(1-b)\bm
-                       {A}_s)\vec{x} = \frac{b}{N}\bm{1}_{N\times1}$$
+l.20 (\bm{I}-(1-c)\bm
+                     {A}_n)\vec{x} = \frac{c}{N}\bm{1}_{N\times1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1234,8 +1216,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.18 ...{I}-(1-b)\bm{A}_s)\vec{x} = \frac{b}{N}\bm
-                                                  {1}_{N\times1}$$
+l.20 ...{I}-(1-c)\bm{A}_n)\vec{x} = \frac{c}{N}\bm
+                                                  {1}_{N\times1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1243,10 +1225,10 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (110.7521pt too wide) detected at line 18
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (1 \OM
-S/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 A[]\OT1/c
-mr/m/n/10 )[] = []1[]
+Overfull \hbox (111.95702pt too wide) detected at line 21
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (1 \
+OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 A[]\OT1
+/cmr/m/n/10 )[] = []1[]
  []
 
 
@@ -1256,7 +1238,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20 π
+l.23 π
       ου μπορεί να λυθεί αναδρομικά με τη μέθοδο Gauss-Seidel, αρκεί διασφαλ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1344,7 +1326,7 @@ Missing character: There is no α in font nullfont!
 ! Undefined control sequence.
 <recently read> \bm 
                     
-l.20 ..., αρκεί διασφαλιστεί ότι σε κάθε βήμα $\bm
+l.23 ..., αρκεί διασφαλιστεί ότι σε κάθε βήμα $\bm
                                                   {1}_{N\times N}\cdot\vec{x...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1353,7 +1335,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.20 ...ήμα $\bm{1}_{N\times N}\cdot\vec{x}_k =\bm
+l.23 ...ήμα $\bm{1}_{N\times N}\cdot\vec{x}_k =\bm
                                                   {1}_{N\times1}$, δηλαδή ότ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1417,11 +1399,11 @@ Missing character: There is no . in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 8 strings out of 492970
- 98 string characters out of 6136052
+ 12 strings out of 492970
+ 191 string characters out of 6136052
  65701 words of memory out of 5000000
- 4116 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 4118 multiletter control sequences out of 15000+600000
+ 3648 words of font info for 15 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 17i,6n,12p,297b,58s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 17i,6n,12p,284b,96s stack positions out of 5000i,500n,10000p,200000b,80000s
 No pages of output.

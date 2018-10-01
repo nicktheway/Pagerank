@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'report.blg'
-[17] biber:313> INFO - === Sun Sep 30, 2018, 08:20:18
-[32] Biber.pm:371> INFO - Reading 'report.bcf'
-[75] Biber.pm:857> INFO - Found 5 citekeys in bib section 0
-[84] Biber.pm:3976> INFO - Processing section 0
-[91] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
-[92] bibtex.pm:1489> INFO - LaTeX decoding ...
-[99] bibtex.pm:1305> INFO - Found BibTeX data source 'references.bib'
-[121] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[121] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[121] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'el-GR'
-[121] Biber.pm:3810> INFO - No sort tailoring available for locale 'el-GR'
-[124] bbl.pm:617> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[125] bbl.pm:720> INFO - Output to report.bbl
+[21] biber:313> INFO - === Mon Oct  1, 2018, 16:05:08
+[38] Biber.pm:371> INFO - Reading 'report.bcf'
+[82] Biber.pm:857> INFO - Found 7 citekeys in bib section 0
+[92] Biber.pm:3976> INFO - Processing section 0
+[100] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[101] bibtex.pm:1489> INFO - LaTeX decoding ...
+[110] bibtex.pm:1305> INFO - Found BibTeX data source 'references.bib'
+[142] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[142] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[142] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'el-GR'
+[142] Biber.pm:3810> INFO - No sort tailoring available for locale 'el-GR'
+[146] bbl.pm:617> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[148] bbl.pm:720> INFO - Output to report.bbl

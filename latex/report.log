@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  1 OCT 2018 06:45
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  1 OCT 2018 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,9 +621,16 @@ Package: abstract 2009/06/08 v1.2a configurable abstracts
 \absparindent=\skip57
 \absparsep=\skip58
 )
+(/usr/share/texlive/texmf-dist/tex/latex/fancyref/fancyref.sty
+Package: fancyref 1999/02/03 v0.9c Fancy cross-referencing
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/varioref.sty
+Package: varioref 2016/02/16 v1.5c package for extended references (FMi)
+\c@vrcnt=\count268
+))
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count268
+\c@lips@count=\count269
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
@@ -631,7 +638,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen155
 \enit@toks=\toks23
 \enit@inbox=\box43
-\enitdp@description=\count269
+\enitdp@description=\count270
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
@@ -650,7 +657,7 @@ Package inputenc Warning: inputenc package ignored with utf8 based engines.
 ) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen156
 \WF@size=\dimen157
-\c@WF@wrappedlines=\count270
+\c@WF@wrappedlines=\count271
 \WF@box=\box46
 \WF@everypar=\toks27
 Package: wrapfig 2003/01/31  v 3.6
@@ -672,20 +679,20 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen163
 \caption@hangindent=\dimen164
 )
-\c@ContinuedFloat=\count271
+\c@ContinuedFloat=\count272
 Package caption Info: wrapfig package is loaded.
 )
-\c@KVtest=\count272
+\c@KVtest=\count273
 \sf@farskip=\skip60
 \sf@captopadj=\dimen165
 \sf@capskip=\skip61
 \sf@nearskip=\skip62
-\c@subfigure=\count273
-\c@subfigure@save=\count274
-\c@lofdepth=\count275
-\c@subtable=\count276
-\c@subtable@save=\count277
-\c@lotdepth=\count278
+\c@subfigure=\count274
+\c@subfigure@save=\count275
+\c@lofdepth=\count276
+\c@subtable=\count277
+\c@subtable@save=\count278
+\c@lotdepth=\count279
 \sf@top=\skip63
 \sf@bottom=\skip64
 )
@@ -701,12 +708,12 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen173
 \cmidrulekern=\dimen174
 \defaultaddspace=\dimen175
-\@cmidla=\count279
-\@cmidlb=\count280
+\@cmidla=\count280
+\@cmidlb=\count281
 \@aboverulesep=\dimen176
 \@belowrulesep=\dimen177
-\@thisruleclass=\count281
-\@lastruleclass=\count282
+\@thisruleclass=\count282
+\@lastruleclass=\count283
 \@thisrulewidth=\dimen178
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -747,7 +754,7 @@ File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count283
+\c@r@tfl@t=\count284
 \rotFPtop=\skip67
 \rotFPbot=\skip68
 \rot@float@box=\box48
@@ -755,12 +762,12 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
-\csq@reset=\count284
-\csq@gtype=\count285
-\csq@glevel=\count286
-\csq@qlevel=\count287
-\csq@maxlvl=\count288
-\csq@tshold=\count289
+\csq@reset=\count285
+\csq@gtype=\count286
+\csq@glevel=\count287
+\csq@qlevel=\count288
+\csq@maxlvl=\count289
+\csq@tshold=\count290
 \csq@ltx@everypar=\toks30
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -834,10 +841,10 @@ ex
 \pgf@yc=\dimen195
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count290
-\c@pgf@countb=\count291
-\c@pgf@countc=\count292
-\c@pgf@countd=\count293
+\c@pgf@counta=\count291
+\c@pgf@countb=\count292
+\c@pgf@countc=\count293
+\c@pgf@countd=\count294
 \t@pgf@toka=\toks35
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
@@ -856,13 +863,13 @@ File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
 f
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )
-\pgfsys@objnum=\count294
+\pgfsys@objnum=\count295
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count295
-\pgfsyssoftpath@bigbuffer@items=\count296
+\pgfsyssoftpath@smallbuffer@items=\count296
+\pgfsyssoftpath@bigbuffer@items=\count297
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -876,7 +883,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen196
-\pgfmath@count=\count297
+\pgfmath@count=\count298
 \pgfmath@box=\box50
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
@@ -900,7 +907,7 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count298
+\c@pgfmathroundto@lastzeros=\count299
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
@@ -938,7 +945,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box51
 \pgf@hbox=\box52
 \pgf@layerbox@main=\box53
-\pgf@picture@serial@count=\count299
+\pgf@picture@serial@count=\count300
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
@@ -971,7 +978,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen276
-\pgf@sys@shading@range@num=\count300
+\pgf@sys@shading@range@num=\count301
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1028,7 +1035,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count301
+\pgf@plot@mark@count=\count302
 \pgfplotmarksize=\dimen281
 )
 \tikz@lastx=\dimen282
@@ -1041,18 +1048,18 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box57
 \tikz@tempbox=\box58
 \tikz@tempbox@bg=\box59
-\tikztreelevel=\count302
-\tikznumberofchildren=\count303
-\tikznumberofcurrentchild=\count304
-\tikz@fig@count=\count305
+\tikztreelevel=\count303
+\tikznumberofchildren=\count304
+\tikznumberofcurrentchild=\count305
+\tikz@fig@count=\count306
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count306
-\pgfmatrixcurrentcolumn=\count307
-\pgf@matrix@numberofcolumns=\count308
+\pgfmatrixcurrentrow=\count307
+\pgfmatrixcurrentcolumn=\count308
+\pgf@matrix@numberofcolumns=\count309
 )
-\tikz@expandcount=\count309
+\tikz@expandcount=\count310
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1064,24 +1071,24 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count310
-\calc@Bcount=\count311
+\calc@Acount=\count311
+\calc@Bcount=\count312
 \calc@Adimen=\dimen288
 \calc@Bdimen=\dimen289
 \calc@Askip=\skip69
 \calc@Bskip=\skip70
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count312
+\calc@Ccount=\count313
 \calc@Cskip=\skip71
 )
-\c@@todonotes@numberoftodonotes=\count313
+\c@@todonotes@numberoftodonotes=\count314
 )
 (/usr/share/texlive/texmf-dist/tex/latex/sttools/stfloats.sty
 Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip sett
 ings
-\@dblbotnum=\count314
-\c@dblbotnumber=\count315
+\@dblbotnum=\count315
+\c@dblbotnumber=\count316
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
@@ -1210,7 +1217,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count316
+\lrq@indent=\count317
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1222,49 +1229,49 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write4
-\integerpart=\count317
-\decimalpart=\count318
+\integerpart=\count318
+\decimalpart=\count319
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count319
-\c@listtotal=\count320
-\c@listcount=\count321
-\c@liststart=\count322
-\c@liststop=\count323
-\c@citecount=\count324
-\c@citetotal=\count325
-\c@multicitecount=\count326
-\c@multicitetotal=\count327
-\c@instcount=\count328
-\c@maxnames=\count329
-\c@minnames=\count330
-\c@maxitems=\count331
-\c@minitems=\count332
-\c@citecounter=\count333
-\c@savedcitecounter=\count334
-\c@uniquelist=\count335
-\c@uniquename=\count336
-\c@refsection=\count337
-\c@refsegment=\count338
-\c@maxextratitle=\count339
-\c@maxextratitleyear=\count340
-\c@maxextradate=\count341
-\c@maxextraalpha=\count342
-\c@abbrvpenalty=\count343
-\c@highnamepenalty=\count344
-\c@lownamepenalty=\count345
-\c@maxparens=\count346
-\c@parenlevel=\count347
-\blx@tempcnta=\count348
-\blx@tempcntb=\count349
-\blx@tempcntc=\count350
-\blx@maxsection=\count351
-\blx@maxsegment@0=\count352
-\blx@notetype=\count353
-\blx@parenlevel@text=\count354
-\blx@parenlevel@foot=\count355
-\blx@sectionciteorder@0=\count356
+\c@tabx@nest=\count320
+\c@listtotal=\count321
+\c@listcount=\count322
+\c@liststart=\count323
+\c@liststop=\count324
+\c@citecount=\count325
+\c@citetotal=\count326
+\c@multicitecount=\count327
+\c@multicitetotal=\count328
+\c@instcount=\count329
+\c@maxnames=\count330
+\c@minnames=\count331
+\c@maxitems=\count332
+\c@minitems=\count333
+\c@citecounter=\count334
+\c@savedcitecounter=\count335
+\c@uniquelist=\count336
+\c@uniquename=\count337
+\c@refsection=\count338
+\c@refsegment=\count339
+\c@maxextratitle=\count340
+\c@maxextratitleyear=\count341
+\c@maxextradate=\count342
+\c@maxextraalpha=\count343
+\c@abbrvpenalty=\count344
+\c@highnamepenalty=\count345
+\c@lownamepenalty=\count346
+\c@maxparens=\count347
+\c@parenlevel=\count348
+\blx@tempcnta=\count349
+\blx@tempcntb=\count350
+\blx@tempcntc=\count351
+\blx@maxsection=\count352
+\blx@maxsegment@0=\count353
+\blx@notetype=\count354
+\blx@parenlevel@text=\count355
+\blx@parenlevel@foot=\count356
+\blx@sectionciteorder@0=\count357
 \labelnumberwidth=\skip73
 \labelalphawidth=\skip74
 \biblabelsep=\skip75
@@ -1275,9 +1282,9 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \bibhang=\skip80
 \blx@bcfin=\read3
 \blx@bcfout=\write5
-\c@mincomprange=\count357
-\c@maxcomprange=\count358
-\c@mincompwidth=\count359
+\c@mincomprange=\count358
+\c@maxcomprange=\count359
+\c@mincompwidth=\count360
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1288,74 +1295,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count360
-\c@savedafterword=\count361
-\c@annotator=\count362
-\c@savedannotator=\count363
-\c@author=\count364
-\c@savedauthor=\count365
-\c@bookauthor=\count366
-\c@savedbookauthor=\count367
-\c@commentator=\count368
-\c@savedcommentator=\count369
-\c@editor=\count370
-\c@savededitor=\count371
-\c@editora=\count372
-\c@savededitora=\count373
-\c@editorb=\count374
-\c@savededitorb=\count375
-\c@editorc=\count376
-\c@savededitorc=\count377
-\c@foreword=\count378
-\c@savedforeword=\count379
-\c@holder=\count380
-\c@savedholder=\count381
-\c@introduction=\count382
-\c@savedintroduction=\count383
-\c@namea=\count384
-\c@savednamea=\count385
-\c@nameb=\count386
-\c@savednameb=\count387
-\c@namec=\count388
-\c@savednamec=\count389
-\c@translator=\count390
-\c@savedtranslator=\count391
-\c@shortauthor=\count392
-\c@savedshortauthor=\count393
-\c@shorteditor=\count394
-\c@savedshorteditor=\count395
-\c@labelname=\count396
-\c@savedlabelname=\count397
-\c@institution=\count398
-\c@savedinstitution=\count399
-\c@lista=\count400
-\c@savedlista=\count401
-\c@listb=\count402
-\c@savedlistb=\count403
-\c@listc=\count404
-\c@savedlistc=\count405
-\c@listd=\count406
-\c@savedlistd=\count407
-\c@liste=\count408
-\c@savedliste=\count409
-\c@listf=\count410
-\c@savedlistf=\count411
-\c@location=\count412
-\c@savedlocation=\count413
-\c@organization=\count414
-\c@savedorganization=\count415
-\c@origlocation=\count416
-\c@savedoriglocation=\count417
-\c@origpublisher=\count418
-\c@savedorigpublisher=\count419
-\c@publisher=\count420
-\c@savedpublisher=\count421
-\c@language=\count422
-\c@savedlanguage=\count423
-\c@origlanguage=\count424
-\c@savedoriglanguage=\count425
-\c@pageref=\count426
-\c@savedpageref=\count427
+\c@afterword=\count361
+\c@savedafterword=\count362
+\c@annotator=\count363
+\c@savedannotator=\count364
+\c@author=\count365
+\c@savedauthor=\count366
+\c@bookauthor=\count367
+\c@savedbookauthor=\count368
+\c@commentator=\count369
+\c@savedcommentator=\count370
+\c@editor=\count371
+\c@savededitor=\count372
+\c@editora=\count373
+\c@savededitora=\count374
+\c@editorb=\count375
+\c@savededitorb=\count376
+\c@editorc=\count377
+\c@savededitorc=\count378
+\c@foreword=\count379
+\c@savedforeword=\count380
+\c@holder=\count381
+\c@savedholder=\count382
+\c@introduction=\count383
+\c@savedintroduction=\count384
+\c@namea=\count385
+\c@savednamea=\count386
+\c@nameb=\count387
+\c@savednameb=\count388
+\c@namec=\count389
+\c@savednamec=\count390
+\c@translator=\count391
+\c@savedtranslator=\count392
+\c@shortauthor=\count393
+\c@savedshortauthor=\count394
+\c@shorteditor=\count395
+\c@savedshorteditor=\count396
+\c@labelname=\count397
+\c@savedlabelname=\count398
+\c@institution=\count399
+\c@savedinstitution=\count400
+\c@lista=\count401
+\c@savedlista=\count402
+\c@listb=\count403
+\c@savedlistb=\count404
+\c@listc=\count405
+\c@savedlistc=\count406
+\c@listd=\count407
+\c@savedlistd=\count408
+\c@liste=\count409
+\c@savedliste=\count410
+\c@listf=\count411
+\c@savedlistf=\count412
+\c@location=\count413
+\c@savedlocation=\count414
+\c@organization=\count415
+\c@savedorganization=\count416
+\c@origlocation=\count417
+\c@savedoriglocation=\count418
+\c@origpublisher=\count419
+\c@savedorigpublisher=\count420
+\c@publisher=\count421
+\c@savedpublisher=\count422
+\c@language=\count423
+\c@savedlanguage=\count424
+\c@origlanguage=\count425
+\c@savedoriglanguage=\count426
+\c@pageref=\count427
+\c@savedpageref=\count428
 \shorthandwidth=\skip81
 \shortjournalwidth=\skip82
 \shortserieswidth=\skip83
@@ -1385,13 +1392,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count428
-\c@textcitetotal=\count429
-\c@textcitemaxnames=\count430
-\c@biburlnumpenalty=\count431
-\c@biburlucpenalty=\count432
-\c@biburllcpenalty=\count433
-\c@smartand=\count434
+\c@textcitecount=\count429
+\c@textcitetotal=\count430
+\c@textcitemaxnames=\count431
+\c@biburlnumpenalty=\count432
+\c@biburlucpenalty=\count433
+\c@biburllcpenalty=\count434
+\c@smartand=\count435
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -1413,8 +1420,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count435
-\c@bbx:relatedtotal=\count436
+\c@bbx:relatedcount=\count436
+\c@bbx:relatedtotal=\count437
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -1426,8 +1433,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 File: numeric-comp.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count437
-\c@cbx@tempcntb=\count438
+\c@cbx@tempcnta=\count438
+\c@cbx@tempcntb=\count439
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1491,13 +1498,13 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen294
-\Hy@linkcounter=\count439
-\Hy@pagecounter=\count440
+\Hy@linkcounter=\count440
+\Hy@pagecounter=\count441
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count441
+\Hy@SavedSpaceFactor=\count442
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1510,10 +1517,10 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count442
+\c@Hy@tempcnt=\count443
 LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen295
-\Fld@menulength=\count443
+\Fld@menulength=\count444
 \Field@Width=\dimen296
 \Fld@charsize=\dimen297
 Package hyperref Info: Hyper figures OFF on input line 6369.
@@ -1525,9 +1532,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count444
-\c@Item=\count445
-\c@Hfootnote=\count446
+\Hy@abspage=\count445
+\c@Item=\count446
+\c@Hfootnote=\count447
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
@@ -1542,10 +1549,10 @@ Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box60
-\c@Hy@AnnotLevel=\count447
-\HyField@AnnotCount=\count448
-\Fld@listcount=\count449
-\c@bookmark@seq@number=\count450
+\c@Hy@AnnotLevel=\count448
+\HyField@AnnotCount=\count449
+\Fld@listcount=\count450
+\c@bookmark@seq@number=\count451
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1572,7 +1579,7 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \TX@old@col=\dimen302
 \TX@target=\dimen303
 \TX@delta=\dimen304
-\TX@cols=\count451
+\TX@cols=\count452
 \TX@ftn=\toks44
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
@@ -1609,8 +1616,8 @@ Package: ntheorem 2011/08/15 1.33
 \thm@topsep=\skip104
 \thm@topsepadd=\skip105
 )
-\c@TRQ=\count452
-\c@Hyp=\count453
+\c@TRQ=\count453
+\c@Hyp=\count454
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
 Package csquotes Info: Adjusting default style.
@@ -1654,37 +1661,37 @@ File: greek.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 121.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 117.
-LaTeX Font Info:    No file TUptm.fd. on input line 117.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Try loading font information for TU+ptm on input line 121.
+LaTeX Font Info:    No file TUptm.fd. on input line 121.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 117.
+(Font)              using `TU/lmr/m/n' instead on input line 121.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1727,57 +1734,57 @@ LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
 .................................................
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 117.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 117.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 117.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 117.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 117.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 117.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 117.
-LaTeX Font Info:    Redeclaring math accent \check on input line 117.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 117.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 117.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 117.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 117.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 117.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 121.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 121.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 121.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 121.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 121.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 121.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 121.
+LaTeX Font Info:    Redeclaring math accent \check on input line 121.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 121.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 121.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 121.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 121.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 117.
+(Font)              `operators' in the math version `normal' on input line 121.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/ptm/m/n on input line 117.
+(Font)                  OT1/cmr/m/n --> TU/ptm/m/n on input line 121.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 117.
+(Font)              `operators' in the math version `bold' on input line 121.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ptm/m/n on input line 117.
+(Font)                  OT1/cmr/bx/n --> TU/ptm/m/n on input line 121.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 117.
+(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 121.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/ptm/m/it on input line 117.
+(Font)                  OT1/cmr/m/it --> TU/ptm/m/it on input line 121.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/ptm/bx/n on input line 117.
+(Font)                  OT1/cmr/bx/n --> TU/ptm/bx/n on input line 121.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 117.
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 121.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 117.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 121.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/ptm/m/n --> TU/ptm/bx/n on input line 117.
+(Font)                  TU/ptm/m/n --> TU/ptm/bx/n on input line 121.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/ptm/bx/it on input line 117.
+(Font)                  OT1/cmr/bx/it --> TU/ptm/bx/it on input line 121.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/bx/n on input line 117.
+(Font)                  OT1/cmss/bx/n --> TU/phv/bx/n on input line 121.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/bx/n on input line 117.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/bx/n on input line 121.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1793,10 +1800,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
  (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 117.
-Package biblatex Info: Reference segment=0 on input line 117.
+Package biblatex Info: Reference section=0 on input line 121.
+Package biblatex Info: Reference segment=0 on input line 121.
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring ON on input line 117.
+Package hyperref Info: Link coloring ON on input line 121.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1804,16 +1811,18 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count454
+\c@section@level=\count455
+LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 121.
+LaTeX Info: Redefining \pageref on input line 121.
+LaTeX Info: Redefining \nameref on input line 121.
 
 (./report.out) (./report.out)
 \@outlinefile=\write6
 \openout6 = `report.out'.
 
+LaTeX Info: Redefining \Ref on input line 121.
  (./1_Pagerank.tex
 Underfull \hbox (badness 1655) in paragraph at lines 3--4
 \TU/NotoSerif(1)/m/n/10.95 ταυτίζεται με το ποσοστό του χρόνου στον
@@ -1884,24 +1893,32 @@ Underfull \hbox (badness 2582) in paragraph at lines 16--18
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-(./3_wg.tex) (./4_serial_alg.tex
+(./3_wg.tex)
+Underfull \hbox (badness 1325) in paragraph at lines 10--142
+\TU/NotoSerif(1)/m/n/10.95 γραμμής βρίσκονται συνεχόμενα στη μνήμη
+ []
+
+(./4_serial_alg.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 6526) in paragraph at lines 19--20
 []\TU/NotoSerif(1)/m/n/10.95 Κάθε στοιχείο $\OML/cmm/m/it/10.95 x[]$ \TU/NotoSe
 rif(1)/m/n/10.95 διαιρείται με το
  []
 
-) (./5_parallel_alg.tex
+) (./5_parallel_alg.tex [3]
 Underfull \hbox (badness 4316) in paragraph at lines 7--8
 []\TU/NotoSerif(1)/m/n/10.95 Τον 1ο κόμβο τον εισάγουμε στην 1η
  []
 
-[3]
+
 Underfull \hbox (badness 1762) in paragraph at lines 12--13
 \TU/NotoSerif(1)/m/n/10.95 σε ομάδες προχωράμε σε ανακατάταξη των
  []
 
 )
-Underfull \hbox (badness 2103) in paragraph at lines 16--144
+Underfull \hbox (badness 2103) in paragraph at lines 16--148
 \TU/NotoSerif(1)/m/n/10.95 τους αλληλουχία ώστε να γίνει εύκολα σύ-
  []
 
@@ -1935,10 +1952,7 @@ Underfull \hbox (badness 2318) in paragraph at lines 16--17
 \TU/NotoSerif(1)/m/n/10.95 ταχύτερος. Ένας διαφορετικός αλγόριθμος
  []
 
-) (./7_results.tex
-Underfull \vbox (badness 2318) has occurred while \output is active []
-
- [4]
+[4]) (./7_results.tex
 File: plots/it_time.png Graphic file (type bmp)
 <plots/it_time.png>
 File: plots/speed_up.png Graphic file (type bmp)
@@ -1971,87 +1985,104 @@ Underfull \hbox (badness 3009) in paragraph at lines 1--2
 \TU/NotoSerif(1)/m/n/10.95 θανότητα προγραμματιστικού λάθους, έγινε
  []
 
-
+[6]
 Underfull \hbox (badness 3019) in paragraph at lines 3--4
 []\TU/NotoSerif(1)/m/n/10.95 Η ορθότητα του παράλληλου αλγορίθμου
  []
 
 )
-Underfull \hbox (badness 2735) in paragraph at lines 5--153
+Underfull \hbox (badness 2735) in paragraph at lines 5--157
 []\TU/NotoSerif(1)/m/n/10.95 Τέλος, έχει επιβεβαιωθεί (με το εργαλείο
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 154--154
+Underfull \hbox (badness 2875) in paragraph at lines 158--158
 |\TU/NotoSerif(1)/bx/n/14.4 Tαχύτητα σύγκλισης κι εκτέλε-
  []
 
-(./9_speeds.tex [6])
-Underfull \hbox (badness 2717) in paragraph at lines 165--165
+(./9_speeds.tex)
+Underfull \hbox (badness 2717) in paragraph at lines 169--169
 []\TU/NotoSerif(1)/m/n/10.95 S. Brin []και []L. Page, «  The anatomy of
  []
 
 
-Underfull \hbox (badness 4266) in paragraph at lines 165--165
+Underfull \hbox (badness 4266) in paragraph at lines 169--169
 \TU/NotoSerif(1)/m/n/10.95 a large-scale hypertextual web search
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 165--165
+Underfull \hbox (badness 3168) in paragraph at lines 169--169
 \TU/NotoSerif(1)/m/n/10.95 engine,» \TU/NotoSerif(1)/m/it/10.95 Computer networ
 ks and ISDN
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
+[]\TU/NotoSerif(1)/m/n/10.95 N. Eiron, K. S. McCurley []και []J. A.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
+\TU/NotoSerif(1)/m/n/10.95 Tomlin, «  Ranking the web frontier,»
+ []
+
+
+Underfull \hbox (badness 3919) in paragraph at lines 169--169
+\TU/NotoSerif(1)/m/it/10.95 conference on World Wide Web\TU/NotoSerif(1)/m/n/10
+.95 , ACM,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
+\TU/NotoSerif(1)/m/n/10.95 linear system,» \TU/NotoSerif(1)/m/it/10.95 Internet
+ Mathematics\TU/NotoSerif(1)/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
 \TU/NotoSerif(1)/m/it/10.95 Stanford Large Network Dataset
  []
 
 
-Underfull \hbox (badness 2158) in paragraph at lines 165--165
+Underfull \hbox (badness 2158) in paragraph at lines 169--169
 \TU/NotoSerif(1)/m/it/10.95 Collection\TU/NotoSerif(1)/m/n/10.95 , [][]$[][][][
 ] [] [] [] [][][][] [] [][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
 \TU/NotoSerif(1)/m/n/10.95 «  A PageRank Algorithm based on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
 []\TU/NotoSerif(1)/m/n/10.95 Διδακτορική διατρ.[], Massachusetts
  []
 
 \tf@thm=\write7
 \openout7 = `report.thm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
-[7
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 167.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40289 strings out of 492970
- 780922 string characters out of 6136052
- 1349829 words of memory out of 5000000
- 43712 multiletter control sequences out of 15000+600000
+ 40530 strings out of 492970
+ 784714 string characters out of 6136052
+ 1355576 words of memory out of 5000000
+ 43946 multiletter control sequences out of 15000+600000
  537015 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  62i,12n,96p,10500b,6006s stack positions out of 5000i,500n,10000p,200000b,80000s

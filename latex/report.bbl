@@ -80,6 +80,82 @@
       \field{pages}{103\bibrangedash 105}
       \range{pages}{3}
     \endentry
+    \entry{eiron2004ranking}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=c74bb8de508ea27fdd8b3f76b8eca341}{%
+           family={Eiron},
+           familyi={E\bibinitperiod},
+           given={Nadav},
+           giveni={N\bibinitperiod}}}%
+        {{hash=88ca76abfe7fc357b25a43cc90b5035f}{%
+           family={McCurley},
+           familyi={M\bibinitperiod},
+           given={Kevin\bibnamedelima S},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c81159305051a25aed65d422e75dbaa8}{%
+           family={Tomlin},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{2a0cc12c4f44cd1cca255c638a33a7f7}
+      \strng{fullhash}{2a0cc12c4f44cd1cca255c638a33a7f7}
+      \strng{bibnamehash}{2a0cc12c4f44cd1cca255c638a33a7f7}
+      \strng{authorbibnamehash}{2a0cc12c4f44cd1cca255c638a33a7f7}
+      \strng{authornamehash}{2a0cc12c4f44cd1cca255c638a33a7f7}
+      \strng{authorfullhash}{2a0cc12c4f44cd1cca255c638a33a7f7}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 13th international conference on World Wide Web}
+      \field{title}{Ranking the web frontier}
+      \field{year}{2004}
+      \field{pages}{309\bibrangedash 318}
+      \range{pages}{10}
+    \endentry
+    \entry{del2005fast}{article}{}
+      \name{author}{3}{}{%
+        {{hash=773704f1363cf55a6ab4e9c96ee1b21c}{%
+           family={Del\bibnamedelima Corso},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Gianna\bibnamedelima M},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=2358c8ace29ac0277b863b962b4bcc5c}{%
+           family={Gulli},
+           familyi={G\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3d10dd60f75646b27416ff130953c49a}{%
+           family={Romani},
+           familyi={R\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{c7fb32a264e69ca4f09165323b4b976f}
+      \strng{fullhash}{c7fb32a264e69ca4f09165323b4b976f}
+      \strng{bibnamehash}{c7fb32a264e69ca4f09165323b4b976f}
+      \strng{authorbibnamehash}{c7fb32a264e69ca4f09165323b4b976f}
+      \strng{authornamehash}{c7fb32a264e69ca4f09165323b4b976f}
+      \strng{authorfullhash}{c7fb32a264e69ca4f09165323b4b976f}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Internet Mathematics}
+      \field{number}{3}
+      \field{title}{Fast PageRank computation via a sparse linear system}
+      \field{volume}{2}
+      \field{year}{2005}
+      \field{pages}{251\bibrangedash 273}
+      \range{pages}{23}
+    \endentry
     \entry{snapnets}{misc}{}
       \name{author}{2}{}{%
         {{hash=900d107125ff0ca84698cb909e4f6c51}{%
@@ -99,8 +175,8 @@
       \strng{authorbibnamehash}{8b6c59a3c7880c51055cf3864633578b}
       \strng{authornamehash}{8b6c59a3c7880c51055cf3864633578b}
       \strng{authorfullhash}{8b6c59a3c7880c51055cf3864633578b}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{http://snap.stanford.edu/data}}
@@ -132,8 +208,8 @@
       \strng{authorbibnamehash}{2bf1d5826f2d0598e67653b36c48ac9b}
       \strng{authornamehash}{2bf1d5826f2d0598e67653b36c48ac9b}
       \strng{authorfullhash}{2bf1d5826f2d0598e67653b36c48ac9b}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A PageRank Algorithm based on Asynchronous Gauss-Seidel Iterations}
@@ -155,8 +231,8 @@
       \strng{authorbibnamehash}{bcd5341dd08e441bda37a1d87c784e74}
       \strng{authornamehash}{bcd5341dd08e441bda37a1d87c784e74}
       \strng{authorfullhash}{bcd5341dd08e441bda37a1d87c784e74}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Parallel algorithms for scheduling data-graph computations}
