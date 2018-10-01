@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  1 OCT 2018 22:53
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  1 OCT 2018 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1661,37 +1661,37 @@ File: greek.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 121.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 122.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 121.
-LaTeX Font Info:    No file TUptm.fd. on input line 121.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Try loading font information for TU+ptm on input line 122.
+LaTeX Font Info:    No file TUptm.fd. on input line 122.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 121.
+(Font)              using `TU/lmr/m/n' instead on input line 122.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1734,57 +1734,57 @@ LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
 .................................................
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 121.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 121.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 121.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 121.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 121.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 121.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 121.
-LaTeX Font Info:    Redeclaring math accent \check on input line 121.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 121.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 121.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 121.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 121.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 121.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 122.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 122.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 122.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 122.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 122.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 122.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 122.
+LaTeX Font Info:    Redeclaring math accent \check on input line 122.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 122.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 122.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 122.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 122.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 122.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 121.
+(Font)              `operators' in the math version `normal' on input line 122.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/ptm/m/n on input line 121.
+(Font)                  OT1/cmr/m/n --> TU/ptm/m/n on input line 122.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 121.
+(Font)              `operators' in the math version `bold' on input line 122.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ptm/m/n on input line 121.
+(Font)                  OT1/cmr/bx/n --> TU/ptm/m/n on input line 122.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 121.
+(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/ptm/m/it on input line 121.
+(Font)                  OT1/cmr/m/it --> TU/ptm/m/it on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/ptm/bx/n on input line 121.
+(Font)                  OT1/cmr/bx/n --> TU/ptm/bx/n on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 121.
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 121.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 122.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/ptm/m/n --> TU/ptm/bx/n on input line 121.
+(Font)                  TU/ptm/m/n --> TU/ptm/bx/n on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/ptm/bx/it on input line 121.
+(Font)                  OT1/cmr/bx/it --> TU/ptm/bx/it on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/bx/n on input line 121.
+(Font)                  OT1/cmss/bx/n --> TU/phv/bx/n on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/bx/n on input line 121.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/bx/n on input line 122.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1800,10 +1800,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
  (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 121.
-Package biblatex Info: Reference segment=0 on input line 121.
+Package biblatex Info: Reference section=0 on input line 122.
+Package biblatex Info: Reference segment=0 on input line 122.
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring ON on input line 121.
+Package hyperref Info: Link coloring ON on input line 122.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1814,15 +1814,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count455
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 121.
-LaTeX Info: Redefining \pageref on input line 121.
-LaTeX Info: Redefining \nameref on input line 121.
+LaTeX Info: Redefining \ref on input line 122.
+LaTeX Info: Redefining \pageref on input line 122.
+LaTeX Info: Redefining \nameref on input line 122.
 
 (./report.out) (./report.out)
 \@outlinefile=\write6
 \openout6 = `report.out'.
 
-LaTeX Info: Redefining \Ref on input line 121.
+LaTeX Info: Redefining \Ref on input line 122.
  (./1_Pagerank.tex
 Underfull \hbox (badness 1655) in paragraph at lines 3--4
 \TU/NotoSerif(1)/m/n/10.95 ταυτίζεται με το ποσοστό του χρόνου στον
@@ -1894,7 +1894,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 (./3_wg.tex)
-Underfull \hbox (badness 1325) in paragraph at lines 10--142
+Underfull \hbox (badness 1325) in paragraph at lines 10--143
 \TU/NotoSerif(1)/m/n/10.95 γραμμής βρίσκονται συνεχόμενα στη μνήμη
  []
 
@@ -1923,7 +1923,7 @@ Underfull \hbox (badness 1762) in paragraph at lines 12--13
  []
 
 )
-Underfull \hbox (badness 2103) in paragraph at lines 16--148
+Underfull \hbox (badness 2103) in paragraph at lines 16--149
 \TU/NotoSerif(1)/m/n/10.95 τους αλληλουχία ώστε να γίνει εύκολα σύ-
  []
 
@@ -1961,22 +1961,47 @@ File: plots/it_time.png Graphic file (type bmp)
 <plots/it_time.png>
 File: plots/speed_up.png Graphic file (type bmp)
 <plots/speed_up.png>
-File: plots/diff.png Graphic file (type bmp)
-<plots/diff.png>
+File: plots/pagerank.png Graphic file (type bmp)
+<plots/pagerank.png>
 File: plots/it_times_diades.png Graphic file (type bmp)
 <plots/it_times_diades.png>
 File: plots/speed_up_diades.png Graphic file (type bmp)
 <plots/speed_up_diades.png>
-File: plots/pagerank.png Graphic file (type bmp)
-<plots/pagerank.png>
-[5]) (./8_correctness.tex
-Underfull \hbox (badness 1496) in paragraph at lines 1--2
-[]\TU/NotoSerif(1)/m/n/10.95 Ο σειριακός αλγόριθμος που υλοποιήθηκε
+File: plots/diff.png Graphic file (type bmp)
+<plots/diff.png>
+
+Underfull \hbox (badness 2573) in paragraph at lines 59--60
+[]\TU/NotoSerif(1)/m/n/10.95 Αποτελέσματα και για τα υπόλοιπα web-
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 1--2
-\TU/NotoSerif(1)/m/n/10.95 θανότητα προγραμματιστικού λάθους, έγινε
+Underfull \hbox (badness 1062) in paragraph at lines 59--60
+\TU/NotoSerif(1)/m/n/10.95 graphs συμπεριλαμβάνονται στα παραδοτέα.
+ []
+
+[5]) (./8_correctness.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+[]\TU/NotoSerif(1)/m/n/10.95 Αρχικά, ο αλγόριθμος υπολογισμού της
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+\TU/NotoSerif(1)/m/n/10.95 pagerank που υλοποιήθηκε υποστηρίζεται
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 1--2
+\TU/NotoSerif(1)/m/n/10.95 μαθηματικά σε κάθε του βήμα. Σε κάθε πε-
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 1--2
+\TU/NotoSerif(1)/m/n/10.95 ρίπτωση, για να αποκλειστεί η πιθανότητα
+ []
+
+
+Underfull \hbox (badness 6268) in paragraph at lines 1--2
+\TU/NotoSerif(1)/m/n/10.95 αποτελεσμάτων για μικρής κλίμακας web-
  []
 
 
@@ -1985,71 +2010,71 @@ Underfull \hbox (badness 3019) in paragraph at lines 3--4
  []
 
 [6])
-Underfull \hbox (badness 2735) in paragraph at lines 5--157
+Underfull \hbox (badness 2735) in paragraph at lines 9--158
 []\TU/NotoSerif(1)/m/n/10.95 Τέλος, έχει επιβεβαιωθεί (με το εργαλείο
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 158--158
+Underfull \hbox (badness 2875) in paragraph at lines 159--159
 |\TU/NotoSerif(1)/bx/n/14.4 Tαχύτητα σύγκλισης κι εκτέλε-
  []
 
 (./9_speeds.tex)
-Underfull \hbox (badness 2717) in paragraph at lines 169--169
+Underfull \hbox (badness 2717) in paragraph at lines 170--170
 []\TU/NotoSerif(1)/m/n/10.95 S. Brin []και []L. Page, «  The anatomy of
  []
 
 
-Underfull \hbox (badness 4266) in paragraph at lines 169--169
+Underfull \hbox (badness 4266) in paragraph at lines 170--170
 \TU/NotoSerif(1)/m/n/10.95 a large-scale hypertextual web search
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 169--169
+Underfull \hbox (badness 3168) in paragraph at lines 170--170
 \TU/NotoSerif(1)/m/n/10.95 engine,» \TU/NotoSerif(1)/m/it/10.95 Computer networ
 ks and ISDN
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 []\TU/NotoSerif(1)/m/n/10.95 N. Eiron, K. S. McCurley []και []J. A.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 \TU/NotoSerif(1)/m/n/10.95 Tomlin, «  Ranking the web frontier,»
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 169--169
+Underfull \hbox (badness 3919) in paragraph at lines 170--170
 \TU/NotoSerif(1)/m/it/10.95 conference on World Wide Web\TU/NotoSerif(1)/m/n/10
 .95 , ACM,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 \TU/NotoSerif(1)/m/n/10.95 linear system,» \TU/NotoSerif(1)/m/it/10.95 Internet
  Mathematics\TU/NotoSerif(1)/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 \TU/NotoSerif(1)/m/it/10.95 Stanford Large Network Dataset
  []
 
 
-Underfull \hbox (badness 2158) in paragraph at lines 169--169
+Underfull \hbox (badness 2158) in paragraph at lines 170--170
 \TU/NotoSerif(1)/m/it/10.95 Collection\TU/NotoSerif(1)/m/n/10.95 , [][]$[][][][
 ] [] [] [] [][][][] [] [][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 \TU/NotoSerif(1)/m/n/10.95 «  A PageRank Algorithm based on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 []\TU/NotoSerif(1)/m/n/10.95 Διδακτορική διατρ.[], Massachusetts
  []
 
@@ -2057,11 +2082,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--169
 \openout7 = `report.thm'.
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 171.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 172.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
 
@@ -2073,10 +2098,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40530 strings out of 492970
- 784714 string characters out of 6136052
- 1355594 words of memory out of 5000000
- 43946 multiletter control sequences out of 15000+600000
+ 40535 strings out of 492970
+ 784838 string characters out of 6136052
+ 1355932 words of memory out of 5000000
+ 43951 multiletter control sequences out of 15000+600000
  537015 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  62i,12n,96p,10500b,6114s stack positions out of 5000i,500n,10000p,200000b,80000s
