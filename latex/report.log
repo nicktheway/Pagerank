@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  1 OCT 2018 23:53
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Debian) (preloaded format=xelatex 2018.9.29)  2 OCT 2018 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1943,8 +1943,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-\TU/NotoSerif(1)/m/n/10.95 κόμβων που θα οδηγούσε σε καλύτερη
+Underfull \hbox (badness 6961) in paragraph at lines 11--12
+\TU/NotoSerif(1)/m/n/10.95 γκλιση ή καλύτερη διαχωρισιμότητα για
+ []
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 11--12
+\TU/NotoSerif(1)/m/n/10.95 η παραλληλοποίηση γίνεται με τρόπο που
  []
 
 [4]) (./7_results.tex
@@ -2019,7 +2024,25 @@ Underfull \hbox (badness 2875) in paragraph at lines 159--159
 |\TU/NotoSerif(1)/bx/n/14.4 Tαχύτητα σύγκλισης κι εκτέλε-
  []
 
-(./9_speeds.tex)
+(./9_speeds.tex
+Underfull \hbox (badness 1264) in paragraph at lines 1--2
+\TU/NotoSerif(1)/m/n/10.95 seidel είναι το κύριο πλεονέκτημα της ένα-
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 1--2
+\TU/NotoSerif(1)/m/n/10.95 θόδων για την υλοποίηση του αλγορίθμου
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 3--4
+[]\TU/NotoSerif(1)/m/n/10.95 Ο ρυθμός σύγκλισής της την καθιστά τα-
+ []
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 2717) in paragraph at lines 170--170
 []\TU/NotoSerif(1)/m/n/10.95 S. Brin []και []L. Page, «  The anatomy of
  []
@@ -2100,7 +2123,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  40535 strings out of 492970
  784838 string characters out of 6136052
- 1355932 words of memory out of 5000000
+ 1355960 words of memory out of 5000000
  43951 multiletter control sequences out of 15000+600000
  537015 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
